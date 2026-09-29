@@ -1,0 +1,152 @@
+{
+  "source": "imd",
+  "where": "gha",
+  "started_utc": "2026-09-29T02:40:04+00:00",
+  "egress": {
+    "country": "US",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "steps": [
+    {
+      "name": "hist_2025",
+      "method": "POST",
+      "url": "https://imdpune.gov.in/cmpg/Griddata/rainfall.php",
+      "status": 200,
+      "seconds": 46.89,
+      "bytes": 25425900,
+      "content_type": "application/octet-stream",
+      "ok": true
+    },
+    {
+      "name": "rt_2026-09-29",
+      "method": "POST",
+      "url": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php",
+      "status": 200,
+      "seconds": 7.0,
+      "bytes": 0,
+      "content_type": "application/octet-stream",
+      "ok": true
+    },
+    {
+      "name": "rt_2026-09-28",
+      "method": "POST",
+      "url": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php",
+      "status": 200,
+      "seconds": 7.05,
+      "bytes": 69660,
+      "content_type": "application/octet-stream",
+      "ok": true
+    },
+    {
+      "name": "rt_2026-09-27",
+      "method": "POST",
+      "url": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php",
+      "status": 200,
+      "seconds": 6.96,
+      "bytes": 69660,
+      "content_type": "application/octet-stream",
+      "ok": true
+    },
+    {
+      "name": "rt_2026-09-26",
+      "method": "POST",
+      "url": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php",
+      "status": 200,
+      "seconds": 5.9,
+      "bytes": 69660,
+      "content_type": "application/octet-stream",
+      "ok": true
+    },
+    {
+      "name": "rt_2026-09-25",
+      "method": "POST",
+      "url": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php",
+      "status": 200,
+      "seconds": 8.79,
+      "bytes": 69660,
+      "content_type": "application/octet-stream",
+      "ok": true
+    },
+    {
+      "name": "rt_2026-09-24",
+      "method": "POST",
+      "url": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php",
+      "status": 200,
+      "seconds": 5.74,
+      "bytes": 69660,
+      "content_type": "application/octet-stream",
+      "ok": true
+    },
+    {
+      "name": "rt_2026-09-23",
+      "method": "POST",
+      "url": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php",
+      "status": 200,
+      "seconds": 3.57,
+      "bytes": 69660,
+      "content_type": "application/octet-stream",
+      "ok": true
+    },
+    {
+      "name": "rt_2026-09-22",
+      "method": "POST",
+      "url": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php",
+      "status": 200,
+      "seconds": 3.77,
+      "bytes": 69660,
+      "content_type": "application/octet-stream",
+      "ok": true
+    },
+    {
+      "name": "rt_2026-09-21",
+      "method": "POST",
+      "url": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php",
+      "status": 200,
+      "seconds": 3.59,
+      "bytes": 69660,
+      "content_type": "application/octet-stream",
+      "ok": true
+    },
+    {
+      "name": "rt_2026-09-20",
+      "method": "POST",
+      "url": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php",
+      "status": 200,
+      "seconds": 4.96,
+      "bytes": 69660,
+      "content_type": "application/octet-stream",
+      "ok": true
+    },
+    {
+      "name": "mausam_home",
+      "method": "GET",
+      "url": "https://mausam.imd.gov.in/",
+      "status": 200,
+      "seconds": 2.39,
+      "bytes": 229128,
+      "content_type": "text/html; charset=UTF-8",
+      "ok": true
+    }
+  ],
+  "findings": {
+    "hist_2025_bytes": 25425900,
+    "latest_full_historical_year": 2025,
+    "grid_cell": [
+      18.5,
+      73.75
+    ],
+    "jjas_2025_mm_at_cell": 888.9,
+    "dims": {
+      "time": 365,
+      "lat": 129,
+      "lon": 135
+    },
+    "rt_2026-09-29_bytes": 0,
+    "latest_realtime_day": "2026-09-28",
+    "realtime_lag_days": 1,
+    "rt_2026-09-28_mm_at_cell": 0.0,
+    "rt_valid_cells": 4964
+  },
+  "status": "ok",
+  "finished_utc": "2026-09-29T02:41:52+00:00"
+}

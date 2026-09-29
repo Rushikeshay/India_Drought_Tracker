@@ -1,0 +1,235 @@
+{
+  "source": "enso",
+  "where": "gha",
+  "started_utc": "2026-09-29T02:39:59+00:00",
+  "egress": {
+    "country": "US",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "steps": [
+    {
+      "name": "cpc_strengths",
+      "method": "GET",
+      "url": "https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso/roni/strengths/",
+      "status": 200,
+      "seconds": 0.38,
+      "bytes": 31211,
+      "content_type": "text/html; charset=UTF-8",
+      "ok": true
+    },
+    {
+      "name": "cpc_discussion",
+      "method": "GET",
+      "url": "https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc.shtml",
+      "status": 200,
+      "seconds": 0.07,
+      "bytes": 13506,
+      "content_type": "text/html; charset=utf-8",
+      "ok": true
+    },
+    {
+      "name": "iri_fig3_svg",
+      "method": "GET",
+      "url": "https://ensoforecast.iri.columbia.edu/figure3_plot/2026/8",
+      "status": 200,
+      "seconds": 0.9,
+      "bytes": 70255,
+      "content_type": "image/svg+xml; charset=utf-8",
+      "ok": true
+    },
+    {
+      "name": "iri_data_library",
+      "method": "GET",
+      "url": "https://iridl.ldeo.columbia.edu/",
+      "status": 200,
+      "seconds": 0.54,
+      "bytes": 29068,
+      "content_type": "text/html; charset=UTF-8",
+      "ok": true
+    }
+  ],
+  "findings": {
+    "cpc_issued": "September 2026",
+    "table_header": [
+      "Season",
+      "Index \u2264 -2.0\u00b0C",
+      "-1.5\u00b0C \u2265 Index > -2.0\u00b0C",
+      "-1.0\u00b0C \u2265 Index > -1.5\u00b0C",
+      "-0.5\u00b0C \u2265 Index > -1.0\u00b0C",
+      "-0.5\u00b0C < Index < 0.5\u00b0C",
+      "0.5\u00b0C \u2264 Index < 1.0\u00b0C",
+      "1.0\u00b0C \u2264 Index < 1.5\u00b0C",
+      "1.5\u00b0C \u2264 Index < 2.0\u00b0C",
+      "Index \u2265 2.0\u00b0C"
+    ],
+    "seasons": [
+      {
+        "season": "ASO",
+        "la_nina": 0.0,
+        "neutral": 0.0,
+        "el_nino": 100.0,
+        "bins": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          23.0,
+          77.0
+        ]
+      },
+      {
+        "season": "SON",
+        "la_nina": 0.0,
+        "neutral": 0.0,
+        "el_nino": 100.0,
+        "bins": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          3.0,
+          97.0
+        ]
+      },
+      {
+        "season": "OND",
+        "la_nina": 0.0,
+        "neutral": 0.0,
+        "el_nino": 100.0,
+        "bins": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          2.0,
+          98.0
+        ]
+      },
+      {
+        "season": "NDJ",
+        "la_nina": 0.0,
+        "neutral": 0.0,
+        "el_nino": 100.0,
+        "bins": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          7.0,
+          93.0
+        ]
+      },
+      {
+        "season": "DJF",
+        "la_nina": 0.0,
+        "neutral": 0.0,
+        "el_nino": 100.0,
+        "bins": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          4.0,
+          21.0,
+          75.0
+        ]
+      },
+      {
+        "season": "JFM",
+        "la_nina": 0.0,
+        "neutral": 0.0,
+        "el_nino": 100.0,
+        "bins": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          3.0,
+          19.0,
+          39.0,
+          39.0
+        ]
+      },
+      {
+        "season": "FMA",
+        "la_nina": 0.0,
+        "neutral": 3.0,
+        "el_nino": 97.0,
+        "bins": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          3.0,
+          20.0,
+          45.0,
+          27.0,
+          5.0
+        ]
+      },
+      {
+        "season": "MAM",
+        "la_nina": 0.0,
+        "neutral": 18.0,
+        "el_nino": 82.0,
+        "bins": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          18.0,
+          48.0,
+          30.0,
+          4.0,
+          0.0
+        ]
+      },
+      {
+        "season": "AMJ",
+        "la_nina": 2.0,
+        "neutral": 55.0,
+        "el_nino": 43.0,
+        "bins": [
+          0.0,
+          0.0,
+          0.0,
+          2.0,
+          55.0,
+          35.0,
+          8.0,
+          0.0,
+          0.0
+        ]
+      }
+    ],
+    "row_sums": [
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100
+    ],
+    "cpc_next_discussion": "8 October 2026"
+  },
+  "status": "ok",
+  "finished_utc": "2026-09-29T02:40:01+00:00"
+}

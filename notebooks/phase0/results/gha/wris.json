@@ -1,0 +1,55 @@
+{
+  "source": "wris",
+  "where": "gha",
+  "started_utc": "2026-09-29T02:41:52+00:00",
+  "egress": {
+    "country": "US",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "steps": [
+    {
+      "name": "api_docs",
+      "method": "GET",
+      "url": "https://indiawris.gov.in/v3/api-docs",
+      "ok": false,
+      "seconds": 60.3,
+      "error": "ConnectTimeout(MaxRetryError(\"HTTPSConnectionPool(host='indiawris.gov.in', port=443): Max retries exceeded with url: /v3/api-docs (Caused by ConnectTimeoutError(<HTTPSConnection(host='indiawris.gov.in', port=443) at 0x7f9c2c743490>, 'Connection to indiawris.gov.in timed out. (connect timeout=60)'))\"))"
+    },
+    {
+      "name": "dataset_list",
+      "method": "POST",
+      "url": "https://indiawris.gov.in/DataSet/DataSetList",
+      "json": {
+        "headers": {
+          "normalizedNames": {},
+          "lazyUpdate": null
+        }
+      },
+      "ok": false,
+      "seconds": 60.31,
+      "error": "ConnectTimeout(MaxRetryError(\"HTTPSConnectionPool(host='indiawris.gov.in', port=443): Max retries exceeded with url: /DataSet/DataSetList (Caused by ConnectTimeoutError(<HTTPSConnection(host='indiawris.gov.in', port=443) at 0x7f9c2c1e3910>, 'Connection to indiawris.gov.in timed out. (connect timeout=60)'))\"))"
+    },
+    {
+      "name": "gwl_page_0",
+      "method": "POST",
+      "url": "https://indiawris.gov.in/Dataset/Ground%20Water%20Level",
+      "params": {
+        "stateName": "Maharashtra",
+        "districtName": "Pune",
+        "agencyName": "CGWB",
+        "startdate": "1990-01-01",
+        "enddate": "2026-09-29",
+        "download": "false",
+        "page": 0,
+        "size": 9000
+      },
+      "ok": false,
+      "seconds": 135.72,
+      "error": "ConnectTimeout(MaxRetryError(\"HTTPSConnectionPool(host='indiawris.gov.in', port=443): Max retries exceeded with url: /Dataset/Ground%20Water%20Level?stateName=Maharashtra&districtName=Pune&agencyName=CGWB&startdate=1990-01-01&enddate=2026-09-29&download=false&page=0&size=9000 (Caused by ConnectTimeoutError(<HTTPSConnection(host='indiawris.gov.in', port=443) at 0x7f9c2c1e8fd0>, 'Connection to indiawris.gov.in timed out. (connect timeout=180)'))\"))"
+    }
+  ],
+  "findings": {},
+  "status": "failed",
+  "error": "ProbeFailed('gwl_page_0 failed: ConnectTimeout(MaxRetryError(\"HTTPSConnectionPool(host=\\'indiawris.gov.in\\', port=443): Max retries exceeded with url: /Dataset/Ground%20Water%20Level?stateName=Maharashtra&districtName=Pune&agencyName=CGWB&startdate=1990-01-01&enddate=2026-09-29&download=false&page=0&size=9000 (Caused by ConnectTimeoutError(<HTTPSConnection(host=\\'indiawris.gov.in\\', port=443) at 0x7f9c2c1e8fd0>, \\'Connection to indiawris.gov.in timed out. (connect timeout=180)\\'))\"))')",
+  "finished_utc": "2026-09-29T02:46:09+00:00"
+}

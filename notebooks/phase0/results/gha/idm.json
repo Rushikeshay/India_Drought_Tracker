@@ -1,0 +1,104 @@
+{
+  "source": "idm",
+  "where": "gha",
+  "started_utc": "2026-09-29T02:40:02+00:00",
+  "egress": {
+    "country": "US",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "steps": [
+    {
+      "name": "repo_meta",
+      "method": "GET",
+      "url": "https://api.github.com/repos/wcl-iitgn/IndianDroughtMonitor",
+      "status": 200,
+      "seconds": 0.32,
+      "bytes": 6743,
+      "content_type": "application/json; charset=utf-8",
+      "ok": true
+    },
+    {
+      "name": "cdi_last_commit",
+      "method": "GET",
+      "url": "https://api.github.com/repos/wcl-iitgn/IndianDroughtMonitor/commits",
+      "params": {
+        "path": "data/Current_CDI.txt",
+        "per_page": 1
+      },
+      "status": 200,
+      "seconds": 0.17,
+      "bytes": 3433,
+      "content_type": "application/json; charset=utf-8",
+      "ok": true
+    },
+    {
+      "name": "current_cdi",
+      "method": "GET",
+      "url": "https://raw.githubusercontent.com/wcl-iitgn/IndianDroughtMonitor/main/data/Current_CDI.txt",
+      "status": 200,
+      "seconds": 0.23,
+      "bytes": 100527,
+      "content_type": "text/plain; charset=utf-8",
+      "ok": true
+    },
+    {
+      "name": "summary_latest",
+      "method": "GET",
+      "url": "https://raw.githubusercontent.com/wcl-iitgn/IndianDroughtMonitor/main/data/summary_latest.txt",
+      "status": 200,
+      "seconds": 0.19,
+      "bytes": 1760,
+      "content_type": "text/plain; charset=utf-8",
+      "ok": true
+    },
+    {
+      "name": "district_stats",
+      "method": "GET",
+      "url": "https://raw.githubusercontent.com/wcl-iitgn/IndianDroughtMonitor/main/data/districts/district-stats.json",
+      "status": 200,
+      "seconds": 0.21,
+      "bytes": 118671,
+      "content_type": "text/plain; charset=utf-8",
+      "ok": true
+    }
+  ],
+  "findings": {
+    "license": null,
+    "pushed_at": "2026-09-24T12:41:04Z",
+    "cdi_last_commit": "2026-09-24T12:40:31Z",
+    "cdi_age_days": 4,
+    "cdi_cells": 4537,
+    "cdi_grid_step": [
+      0.25,
+      0.25
+    ],
+    "cdi_value_range": [
+      -2.7739,
+      2.1423
+    ],
+    "summary_head": "# India Drought Monitor \u2014 National Summary for week ending 2026-09-23\n\nThe national drought situation this week shows a significant distribution across the drought classes. The cumulative area in the Normal class was 48.8%, while the area experiencing D0 or worse conditions was 51.2%. The total drought area, measured by D0 or worse, was 51.2% this week, which represents a contraction of 1.4 percen",
+    "district_stats_type": "dict",
+    "district_stats_keys": [
+      "week_ending",
+      "districts"
+    ],
+    "district_stats_week_ending": "2026-09-23",
+    "district_stats_count": 740,
+    "district_stats_sample": [
+      {
+        "district": "Anantapur",
+        "state": "Andhra Pradesh",
+        "state_id": 3,
+        "none_pct": 31.3,
+        "d0_pct": 23.6,
+        "d1_pct": 36.3,
+        "d2_pct": 0.0,
+        "d3_pct": 8.8,
+        "d4_pct": 0.0,
+        "drought_pct": 68.7
+      }
+    ]
+  },
+  "status": "ok",
+  "finished_utc": "2026-09-29T02:40:03+00:00"
+}
