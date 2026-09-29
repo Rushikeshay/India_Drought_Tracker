@@ -6,20 +6,20 @@ Machine-readable results: `notebooks/phase0/results/<laptop|gha>/<source>.json`.
 
 Phase 0 laptop run: 2026-09-29 02:16–02:25 UTC, egress **US** (Comcast, AS7922).
 The maintainer works outside India, so "laptop" is also a non-India IP.
-GitHub Actions run: **not done yet**.
+GitHub Actions run: 2026-09-29 ~02:40 UTC, egress US (Microsoft AS8075). Results match the laptop run exactly.
 
 ## Access summary
 
 | Source | Layer | Laptop (US) | GH Actions | Lag / freshness |
 |---|---|---|---|---|
-| IMD gridded rain (imdpune.gov.in) | Rainfall | ✅ | pending | Real-time: day D is available on D (IST). Historical: 2025 is the latest full year |
-| IN-GRES (ingres.iith.ac.in) | GW stress | ✅ | pending | Edition 2025-2026 served |
-| India-WRIS GW levels (indiawris.gov.in) | GW level | ❌ TCP connect timeout | pending | — |
-| NWDP CGWB quarterly GW levels (nwdp.nwic.gov.in) | GW history | ✅ | pending | **2–4 years behind**: most states end 2023–Jan 2024 |
-| IIT-GN India Drought Monitor (GitHub) | Cross-check | ✅ | pending | Weekly; latest week ending 2026-09-23, committed 2026-09-24 |
-| NOAA CPC ENSO probabilities | Outlook | ✅ | pending | Monthly (2nd Thursday). Issued Sep 2026; next 8 Oct 2026 |
-| IRI ENSO plume SVG / IRI Data Library | Outlook | ✅ reachable | pending | Monthly |
-| mausam.imd.gov.in (validation pages) | Rainfall check | ✅ reachable | pending | — |
+| IMD gridded rain (imdpune.gov.in) | Rainfall | ✅ | ✅ | Real-time: day D is available on D (IST). Historical: 2025 is the latest full year |
+| IN-GRES (ingres.iith.ac.in) | GW stress | ✅ | ✅ | Edition 2025-2026 served |
+| India-WRIS GW levels (indiawris.gov.in) | GW level | ❌ TCP connect timeout | ❌ TCP connect timeout | — |
+| NWDP CGWB quarterly GW levels (nwdp.nwic.gov.in) | GW history | ✅ | ✅ | **2–4 years behind**: most states end 2023–Jan 2024 |
+| IIT-GN India Drought Monitor (GitHub) | Cross-check | ✅ | ✅ | Weekly; latest week ending 2026-09-23, committed 2026-09-24 |
+| NOAA CPC ENSO probabilities | Outlook | ✅ | ✅ | Monthly (2nd Thursday). Issued Sep 2026; next 8 Oct 2026 |
+| IRI ENSO plume SVG / IRI Data Library | Outlook | ✅ reachable | ✅ reachable | Monthly |
+| mausam.imd.gov.in (validation pages) | Rainfall check | ✅ reachable | ✅ reachable | — |
 
 ---
 
@@ -53,7 +53,7 @@ GitHub Actions run: **not done yet**.
 
 - Endpoint (from the neer-vazhvu playbook): `POST https://indiawris.gov.in/Dataset/Ground%20Water%20Level?stateName=..&districtName=..&agencyName=CGWB&startdate=..&enddate=..&download=false&page=0&size=9000`.
 - **Result 2026-09-29:** `indiawris.gov.in` resolves to **164.100.85.36 (NICNET)**. TCP connects to ports 443 and 80 time out, so the host is unreachable, not refusing requests. Same result for `/v3/api-docs`, `/DataSet/DataSetList` and the GWL endpoint.
-- This contradicts the playbook ("works from a non-India IP", July 2026). The playbook's own rule is that NICNET 164.100.x.x hosts refuse non-India IPs, so this looks like a geo-filter that may have been added or tightened since then. It could also be an outage. **Re-test from GitHub Actions and again on a later day.**
+- This contradicts the playbook ("works from a non-India IP", July 2026). The playbook's own rule is that NICNET 164.100.x.x hosts refuse non-India IPs, so this looks like a geo-filter that may have been added or tightened since then. The GitHub Actions runner (US, Microsoft) got the same timeout. **Chosen route: an Oracle Cloud Always Free VM in an Indian region (`deploy/oracle/`).**
 - Could not test: whether a `JSESSIONID` cookie is needed, and the extra CSV fields.
 - Candidate fallbacks (not yet evaluated):
   - `api.data.gov.in` is reachable from the US (it is also NICNET, 164.100.61.198). It needs a free API key; we still need to find which CGWB groundwater-level resources exist and how fresh they are.
