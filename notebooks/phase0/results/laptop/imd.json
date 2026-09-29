@@ -1,0 +1,151 @@
+{
+  "source": "imd",
+  "where": "laptop",
+  "started_utc": "2026-09-29T02:19:55+00:00",
+  "egress": {
+    "country": "US",
+    "org": "AS7922 Comcast Cable Communications, LLC"
+  },
+  "steps": [
+    {
+      "name": "hist_2025",
+      "method": "POST",
+      "url": "https://imdpune.gov.in/cmpg/Griddata/rainfall.php",
+      "status": 200,
+      "seconds": 57.49,
+      "bytes": 25425900,
+      "content_type": "application/octet-stream",
+      "ok": true
+    },
+    {
+      "name": "rt_2026-09-28",
+      "method": "POST",
+      "url": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php",
+      "status": 200,
+      "seconds": 2.58,
+      "bytes": 69660,
+      "content_type": "application/octet-stream",
+      "ok": true
+    },
+    {
+      "name": "rt_2026-09-27",
+      "method": "POST",
+      "url": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php",
+      "status": 200,
+      "seconds": 2.68,
+      "bytes": 69660,
+      "content_type": "application/octet-stream",
+      "ok": true
+    },
+    {
+      "name": "rt_2026-09-26",
+      "method": "POST",
+      "url": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php",
+      "status": 200,
+      "seconds": 2.11,
+      "bytes": 69660,
+      "content_type": "application/octet-stream",
+      "ok": true
+    },
+    {
+      "name": "rt_2026-09-25",
+      "method": "POST",
+      "url": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php",
+      "status": 200,
+      "seconds": 2.18,
+      "bytes": 69660,
+      "content_type": "application/octet-stream",
+      "ok": true
+    },
+    {
+      "name": "rt_2026-09-24",
+      "method": "POST",
+      "url": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php",
+      "status": 200,
+      "seconds": 2.77,
+      "bytes": 69660,
+      "content_type": "application/octet-stream",
+      "ok": true
+    },
+    {
+      "name": "rt_2026-09-23",
+      "method": "POST",
+      "url": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php",
+      "status": 200,
+      "seconds": 2.66,
+      "bytes": 69660,
+      "content_type": "application/octet-stream",
+      "ok": true
+    },
+    {
+      "name": "rt_2026-09-22",
+      "method": "POST",
+      "url": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php",
+      "status": 200,
+      "seconds": 2.97,
+      "bytes": 69660,
+      "content_type": "application/octet-stream",
+      "ok": true
+    },
+    {
+      "name": "rt_2026-09-21",
+      "method": "POST",
+      "url": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php",
+      "status": 200,
+      "seconds": 3.07,
+      "bytes": 69660,
+      "content_type": "application/octet-stream",
+      "ok": true
+    },
+    {
+      "name": "rt_2026-09-20",
+      "method": "POST",
+      "url": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php",
+      "status": 200,
+      "seconds": 3.14,
+      "bytes": 69660,
+      "content_type": "application/octet-stream",
+      "ok": true
+    },
+    {
+      "name": "rt_2026-09-19",
+      "method": "POST",
+      "url": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php",
+      "status": 200,
+      "seconds": 3.68,
+      "bytes": 69660,
+      "content_type": "application/octet-stream",
+      "ok": true
+    },
+    {
+      "name": "mausam_home",
+      "method": "GET",
+      "url": "https://mausam.imd.gov.in/",
+      "status": 200,
+      "seconds": 3.03,
+      "bytes": 229045,
+      "content_type": "text/html; charset=UTF-8",
+      "ok": true
+    }
+  ],
+  "findings": {
+    "hist_2025_bytes": 25425900,
+    "latest_full_historical_year": 2025,
+    "grid_cell": [
+      18.5,
+      73.75
+    ],
+    "jjas_2025_mm_at_cell": 888.9,
+    "dims": {
+      "time": 365,
+      "lat": 129,
+      "lon": 135
+    },
+    "latest_realtime_day": "2026-09-28",
+    "realtime_lag_days": 0,
+    "rt_2026-09-28_mm_at_cell": 0.0,
+    "rt_valid_cells": 4964
+  },
+  "status": "ok",
+  "finished_utc": "2026-09-29T02:21:24+00:00"
+}

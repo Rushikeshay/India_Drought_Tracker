@@ -1,0 +1,7 @@
+# Section 6 of docs/plan.md. Ask before adding anything not listed there.
+pandas
+geopandas
+xarray
+imdlib
+duckdb
+requests

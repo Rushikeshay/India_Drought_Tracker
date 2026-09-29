@@ -1,0 +1,34 @@
+# Phase 0: run the access probes from a GitHub-hosted runner (US IP) so we can
+# compare reachability with the laptop run. Manual trigger only.
+name: phase0-probes
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      matrix:
+        source: [wris, imd, ingres, idm, enso]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Probe ${{ matrix.source }}
+        working-directory: notebooks/phase0
+        run: python probe_${{ matrix.source }}.py
+      - name: Upload result
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: probe-${{ matrix.source }}
+          path: notebooks/phase0/results/gha/
