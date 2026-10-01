@@ -69,7 +69,11 @@ GitHub Actions run: 2026-09-29 ~02:40 UTC, egress US (Microsoft AS8075). Results
 - Station names are **not stable across files** (for example "Aad (Bk)_1" in 1991–2020 vs "Aad (Bk)" in 2021–2025). Identify wells by lat/lon.
 - **Freshness checked 2026-09-29:** the 2026–2030 files have 0 rows (regenerated daily, still empty). The latest reading in the 2021–2025 files by state ranges from 2022-01 (Dadra & Nagar Haveli) to 2025-01 (Tamil Nadu, Odisha). Most states end between 2023-08 and 2024-01. Maharashtra ends 2023-08-10. **2–4 years behind WRIS.**
 - Use: the **historical baseline** (1991–~2023) for per-well percentiles, without an India IP. Not usable for the current season.
-- Also on NWDP: `ground-water-level-telemetry-hourly-…-cgwb` and six-hourly telemetry (2021–2025, large files, 10–110 MB per state). Freshness not checked yet.
+- **Telemetry (six-hourly DWLR), checked 2026-10-01:** datasets `ground-water-level-telemetry-daily-cgwb-as-assam` (all states, despite the name) and `ground-water-level-telemetry-hourly-…-cgwb` (Assam, Bihar). The **2026–2030 files are current**: latest reading 2026-09-29 (2-day lag), regenerated daily, ~390 MB in total. 4,565 stations; **3,466 reported in Sep 2026**, in 404 districts (≥ 5 live wells: 206 districts). Thin or dead in places: Maharashtra 29 of 174 live, Kerala none since 2026-06-19, Karnataka 127 of 386.
+  - Values are **negative-down** (92% of stations have a negative January median); the manual network is positive-down. Flip per station.
+  - Telemetry history starts in 2021 (2021–2025 files, ~1.6 GB), so there are **not 10 years per well**.
+  - Of the live telemetry wells, 2,405 have a manual well within 200 m (names usually match, with a `_1` suffix), but only **775** of those manual wells have ≥ 10 years of January readings. That gives **65 districts with ≥ 5 such wells**. Co-located doesn't always mean the same well: some telemetry sensors sit in deeper piezometers (Andheri Devi: −33.9 m telemetry vs 7.5 m manual). Same-well identity needs checking against the 2021–2023 overlap.
+  - For comparison, the **manual network** has 10,711 wells with ≥ 10 years of January history still measured in 2023+, covering **450 districts with ≥ 5 wells**. Its 2024–2026 readings are only on WRIS.
 - Also found (not probed in depth): the India Data Portal (ISB) CKAN at `ckandev.indiadataportal.com`, dataset `cgwb-changes-in-depth-to-water-level`. Reachable; `isopen: false`.
 
 ## 4. IIT Gandhinagar — India Drought Monitor (cross-check only)
