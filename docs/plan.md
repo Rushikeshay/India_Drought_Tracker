@@ -37,7 +37,7 @@ Reproduce with `notebooks/phase0/coverage.py`.
 
 | Layer | Source | Access | Refresh |
 |---|---|---|---|
-| Rain | IMD 0.25° gridded: yearly files (**1951**–last year) + real-time daily. Daily grids are reduced to districts and deleted; we store district **monthly** history, district daily **normals**, and **current-season daily** only | POST to imdpune.gov.in; works from any IP | Daily; re-fetch the last 7 days (newest file may be preliminary) |
+| Rain | IMD 0.25° gridded: yearly files (**1971**–last year; 1951–1970 kept from the first build) + real-time daily. Daily grids are reduced to districts and deleted; we store district **monthly** history, district daily **normals**, and **current-season daily** only | POST to imdpune.gov.in; works from any IP | Daily; re-fetch the last 7 days (newest file may be preliminary) |
 | GW history | **NWDP** CGWB manual quarterly CSVs, 1991–2025 (most states end 2023–24) | nwdp.nwic.gov.in CKAN; any IP; includes LGD codes | One-time + yearly |
 | GW current | **NWDP** CGWB telemetry six-hourly, 2026–2030 files (~3,500 live wells) | Same; 2-day lag | Daily |
 | GW stress | IN-GRES, **2025-2026** edition, district + block | Open JSON API | Yearly |

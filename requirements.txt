@@ -6,3 +6,4 @@ imdlib
 duckdb
 requests
 pyarrow
+pypdf

@@ -5,7 +5,7 @@ district (weights = overlap area in km2), using only cells with data that day.
 
 Stored (small; daily grids are deleted after reduction):
   data/reference/imd_district_weights.csv       cell -> district overlap weights
-  data/processed/rain_monthly.parquet           dist_lgd, year, month, mm   (1951 - last full year)
+  data/processed/rain_monthly.parquet           dist_lgd, year, month, mm   (START_YEAR - last full year; 1951-1970 also present from the first build)
   data/processed/rain_daily_normal.parquet      dist_lgd, month, day, mm    (NORMAL_PERIOD mean)
   data/raw/imd/reduced/<year>.parquet           per-year daily district series (local checkpoint)
 
@@ -34,7 +34,7 @@ PROC = REPO / "data" / "processed"
 REDUCED = REPO / "data" / "raw" / "imd" / "reduced"
 EQUAL_AREA = "+proj=aea +lat_1=12 +lat_2=28 +lat_0=20 +lon_0=78 +datum=WGS84 +units=m"
 NORMAL_PERIOD = (1971, 2020)  # IMD's current LPA period; verified against IMD pages in validation
-START_YEAR = 1951
+START_YEAR = 1971  # IMD normal period starts 1971; earlier years are optional context
 
 log = logging.getLogger("rain")
 
