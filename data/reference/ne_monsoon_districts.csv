@@ -1,0 +1,98 @@
+dist_lgd,state,district,subdivision
+745,Andhra Pradesh,Alluri Sitharama Raju,Coastal AP / Rayalaseema
+744,Andhra Pradesh,Anakapalli,Coastal AP / Rayalaseema
+502,Andhra Pradesh,Anantapur,Coastal AP / Rayalaseema
+753,Andhra Pradesh,Annamayya,Coastal AP / Rayalaseema
+750,Andhra Pradesh,Bapatla,Coastal AP / Rayalaseema
+503,Andhra Pradesh,Chittoor,Coastal AP / Rayalaseema
+505,Andhra Pradesh,East Godavari,Coastal AP / Rayalaseema
+748,Andhra Pradesh,Eluru,Coastal AP / Rayalaseema
+506,Andhra Pradesh,Guntur,Coastal AP / Rayalaseema
+746,Andhra Pradesh,Kakinada,Coastal AP / Rayalaseema
+747,Andhra Pradesh,Konaseema,Coastal AP / Rayalaseema
+510,Andhra Pradesh,Krishna,Coastal AP / Rayalaseema
+511,Andhra Pradesh,Kurnool,Coastal AP / Rayalaseema
+755,Andhra Pradesh,Nandyal,Coastal AP / Rayalaseema
+749,Andhra Pradesh,Ntr,Coastal AP / Rayalaseema
+751,Andhra Pradesh,Palnadu,Coastal AP / Rayalaseema
+743,Andhra Pradesh,Parvathipuram Manyam,Coastal AP / Rayalaseema
+517,Andhra Pradesh,Prakasam,Coastal AP / Rayalaseema
+515,Andhra Pradesh,Spsr Nellore,Coastal AP / Rayalaseema
+754,Andhra Pradesh,Sri Sathya Sai,Coastal AP / Rayalaseema
+519,Andhra Pradesh,Srikakulam,Coastal AP / Rayalaseema
+752,Andhra Pradesh,Tirupati,Coastal AP / Rayalaseema
+520,Andhra Pradesh,Visakhapatanam,Coastal AP / Rayalaseema
+521,Andhra Pradesh,Vizianagaram,Coastal AP / Rayalaseema
+523,Andhra Pradesh,West Godavari,Coastal AP / Rayalaseema
+504,Andhra Pradesh,Y.S.R.,Coastal AP / Rayalaseema
+526,Karnataka,Bengaluru Rural,South Interior Karnataka
+525,Karnataka,Bengaluru Urban,South Interior Karnataka
+531,Karnataka,Chamarajanagara,South Interior Karnataka
+630,Karnataka,Chikkaballapura,South Interior Karnataka
+532,Karnataka,Chikkamagaluru,South Interior Karnataka
+533,Karnataka,Chitradurga,South Interior Karnataka
+535,Karnataka,Davangere,South Interior Karnataka
+539,Karnataka,Hassan,South Interior Karnataka
+541,Karnataka,Kodagu,South Interior Karnataka
+542,Karnataka,Kolar,South Interior Karnataka
+544,Karnataka,Mandya,South Interior Karnataka
+545,Karnataka,Mysuru,South Interior Karnataka
+631,Karnataka,Ramanagara,South Interior Karnataka
+547,Karnataka,Shivamogga,South Interior Karnataka
+548,Karnataka,Tumakuru,South Interior Karnataka
+554,Kerala,Alappuzha,Kerala & Mahe
+555,Kerala,Ernakulam,Kerala & Mahe
+556,Kerala,Idukki,Kerala & Mahe
+557,Kerala,Kannur,Kerala & Mahe
+558,Kerala,Kasaragod,Kerala & Mahe
+559,Kerala,Kollam,Kerala & Mahe
+560,Kerala,Kottayam,Kerala & Mahe
+561,Kerala,Kozhikode,Kerala & Mahe
+562,Kerala,Malappuram,Kerala & Mahe
+563,Kerala,Palakkad,Kerala & Mahe
+564,Kerala,Pathanamthitta,Kerala & Mahe
+565,Kerala,Thiruvananthapuram,Kerala & Mahe
+566,Kerala,Thrissur,Kerala & Mahe
+567,Kerala,Wayanad,Kerala & Mahe
+598,Puducherry,Karaikal,"Tamil Nadu, Puducherry & Karaikal (Yanam: Coastal AP; Mahe: Kerala)"
+599,Puducherry,Mahe,"Tamil Nadu, Puducherry & Karaikal (Yanam: Coastal AP; Mahe: Kerala)"
+600,Puducherry,Pondicherry,"Tamil Nadu, Puducherry & Karaikal (Yanam: Coastal AP; Mahe: Kerala)"
+601,Puducherry,Yanam,"Tamil Nadu, Puducherry & Karaikal (Yanam: Coastal AP; Mahe: Kerala)"
+610,Tamil Nadu,Ariyalur,"Tamil Nadu, Puducherry & Karaikal"
+730,Tamil Nadu,Chengalpattu,"Tamil Nadu, Puducherry & Karaikal"
+568,Tamil Nadu,Chennai,"Tamil Nadu, Puducherry & Karaikal"
+569,Tamil Nadu,Coimbatore,"Tamil Nadu, Puducherry & Karaikal"
+570,Tamil Nadu,Cuddalore,"Tamil Nadu, Puducherry & Karaikal"
+571,Tamil Nadu,Dharmapuri,"Tamil Nadu, Puducherry & Karaikal"
+572,Tamil Nadu,Dindigul,"Tamil Nadu, Puducherry & Karaikal"
+573,Tamil Nadu,Erode,"Tamil Nadu, Puducherry & Karaikal"
+729,Tamil Nadu,Kallakurichi,"Tamil Nadu, Puducherry & Karaikal"
+574,Tamil Nadu,Kanchipuram,"Tamil Nadu, Puducherry & Karaikal"
+575,Tamil Nadu,Kanniyakumari,"Tamil Nadu, Puducherry & Karaikal"
+576,Tamil Nadu,Karur,"Tamil Nadu, Puducherry & Karaikal"
+577,Tamil Nadu,Krishnagiri,"Tamil Nadu, Puducherry & Karaikal"
+578,Tamil Nadu,Madurai,"Tamil Nadu, Puducherry & Karaikal"
+735,Tamil Nadu,Mayiladuthurai,"Tamil Nadu, Puducherry & Karaikal"
+579,Tamil Nadu,Nagapattinam,"Tamil Nadu, Puducherry & Karaikal"
+580,Tamil Nadu,Namakkal,"Tamil Nadu, Puducherry & Karaikal"
+581,Tamil Nadu,Perambalur,"Tamil Nadu, Puducherry & Karaikal"
+582,Tamil Nadu,Pudukkottai,"Tamil Nadu, Puducherry & Karaikal"
+583,Tamil Nadu,Ramanathapuram,"Tamil Nadu, Puducherry & Karaikal"
+731,Tamil Nadu,Ranipet,"Tamil Nadu, Puducherry & Karaikal"
+584,Tamil Nadu,Salem,"Tamil Nadu, Puducherry & Karaikal"
+585,Tamil Nadu,Sivaganga,"Tamil Nadu, Puducherry & Karaikal"
+733,Tamil Nadu,Tenkasi,"Tamil Nadu, Puducherry & Karaikal"
+586,Tamil Nadu,Thanjavur,"Tamil Nadu, Puducherry & Karaikal"
+587,Tamil Nadu,The Nilgiris,"Tamil Nadu, Puducherry & Karaikal"
+588,Tamil Nadu,Theni,"Tamil Nadu, Puducherry & Karaikal"
+589,Tamil Nadu,Thiruvallur,"Tamil Nadu, Puducherry & Karaikal"
+590,Tamil Nadu,Thiruvarur,"Tamil Nadu, Puducherry & Karaikal"
+591,Tamil Nadu,Tiruchirappalli,"Tamil Nadu, Puducherry & Karaikal"
+592,Tamil Nadu,Tirunelveli,"Tamil Nadu, Puducherry & Karaikal"
+732,Tamil Nadu,Tirupathur,"Tamil Nadu, Puducherry & Karaikal"
+634,Tamil Nadu,Tiruppur,"Tamil Nadu, Puducherry & Karaikal"
+593,Tamil Nadu,Tiruvannamalai,"Tamil Nadu, Puducherry & Karaikal"
+594,Tamil Nadu,Tuticorin,"Tamil Nadu, Puducherry & Karaikal"
+595,Tamil Nadu,Vellore,"Tamil Nadu, Puducherry & Karaikal"
+596,Tamil Nadu,Villupuram,"Tamil Nadu, Puducherry & Karaikal"
+597,Tamil Nadu,Virudhunagar,"Tamil Nadu, Puducherry & Karaikal"

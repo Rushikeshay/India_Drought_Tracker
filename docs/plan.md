@@ -1,4 +1,6 @@
-# India Drought Tracker — Plan (v2)
+# India Drought & Groundwater Watch — Plan (v2)
+
+Tagline / web address: **Hidden Drought** (e.g. hiddendrought.in, domain not yet bought).
 
 Repo: github.com/Rushikeshay/India_Drought_Tracker · Updated 2026-10-01 · v1 of this plan is in git history (commit 4a489fe).
 Source details, URLs, quirks and test results: [sources.md](sources.md). This file holds the decisions and the status.
@@ -35,7 +37,7 @@ Reproduce with `notebooks/phase0/coverage.py`.
 
 | Layer | Source | Access | Refresh |
 |---|---|---|---|
-| Rain | IMD 0.25° gridded: yearly files (1901–last year) + real-time daily | POST to imdpune.gov.in; works from any IP | Daily; re-fetch the last 7 days (newest file may be preliminary) |
+| Rain | IMD 0.25° gridded: yearly files (**1951**–last year) + real-time daily. Daily grids are reduced to districts and deleted; we store district **monthly** history, district daily **normals**, and **current-season daily** only | POST to imdpune.gov.in; works from any IP | Daily; re-fetch the last 7 days (newest file may be preliminary) |
 | GW history | **NWDP** CGWB manual quarterly CSVs, 1991–2025 (most states end 2023–24) | nwdp.nwic.gov.in CKAN; any IP; includes LGD codes | One-time + yearly |
 | GW current | **NWDP** CGWB telemetry six-hourly, 2026–2030 files (~3,500 live wells) | Same; 2-day lag | Daily |
 | GW stress | IN-GRES, **2025-2026** edition, district + block | Open JSON API | Yearly |
@@ -95,10 +97,10 @@ Secondary marks: GW confidence tier, IN-GRES category and worst block, IDM droug
 
 ## 10. Open items
 
-Phase 1 follow-ups: (a) Rajasthan's 9 districts abolished in Dec 2024 are still on the map, flagged in `notes`; (b) districts newer than the Dec 2023 map (MP: Pandhurna, Maihar, Mauganj; AP: Markapuram, Polavaram; Gujarat: Vav-Tharad) aren't on it; (c) 64 map districts have no IN-GRES row (carved-out districts and Uttarakhand hills). Phase 4 falls back to the parent or marks them "not assessed". Delhi's IN-GRES units don't match LGD.
+Phase 1 follow-ups: (a) **Decided 2026-10-01:** keep Rajasthan's 50-district map (9 districts abolished Dec 2024 stay, flagged) and show each source at the level it reports. Never re-apportion data to new boundaries; (b) districts newer than the Dec 2023 map (MP: Pandhurna, Maihar, Mauganj; AP: Markapuram, Polavaram; Gujarat: Vav-Tharad) aren't on it; (c) 64 map districts have no IN-GRES row (carved-out districts and Uttarakhand hills). Phase 4 falls back to the parent or marks them "not assessed". Delhi's IN-GRES units don't match LGD.
 
 
-1. Site name and domain.
+1. Buy the domain (hiddendrought.in or similar).
 2. Licenses still to confirm: IMD gridded data terms; India Data Portal dataset (`isopen: false`).
 3. Later: Oracle/WRIS upgrade for current-tier groundwater; declarations (v2).
 
