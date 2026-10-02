@@ -14,3 +14,4 @@ data/reference/*.parquet
 !data/processed/gw_cycles.parquet
 !data/processed/gw_wells.parquet
 !data/processed/gw_tele_latest.parquet
+!data/processed/idm_weekly.parquet

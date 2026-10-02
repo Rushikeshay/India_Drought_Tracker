@@ -94,6 +94,8 @@ GitHub Actions run: 2026-09-29 ~02:40 UTC, egress US (Microsoft AS8075). Results
   - `data/districts/district-stats.json`: `{week_ending, districts:[{district, state, state_id, none_pct, d0_pct … d4_pct, drought_pct}]}`, **740 districts, keyed by name only (no LGD code)**. We'd need a crosswalk.
   - `data/summary_latest.txt`: national summary prose, with the week-ending date.
 - Update: weekly. Latest week ending 2026-09-23; `Current_CDI.txt` committed 2026-09-24 (4 days old at probe time).
+- **Phase 5:** `data/Drough_TS/CDI_YYYYMMDD.txt` holds 273 weekly grids (2021-07-14 to 2026-09-30), 4,537 cells centred at x.125/x.375. Class edges from IDM's `classify()`: Normal > −0.5 ≥ D0 > −0.8 ≥ D1 > −1.3 ≥ D2 > −1.6 ≥ D3 > −2.0 ≥ D4. We compute area-weighted district values over LGD boundaries (`pipeline/process/idm.py`); 775 districts covered (islands, Mumbai, Daman and Mahe fall between land cells).
+- **IDM's own `district-stats.json` mis-registers its grid:** `build_districts.py` snaps cell centres with Python `round(x/0.25)*0.25`, and banker's rounding sends x.125 and x.375 in alternating directions. 4,474 cells collapse to 1,197 positions. Reproducing that snapping matches their file exactly (r = 0.99, median difference 0); our correct-registration values differ (r = 0.79). We use our own values. Worth reporting to the lab.
 
 ## 5. ENSO outlook — NOAA CPC
 

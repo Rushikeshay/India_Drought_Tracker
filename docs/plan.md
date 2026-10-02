@@ -84,8 +84,8 @@ Secondary marks: GW confidence tier, IN-GRES category and worst block, IDM droug
 | 2 | Rainfall pipeline | ✅ **Done 2026-10-01**: headline = IMD official district figure (711), gridded fallback (72); history/SPI gridded | Season-to-date departure + SPI per district; matches IMD district pages within a few % |
 | 3 | Groundwater pipeline (NWDP) | ✅ **Done 2026-10-01** (awaiting review). See §10 for results | History + telemetry merged; signs, envelope, pairing, tiers; sane for Punjab, Marathwada, Delhi |
 | 4 | Stress layer (IN-GRES) | ✅ **Done 2026-10-01** (awaiting review). See §10 | 2025-26 edition joined incl. worst block; unmatched listed |
-| 5 | IDM drought layer | ⏭ **Next** | Weekly CDI grids → district stats with our own boundaries (back to Jul 2021); crosswalk of IDM names → LGD |
-| 6 | Classification + validation | — | Both tiers; unit tests; back-test 2023 vs known droughts |
+| 5 | IDM drought layer | ✅ **Done 2026-10-01** (awaiting review): 775 districts weekly since 2021-07-14 | Weekly CDI grids → district stats with our own boundaries (back to Jul 2021); crosswalk of IDM names → LGD |
+| 6 | Classification + validation | ⏭ **Next** | Both tiers; unit tests; back-test 2023 vs known droughts |
 | 7 | Front end v1 | — | Map, district panel, hidden-drought table, methods page; phone + laptop |
 | 8 | Automation | — | `refresh.yml` daily on Actions, unattended for 2 weeks |
 | 9 | Outlook | — | Scenario engine + ENSO/NMME; back-test |
