@@ -5,7 +5,7 @@ Source details, URLs, quirks and test results: [sources.md](sources.md). This fi
 
 ## 1. Goal
 
-A public website that shows, for every Indian district, whether **rain** and **groundwater** are adequate, whether **drought was declared**, and what a dry next year would mean. Audience: intermediaries (NGOs, extension officers, journalists, district officials).
+A public website that shows, for every Indian district, whether **rain** and **groundwater** are adequate, how a **drought index** (IIT-GN IDM) rates it, and what a dry next year would mean. Official declarations are deferred to v2. Audience: intermediaries (NGOs, extension officers, journalists, district officials).
 
 Core idea: drought declaration is gated on rainfall (Drought Manual 2020), so:
 - **Hidden drought:** normal rain but depleted groundwater, so no declaration.
@@ -15,8 +15,8 @@ Core idea: drought declaration is gated on rainfall (Drought Manual 2020), so:
 
 | Tier | Period | Layers | What it answers |
 |---|---|---|---|
-| **Historical** | ~2000–2023 | Rain, groundwater trend, declarations, IN-GRES stress | Long-term pattern for the district. Context where current data is thin. |
-| **Current** | 2024–now | Rain season-to-date, latest groundwater level, current declarations, ENSO outlook | How the district is doing right now. |
+| **Historical** | ~2000–2023 | Rain, groundwater trend, IN-GRES stress (IDM index from Jul 2021) | Long-term pattern for the district. Context where current data is thin. |
+| **Current** | 2024–now | Rain season-to-date, latest groundwater level, IDM drought index, ENSO outlook | How the district is doing right now. |
 
 ## 3. Coverage without an India IP (measured 2026-10-01, 785 LGD districts)
 
@@ -26,7 +26,8 @@ Core idea: drought declaration is gated on rainfall (Drought Manual 2020), so:
 | GW: ≥ 1 well | 91% | 57% live in the last 60 days · 76% with any 2024+ reading |
 | GW: ≥ 3 wells, ≥ 5 yrs history | 85% | 2% (telemetry only) to 23% (if paired with old manual wells) |
 | GW: ≥ 5 wells, ≥ 10 yrs (v1 rule) | 78% | ≤ 9% |
-| Declarations | Not available yet (§6) | Not available yet |
+| IDM drought index | Weekly grids from Jul 2021 only | District stats weekly (740 districts by name) |
+| Declarations | Deferred to v2 | Deferred to v2 |
 
 Reproduce with `notebooks/phase0/coverage.py`.
 
@@ -38,10 +39,9 @@ Reproduce with `notebooks/phase0/coverage.py`.
 | GW history | **NWDP** CGWB manual quarterly CSVs, 1991–2025 (most states end 2023–24) | nwdp.nwic.gov.in CKAN; any IP; includes LGD codes | One-time + yearly |
 | GW current | **NWDP** CGWB telemetry six-hourly, 2026–2030 files (~3,500 live wells) | Same; 2-day lag | Daily |
 | GW stress | IN-GRES, **2025-2026** edition, district + block | Open JSON API | Yearly |
-| Detected drought (cross-check) | IIT-GN India Drought Monitor (CDI, SPI, soil moisture; 740 districts by name) | GitHub raw files | Weekly. **No license; ask before republishing** |
+| Detected drought | IIT-GN India Drought Monitor: CDI grids (weekly since 2021-07-14), district stats (current week), SPI/SRI/SSMI | GitHub raw files + data-query tool | Weekly. Used with attribution to IIT-GN Water and Climate Lab (owner's decision 2026-10-01) |
 | ENSO | NOAA CPC strength-probability table (RONI-based) | HTML table | Monthly (2nd Thursday) |
 | NMME rain terciles | IRI Data Library | Reachable | Monthly (Phase 9) |
-| Declarations | See §6 | — | — |
 | Boundaries | india-geodata `LGD_Districts` (785 districts, Dec 2023, CC0) | GitHub release | Fixed |
 
 **Dropped from the default path:** India-WRIS. It's blocked outside India (NICNET), and fresh manual readings 2024+ exist only there. An optional upgrade is ready but untested: a free Oracle VM in India (`deploy/oracle/`, `pipeline/sources/wris.py`). It would raise current-tier GW coverage to about 57% at full rigour (450 districts have long-history manual wells). Revisit after launch.
@@ -59,12 +59,10 @@ Reproduce with `notebooks/phase0/coverage.py`.
   - **Insufficient:** none of the above.
 - Low groundwater = district median well percentile ≤ 20th. Also show the change in metres vs the multi-year mean.
 
-## 6. Drought declarations (moved up from v2)
+## 6. Drought declarations: deferred to v2 (decided 2026-10-01)
 
-No national machine-readable dataset exists; states publish their own notifications. The IDM data tables are a **detected** index (D0–D4 area %), not declarations.
-- **2000–2017:** IIT Gandhinagar ("Drought detection and declaration in India", *Water Security* 2021) compared declared and detected drought for all districts. **Email the lab** to ask for the declarations data and for permission to reuse IDM data.
-- **2018–now:** hand-compiled CSV `data/reference/declarations.csv` (state, district, tehsil, season, year, date, order URL). Start with drought-prone states (Maharashtra, Karnataka, Andhra Pradesh, Telangana, Rajasthan, Gujarat, Madhya Pradesh).
-- Show declared vs detected (rain deficit, IDM CDI, groundwater) side by side. That gap is the point of the site.
+Out of v1. No national machine-readable dataset exists; states publish their own notifications. The IDM index is a **detected** drought measure and is always labelled that way, never as "declared".
+v2 options: a hand-compiled CSV `data/reference/declarations.csv` (state, district, tehsil, season, year, date, order URL) from state notifications, starting with drought-prone states. Then show declared vs detected side by side.
 
 ## 7. Classification (current tier)
 
@@ -73,7 +71,7 @@ No national machine-readable dataset exists; states publish their own notificati
 | **Rain OK** | Fine | Hidden drought |
 | **Rain short** (IMD Deficient or worse, season-to-date) | Buffered | Double drought |
 
-Secondary marks: GW confidence tier, IN-GRES category and worst block, declared yes/no, data age. NE-monsoon districts (Tamil Nadu, Puducherry, coastal AP, Rayalaseema, south interior Karnataka, Kerala) switch to the Oct–Dec season on Oct 1.
+Secondary marks: GW confidence tier, IN-GRES category and worst block, IDM drought class, data age. NE-monsoon districts (Tamil Nadu, Puducherry, coastal AP, Rayalaseema, south interior Karnataka, Kerala) switch to the Oct–Dec season on Oct 1.
 
 ## 8. Phases and status
 
@@ -84,7 +82,7 @@ Secondary marks: GW confidence tier, IN-GRES category and worst block, declared 
 | 2 | Rainfall pipeline | — | Season-to-date departure + SPI per district; matches IMD district pages within a few % |
 | 3 | Groundwater pipeline (NWDP) | — | History + telemetry merged; signs, envelope, pairing, tiers; sane for Punjab, Marathwada, Delhi |
 | 4 | Stress layer (IN-GRES) | — | 2025-26 edition joined incl. worst block; unmatched listed |
-| 5 | Declarations | — | IIT-GN emailed; CSV schema; ≥ 1 state compiled 2018–now |
+| 5 | IDM drought layer | — | Weekly CDI grids → district stats with our own boundaries (back to Jul 2021); crosswalk of IDM names → LGD |
 | 6 | Classification + validation | — | Both tiers; unit tests; back-test 2023 vs known droughts |
 | 7 | Front end v1 | — | Map, district panel, hidden-drought table, methods page; phone + laptop |
 | 8 | Automation | — | `refresh.yml` daily on Actions, unattended for 2 weeks |
@@ -97,11 +95,10 @@ Secondary marks: GW confidence tier, IN-GRES category and worst block, declared 
 
 ## 10. Open items
 
-1. Email IIT-GN: declarations 2000–2017 and IDM reuse terms.
-2. Site name and domain.
-3. Approve `pyarrow` (parquet) or keep CSV.
-4. Licenses still to confirm: IMD gridded data terms; India Data Portal dataset (`isopen: false`).
-5. Later: Oracle/WRIS upgrade for current-tier groundwater.
+1. Site name and domain.
+2. Approve `pyarrow` (parquet) or keep CSV.
+3. Licenses still to confirm: IMD gridded data terms; India Data Portal dataset (`isopen: false`).
+4. Later: Oracle/WRIS upgrade for current-tier groundwater; declarations (v2).
 
 ## 11. Working rules (for Claude Code)
 
