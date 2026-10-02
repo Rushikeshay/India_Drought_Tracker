@@ -63,7 +63,9 @@ def fetch_all() -> list[Path]:
 
 
 def read(p: Path) -> pd.DataFrame:
-    return pd.read_csv(p, sep=r"\s+", header=None, names=["lat", "lon", "cdi"])
+    """Files contain ~60 placeholder rows "NaN NaN NaN" with no location; drop them."""
+    d = pd.read_csv(p, sep=r"\s+", header=None, names=["lat", "lon", "cdi"])
+    return d.dropna(subset=["lat", "lon"]).reset_index(drop=True)
 
 
 def week_of(p: Path) -> date:
