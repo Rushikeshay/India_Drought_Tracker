@@ -63,7 +63,6 @@ CYCLES = ["JAN", "PRE", "AUG", "NOV"]
 LIVE_DAYS = 60
 TIERS = [("full", 5, 10), ("short", 3, 5)]  # (name, min wells, min same-cycle history years)
 LOW_PCT = 20
-MAX_JUMP_M = 10  # |change vs same cycle last year| above this: flagged for review (kept; medians limit influence)
 BASELINE = (2000, 2023)
 WEB = REPO / "web" / "data"
 COLS = ["Station", "Agency", "Latitude", "Longitude", "Data Acquisition Time"]
@@ -264,7 +263,7 @@ def sen_slope(years: np.ndarray, vals: np.ndarray) -> float:
 
 
 def district_status(c: pd.DataFrame, units: pd.DataFrame, master: pd.DataFrame, year: int, cyc: str,
-                    live: set | None = None) -> tuple[dict, int]:
+                    live: set | None = None) -> dict:
     """Per-district groundwater status for one (year, cycle). `live`: wells counted as
     live for the level_only tier (None = every well with a reading in that cycle)."""
     cur = c[(c.year == year) & (c.cycle == cyc)].set_index("unit").depth_m
@@ -289,14 +288,11 @@ def district_status(c: pd.DataFrame, units: pd.DataFrame, master: pd.DataFrame, 
     W["change_since_prev_cycle_m"] = W.unit.map(prev_v) - W.depth_m  # positive = water rose
     ly = c[(c.year == year - 1) & (c.cycle == cyc)].set_index("unit").depth_m
     W["change_vs_last_year_m"] = W.unit.map(ly) - W.depth_m
-    W["jump"] = W.change_vs_last_year_m.abs() > MAX_JUMP_M
-    n_jump = int(W.jump.sum())
 
     out = {}
     for code in master.dist_lgd:
         d = W[W.dist_lgd == code]
-        rec = {"tier": "insufficient", "n_wells_with_reading": int(len(d)), "n_live": int(d.live.sum()),
-               "n_wells_jump_gt_10m": int(d.jump.sum())}
+        rec = {"tier": "insufficient", "n_wells_with_reading": int(len(d)), "n_live": int(d.live.sum())}
         for name, nmin, ymin in TIERS:
             q = d[d.hist_years >= ymin]
             if len(q) >= nmin:
@@ -311,7 +307,7 @@ def district_status(c: pd.DataFrame, units: pd.DataFrame, master: pd.DataFrame, 
                        change_since_prev_cycle_m=_r(d.change_since_prev_cycle_m.median()),
                        change_vs_last_year_m=_r(d.change_vs_last_year_m.median()))
         out[int(code)] = rec
-    return out, n_jump
+    return out
 
 
 def build_status(today: pd.Timestamp | None = None) -> None:
@@ -325,7 +321,7 @@ def build_status(today: pd.Timestamp | None = None) -> None:
     live_cut = today - pd.Timedelta(days=LIVE_DAYS)
     last_t = latest["last"].combine_first(units["last"])
     live = set(last_t[last_t >= live_cut].index)
-    out, n_jump = district_status(c, units, master, year, cyc, live)
+    out = district_status(c, units, master, year, cyc, live)
     tiers = pd.Series([v["tier"] for v in out.values()]).value_counts().to_dict()
     doc = {"as_of": str(today.date()), "cycle": cyc, "cycle_year": year,
            "cycle_months": {"JAN": "January", "PRE": "pre-monsoon (Apr-May)", "AUG": "August", "NOV": "November"}[cyc],
@@ -333,7 +329,7 @@ def build_status(today: pd.Timestamp | None = None) -> None:
                      "percentile_meaning": "share of past same-cycle years with water deeper than now (0 = deepest on record)",
                      "signs": "change values in metres; positive = water level rose"},
            "source": "CGWB via National Water Data Portal (telemetry + manual quarterly); wells joined to districts by location",
-           "tier_counts": tiers, "wells_flagged_jump_gt_10m": n_jump, "districts": out}
+           "tier_counts": tiers, "districts": out}
     WEB.mkdir(parents=True, exist_ok=True)
     (WEB / "groundwater.json").write_text(json.dumps(doc, separators=(",", ":")))
     log.info("current %s %s: %s", cyc, year, tiers)

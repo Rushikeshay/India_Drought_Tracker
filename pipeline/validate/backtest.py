@@ -42,7 +42,7 @@ def main(argv=None) -> int:
     dep = ((act - nrm) / nrm * 100).round()
 
     c, units = gw.series()
-    g, _ = gw.district_status(c, units, master, y, "NOV", live=None)
+    g = gw.district_status(c, units, master, y, "NOV", live=None)
 
     rows = []
     for m in master.itertuples():

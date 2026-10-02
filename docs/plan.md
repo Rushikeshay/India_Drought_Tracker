@@ -101,19 +101,17 @@ Secondary marks: GW confidence tier, IN-GRES category and worst block, IDM droug
 **Phase 6 results (2026-10-01):**
 - **Current (rain = SW 2026 / NE season, GW = Aug 2026):** only **16 districts** get a quadrant: fine 6, buffered 4, hidden drought 3 (Bikaner, Jhunjhunu, Sikar: normal rain, GW at record lows, all Over-exploited), double drought 3 (Sirohi, Nalgonda, Yadadri Bhuvanagiri). Not classified: GW level-only 349, GW insufficient 319, NE season < 15 days 99.
 - **Back-test 2023 (gridded rain Jun–Sep, GW Nov 2023 manual network):** 215 districts classified (fine 128, buffered 40, hidden 27, double 20). Jharkhand 19/24 rain-short, matching its 2023 drought. Hidden drought in Punjab (6) and Rajasthan (7). **Karnataka: only 15/31 districts rain-short, though 223 taluks were declared.** Seasonal departure misses dry-spell droughts like August 2023. Maharashtra, Gujarat and Bihar lack Nov 2023 manual readings on NWDP.
-- Groundwater QA: 242 live wells changed > 10 m vs last year (both directions, spread across states). **Flagged, not excluded**; district values use medians.
+- Groundwater: year-to-year changes of 10 m or more are **normal** (owner, 2026-10-01). No jump flag; only the physical envelope (−5 to 150 m) filters values.
 
 **Questions for the whiteboard review (6b):**
 1. Current-tier coverage (16 districts): accept, add a provisional GW signal for level-only districts (e.g. fell vs last year / vs decadal mean), or revisit Oracle/WRIS?
 2. Rain axis: add a dry-spell / SPI-3 criterion so droughts like Karnataka 2023 aren't missed?
-3. Large-jump wells: keep flagging, or exclude?
 
 **Phase 4 results (2026-10-01):** IN-GRES 2025-26, figures used as published. 719 districts assessed, 64 not in IN-GRES (carved-out districts still inside their parent, Uttarakhand hills). District categories: Safe 519, Semi-critical 67, Critical 22, Over-exploited 91, Hilly 10, Saline 3; 7 Himachal districts assessed by valley only (no district category). 7,000+ blocks/units fetched. **Hidden stress** (district not Critical/OE but ≥ 1 block is) in **105 districts**, e.g. Pune Safe 63.7% with Shirur Critical 95.7%. Extremes: Sangrur 309%, Jaisalmer 297%, Kolar 186%. Unmatched: 3 Delhi IN-GRES units (Central North, Old Delhi, Outer North) with no LGD equivalent.
 
 **Phase 3 results (2026-10-01):** 42,618 wells (36,887 manual + 5,745 telemetry), 1.4M well-cycles. 1,142 impossible values dropped (outside −5 to 150 m). 701 telemetry↔manual pairs accepted (≤ 50 m, ≥ 2 shared cycles agreeing within 1.5 m).
 - **Historical tier:** pre-monsoon trend 2000–2023 for **622 districts (79%)**; PRE/NOV anomaly series for 633. Sanity: Punjab falling (Sangrur 1.1, Barnala 1.0 m/yr; Fazilka rising, matching waterlogging), south Delhi falling 0.4–0.6 m/yr, Marathwada no long-term trend.
 - **Current tier (Aug 2026):** full 8, short-record 26, level-only 402, insufficient 347. Percentiles are rare because most telemetry started in 2023 (≤ 3 same-cycle years). Each year adds one; unpaired wells reach the 5-year short tier around 2028. The Oracle/WRIS route (450 districts at full rigour) stays the main upgrade path.
-- Known QA flags: single-well jumps such as Delhi West −11 m vs last year (probably a sensor). Add a per-well jump check in Phase 6.
 
 **Phase 2 validation (2026-10-01), SW season Jun 1–Sep 30, our gridded vs IMD published:**
 - Subdivision level: median difference 2 percentage points, r = 0.95, 75% within 5 pp. **The method and normals are sound.**
