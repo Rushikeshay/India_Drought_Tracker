@@ -86,7 +86,8 @@ Secondary marks: GW confidence tier, IN-GRES category and worst block, IDM droug
 | 4 | Stress layer (IN-GRES) | ✅ **Done 2026-10-01** (awaiting review). See §10 | 2025-26 edition joined incl. worst block; unmatched listed |
 | 5 | IDM drought layer | ✅ **Done 2026-10-01** (awaiting review): 775 districts weekly since 2021-07-14 | Weekly CDI grids → district stats with our own boundaries (back to Jul 2021); crosswalk of IDM names → LGD |
 | 6 | Classification + validation | ✅ **Done 2026-10-01** (awaiting review). See §10 | Both tiers; unit tests; back-test 2023 vs known droughts |
-| 6b | **Whiteboard: end-to-end data chain review** | ⏭ **Next** (agreed 2026-10-01): source → fetch → transform → output for every layer, with a worked district example, before building the site |
+| 6a | Status history (snapshots) | ✅ **Done 2026-10-01**: Jan/May/Aug/Nov from 2000, 107 snapshots, median 577 districts classified per snapshot |
+| 6b | **Row-level trace (backend accuracy check)** | ⏭ **Next**: follow real rows from each raw file through every transform to status, recomputing each step independently; runs as a test |
 | 7 | Front end v1 | — | Map, district panel, hidden-drought table, methods page; phone + laptop |
 | 8 | Automation | — | `refresh.yml` daily on Actions, unattended for 2 weeks |
 | 9 | Outlook | — | Scenario engine + ENSO/NMME; back-test |
@@ -103,7 +104,9 @@ Secondary marks: GW confidence tier, IN-GRES category and worst block, IDM droug
 - **Back-test 2023 (gridded rain Jun–Sep, GW Nov 2023 manual network):** 215 districts classified (fine 128, buffered 40, hidden 27, double 20). Jharkhand 19/24 rain-short, matching its 2023 drought. Hidden drought in Punjab (6) and Rajasthan (7). **Karnataka: only 15/31 districts rain-short, though 223 taluks were declared.** Seasonal departure misses dry-spell droughts like August 2023. Maharashtra, Gujarat and Bihar lack Nov 2023 manual readings on NWDP.
 - Groundwater: year-to-year changes of 10 m or more are **normal** (owner, 2026-10-01). No jump flag; only the physical envelope (−5 to 150 m) filters values.
 
-**Questions for the whiteboard review (6b):**
+**Status history (6a, 2026-10-01):** snapshots at groundwater cycle ends (Jan 31, May 31, Aug 31, Nov 30) since 2000, so users can look back (e.g. last May = mid-summer, Nov = post-monsoon). Rain = the season current or just completed at the snapshot (IMD official where archived for that exact window, else gridded); `rain_official` now keeps IMD's table on every snapshot/season-end date. Median 577 districts classified per snapshot. Real data gaps: May 2020 and May 2021 have 0 (no pre-monsoon survey during COVID), 2000 (too little prior history), Aug 2012 and Jan 2016 (survey rounds largely missing on NWDP), 2024+ thin. `web/data/status_history.json` is 4.4 MB; split or gzip in Phase 7.
+
+**Open questions:**
 1. Current-tier coverage (16 districts): accept, add a provisional GW signal for level-only districts (e.g. fell vs last year / vs decadal mean), or revisit Oracle/WRIS?
 2. Rain axis: add a dry-spell / SPI-3 criterion so droughts like Karnataka 2023 aren't missed?
 

@@ -115,7 +115,21 @@ def main(argv=None) -> int:
     log.info("IMD period %s to %s: %d districts", t.period_start.iloc[0], t.period_end.iloc[0], len(t))
     save_season_from_daily(t)
     save_season_from_cumulative(not a.no_download)
+    save_snapshot(t)
     return 0
+
+
+# Dates the history snapshots use (groundwater cycle ends) plus season ends.
+SNAPSHOT_DAYS = {(1, 31), (5, 31), (8, 31), (11, 30), (9, 30), (12, 31)}
+
+
+def save_snapshot(t: pd.DataFrame) -> None:
+    """Keep IMD's season-to-date table permanently when its period ends on a snapshot date."""
+    end = date.fromisoformat(t.period_end.iloc[0])
+    if (end.month, end.day) in SNAPSHOT_DAYS:
+        p = OUT / f"snapshot_{end}.csv"
+        t.to_csv(p, index=False)
+        log.info("saved snapshot %s", p.name)
 
 
 if __name__ == "__main__":
