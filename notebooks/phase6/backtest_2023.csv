@@ -1,784 +1,784 @@
-dist_lgd,district,state,rain_dep_pct,rain_category,rain_short,gw_tier,gw_percentile,gw_low,quadrant
-603,Nicobars,Andaman and Nicobar,,,,insufficient,,,
-632,North And Middle Andaman,Andaman and Nicobar,,,,insufficient,,,
-602,South Andamans,Andaman and Nicobar,,,,insufficient,,,
-745,Alluri Sitharama Raju,Andhra Pradesh,3.0,Normal,False,level_only,,,
-744,Anakapalli,Andhra Pradesh,-6.0,Normal,False,level_only,,,
-502,Anantapur,Andhra Pradesh,-9.0,Normal,False,level_only,,,
-753,Annamayya,Andhra Pradesh,-10.0,Normal,False,level_only,,,
-750,Bapatla,Andhra Pradesh,19.0,Normal,False,level_only,,,
-503,Chittoor,Andhra Pradesh,18.0,Normal,False,short,60.0,False,fine
-505,East Godavari,Andhra Pradesh,-9.0,Normal,False,level_only,,,
-748,Eluru,Andhra Pradesh,-9.0,Normal,False,level_only,,,
-506,Guntur,Andhra Pradesh,20.0,Excess,False,level_only,,,
-746,Kakinada,Andhra Pradesh,-25.0,Deficient,True,level_only,,,
-747,Konaseema,Andhra Pradesh,-38.0,Deficient,True,level_only,,,
-510,Krishna,Andhra Pradesh,24.0,Excess,False,level_only,,,
-511,Kurnool,Andhra Pradesh,-21.0,Deficient,True,level_only,,,
-755,Nandyal,Andhra Pradesh,-19.0,Normal,False,level_only,,,
-749,Ntr,Andhra Pradesh,-5.0,Normal,False,level_only,,,
-751,Palnadu,Andhra Pradesh,-9.0,Normal,False,level_only,,,
-743,Parvathipuram Manyam,Andhra Pradesh,4.0,Normal,False,level_only,,,
-517,Prakasam,Andhra Pradesh,-14.0,Normal,False,level_only,,,
-515,Spsr Nellore,Andhra Pradesh,-31.0,Deficient,True,level_only,,,
-754,Sri Sathya Sai,Andhra Pradesh,-9.0,Normal,False,short,68.0,False,fine
-519,Srikakulam,Andhra Pradesh,-8.0,Normal,False,level_only,,,
-752,Tirupati,Andhra Pradesh,8.0,Normal,False,level_only,,,
-520,Visakhapatanam,Andhra Pradesh,1.0,Normal,False,level_only,,,
-521,Vizianagaram,Andhra Pradesh,9.0,Normal,False,level_only,,,
-523,West Godavari,Andhra Pradesh,-20.0,Deficient,True,level_only,,,
-504,Y.S.R.,Andhra Pradesh,-22.0,Deficient,True,short,57.0,False,buffered
-628,Anjaw,Arunachal Pradesh,-47.0,Deficient,True,insufficient,,,
-229,Changlang,Arunachal Pradesh,-12.0,Normal,False,insufficient,,,
-230,Dibang Valley,Arunachal Pradesh,12.0,Normal,False,insufficient,,,
-231,East Kameng,Arunachal Pradesh,-15.0,Normal,False,insufficient,,,
-232,East Siang,Arunachal Pradesh,7.0,Normal,False,insufficient,,,
-766,Itanagar capital complex,Arunachal Pradesh,-1.0,Normal,False,insufficient,,,
-718,Kamle,Arunachal Pradesh,-38.0,Deficient,True,insufficient,,,
-677,Kra Daadi,Arunachal Pradesh,-58.0,Deficient,True,insufficient,,,
-233,Kurung Kumey,Arunachal Pradesh,-50.0,Deficient,True,insufficient,,,
-724,Leparada,Arunachal Pradesh,-18.0,Normal,False,insufficient,,,
-234,Lohit,Arunachal Pradesh,-34.0,Deficient,True,insufficient,,,
-666,Longding,Arunachal Pradesh,-9.0,Normal,False,insufficient,,,
-235,Lower Dibang Valley,Arunachal Pradesh,-15.0,Normal,False,insufficient,,,
-719,Lower Siang,Arunachal Pradesh,-10.0,Normal,False,insufficient,,,
-236,Lower Subansiri,Arunachal Pradesh,-29.0,Deficient,True,insufficient,,,
-678,Namsai,Arunachal Pradesh,-14.0,Normal,False,level_only,,,
-723,Pakke Kessang,Arunachal Pradesh,27.0,Excess,False,insufficient,,,
-237,Papum Pare,Arunachal Pradesh,-10.0,Normal,False,level_only,,,
-725,Shi Yomi,Arunachal Pradesh,-7.0,Normal,False,insufficient,,,
-679,Siang,Arunachal Pradesh,-22.0,Deficient,True,insufficient,,,
-238,Tawang,Arunachal Pradesh,-49.0,Deficient,True,insufficient,,,
-239,Tirap,Arunachal Pradesh,-8.0,Normal,False,insufficient,,,
-240,Upper Siang,Arunachal Pradesh,2.0,Normal,False,insufficient,,,
-241,Upper Subansiri,Arunachal Pradesh,-42.0,Deficient,True,insufficient,,,
-242,West Kameng,Arunachal Pradesh,-16.0,Normal,False,insufficient,,,
-243,West Siang,Arunachal Pradesh,-33.0,Deficient,True,insufficient,,,
-739,Bajali,Assam,13.0,Normal,False,level_only,,,
-616,Baksa,Assam,25.0,Excess,False,insufficient,,,
-280,Barpeta,Assam,15.0,Normal,False,insufficient,,,
-705,Biswanath,Assam,10.0,Normal,False,level_only,,,
-281,Bongaigaon,Assam,29.0,Excess,False,insufficient,,,
-282,Cachar,Assam,-12.0,Normal,False,insufficient,,,
-708,Charaideo,Assam,-9.0,Normal,False,insufficient,,,
-612,Chirang,Assam,13.0,Normal,False,insufficient,,,
-283,Darrang,Assam,-7.0,Normal,False,level_only,,,
-284,Dhemaji,Assam,-7.0,Normal,False,level_only,,,
-285,Dhubri,Assam,1.0,Normal,False,insufficient,,,
-286,Dibrugarh,Assam,-10.0,Normal,False,insufficient,,,
-299,Dima Hasao,Assam,-10.0,Normal,False,insufficient,,,
-287,Goalpara,Assam,11.0,Normal,False,insufficient,,,
-288,Golaghat,Assam,-0.0,Normal,False,insufficient,,,
-289,Hailakandi,Assam,-11.0,Normal,False,level_only,,,
-709,Hojai,Assam,-30.0,Deficient,True,insufficient,,,
-290,Jorhat,Assam,4.0,Normal,False,insufficient,,,
-291,Kamrup,Assam,-11.0,Normal,False,level_only,,,
-618,Kamrup Metro,Assam,-19.0,Normal,False,level_only,,,
-292,Karbi Anglong,Assam,-16.0,Normal,False,level_only,,,
-293,Karimganj,Assam,-7.0,Normal,False,insufficient,,,
-294,Kokrajhar,Assam,13.0,Normal,False,insufficient,,,
-295,Lakhimpur,Assam,-1.0,Normal,False,level_only,,,
-706,Majuli,Assam,-7.0,Normal,False,insufficient,,,
-296,Marigaon,Assam,-7.0,Normal,False,level_only,,,
-297,Nagaon,Assam,-14.0,Normal,False,level_only,,,
-298,Nalbari,Assam,-12.0,Normal,False,insufficient,,,
-300,Sivasagar,Assam,6.0,Normal,False,level_only,,,
-301,Sonitpur,Assam,-10.0,Normal,False,insufficient,,,
-707,South Salmara Mancachar,Assam,14.0,Normal,False,insufficient,,,
-756,Tamulpur,Assam,-15.0,Normal,False,level_only,,,
-302,Tinsukia,Assam,-12.0,Normal,False,insufficient,,,
-617,Udalguri,Assam,-16.0,Normal,False,level_only,,,
-710,West Karbi Anglong,Assam,-36.0,Deficient,True,insufficient,,,
-188,Araria,Bihar,-2.0,Normal,False,insufficient,,,
-611,Arwal,Bihar,-38.0,Deficient,True,insufficient,,,
-189,Aurangabad,Bihar,-40.0,Deficient,True,insufficient,,,
-190,Banka,Bihar,-3.0,Normal,False,insufficient,,,
-191,Begusarai,Bihar,-5.0,Normal,False,insufficient,,,
-192,Bhagalpur,Bihar,-14.0,Normal,False,insufficient,,,
-193,Bhojpur,Bihar,-41.0,Deficient,True,insufficient,,,
-194,Buxar,Bihar,-30.0,Deficient,True,insufficient,,,
-195,Darbhanga,Bihar,-20.0,Deficient,True,insufficient,,,
-196,Gaya,Bihar,-33.0,Deficient,True,insufficient,,,
-197,Gopalganj,Bihar,-27.0,Deficient,True,insufficient,,,
-198,Jamui,Bihar,-21.0,Deficient,True,level_only,,,
-199,Jehanabad,Bihar,-24.0,Deficient,True,insufficient,,,
-200,Kaimur (Bhabua),Bihar,-29.0,Deficient,True,insufficient,,,
-201,Katihar,Bihar,-8.0,Normal,False,insufficient,,,
-202,Khagaria,Bihar,10.0,Normal,False,insufficient,,,
-203,Kishanganj,Bihar,-18.0,Normal,False,insufficient,,,
-204,Lakhisarai,Bihar,-1.0,Normal,False,insufficient,,,
-205,Madhepura,Bihar,-7.0,Normal,False,insufficient,,,
-206,Madhubani,Bihar,-12.0,Normal,False,insufficient,,,
-207,Munger,Bihar,1.0,Normal,False,insufficient,,,
-208,Muzaffarpur,Bihar,-10.0,Normal,False,insufficient,,,
-209,Nalanda,Bihar,-25.0,Deficient,True,insufficient,,,
-210,Nawada,Bihar,-31.0,Deficient,True,insufficient,,,
-211,Pashchim Champaran,Bihar,-34.0,Deficient,True,insufficient,,,
-212,Patna,Bihar,-22.0,Deficient,True,level_only,,,
-213,Purbi Champaran,Bihar,-34.0,Deficient,True,insufficient,,,
-214,Purnia,Bihar,-12.0,Normal,False,level_only,,,
-215,Rohtas,Bihar,-36.0,Deficient,True,insufficient,,,
-216,Saharsa,Bihar,-21.0,Deficient,True,insufficient,,,
-217,Samastipur,Bihar,-23.0,Deficient,True,insufficient,,,
-218,Saran,Bihar,-18.0,Normal,False,insufficient,,,
-219,Sheikhpura,Bihar,-14.0,Normal,False,insufficient,,,
-220,Sheohar,Bihar,-25.0,Deficient,True,insufficient,,,
-221,Sitamarhi,Bihar,-47.0,Deficient,True,insufficient,,,
-222,Siwan,Bihar,-35.0,Deficient,True,insufficient,,,
-223,Supaul,Bihar,11.0,Normal,False,insufficient,,,
-224,Vaishali,Bihar,-17.0,Normal,False,insufficient,,,
-44,Chandigarh,Chandigarh,39.0,Excess,False,level_only,,,
-646,Balod,Chhattisgarh,-7.0,Normal,False,level_only,,,
-644,Baloda Bazar,Chhattisgarh,13.0,Normal,False,level_only,,,
-649,Balrampur,Chhattisgarh,-9.0,Normal,False,level_only,,,
-374,Bastar,Chhattisgarh,-15.0,Normal,False,level_only,,,
-650,Bemetara,Chhattisgarh,15.0,Normal,False,level_only,,,
-636,Bijapur,Chhattisgarh,2.0,Normal,False,insufficient,,,
-375,Bilaspur,Chhattisgarh,3.0,Normal,False,level_only,,,
-376,Dantewada,Chhattisgarh,-22.0,Deficient,True,insufficient,,,
-377,Dhamtari,Chhattisgarh,-9.0,Normal,False,level_only,,,
-378,Durg,Chhattisgarh,17.0,Normal,False,short,42.0,False,fine
-645,Gariyaband,Chhattisgarh,-7.0,Normal,False,level_only,,,
-734,Gaurella Pendra Marwahi,Chhattisgarh,-4.0,Normal,False,level_only,,,
-379,Janjgir-Champa,Chhattisgarh,6.0,Normal,False,level_only,,,
-380,Jashpur,Chhattisgarh,-18.0,Normal,False,short,38.0,False,fine
-382,Kabirdham,Chhattisgarh,2.0,Normal,False,level_only,,,
-381,Kanker,Chhattisgarh,-14.0,Normal,False,level_only,,,
-759,Khairgarh Chhuikhadan Gandai,Chhattisgarh,7.0,Normal,False,level_only,,,
-643,Kondagaon,Chhattisgarh,-17.0,Normal,False,level_only,,,
-383,Korba,Chhattisgarh,-16.0,Normal,False,insufficient,,,
-384,Korea,Chhattisgarh,-27.0,Deficient,True,insufficient,,,
-385,Mahasamund,Chhattisgarh,4.0,Normal,False,level_only,,,
-760,Manendragarh Chirimiri Bharatpur,Chhattisgarh,-21.0,Deficient,True,insufficient,,,
-761,Mohla Manpur Ambagarh Chouki,Chhattisgarh,-7.0,Normal,False,insufficient,,,
-647,Mungeli,Chhattisgarh,19.0,Normal,False,level_only,,,
-637,Narayanpur,Chhattisgarh,-12.0,Normal,False,insufficient,,,
-386,Raigarh,Chhattisgarh,-10.0,Normal,False,level_only,,,
-387,Raipur,Chhattisgarh,19.0,Normal,False,level_only,,,
-388,Rajnandgaon,Chhattisgarh,13.0,Normal,False,level_only,,,
-762,Sakti,Chhattisgarh,-1.0,Normal,False,level_only,,,
-763,Sarangarh Bilaigarh,Chhattisgarh,-1.0,Normal,False,level_only,,,
-642,Sukma,Chhattisgarh,3.0,Normal,False,insufficient,,,
-648,Surajpur,Chhattisgarh,-36.0,Deficient,True,level_only,,,
-389,Surguja,Chhattisgarh,-42.0,Deficient,True,level_only,,,
-465,Dadra And Nagar Haveli,"Dadra,Nagar Haveli,Daman and Diu",16.0,Normal,False,insufficient,,,
-463,Daman,"Dadra,Nagar Haveli,Daman and Diu",11.0,Normal,False,insufficient,,,
-464,Diu,"Dadra,Nagar Haveli,Daman and Diu",23.0,Excess,False,insufficient,,,
-77,Central,Delhi,-3.0,Normal,False,level_only,,,
-78,East,Delhi,10.0,Normal,False,level_only,,,
-79,New Delhi,Delhi,12.0,Normal,False,level_only,,,
-80,North,Delhi,5.0,Normal,False,level_only,,,
-81,North East,Delhi,-7.0,Normal,False,level_only,,,
-82,North West,Delhi,9.0,Normal,False,level_only,,,
-671,Shahdara,Delhi,-7.0,Normal,False,level_only,,,
-83,South,Delhi,21.0,Excess,False,level_only,,,
-670,South East,Delhi,22.0,Excess,False,level_only,,,
-84,South West,Delhi,-0.0,Normal,False,level_only,,,
-85,West,Delhi,9.0,Normal,False,level_only,,,
-551,North Goa,Goa,-1.0,Normal,False,full,71.0,False,fine
-552,South Goa,Goa,-5.0,Normal,False,full,50.0,False,fine
-438,Ahmadabad,Gujarat,-9.0,Normal,False,level_only,,,
-439,Amreli,Gujarat,6.0,Normal,False,level_only,,,
-440,Anand,Gujarat,1.0,Normal,False,level_only,,,
-672,Arvalli,Gujarat,-1.0,Normal,False,level_only,,,
-441,Banas Kantha,Gujarat,26.0,Excess,False,level_only,,,
-442,Bharuch,Gujarat,-17.0,Normal,False,level_only,,,
-443,Bhavnagar,Gujarat,14.0,Normal,False,level_only,,,
-676,Botad,Gujarat,30.0,Excess,False,level_only,,,
-668,Chhotaudepur,Gujarat,21.0,Excess,False,level_only,,,
-444,Dang,Gujarat,7.0,Normal,False,insufficient,,,
-674,Devbhumi Dwarka,Gujarat,54.0,Excess,False,level_only,,,
-445,Dohad,Gujarat,10.0,Normal,False,level_only,,,
-446,Gandhinagar,Gujarat,5.0,Normal,False,level_only,,,
-675,Gir Somnath,Gujarat,56.0,Excess,False,level_only,,,
-447,Jamnagar,Gujarat,42.0,Excess,False,level_only,,,
-448,Junagadh,Gujarat,84.0,Large Excess,False,level_only,,,
-449,Kachchh,Gujarat,63.0,Large Excess,False,level_only,,,
-450,Kheda,Gujarat,11.0,Normal,False,level_only,,,
-451,Mahesana,Gujarat,3.0,Normal,False,level_only,,,
-669,Mahisagar,Gujarat,11.0,Normal,False,level_only,,,
-673,Morbi,Gujarat,4.0,Normal,False,level_only,,,
-452,Narmada,Gujarat,1.0,Normal,False,level_only,,,
-453,Navsari,Gujarat,5.0,Normal,False,level_only,,,
-454,Panch Mahals,Gujarat,9.0,Normal,False,level_only,,,
-455,Patan,Gujarat,8.0,Normal,False,level_only,,,
-456,Porbandar,Gujarat,36.0,Excess,False,level_only,,,
-457,Rajkot,Gujarat,39.0,Excess,False,level_only,,,
-458,Sabar Kantha,Gujarat,6.0,Normal,False,level_only,,,
-459,Surat,Gujarat,-6.0,Normal,False,level_only,,,
-460,Surendranagar,Gujarat,-4.0,Normal,False,level_only,,,
-641,Tapi,Gujarat,1.0,Normal,False,insufficient,,,
-461,Vadodara,Gujarat,-12.0,Normal,False,level_only,,,
-462,Valsad,Gujarat,11.0,Normal,False,level_only,,,
-58,Ambala,Haryana,9.0,Normal,False,full,79.0,False,fine
-59,Bhiwani,Haryana,-32.0,Deficient,True,full,44.0,False,buffered
-701,Charki Dadri,Haryana,-12.0,Normal,False,full,67.0,False,fine
-60,Faridabad,Haryana,-3.0,Normal,False,short,10.0,True,hidden_drought
-61,Fatehabad,Haryana,-37.0,Deficient,True,short,15.0,True,double_drought
-62,Gurugram,Haryana,-3.0,Normal,False,short,56.0,False,fine
-63,Hisar,Haryana,-49.0,Deficient,True,full,96.0,False,buffered
-64,Jhajjar,Haryana,-4.0,Normal,False,full,70.0,False,fine
-65,Jind,Haryana,-9.0,Normal,False,full,22.0,False,fine
-66,Kaithal,Haryana,33.0,Excess,False,full,16.0,True,hidden_drought
-67,Karnal,Haryana,11.0,Normal,False,full,25.0,False,fine
-68,Kurukshetra,Haryana,32.0,Excess,False,full,18.0,True,hidden_drought
-69,Mahendragarh,Haryana,11.0,Normal,False,level_only,,,
-604,Nuh,Haryana,0.0,Normal,False,level_only,,,
-619,Palwal,Haryana,-8.0,Normal,False,short,29.0,False,fine
-70,Panchkula,Haryana,43.0,Excess,False,full,83.0,False,fine
-71,Panipat,Haryana,1.0,Normal,False,full,12.0,True,hidden_drought
-72,Rewari,Haryana,2.0,Normal,False,level_only,,,
-73,Rohtak,Haryana,2.0,Normal,False,full,57.0,False,fine
-74,Sirsa,Haryana,-14.0,Normal,False,full,28.0,False,fine
-75,Sonipat,Haryana,6.0,Normal,False,full,44.0,False,fine
-76,Yamunanagar,Haryana,28.0,Excess,False,full,77.0,False,fine
-15,Bilaspur,Himachal Pradesh,45.0,Excess,False,level_only,,,
-16,Chamba,Himachal Pradesh,-5.0,Normal,False,insufficient,,,
-17,Hamirpur,Himachal Pradesh,49.0,Excess,False,short,67.0,False,fine
-18,Kangra,Himachal Pradesh,30.0,Excess,False,full,40.0,False,fine
-19,Kinnaur,Himachal Pradesh,-5.0,Normal,False,insufficient,,,
-20,Kullu,Himachal Pradesh,32.0,Excess,False,level_only,,,
-21,Lahul And Spiti,Himachal Pradesh,-16.0,Normal,False,insufficient,,,
-22,Mandi,Himachal Pradesh,52.0,Excess,False,full,71.0,False,fine
-23,Shimla,Himachal Pradesh,42.0,Excess,False,level_only,,,
-24,Sirmaur,Himachal Pradesh,53.0,Excess,False,full,62.0,False,fine
-25,Solan,Himachal Pradesh,60.0,Large Excess,False,full,50.0,False,fine
-26,Una,Himachal Pradesh,20.0,Excess,False,full,60.0,False,fine
-1,Anantnag,Jammu and Kashmir,-14.0,Normal,False,insufficient,,,
-623,Bandipora,Jammu and Kashmir,-13.0,Normal,False,insufficient,,,
-3,Baramulla,Jammu and Kashmir,-27.0,Deficient,True,insufficient,,,
-2,Budgam,Jammu and Kashmir,-28.0,Deficient,True,insufficient,,,
-4,Doda,Jammu and Kashmir,1.0,Normal,False,insufficient,,,
-626,Ganderbal,Jammu and Kashmir,-1.0,Normal,False,level_only,,,
-5,Jammu,Jammu and Kashmir,50.0,Excess,False,level_only,,,
-7,Kathua,Jammu and Kashmir,31.0,Excess,False,level_only,,,
-620,Kishtwar,Jammu and Kashmir,-17.0,Normal,False,insufficient,,,
-622,Kulgam,Jammu and Kashmir,-10.0,Normal,False,insufficient,,,
-8,Kupwara,Jammu and Kashmir,-46.0,Deficient,True,insufficient,,,
-10,Poonch,Jammu and Kashmir,-26.0,Deficient,True,level_only,,,
-11,Pulwama,Jammu and Kashmir,-9.0,Normal,False,insufficient,,,
-12,Rajouri,Jammu and Kashmir,37.0,Excess,False,level_only,,,
-621,Ramban,Jammu and Kashmir,-12.0,Normal,False,insufficient,,,
-627,Reasi,Jammu and Kashmir,83.0,Large Excess,False,level_only,,,
-624,Samba,Jammu and Kashmir,28.0,Excess,False,level_only,,,
-625,Shopian,Jammu and Kashmir,-35.0,Deficient,True,insufficient,,,
-13,Srinagar,Jammu and Kashmir,4.0,Normal,False,level_only,,,
-14,Udhampur,Jammu and Kashmir,9.0,Normal,False,level_only,,,
-322,Bokaro,Jharkhand,-27.0,Deficient,True,full,46.0,False,buffered
-323,Chatra,Jharkhand,-35.0,Deficient,True,full,50.0,False,buffered
-324,Deoghar,Jharkhand,-21.0,Deficient,True,full,43.0,False,buffered
-325,Dhanbad,Jharkhand,-28.0,Deficient,True,full,27.0,False,buffered
-326,Dumka,Jharkhand,-33.0,Deficient,True,full,39.0,False,buffered
-327,East Singhbum,Jharkhand,-26.0,Deficient,True,full,52.0,False,buffered
-328,Garhwa,Jharkhand,-34.0,Deficient,True,full,45.0,False,buffered
-329,Giridih,Jharkhand,-26.0,Deficient,True,full,47.0,False,buffered
-330,Godda,Jharkhand,-7.0,Normal,False,full,50.0,False,fine
-331,Gumla,Jharkhand,-26.0,Deficient,True,full,90.0,False,buffered
-332,Hazaribagh,Jharkhand,-41.0,Deficient,True,short,48.0,False,buffered
-333,Jamtara,Jharkhand,-30.0,Deficient,True,short,17.0,True,double_drought
-606,Khunti,Jharkhand,-10.0,Normal,False,full,65.0,False,fine
-334,Koderma,Jharkhand,-26.0,Deficient,True,short,20.0,True,double_drought
-335,Latehar,Jharkhand,-23.0,Deficient,True,full,35.0,False,buffered
-336,Lohardaga,Jharkhand,-36.0,Deficient,True,full,10.0,True,double_drought
-337,Pakur,Jharkhand,-26.0,Deficient,True,full,13.0,True,double_drought
-338,Palamu,Jharkhand,-31.0,Deficient,True,full,42.0,False,buffered
-607,Ramgarh,Jharkhand,-20.0,Deficient,True,short,29.0,False,buffered
-339,Ranchi,Jharkhand,-23.0,Deficient,True,full,55.0,False,buffered
-340,Sahebganj,Jharkhand,4.0,Normal,False,full,29.0,False,fine
-341,Saraikela Kharsawan,Jharkhand,-25.0,Deficient,True,short,77.0,False,buffered
-342,Simdega,Jharkhand,-5.0,Normal,False,full,75.0,False,fine
-343,West Singhbhum,Jharkhand,-2.0,Normal,False,full,65.0,False,fine
-524,Bagalkote,Karnataka,-28.0,Deficient,True,full,27.0,False,buffered
-528,Ballari,Karnataka,-22.0,Deficient,True,full,19.0,True,double_drought
-527,Belagavi,Karnataka,-20.0,Deficient,True,full,20.0,True,double_drought
-526,Bengaluru Rural,Karnataka,-17.0,Normal,False,full,48.0,False,fine
-525,Bengaluru Urban,Karnataka,-26.0,Deficient,True,full,25.0,False,buffered
-529,Bidar,Karnataka,14.0,Normal,False,full,27.0,False,fine
-531,Chamarajanagara,Karnataka,-17.0,Normal,False,full,32.0,False,fine
-630,Chikkaballapura,Karnataka,9.0,Normal,False,full,78.0,False,fine
-532,Chikkamagaluru,Karnataka,-39.0,Deficient,True,full,10.0,True,double_drought
-533,Chitradurga,Karnataka,-9.0,Normal,False,full,35.0,False,fine
-534,Dakshina Kannada,Karnataka,-26.0,Deficient,True,full,40.0,False,buffered
-535,Davangere,Karnataka,-29.0,Deficient,True,full,20.0,True,double_drought
-536,Dharwad,Karnataka,-9.0,Normal,False,full,42.0,False,fine
-537,Gadag,Karnataka,-20.0,Deficient,True,full,73.0,False,buffered
-539,Hassan,Karnataka,-20.0,Deficient,True,full,20.0,True,double_drought
-540,Haveri,Karnataka,-30.0,Deficient,True,full,40.0,False,buffered
-538,Kalaburagi,Karnataka,8.0,Normal,False,full,20.0,True,hidden_drought
-541,Kodagu,Karnataka,-30.0,Deficient,True,full,20.0,True,double_drought
-542,Kolar,Karnataka,-2.0,Normal,False,full,50.0,False,fine
-543,Koppal,Karnataka,-7.0,Normal,False,full,58.0,False,fine
-544,Mandya,Karnataka,15.0,Normal,False,full,19.0,True,hidden_drought
-545,Mysuru,Karnataka,-25.0,Deficient,True,full,19.0,True,double_drought
-546,Raichur,Karnataka,-10.0,Normal,False,full,33.0,False,fine
-631,Ramanagara,Karnataka,-34.0,Deficient,True,full,38.0,False,buffered
-547,Shivamogga,Karnataka,-27.0,Deficient,True,full,7.0,True,double_drought
-548,Tumakuru,Karnataka,-15.0,Normal,False,full,35.0,False,fine
-549,Udupi,Karnataka,-30.0,Deficient,True,full,4.0,True,double_drought
-550,Uttara Kannada,Karnataka,-18.0,Normal,False,full,5.0,True,hidden_drought
-738,Vijayanagar,Karnataka,-15.0,Normal,False,full,40.0,False,fine
-530,Vijayapura,Karnataka,-18.0,Normal,False,full,24.0,False,fine
-635,Yadgir,Karnataka,4.0,Normal,False,full,30.0,False,fine
-554,Alappuzha,Kerala,-8.0,Normal,False,level_only,,,
-555,Ernakulam,Kerala,-18.0,Normal,False,level_only,,,
-556,Idukki,Kerala,-16.0,Normal,False,level_only,,,
-557,Kannur,Kerala,-32.0,Deficient,True,level_only,,,
-558,Kasaragod,Kerala,-27.0,Deficient,True,level_only,,,
-559,Kollam,Kerala,-27.0,Deficient,True,level_only,,,
-560,Kottayam,Kerala,-13.0,Normal,False,level_only,,,
-561,Kozhikode,Kerala,-24.0,Deficient,True,level_only,,,
-562,Malappuram,Kerala,-28.0,Deficient,True,level_only,,,
-563,Palakkad,Kerala,-28.0,Deficient,True,level_only,,,
-564,Pathanamthitta,Kerala,-21.0,Deficient,True,level_only,,,
-565,Thiruvananthapuram,Kerala,-30.0,Deficient,True,level_only,,,
-566,Thrissur,Kerala,-25.0,Deficient,True,level_only,,,
-567,Wayanad,Kerala,-13.0,Normal,False,level_only,,,
-6,Kargil,Ladakh,-64.0,Large Deficient,True,insufficient,,,
-9,Leh Ladakh,Ladakh,-59.0,Deficient,True,level_only,,,
-553,Lakshadweep District,Lakshadweep,,,,insufficient,,,
-667,Agar Malwa,Madhya Pradesh,-6.0,Normal,False,level_only,,,
-639,Alirajpur,Madhya Pradesh,23.0,Excess,False,level_only,,,
-390,Anuppur,Madhya Pradesh,1.0,Normal,False,level_only,,,
-391,Ashoknagar,Madhya Pradesh,-19.0,Normal,False,level_only,,,
-392,Balaghat,Madhya Pradesh,4.0,Normal,False,level_only,,,
-393,Barwani,Madhya Pradesh,10.0,Normal,False,level_only,,,
-394,Betul,Madhya Pradesh,6.0,Normal,False,level_only,,,
-395,Bhind,Madhya Pradesh,34.0,Excess,False,level_only,,,
-396,Bhopal,Madhya Pradesh,-12.0,Normal,False,level_only,,,
-397,Burhanpur,Madhya Pradesh,18.0,Normal,False,insufficient,,,
-398,Chhatarpur,Madhya Pradesh,-13.0,Normal,False,level_only,,,
-399,Chhindwara,Madhya Pradesh,15.0,Normal,False,level_only,,,
-400,Damoh,Madhya Pradesh,-10.0,Normal,False,level_only,,,
-401,Datia,Madhya Pradesh,7.0,Normal,False,level_only,,,
-402,Dewas,Madhya Pradesh,17.0,Normal,False,level_only,,,
-403,Dhar,Madhya Pradesh,20.0,Excess,False,level_only,,,
-404,Dindori,Madhya Pradesh,10.0,Normal,False,level_only,,,
-405,East Nimar,Madhya Pradesh,13.0,Normal,False,level_only,,,
-406,Guna,Madhya Pradesh,-25.0,Deficient,True,level_only,,,
-407,Gwalior,Madhya Pradesh,-7.0,Normal,False,level_only,,,
-408,Harda,Madhya Pradesh,18.0,Normal,False,level_only,,,
-410,Indore,Madhya Pradesh,28.0,Excess,False,level_only,,,
-411,Jabalpur,Madhya Pradesh,5.0,Normal,False,level_only,,,
-412,Jhabua,Madhya Pradesh,28.0,Excess,False,level_only,,,
-413,Katni,Madhya Pradesh,-1.0,Normal,False,level_only,,,
-414,Khargone,Madhya Pradesh,22.0,Excess,False,level_only,,,
-415,Mandla,Madhya Pradesh,1.0,Normal,False,level_only,,,
-416,Mandsaur,Madhya Pradesh,-11.0,Normal,False,level_only,,,
-417,Morena,Madhya Pradesh,-5.0,Normal,False,insufficient,,,
-409,Narmadapuram,Madhya Pradesh,12.0,Normal,False,insufficient,,,
-418,Narsinghpur,Madhya Pradesh,16.0,Normal,False,level_only,,,
-419,Neemuch,Madhya Pradesh,-23.0,Deficient,True,level_only,,,
-722,Niwari,Madhya Pradesh,7.0,Normal,False,level_only,,,
-420,Panna,Madhya Pradesh,-17.0,Normal,False,level_only,,,
-421,Raisen,Madhya Pradesh,-2.0,Normal,False,insufficient,,,
-422,Rajgarh,Madhya Pradesh,-17.0,Normal,False,level_only,,,
-423,Ratlam,Madhya Pradesh,25.0,Excess,False,level_only,,,
-424,Rewa,Madhya Pradesh,-30.0,Deficient,True,level_only,,,
-425,Sagar,Madhya Pradesh,-5.0,Normal,False,level_only,,,
-426,Satna,Madhya Pradesh,-31.0,Deficient,True,level_only,,,
-427,Sehore,Madhya Pradesh,1.0,Normal,False,level_only,,,
-428,Seoni,Madhya Pradesh,19.0,Normal,False,level_only,,,
-429,Shahdol,Madhya Pradesh,-18.0,Normal,False,level_only,,,
-430,Shajapur,Madhya Pradesh,-21.0,Deficient,True,level_only,,,
-431,Sheopur,Madhya Pradesh,-8.0,Normal,False,level_only,,,
-432,Shivpuri,Madhya Pradesh,-4.0,Normal,False,level_only,,,
-433,Sidhi,Madhya Pradesh,-28.0,Deficient,True,level_only,,,
-638,Singrauli,Madhya Pradesh,-22.0,Deficient,True,level_only,,,
-434,Tikamgarh,Madhya Pradesh,-0.0,Normal,False,level_only,,,
-435,Ujjain,Madhya Pradesh,18.0,Normal,False,level_only,,,
-436,Umaria,Madhya Pradesh,4.0,Normal,False,level_only,,,
-437,Vidisha,Madhya Pradesh,-14.0,Normal,False,level_only,,,
-466,Ahmednagar,Maharashtra,-12.0,Normal,False,level_only,,,
-467,Akola,Maharashtra,-23.0,Deficient,True,level_only,,,
-468,Amravati,Maharashtra,-9.0,Normal,False,level_only,,,
-469,Aurangabad,Maharashtra,-15.0,Normal,False,level_only,,,
-470,Beed,Maharashtra,-24.0,Deficient,True,level_only,,,
-471,Bhandara,Maharashtra,-3.0,Normal,False,level_only,,,
-472,Buldhana,Maharashtra,-15.0,Normal,False,level_only,,,
-473,Chandrapur,Maharashtra,6.0,Normal,False,level_only,,,
-474,Dhule,Maharashtra,-1.0,Normal,False,level_only,,,
-475,Gadchiroli,Maharashtra,3.0,Normal,False,level_only,,,
-476,Gondia,Maharashtra,-2.0,Normal,False,level_only,,,
-477,Hingoli,Maharashtra,-16.0,Normal,False,insufficient,,,
-478,Jalgaon,Maharashtra,2.0,Normal,False,level_only,,,
-479,Jalna,Maharashtra,-24.0,Deficient,True,level_only,,,
-480,Kolhapur,Maharashtra,-23.0,Deficient,True,level_only,,,
-481,Latur,Maharashtra,-6.0,Normal,False,level_only,,,
-482,Mumbai,Maharashtra,21.0,Excess,False,insufficient,,,
-483,Mumbai Suburban,Maharashtra,22.0,Excess,False,insufficient,,,
-484,Nagpur,Maharashtra,7.0,Normal,False,level_only,,,
-485,Nanded,Maharashtra,28.0,Excess,False,level_only,,,
-486,Nandurbar,Maharashtra,-7.0,Normal,False,level_only,,,
-487,Nashik,Maharashtra,-10.0,Normal,False,level_only,,,
-488,Osmanabad,Maharashtra,-17.0,Normal,False,insufficient,,,
-665,Palghar,Maharashtra,21.0,Excess,False,insufficient,,,
-489,Parbhani,Maharashtra,-17.0,Normal,False,level_only,,,
-490,Pune,Maharashtra,-31.0,Deficient,True,level_only,,,
-491,Raigad,Maharashtra,10.0,Normal,False,level_only,,,
-492,Ratnagiri,Maharashtra,-1.0,Normal,False,level_only,,,
-493,Sangli,Maharashtra,-38.0,Deficient,True,insufficient,,,
-494,Satara,Maharashtra,-45.0,Deficient,True,level_only,,,
-495,Sindhudurg,Maharashtra,-2.0,Normal,False,level_only,,,
-496,Solapur,Maharashtra,-28.0,Deficient,True,level_only,,,
-497,Thane,Maharashtra,21.0,Excess,False,insufficient,,,
-498,Wardha,Maharashtra,3.0,Normal,False,level_only,,,
-499,Washim,Maharashtra,-10.0,Normal,False,level_only,,,
-500,Yavatmal,Maharashtra,12.0,Normal,False,level_only,,,
-252,Bishnupur,Manipur,-49.0,Deficient,True,insufficient,,,
-253,Chandel,Manipur,-57.0,Deficient,True,insufficient,,,
-254,Churachandpur,Manipur,-62.0,Large Deficient,True,insufficient,,,
-255,Imphal East,Manipur,-26.0,Deficient,True,insufficient,,,
-256,Imphal West,Manipur,-32.0,Deficient,True,insufficient,,,
-713,Jiribam,Manipur,-17.0,Normal,False,insufficient,,,
-711,Kakching,Manipur,-52.0,Deficient,True,insufficient,,,
-717,Kamjong,Manipur,-22.0,Deficient,True,insufficient,,,
-712,Kangpokpi,Manipur,-23.0,Deficient,True,insufficient,,,
-714,Noney,Manipur,-32.0,Deficient,True,insufficient,,,
-715,Pherzawl,Manipur,-63.0,Large Deficient,True,insufficient,,,
-257,Senapati,Manipur,-16.0,Normal,False,insufficient,,,
-258,Tamenglong,Manipur,-9.0,Normal,False,insufficient,,,
-716,Tengnoupal,Manipur,-42.0,Deficient,True,insufficient,,,
-259,Thoubal,Manipur,-41.0,Deficient,True,insufficient,,,
-260,Ukhrul,Manipur,-15.0,Normal,False,insufficient,,,
-273,East Garo Hills,Meghalaya,-3.0,Normal,False,insufficient,,,
-657,East Jaintia Hills,Meghalaya,-44.0,Deficient,True,level_only,,,
-274,East Khasi Hills,Meghalaya,-29.0,Deficient,True,level_only,,,
-740,Eastern West Khasi Hills,Meghalaya,2.0,Normal,False,insufficient,,,
-656,North Garo Hills,Meghalaya,17.0,Normal,False,level_only,,,
-276,Ri Bhoi,Meghalaya,-21.0,Deficient,True,level_only,,,
-277,South Garo Hills,Meghalaya,-13.0,Normal,False,insufficient,,,
-663,South West Garo Hills,Meghalaya,37.0,Excess,False,insufficient,,,
-658,South West Khasi Hills,Meghalaya,8.0,Normal,False,insufficient,,,
-278,West Garo Hills,Meghalaya,27.0,Excess,False,insufficient,,,
-275,West Jaintia Hills,Meghalaya,-42.0,Deficient,True,insufficient,,,
-279,West Khasi Hills,Meghalaya,-4.0,Normal,False,insufficient,,,
-261,Aizawl,Mizoram,-38.0,Deficient,True,insufficient,,,
-262,Champhai,Mizoram,-42.0,Deficient,True,insufficient,,,
-726,Hnahthial,Mizoram,40.0,Excess,False,insufficient,,,
-728,Khawzawl,Mizoram,-43.0,Deficient,True,insufficient,,,
-263,Kolasib,Mizoram,-13.0,Normal,False,insufficient,,,
-264,Lawngtlai,Mizoram,87.0,Large Excess,False,insufficient,,,
-265,Lunglei,Mizoram,-20.0,Deficient,True,insufficient,,,
-266,Mamit,Mizoram,-19.0,Normal,False,insufficient,,,
-267,Saiha,Mizoram,221.0,Large Excess,False,insufficient,,,
-727,Saitual,Mizoram,-69.0,Large Deficient,True,insufficient,,,
-268,Serchhip,Mizoram,-21.0,Deficient,True,insufficient,,,
-758,Chumoukedima,Nagaland,-11.0,Normal,False,insufficient,,,
-244,Dimapur,Nagaland,-5.0,Normal,False,level_only,,,
-614,Kiphire,Nagaland,19.0,Normal,False,insufficient,,,
-245,Kohima,Nagaland,-5.0,Normal,False,insufficient,,,
-615,Longleng,Nagaland,13.0,Normal,False,insufficient,,,
-246,Mokokchung,Nagaland,20.0,Excess,False,insufficient,,,
-247,Mon,Nagaland,3.0,Normal,False,insufficient,,,
-764,Niuland,Nagaland,-2.0,Normal,False,insufficient,,,
-736,Noklak,Nagaland,21.0,Excess,False,insufficient,,,
-613,Peren,Nagaland,-10.0,Normal,False,insufficient,,,
-248,Phek,Nagaland,6.0,Normal,False,insufficient,,,
-765,Shamator,Nagaland,21.0,Excess,False,insufficient,,,
-757,Tseminyu,Nagaland,32.0,Excess,False,insufficient,,,
-249,Tuensang,Nagaland,25.0,Excess,False,insufficient,,,
-250,Wokha,Nagaland,28.0,Excess,False,insufficient,,,
-251,Zunheboto,Nagaland,22.0,Excess,False,insufficient,,,
-344,Anugul,Odisha,10.0,Normal,False,full,70.0,False,fine
-345,Balangir,Odisha,3.0,Normal,False,full,80.0,False,fine
-346,Baleshwar,Odisha,-11.0,Normal,False,full,52.0,False,fine
-347,Bargarh,Odisha,6.0,Normal,False,short,78.0,False,fine
-348,Bhadrak,Odisha,-12.0,Normal,False,short,81.0,False,fine
-349,Boudh,Odisha,12.0,Normal,False,full,49.0,False,fine
-350,Cuttack,Odisha,-12.0,Normal,False,level_only,,,
-351,Deogarh,Odisha,-3.0,Normal,False,insufficient,,,
-352,Dhenkanal,Odisha,-1.0,Normal,False,short,18.0,True,hidden_drought
-353,Gajapati,Odisha,-7.0,Normal,False,full,20.0,True,hidden_drought
-354,Ganjam,Odisha,-4.0,Normal,False,full,20.0,False,fine
-355,Jagatsinghapur,Odisha,-31.0,Deficient,True,insufficient,,,
-356,Jajapur,Odisha,-10.0,Normal,False,short,33.0,False,fine
-357,Jharsuguda,Odisha,10.0,Normal,False,level_only,,,
-358,Kalahandi,Odisha,1.0,Normal,False,level_only,,,
-359,Kandhamal,Odisha,7.0,Normal,False,full,100.0,False,fine
-360,Kendrapara,Odisha,-30.0,Deficient,True,level_only,,,
-361,Kendujhar,Odisha,-1.0,Normal,False,short,6.0,True,hidden_drought
-362,Khordha,Odisha,-9.0,Normal,False,full,20.0,True,hidden_drought
-363,Koraput,Odisha,6.0,Normal,False,full,50.0,False,fine
-364,Malkangiri,Odisha,18.0,Normal,False,short,85.0,False,fine
-365,Mayurbhanj,Odisha,-11.0,Normal,False,full,45.0,False,fine
-366,Nabarangpur,Odisha,-18.0,Normal,False,level_only,,,
-367,Nayagarh,Odisha,1.0,Normal,False,full,29.0,False,fine
-368,Nuapada,Odisha,-7.0,Normal,False,short,83.0,False,fine
-369,Puri,Odisha,-22.0,Deficient,True,full,8.0,True,double_drought
-370,Rayagada,Odisha,-4.0,Normal,False,level_only,,,
-371,Sambalpur,Odisha,5.0,Normal,False,insufficient,,,
-372,Sonepur,Odisha,6.0,Normal,False,short,92.0,False,fine
-373,Sundargarh,Odisha,-4.0,Normal,False,insufficient,,,
-598,Karaikal,Puducherry,-24.0,Deficient,True,level_only,,,
-599,Mahe,Puducherry,-24.0,Deficient,True,insufficient,,,
-600,Pondicherry,Puducherry,52.0,Excess,False,full,32.0,False,fine
-601,Yanam,Puducherry,-36.0,Deficient,True,insufficient,,,
-27,Amritsar,Punjab,27.0,Excess,False,short,34.0,False,fine
-605,Barnala,Punjab,8.0,Normal,False,short,0.0,True,hidden_drought
-28,Bathinda,Punjab,-33.0,Deficient,True,full,0.0,True,double_drought
-29,Faridkot,Punjab,4.0,Normal,False,full,9.0,True,hidden_drought
-30,Fatehgarh Sahib,Punjab,7.0,Normal,False,full,23.0,False,fine
-651,Fazilka,Punjab,-26.0,Deficient,True,full,20.0,True,double_drought
-31,Ferozepur,Punjab,21.0,Excess,False,short,70.0,False,fine
-32,Gurdaspur,Punjab,25.0,Excess,False,full,35.0,False,fine
-33,Hoshiarpur,Punjab,10.0,Normal,False,full,56.0,False,fine
-34,Jalandhar,Punjab,-9.0,Normal,False,full,18.0,True,hidden_drought
-35,Kapurthala,Punjab,9.0,Normal,False,full,18.0,True,hidden_drought
-36,Ludhiana,Punjab,-6.0,Normal,False,full,13.0,True,hidden_drought
-737,Malerkotla,Punjab,-25.0,Deficient,True,level_only,,,
-37,Mansa,Punjab,-36.0,Deficient,True,short,5.0,True,double_drought
-38,Moga,Punjab,-15.0,Normal,False,short,5.0,True,hidden_drought
-662,Pathankot,Punjab,25.0,Excess,False,full,40.0,False,fine
-41,Patiala,Punjab,11.0,Normal,False,full,51.0,False,fine
-42,Rupnagar,Punjab,41.0,Excess,False,full,70.0,False,fine
-608,S.A.S Nagar,Punjab,17.0,Normal,False,short,87.0,False,fine
-43,Sangrur,Punjab,-27.0,Deficient,True,short,0.0,True,double_drought
-40,Shahid Bhagat Singh Nagar,Punjab,9.0,Normal,False,full,36.0,False,fine
-39,Sri Muktsar Sahib,Punjab,-25.0,Deficient,True,full,44.0,False,buffered
-609,Tarn Taran,Punjab,5.0,Normal,False,short,23.0,False,fine
-86,Ajmer,Rajasthan,25.0,Excess,False,full,60.0,False,fine
-87,Alwar,Rajasthan,-13.0,Normal,False,full,21.0,False,fine
-776,Anoopgarh,Rajasthan,41.0,Excess,False,full,80.0,False,fine
-775,Balotra,Rajasthan,83.0,Large Excess,False,full,45.0,False,fine
-88,Banswara,Rajasthan,15.0,Normal,False,full,35.0,False,fine
-89,Baran,Rajasthan,-30.0,Deficient,True,full,39.0,False,buffered
-90,Barmer,Rajasthan,74.0,Large Excess,False,full,50.0,False,fine
-774,Beawar,Rajasthan,11.0,Normal,False,full,77.0,False,fine
-91,Bharatpur,Rajasthan,13.0,Normal,False,full,19.0,True,hidden_drought
-92,Bhilwara,Rajasthan,-7.0,Normal,False,full,78.0,False,fine
-93,Bikaner,Rajasthan,27.0,Excess,False,full,64.0,False,fine
-94,Bundi,Rajasthan,-20.0,Deficient,True,full,38.0,False,buffered
-95,Chittorgarh,Rajasthan,-15.0,Normal,False,full,35.0,False,fine
-96,Churu,Rajasthan,1.0,Normal,False,full,34.0,False,fine
-97,Dausa,Rajasthan,11.0,Normal,False,full,0.0,True,hidden_drought
-767,Deeg,Rajasthan,-0.0,Normal,False,full,23.0,False,fine
-98,Dholpur,Rajasthan,10.0,Normal,False,full,85.0,False,fine
-768,Didwana Kuchaman,Rajasthan,38.0,Excess,False,full,54.0,False,fine
-769,Dudu,Rajasthan,6.0,Normal,False,short,80.0,False,fine
-99,Dungarpur,Rajasthan,-26.0,Deficient,True,full,24.0,False,buffered
-100,Ganganagar,Rajasthan,41.0,Excess,False,full,92.0,False,fine
-771,Gangapurcity,Rajasthan,10.0,Normal,False,full,54.0,False,fine
-101,Hanumangarh,Rajasthan,-17.0,Normal,False,full,3.0,True,hidden_drought
-102,Jaipur,Rajasthan,-23.0,Deficient,True,full,22.0,False,buffered
-783,Jaipur Gramin,Rajasthan,1.0,Normal,False,full,43.0,False,fine
-103,Jaisalmer,Rajasthan,22.0,Excess,False,full,80.0,False,fine
-104,Jalore,Rajasthan,87.0,Large Excess,False,short,61.0,False,fine
-105,Jhalawar,Rajasthan,-24.0,Deficient,True,full,38.0,False,buffered
-106,Jhunjhunu,Rajasthan,17.0,Normal,False,full,0.0,True,hidden_drought
-107,Jodhpur,Rajasthan,36.0,Excess,False,full,90.0,False,fine
-778,Jodhpur Gramin,Rajasthan,24.0,Excess,False,full,87.0,False,fine
-108,Karauli,Rajasthan,3.0,Normal,False,full,53.0,False,fine
-781,Kekri,Rajasthan,6.0,Normal,False,full,72.0,False,fine
-770,Khairthal-Tijara,Rajasthan,-8.0,Normal,False,full,0.0,True,hidden_drought
-109,Kota,Rajasthan,-20.0,Deficient,True,full,52.0,False,buffered
-782,Kotputli-Behror,Rajasthan,-0.0,Normal,False,short,0.0,True,hidden_drought
-110,Nagaur,Rajasthan,25.0,Excess,False,short,87.0,False,fine
-773,Neem Ka Thana,Rajasthan,18.0,Normal,False,level_only,,,
-111,Pali,Rajasthan,66.0,Large Excess,False,full,86.0,False,fine
-772,Phalodi,Rajasthan,55.0,Excess,False,level_only,,,
-629,Pratapgarh,Rajasthan,14.0,Normal,False,full,58.0,False,fine
-112,Rajsamand,Rajasthan,34.0,Excess,False,full,62.0,False,fine
-777,Salumbar,Rajasthan,-3.0,Normal,False,full,21.0,False,fine
-779,Sanchor,Rajasthan,66.0,Large Excess,False,insufficient,,,
-113,Sawai Madhopur,Rajasthan,-9.0,Normal,False,full,46.0,False,fine
-780,Shahpura,Rajasthan,-17.0,Normal,False,full,60.0,False,fine
-114,Sikar,Rajasthan,19.0,Normal,False,full,0.0,True,hidden_drought
-115,Sirohi,Rajasthan,58.0,Excess,False,full,76.0,False,fine
-116,Tonk,Rajasthan,1.0,Normal,False,full,48.0,False,fine
-117,Udaipur,Rajasthan,13.0,Normal,False,full,72.0,False,fine
-225,Gangtok,Sikkim,-6.0,Normal,False,insufficient,,,
-228,Gyalshing,Sikkim,4.0,Normal,False,insufficient,,,
-226,Mangan,Sikkim,-8.0,Normal,False,insufficient,,,
-227,Namchi,Sikkim,-0.0,Normal,False,insufficient,,,
-741,Pakyong,Sikkim,-8.0,Normal,False,insufficient,,,
-742,Soreng,Sikkim,-10.0,Normal,False,insufficient,,,
-610,Ariyalur,Tamil Nadu,-17.0,Normal,False,short,29.0,False,fine
-730,Chengalpattu,Tamil Nadu,66.0,Large Excess,False,level_only,,,
-568,Chennai,Tamil Nadu,27.0,Excess,False,level_only,,,
-569,Coimbatore,Tamil Nadu,-24.0,Deficient,True,full,45.0,False,buffered
-570,Cuddalore,Tamil Nadu,5.0,Normal,False,full,18.0,True,hidden_drought
-571,Dharmapuri,Tamil Nadu,14.0,Normal,False,level_only,,,
-572,Dindigul,Tamil Nadu,-10.0,Normal,False,full,61.0,False,fine
-573,Erode,Tamil Nadu,-4.0,Normal,False,full,51.0,False,fine
-729,Kallakurichi,Tamil Nadu,21.0,Excess,False,full,40.0,False,fine
-574,Kanchipuram,Tamil Nadu,59.0,Excess,False,level_only,,,
-575,Kanniyakumari,Tamil Nadu,-41.0,Deficient,True,level_only,,,
-576,Karur,Tamil Nadu,-16.0,Normal,False,full,75.0,False,fine
-577,Krishnagiri,Tamil Nadu,2.0,Normal,False,full,56.0,False,fine
-578,Madurai,Tamil Nadu,-5.0,Normal,False,full,82.0,False,fine
-735,Mayiladuthurai,Tamil Nadu,-24.0,Deficient,True,full,40.0,False,buffered
-579,Nagapattinam,Tamil Nadu,-37.0,Deficient,True,full,17.0,True,double_drought
-580,Namakkal,Tamil Nadu,1.0,Normal,False,full,76.0,False,fine
-581,Perambalur,Tamil Nadu,-21.0,Deficient,True,full,55.0,False,buffered
-582,Pudukkottai,Tamil Nadu,-14.0,Normal,False,full,37.0,False,fine
-583,Ramanathapuram,Tamil Nadu,-26.0,Deficient,True,full,42.0,False,buffered
-731,Ranipet,Tamil Nadu,53.0,Excess,False,full,77.0,False,fine
-584,Salem,Tamil Nadu,-0.0,Normal,False,full,42.0,False,fine
-585,Sivaganga,Tamil Nadu,1.0,Normal,False,full,52.0,False,fine
-733,Tenkasi,Tamil Nadu,-57.0,Deficient,True,short,47.0,False,buffered
-586,Thanjavur,Tamil Nadu,-8.0,Normal,False,full,30.0,False,fine
-587,The Nilgiris,Tamil Nadu,20.0,Excess,False,full,40.0,False,fine
-588,Theni,Tamil Nadu,-29.0,Deficient,True,full,94.0,False,buffered
-589,Thiruvallur,Tamil Nadu,54.0,Excess,False,level_only,,,
-590,Thiruvarur,Tamil Nadu,-13.0,Normal,False,full,29.0,False,fine
-591,Tiruchirappalli,Tamil Nadu,1.0,Normal,False,full,60.0,False,fine
-592,Tirunelveli,Tamil Nadu,-33.0,Deficient,True,full,35.0,False,buffered
-732,Tirupathur,Tamil Nadu,30.0,Excess,False,full,86.0,False,fine
-634,Tiruppur,Tamil Nadu,-44.0,Deficient,True,full,59.0,False,buffered
-593,Tiruvannamalai,Tamil Nadu,40.0,Excess,False,level_only,,,
-594,Tuticorin,Tamil Nadu,-33.0,Deficient,True,full,53.0,False,buffered
-595,Vellore,Tamil Nadu,33.0,Excess,False,full,79.0,False,fine
-596,Villupuram,Tamil Nadu,59.0,Excess,False,full,57.0,False,fine
-597,Virudhunagar,Tamil Nadu,-9.0,Normal,False,full,81.0,False,fine
-501,Adilabad,Telangana,24.0,Excess,False,level_only,,,
-690,Bhadradri Kothagudem,Telangana,2.0,Normal,False,level_only,,,
-686,Hanumakonda,Telangana,42.0,Excess,False,level_only,,,
-507,Hyderabad,Telangana,-2.0,Normal,False,level_only,,,
-681,Jagitial,Telangana,29.0,Excess,False,level_only,,,
-689,Jangoan,Telangana,49.0,Excess,False,level_only,,,
-687,Jayashankar Bhupalapally,Telangana,21.0,Excess,False,level_only,,,
-695,Jogulamba Gadwal,Telangana,-11.0,Normal,False,level_only,,,
-685,Kamareddy,Telangana,32.0,Excess,False,level_only,,,
-508,Karimnagar,Telangana,36.0,Excess,False,level_only,,,
-509,Khammam,Telangana,-2.0,Normal,False,level_only,,,
-699,Kumuram Bheem Asifabad,Telangana,11.0,Normal,False,level_only,,,
-688,Mahabubabad,Telangana,20.0,Excess,False,level_only,,,
-512,Mahabubnagar,Telangana,-1.0,Normal,False,level_only,,,
-684,Mancherial,Telangana,17.0,Normal,False,level_only,,,
-513,Medak,Telangana,31.0,Excess,False,level_only,,,
-700,Medchal Malkajgiri,Telangana,14.0,Normal,False,level_only,,,
-720,Mulugu,Telangana,1.0,Normal,False,level_only,,,
-694,Nagarkurnool,Telangana,-11.0,Normal,False,level_only,,,
-514,Nalgonda,Telangana,-17.0,Normal,False,short,20.0,True,hidden_drought
-721,Narayanpet,Telangana,4.0,Normal,False,level_only,,,
-680,Nirmal,Telangana,42.0,Excess,False,level_only,,,
-516,Nizamabad,Telangana,57.0,Excess,False,level_only,,,
-682,Peddapalli,Telangana,22.0,Excess,False,level_only,,,
-683,Rajanna Sircilla,Telangana,39.0,Excess,False,level_only,,,
-518,Ranga Reddy,Telangana,1.0,Normal,False,level_only,,,
-691,Sangareddy,Telangana,24.0,Excess,False,short,50.0,False,fine
-692,Siddipet,Telangana,30.0,Excess,False,level_only,,,
-696,Suryapet,Telangana,9.0,Normal,False,level_only,,,
-698,Vikarabad,Telangana,16.0,Normal,False,level_only,,,
-693,Wanaparthy,Telangana,-7.0,Normal,False,level_only,,,
-522,Warangal,Telangana,33.0,Excess,False,level_only,,,
-697,Yadadri Bhuvanagiri,Telangana,18.0,Normal,False,short,0.0,True,hidden_drought
-269,Dhalai,Tripura,-8.0,Normal,False,insufficient,,,
-654,Gomati,Tripura,-13.0,Normal,False,insufficient,,,
-652,Khowai,Tripura,-8.0,Normal,False,level_only,,,
-270,North Tripura,Tripura,-5.0,Normal,False,level_only,,,
-653,Sepahijala,Tripura,5.0,Normal,False,insufficient,,,
-271,South Tripura,Tripura,-11.0,Normal,False,level_only,,,
-655,Unakoti,Tripura,8.0,Normal,False,insufficient,,,
-272,West Tripura,Tripura,-5.0,Normal,False,level_only,,,
-118,Agra,Uttar Pradesh,-1.0,Normal,False,insufficient,,,
-119,Aligarh,Uttar Pradesh,16.0,Normal,False,insufficient,,,
-121,Ambedkar Nagar,Uttar Pradesh,-43.0,Deficient,True,level_only,,,
-640,Amethi,Uttar Pradesh,-40.0,Deficient,True,insufficient,,,
-154,Amroha,Uttar Pradesh,15.0,Normal,False,level_only,,,
-122,Auraiya,Uttar Pradesh,-8.0,Normal,False,insufficient,,,
-140,Ayodhya,Uttar Pradesh,-30.0,Deficient,True,level_only,,,
-123,Azamgarh,Uttar Pradesh,-38.0,Deficient,True,level_only,,,
-124,Baghpat,Uttar Pradesh,17.0,Normal,False,level_only,,,
-125,Bahraich,Uttar Pradesh,-22.0,Deficient,True,level_only,,,
-126,Ballia,Uttar Pradesh,-36.0,Deficient,True,insufficient,,,
-127,Balrampur,Uttar Pradesh,-23.0,Deficient,True,level_only,,,
-128,Banda,Uttar Pradesh,-29.0,Deficient,True,level_only,,,
-129,Barabanki,Uttar Pradesh,2.0,Normal,False,level_only,,,
-130,Bareilly,Uttar Pradesh,-14.0,Normal,False,insufficient,,,
-131,Basti,Uttar Pradesh,-42.0,Deficient,True,insufficient,,,
-179,Bhadohi,Uttar Pradesh,-46.0,Deficient,True,insufficient,,,
-132,Bijnor,Uttar Pradesh,34.0,Excess,False,level_only,,,
-133,Budaun,Uttar Pradesh,15.0,Normal,False,insufficient,,,
-134,Bulandshahr,Uttar Pradesh,8.0,Normal,False,level_only,,,
-135,Chandauli,Uttar Pradesh,-40.0,Deficient,True,insufficient,,,
-136,Chitrakoot,Uttar Pradesh,-32.0,Deficient,True,insufficient,,,
-137,Deoria,Uttar Pradesh,-46.0,Deficient,True,insufficient,,,
-138,Etah,Uttar Pradesh,49.0,Excess,False,insufficient,,,
-139,Etawah,Uttar Pradesh,9.0,Normal,False,insufficient,,,
-141,Farrukhabad,Uttar Pradesh,-18.0,Normal,False,insufficient,,,
-142,Fatehpur,Uttar Pradesh,-50.0,Deficient,True,level_only,,,
-143,Firozabad,Uttar Pradesh,41.0,Excess,False,insufficient,,,
-144,Gautam Buddha Nagar,Uttar Pradesh,-26.0,Deficient,True,level_only,,,
-145,Ghaziabad,Uttar Pradesh,-35.0,Deficient,True,level_only,,,
-146,Ghazipur,Uttar Pradesh,-27.0,Deficient,True,insufficient,,,
-147,Gonda,Uttar Pradesh,-22.0,Deficient,True,insufficient,,,
-148,Gorakhpur,Uttar Pradesh,-44.0,Deficient,True,insufficient,,,
-149,Hamirpur,Uttar Pradesh,10.0,Normal,False,insufficient,,,
-661,Hapur,Uttar Pradesh,-32.0,Deficient,True,level_only,,,
-150,Hardoi,Uttar Pradesh,-13.0,Normal,False,insufficient,,,
-163,Hathras,Uttar Pradesh,40.0,Excess,False,insufficient,,,
-151,Jalaun,Uttar Pradesh,-8.0,Normal,False,insufficient,,,
-152,Jaunpur,Uttar Pradesh,-43.0,Deficient,True,insufficient,,,
-153,Jhansi,Uttar Pradesh,-3.0,Normal,False,insufficient,,,
-155,Kannauj,Uttar Pradesh,14.0,Normal,False,insufficient,,,
-156,Kanpur Dehat,Uttar Pradesh,-34.0,Deficient,True,insufficient,,,
-157,Kanpur Nagar,Uttar Pradesh,-23.0,Deficient,True,insufficient,,,
-633,Kasganj,Uttar Pradesh,27.0,Excess,False,insufficient,,,
-158,Kaushambi,Uttar Pradesh,-43.0,Deficient,True,insufficient,,,
-159,Kheri,Uttar Pradesh,-22.0,Deficient,True,insufficient,,,
-160,Kushi Nagar,Uttar Pradesh,-46.0,Deficient,True,insufficient,,,
-161,Lalitpur,Uttar Pradesh,2.0,Normal,False,insufficient,,,
-162,Lucknow,Uttar Pradesh,29.0,Excess,False,level_only,,,
-164,Maharajganj,Uttar Pradesh,-40.0,Deficient,True,insufficient,,,
-165,Mahoba,Uttar Pradesh,-6.0,Normal,False,insufficient,,,
-166,Mainpuri,Uttar Pradesh,33.0,Excess,False,insufficient,,,
-167,Mathura,Uttar Pradesh,-10.0,Normal,False,insufficient,,,
-168,Mau,Uttar Pradesh,-35.0,Deficient,True,level_only,,,
-169,Meerut,Uttar Pradesh,21.0,Excess,False,level_only,,,
-170,Mirzapur,Uttar Pradesh,-47.0,Deficient,True,insufficient,,,
-171,Moradabad,Uttar Pradesh,-7.0,Normal,False,insufficient,,,
-172,Muzaffarnagar,Uttar Pradesh,25.0,Excess,False,level_only,,,
-173,Pilibhit,Uttar Pradesh,-33.0,Deficient,True,insufficient,,,
-174,Pratapgarh,Uttar Pradesh,-42.0,Deficient,True,insufficient,,,
-120,Prayagraj,Uttar Pradesh,-50.0,Deficient,True,insufficient,,,
-175,Rae Bareli,Uttar Pradesh,-21.0,Deficient,True,level_only,,,
-176,Rampur,Uttar Pradesh,14.0,Normal,False,insufficient,,,
-177,Saharanpur,Uttar Pradesh,17.0,Normal,False,level_only,,,
-659,Sambhal,Uttar Pradesh,26.0,Excess,False,level_only,,,
-178,Sant Kabeer Nagar,Uttar Pradesh,-31.0,Deficient,True,insufficient,,,
-180,Shahjahanpur,Uttar Pradesh,-19.0,Normal,False,insufficient,,,
-660,Shamli,Uttar Pradesh,-13.0,Normal,False,level_only,,,
-181,Shravasti,Uttar Pradesh,-30.0,Deficient,True,insufficient,,,
-182,Siddharth Nagar,Uttar Pradesh,-26.0,Deficient,True,level_only,,,
-183,Sitapur,Uttar Pradesh,-24.0,Deficient,True,insufficient,,,
-184,Sonbhadra,Uttar Pradesh,-25.0,Deficient,True,insufficient,,,
-185,Sultanpur,Uttar Pradesh,-46.0,Deficient,True,insufficient,,,
-186,Unnao,Uttar Pradesh,-31.0,Deficient,True,insufficient,,,
-187,Varanasi,Uttar Pradesh,-47.0,Deficient,True,insufficient,,,
-45,Almora,Uttarakhand,-15.0,Normal,False,level_only,,,
-46,Bageshwar,Uttarakhand,48.0,Excess,False,insufficient,,,
-47,Chamoli,Uttarakhand,56.0,Excess,False,insufficient,,,
-48,Champawat,Uttarakhand,-12.0,Normal,False,level_only,,,
-49,Dehradun,Uttarakhand,27.0,Excess,False,full,53.0,False,fine
-50,Haridwar,Uttarakhand,47.0,Excess,False,full,50.0,False,fine
-51,Nainital,Uttarakhand,11.0,Normal,False,full,61.0,False,fine
-52,Pauri Garhwal,Uttarakhand,-10.0,Normal,False,level_only,,,
-53,Pithoragarh,Uttarakhand,20.0,Excess,False,insufficient,,,
-54,Rudra Prayag,Uttarakhand,35.0,Excess,False,insufficient,,,
-55,Tehri Garhwal,Uttarakhand,13.0,Normal,False,insufficient,,,
-56,Udam Singh Nagar,Uttarakhand,27.0,Excess,False,full,25.0,False,fine
-57,Uttar Kashi,Uttarakhand,19.0,Normal,False,level_only,,,
-303,24 Paraganas North,West Bengal,-14.0,Normal,False,level_only,,,
-304,24 Paraganas South,West Bengal,1.0,Normal,False,insufficient,,,
-664,Alipurduar,West Bengal,-0.0,Normal,False,insufficient,,,
-305,Bankura,West Bengal,-22.0,Deficient,True,level_only,,,
-307,Birbhum,West Bengal,-33.0,Deficient,True,level_only,,,
-308,Coochbehar,West Bengal,18.0,Normal,False,insufficient,,,
-309,Darjeeling,West Bengal,-3.0,Normal,False,insufficient,,,
-310,Dinajpur Dakshin,West Bengal,-29.0,Deficient,True,insufficient,,,
-311,Dinajpur Uttar,West Bengal,-15.0,Normal,False,insufficient,,,
-312,Hooghly,West Bengal,-27.0,Deficient,True,level_only,,,
-313,Howrah,West Bengal,-10.0,Normal,False,insufficient,,,
-314,Jalpaiguri,West Bengal,7.0,Normal,False,insufficient,,,
-703,Jhargram,West Bengal,-32.0,Deficient,True,level_only,,,
-702,Kalimpong,West Bengal,1.0,Normal,False,insufficient,,,
-315,Kolkata,West Bengal,-9.0,Normal,False,insufficient,,,
-316,Maldah,West Bengal,-10.0,Normal,False,insufficient,,,
-317,Medinipur East,West Bengal,4.0,Normal,False,level_only,,,
-318,Medinipur West,West Bengal,-27.0,Deficient,True,level_only,,,
-319,Murshidabad,West Bengal,-44.0,Deficient,True,level_only,,,
-320,Nadia,West Bengal,-43.0,Deficient,True,level_only,,,
-704,Paschim Bardhaman,West Bengal,-23.0,Deficient,True,insufficient,,,
-306,Purba Bardhaman,West Bengal,-32.0,Deficient,True,level_only,,,
-321,Purulia,West Bengal,-31.0,Deficient,True,level_only,,,
+dist_lgd,district,state,rain_dep_pct,rain_category,rain_short,rain_short_reasons,gw_tier,gw_percentile,gw_low,quadrant
+603,Nicobars,Andaman and Nicobar,,,,,insufficient,,,
+632,North And Middle Andaman,Andaman and Nicobar,,,,,insufficient,,,
+602,South Andamans,Andaman and Nicobar,,,,,insufficient,,,
+745,Alluri Sitharama Raju,Andhra Pradesh,3.0,Normal,False,,level_only,,,
+744,Anakapalli,Andhra Pradesh,-6.0,Normal,False,,level_only,,,
+502,Anantapur,Andhra Pradesh,-9.0,Normal,False,,provisional,33.0,False,fine
+753,Annamayya,Andhra Pradesh,-10.0,Normal,False,,provisional,21.0,False,fine
+750,Bapatla,Andhra Pradesh,19.0,Normal,False,,level_only,,,
+503,Chittoor,Andhra Pradesh,18.0,Normal,False,,short,60.0,False,fine
+505,East Godavari,Andhra Pradesh,-9.0,Normal,False,,level_only,,,
+748,Eluru,Andhra Pradesh,-9.0,Normal,False,,level_only,,,
+506,Guntur,Andhra Pradesh,20.0,Excess,False,,level_only,,,
+746,Kakinada,Andhra Pradesh,-25.0,Deficient,True,"deviation,spi",level_only,,,
+747,Konaseema,Andhra Pradesh,-38.0,Deficient,True,"deviation,spi,dry_spell",level_only,,,
+510,Krishna,Andhra Pradesh,24.0,Excess,False,,level_only,,,
+511,Kurnool,Andhra Pradesh,-21.0,Deficient,True,"deviation,dry_spell",level_only,,,
+755,Nandyal,Andhra Pradesh,-19.0,Normal,False,,provisional,10.0,True,hidden_drought
+749,Ntr,Andhra Pradesh,-5.0,Normal,False,,level_only,,,
+751,Palnadu,Andhra Pradesh,-9.0,Normal,False,,level_only,,,
+743,Parvathipuram Manyam,Andhra Pradesh,4.0,Normal,False,,level_only,,,
+517,Prakasam,Andhra Pradesh,-14.0,Normal,True,dry_spell,level_only,,,
+515,Spsr Nellore,Andhra Pradesh,-31.0,Deficient,True,deviation,level_only,,,
+754,Sri Sathya Sai,Andhra Pradesh,-9.0,Normal,False,,short,68.0,False,fine
+519,Srikakulam,Andhra Pradesh,-8.0,Normal,False,,provisional,38.0,False,fine
+752,Tirupati,Andhra Pradesh,8.0,Normal,False,,level_only,,,
+520,Visakhapatanam,Andhra Pradesh,1.0,Normal,False,,level_only,,,
+521,Vizianagaram,Andhra Pradesh,9.0,Normal,False,,level_only,,,
+523,West Godavari,Andhra Pradesh,-20.0,Deficient,True,deviation,level_only,,,
+504,Y.S.R.,Andhra Pradesh,-22.0,Deficient,True,deviation,short,57.0,False,buffered
+628,Anjaw,Arunachal Pradesh,-47.0,Deficient,True,"deviation,dry_spell",insufficient,,,
+229,Changlang,Arunachal Pradesh,-12.0,Normal,False,,insufficient,,,
+230,Dibang Valley,Arunachal Pradesh,12.0,Normal,False,,insufficient,,,
+231,East Kameng,Arunachal Pradesh,-15.0,Normal,False,,insufficient,,,
+232,East Siang,Arunachal Pradesh,7.0,Normal,False,,insufficient,,,
+766,Itanagar capital complex,Arunachal Pradesh,-1.0,Normal,False,,insufficient,,,
+718,Kamle,Arunachal Pradesh,-38.0,Deficient,True,"deviation,spi",insufficient,,,
+677,Kra Daadi,Arunachal Pradesh,-58.0,Deficient,True,"deviation,spi,dry_spell",insufficient,,,
+233,Kurung Kumey,Arunachal Pradesh,-50.0,Deficient,True,"deviation,spi,dry_spell",insufficient,,,
+724,Leparada,Arunachal Pradesh,-18.0,Normal,False,,insufficient,,,
+234,Lohit,Arunachal Pradesh,-34.0,Deficient,True,deviation,insufficient,,,
+666,Longding,Arunachal Pradesh,-9.0,Normal,False,,insufficient,,,
+235,Lower Dibang Valley,Arunachal Pradesh,-15.0,Normal,False,,insufficient,,,
+719,Lower Siang,Arunachal Pradesh,-10.0,Normal,False,,insufficient,,,
+236,Lower Subansiri,Arunachal Pradesh,-29.0,Deficient,True,"deviation,spi",insufficient,,,
+678,Namsai,Arunachal Pradesh,-14.0,Normal,False,,level_only,,,
+723,Pakke Kessang,Arunachal Pradesh,27.0,Excess,False,,insufficient,,,
+237,Papum Pare,Arunachal Pradesh,-10.0,Normal,False,,level_only,,,
+725,Shi Yomi,Arunachal Pradesh,-7.0,Normal,False,,insufficient,,,
+679,Siang,Arunachal Pradesh,-22.0,Deficient,True,deviation,insufficient,,,
+238,Tawang,Arunachal Pradesh,-49.0,Deficient,True,"deviation,spi,dry_spell",insufficient,,,
+239,Tirap,Arunachal Pradesh,-8.0,Normal,False,,insufficient,,,
+240,Upper Siang,Arunachal Pradesh,2.0,Normal,False,,insufficient,,,
+241,Upper Subansiri,Arunachal Pradesh,-42.0,Deficient,True,"deviation,spi",insufficient,,,
+242,West Kameng,Arunachal Pradesh,-16.0,Normal,False,,insufficient,,,
+243,West Siang,Arunachal Pradesh,-33.0,Deficient,True,"deviation,spi",insufficient,,,
+739,Bajali,Assam,13.0,Normal,True,dry_spell,level_only,,,
+616,Baksa,Assam,25.0,Excess,False,,insufficient,,,
+280,Barpeta,Assam,15.0,Normal,False,,insufficient,,,
+705,Biswanath,Assam,10.0,Normal,False,,level_only,,,
+281,Bongaigaon,Assam,29.0,Excess,False,,insufficient,,,
+282,Cachar,Assam,-12.0,Normal,False,,insufficient,,,
+708,Charaideo,Assam,-9.0,Normal,False,,insufficient,,,
+612,Chirang,Assam,13.0,Normal,False,,insufficient,,,
+283,Darrang,Assam,-7.0,Normal,False,,level_only,,,
+284,Dhemaji,Assam,-7.0,Normal,False,,level_only,,,
+285,Dhubri,Assam,1.0,Normal,False,,insufficient,,,
+286,Dibrugarh,Assam,-10.0,Normal,False,,insufficient,,,
+299,Dima Hasao,Assam,-10.0,Normal,False,,insufficient,,,
+287,Goalpara,Assam,11.0,Normal,False,,insufficient,,,
+288,Golaghat,Assam,-0.0,Normal,False,,insufficient,,,
+289,Hailakandi,Assam,-11.0,Normal,False,,level_only,,,
+709,Hojai,Assam,-30.0,Deficient,True,"deviation,spi",insufficient,,,
+290,Jorhat,Assam,4.0,Normal,False,,insufficient,,,
+291,Kamrup,Assam,-11.0,Normal,False,,level_only,,,
+618,Kamrup Metro,Assam,-19.0,Normal,False,,level_only,,,
+292,Karbi Anglong,Assam,-16.0,Normal,False,,level_only,,,
+293,Karimganj,Assam,-7.0,Normal,False,,insufficient,,,
+294,Kokrajhar,Assam,13.0,Normal,False,,insufficient,,,
+295,Lakhimpur,Assam,-1.0,Normal,False,,level_only,,,
+706,Majuli,Assam,-7.0,Normal,False,,insufficient,,,
+296,Marigaon,Assam,-7.0,Normal,False,,level_only,,,
+297,Nagaon,Assam,-14.0,Normal,False,,level_only,,,
+298,Nalbari,Assam,-12.0,Normal,False,,insufficient,,,
+300,Sivasagar,Assam,6.0,Normal,False,,level_only,,,
+301,Sonitpur,Assam,-10.0,Normal,False,,insufficient,,,
+707,South Salmara Mancachar,Assam,14.0,Normal,False,,insufficient,,,
+756,Tamulpur,Assam,-15.0,Normal,False,,level_only,,,
+302,Tinsukia,Assam,-12.0,Normal,False,,insufficient,,,
+617,Udalguri,Assam,-16.0,Normal,False,,level_only,,,
+710,West Karbi Anglong,Assam,-36.0,Deficient,True,"deviation,spi",insufficient,,,
+188,Araria,Bihar,-2.0,Normal,False,,insufficient,,,
+611,Arwal,Bihar,-38.0,Deficient,True,"deviation,spi",insufficient,,,
+189,Aurangabad,Bihar,-40.0,Deficient,True,"deviation,spi",insufficient,,,
+190,Banka,Bihar,-3.0,Normal,False,,insufficient,,,
+191,Begusarai,Bihar,-5.0,Normal,False,,insufficient,,,
+192,Bhagalpur,Bihar,-14.0,Normal,False,,insufficient,,,
+193,Bhojpur,Bihar,-41.0,Deficient,True,"deviation,spi",insufficient,,,
+194,Buxar,Bihar,-30.0,Deficient,True,"deviation,spi",insufficient,,,
+195,Darbhanga,Bihar,-20.0,Deficient,True,deviation,insufficient,,,
+196,Gaya,Bihar,-33.0,Deficient,True,"deviation,spi",insufficient,,,
+197,Gopalganj,Bihar,-27.0,Deficient,True,"deviation,spi,dry_spell",insufficient,,,
+198,Jamui,Bihar,-21.0,Deficient,True,deviation,level_only,,,
+199,Jehanabad,Bihar,-24.0,Deficient,True,deviation,insufficient,,,
+200,Kaimur (Bhabua),Bihar,-29.0,Deficient,True,"deviation,spi",insufficient,,,
+201,Katihar,Bihar,-8.0,Normal,False,,insufficient,,,
+202,Khagaria,Bihar,10.0,Normal,False,,insufficient,,,
+203,Kishanganj,Bihar,-18.0,Normal,False,,insufficient,,,
+204,Lakhisarai,Bihar,-1.0,Normal,False,,insufficient,,,
+205,Madhepura,Bihar,-7.0,Normal,False,,insufficient,,,
+206,Madhubani,Bihar,-12.0,Normal,True,dry_spell,insufficient,,,
+207,Munger,Bihar,1.0,Normal,False,,insufficient,,,
+208,Muzaffarpur,Bihar,-10.0,Normal,False,,insufficient,,,
+209,Nalanda,Bihar,-25.0,Deficient,True,"deviation,spi",insufficient,,,
+210,Nawada,Bihar,-31.0,Deficient,True,"deviation,spi",insufficient,,,
+211,Pashchim Champaran,Bihar,-34.0,Deficient,True,"deviation,spi",insufficient,,,
+212,Patna,Bihar,-22.0,Deficient,True,deviation,level_only,,,
+213,Purbi Champaran,Bihar,-34.0,Deficient,True,"deviation,spi,dry_spell",insufficient,,,
+214,Purnia,Bihar,-12.0,Normal,False,,level_only,,,
+215,Rohtas,Bihar,-36.0,Deficient,True,"deviation,spi",insufficient,,,
+216,Saharsa,Bihar,-21.0,Deficient,True,"deviation,dry_spell",insufficient,,,
+217,Samastipur,Bihar,-23.0,Deficient,True,deviation,insufficient,,,
+218,Saran,Bihar,-18.0,Normal,True,dry_spell,insufficient,,,
+219,Sheikhpura,Bihar,-14.0,Normal,False,,insufficient,,,
+220,Sheohar,Bihar,-25.0,Deficient,True,"deviation,dry_spell",insufficient,,,
+221,Sitamarhi,Bihar,-47.0,Deficient,True,"deviation,spi,dry_spell",insufficient,,,
+222,Siwan,Bihar,-35.0,Deficient,True,"deviation,spi",insufficient,,,
+223,Supaul,Bihar,11.0,Normal,False,,insufficient,,,
+224,Vaishali,Bihar,-17.0,Normal,True,dry_spell,insufficient,,,
+44,Chandigarh,Chandigarh,39.0,Excess,False,,provisional,67.0,False,fine
+646,Balod,Chhattisgarh,-7.0,Normal,False,,provisional,59.0,False,fine
+644,Baloda Bazar,Chhattisgarh,13.0,Normal,False,,provisional,43.0,False,fine
+649,Balrampur,Chhattisgarh,-9.0,Normal,False,,level_only,,,
+374,Bastar,Chhattisgarh,-15.0,Normal,False,,level_only,,,
+650,Bemetara,Chhattisgarh,15.0,Normal,False,,level_only,,,
+636,Bijapur,Chhattisgarh,2.0,Normal,False,,insufficient,,,
+375,Bilaspur,Chhattisgarh,3.0,Normal,False,,level_only,,,
+376,Dantewada,Chhattisgarh,-22.0,Deficient,True,"deviation,spi",insufficient,,,
+377,Dhamtari,Chhattisgarh,-9.0,Normal,False,,level_only,,,
+378,Durg,Chhattisgarh,17.0,Normal,False,,short,42.0,False,fine
+645,Gariyaband,Chhattisgarh,-7.0,Normal,False,,level_only,,,
+734,Gaurella Pendra Marwahi,Chhattisgarh,-4.0,Normal,False,,level_only,,,
+379,Janjgir-Champa,Chhattisgarh,6.0,Normal,False,,level_only,,,
+380,Jashpur,Chhattisgarh,-18.0,Normal,False,,short,38.0,False,fine
+382,Kabirdham,Chhattisgarh,2.0,Normal,False,,level_only,,,
+381,Kanker,Chhattisgarh,-14.0,Normal,False,,provisional,30.0,False,fine
+759,Khairgarh Chhuikhadan Gandai,Chhattisgarh,7.0,Normal,False,,level_only,,,
+643,Kondagaon,Chhattisgarh,-17.0,Normal,True,spi,level_only,,,
+383,Korba,Chhattisgarh,-16.0,Normal,False,,insufficient,,,
+384,Korea,Chhattisgarh,-27.0,Deficient,True,"deviation,spi",insufficient,,,
+385,Mahasamund,Chhattisgarh,4.0,Normal,False,,level_only,,,
+760,Manendragarh Chirimiri Bharatpur,Chhattisgarh,-21.0,Deficient,True,deviation,insufficient,,,
+761,Mohla Manpur Ambagarh Chouki,Chhattisgarh,-7.0,Normal,False,,insufficient,,,
+647,Mungeli,Chhattisgarh,19.0,Normal,False,,level_only,,,
+637,Narayanpur,Chhattisgarh,-12.0,Normal,False,,insufficient,,,
+386,Raigarh,Chhattisgarh,-10.0,Normal,False,,level_only,,,
+387,Raipur,Chhattisgarh,19.0,Normal,False,,level_only,,,
+388,Rajnandgaon,Chhattisgarh,13.0,Normal,False,,provisional,4.0,True,hidden_drought
+762,Sakti,Chhattisgarh,-1.0,Normal,False,,level_only,,,
+763,Sarangarh Bilaigarh,Chhattisgarh,-1.0,Normal,False,,level_only,,,
+642,Sukma,Chhattisgarh,3.0,Normal,False,,insufficient,,,
+648,Surajpur,Chhattisgarh,-36.0,Deficient,True,"deviation,spi,dry_spell",level_only,,,
+389,Surguja,Chhattisgarh,-42.0,Deficient,True,"deviation,spi",level_only,,,
+465,Dadra And Nagar Haveli,"Dadra,Nagar Haveli,Daman and Diu",16.0,Normal,False,,insufficient,,,
+463,Daman,"Dadra,Nagar Haveli,Daman and Diu",11.0,Normal,True,dry_spell,insufficient,,,
+464,Diu,"Dadra,Nagar Haveli,Daman and Diu",23.0,Excess,True,dry_spell,insufficient,,,
+77,Central,Delhi,-3.0,Normal,True,dry_spell,level_only,,,
+78,East,Delhi,10.0,Normal,False,,level_only,,,
+79,New Delhi,Delhi,12.0,Normal,False,,level_only,,,
+80,North,Delhi,5.0,Normal,True,dry_spell,level_only,,,
+81,North East,Delhi,-7.0,Normal,True,dry_spell,level_only,,,
+82,North West,Delhi,9.0,Normal,True,dry_spell,level_only,,,
+671,Shahdara,Delhi,-7.0,Normal,True,dry_spell,level_only,,,
+83,South,Delhi,21.0,Excess,False,,level_only,,,
+670,South East,Delhi,22.0,Excess,False,,level_only,,,
+84,South West,Delhi,-0.0,Normal,False,,level_only,,,
+85,West,Delhi,9.0,Normal,True,dry_spell,level_only,,,
+551,North Goa,Goa,-1.0,Normal,False,,full,71.0,False,fine
+552,South Goa,Goa,-5.0,Normal,False,,full,50.0,False,fine
+438,Ahmadabad,Gujarat,-9.0,Normal,True,dry_spell,level_only,,,
+439,Amreli,Gujarat,6.0,Normal,True,dry_spell,level_only,,,
+440,Anand,Gujarat,1.0,Normal,True,dry_spell,level_only,,,
+672,Arvalli,Gujarat,-1.0,Normal,True,dry_spell,level_only,,,
+441,Banas Kantha,Gujarat,26.0,Excess,True,dry_spell,level_only,,,
+442,Bharuch,Gujarat,-17.0,Normal,True,dry_spell,level_only,,,
+443,Bhavnagar,Gujarat,14.0,Normal,True,dry_spell,level_only,,,
+676,Botad,Gujarat,30.0,Excess,True,dry_spell,level_only,,,
+668,Chhotaudepur,Gujarat,21.0,Excess,True,dry_spell,level_only,,,
+444,Dang,Gujarat,7.0,Normal,True,dry_spell,insufficient,,,
+674,Devbhumi Dwarka,Gujarat,54.0,Excess,True,dry_spell,level_only,,,
+445,Dohad,Gujarat,10.0,Normal,True,dry_spell,level_only,,,
+446,Gandhinagar,Gujarat,5.0,Normal,True,dry_spell,level_only,,,
+675,Gir Somnath,Gujarat,56.0,Excess,False,,level_only,,,
+447,Jamnagar,Gujarat,42.0,Excess,True,dry_spell,level_only,,,
+448,Junagadh,Gujarat,84.0,Large Excess,False,,level_only,,,
+449,Kachchh,Gujarat,63.0,Large Excess,True,dry_spell,level_only,,,
+450,Kheda,Gujarat,11.0,Normal,True,dry_spell,level_only,,,
+451,Mahesana,Gujarat,3.0,Normal,True,dry_spell,level_only,,,
+669,Mahisagar,Gujarat,11.0,Normal,True,dry_spell,level_only,,,
+673,Morbi,Gujarat,4.0,Normal,True,dry_spell,level_only,,,
+452,Narmada,Gujarat,1.0,Normal,True,dry_spell,level_only,,,
+453,Navsari,Gujarat,5.0,Normal,True,dry_spell,level_only,,,
+454,Panch Mahals,Gujarat,9.0,Normal,True,dry_spell,level_only,,,
+455,Patan,Gujarat,8.0,Normal,True,dry_spell,level_only,,,
+456,Porbandar,Gujarat,36.0,Excess,False,,level_only,,,
+457,Rajkot,Gujarat,39.0,Excess,True,dry_spell,level_only,,,
+458,Sabar Kantha,Gujarat,6.0,Normal,True,dry_spell,level_only,,,
+459,Surat,Gujarat,-6.0,Normal,True,dry_spell,level_only,,,
+460,Surendranagar,Gujarat,-4.0,Normal,True,dry_spell,level_only,,,
+641,Tapi,Gujarat,1.0,Normal,True,dry_spell,insufficient,,,
+461,Vadodara,Gujarat,-12.0,Normal,True,dry_spell,level_only,,,
+462,Valsad,Gujarat,11.0,Normal,True,dry_spell,level_only,,,
+58,Ambala,Haryana,9.0,Normal,False,,full,79.0,False,fine
+59,Bhiwani,Haryana,-32.0,Deficient,True,"deviation,dry_spell",full,44.0,False,buffered
+701,Charki Dadri,Haryana,-12.0,Normal,True,dry_spell,full,67.0,False,buffered
+60,Faridabad,Haryana,-3.0,Normal,False,,short,10.0,True,hidden_drought
+61,Fatehabad,Haryana,-37.0,Deficient,True,"deviation,dry_spell",short,15.0,True,double_drought
+62,Gurugram,Haryana,-3.0,Normal,True,dry_spell,short,56.0,False,buffered
+63,Hisar,Haryana,-49.0,Deficient,True,"deviation,spi,dry_spell",full,96.0,False,buffered
+64,Jhajjar,Haryana,-4.0,Normal,False,,full,70.0,False,fine
+65,Jind,Haryana,-9.0,Normal,True,dry_spell,full,22.0,False,buffered
+66,Kaithal,Haryana,33.0,Excess,True,dry_spell,full,16.0,True,double_drought
+67,Karnal,Haryana,11.0,Normal,False,,full,25.0,False,fine
+68,Kurukshetra,Haryana,32.0,Excess,False,,full,18.0,True,hidden_drought
+69,Mahendragarh,Haryana,11.0,Normal,False,,provisional,92.0,False,fine
+604,Nuh,Haryana,0.0,Normal,False,,provisional,57.0,False,fine
+619,Palwal,Haryana,-8.0,Normal,False,,short,29.0,False,fine
+70,Panchkula,Haryana,43.0,Excess,False,,full,83.0,False,fine
+71,Panipat,Haryana,1.0,Normal,False,,full,12.0,True,hidden_drought
+72,Rewari,Haryana,2.0,Normal,False,,provisional,50.0,False,fine
+73,Rohtak,Haryana,2.0,Normal,True,dry_spell,full,57.0,False,buffered
+74,Sirsa,Haryana,-14.0,Normal,True,dry_spell,full,28.0,False,buffered
+75,Sonipat,Haryana,6.0,Normal,True,dry_spell,full,44.0,False,buffered
+76,Yamunanagar,Haryana,28.0,Excess,False,,full,77.0,False,fine
+15,Bilaspur,Himachal Pradesh,45.0,Excess,False,,level_only,,,
+16,Chamba,Himachal Pradesh,-5.0,Normal,False,,insufficient,,,
+17,Hamirpur,Himachal Pradesh,49.0,Excess,False,,short,67.0,False,fine
+18,Kangra,Himachal Pradesh,30.0,Excess,False,,full,40.0,False,fine
+19,Kinnaur,Himachal Pradesh,-5.0,Normal,False,,insufficient,,,
+20,Kullu,Himachal Pradesh,32.0,Excess,False,,provisional,25.0,False,fine
+21,Lahul And Spiti,Himachal Pradesh,-16.0,Normal,False,,insufficient,,,
+22,Mandi,Himachal Pradesh,52.0,Excess,False,,full,71.0,False,fine
+23,Shimla,Himachal Pradesh,42.0,Excess,False,,level_only,,,
+24,Sirmaur,Himachal Pradesh,53.0,Excess,False,,full,62.0,False,fine
+25,Solan,Himachal Pradesh,60.0,Large Excess,False,,full,50.0,False,fine
+26,Una,Himachal Pradesh,20.0,Excess,False,,full,60.0,False,fine
+1,Anantnag,Jammu and Kashmir,-14.0,Normal,True,dry_spell,insufficient,,,
+623,Bandipora,Jammu and Kashmir,-13.0,Normal,True,dry_spell,insufficient,,,
+3,Baramulla,Jammu and Kashmir,-27.0,Deficient,True,"deviation,dry_spell",insufficient,,,
+2,Budgam,Jammu and Kashmir,-28.0,Deficient,True,"deviation,dry_spell",insufficient,,,
+4,Doda,Jammu and Kashmir,1.0,Normal,True,dry_spell,insufficient,,,
+626,Ganderbal,Jammu and Kashmir,-1.0,Normal,True,dry_spell,level_only,,,
+5,Jammu,Jammu and Kashmir,50.0,Excess,False,,level_only,,,
+7,Kathua,Jammu and Kashmir,31.0,Excess,False,,level_only,,,
+620,Kishtwar,Jammu and Kashmir,-17.0,Normal,True,dry_spell,insufficient,,,
+622,Kulgam,Jammu and Kashmir,-10.0,Normal,True,dry_spell,insufficient,,,
+8,Kupwara,Jammu and Kashmir,-46.0,Deficient,True,"deviation,spi,dry_spell",insufficient,,,
+10,Poonch,Jammu and Kashmir,-26.0,Deficient,True,"deviation,dry_spell",level_only,,,
+11,Pulwama,Jammu and Kashmir,-9.0,Normal,True,dry_spell,insufficient,,,
+12,Rajouri,Jammu and Kashmir,37.0,Excess,False,,level_only,,,
+621,Ramban,Jammu and Kashmir,-12.0,Normal,True,dry_spell,insufficient,,,
+627,Reasi,Jammu and Kashmir,83.0,Large Excess,False,,level_only,,,
+624,Samba,Jammu and Kashmir,28.0,Excess,False,,level_only,,,
+625,Shopian,Jammu and Kashmir,-35.0,Deficient,True,"deviation,dry_spell",insufficient,,,
+13,Srinagar,Jammu and Kashmir,4.0,Normal,True,dry_spell,level_only,,,
+14,Udhampur,Jammu and Kashmir,9.0,Normal,False,,level_only,,,
+322,Bokaro,Jharkhand,-27.0,Deficient,True,"deviation,spi",full,46.0,False,buffered
+323,Chatra,Jharkhand,-35.0,Deficient,True,"deviation,spi",full,50.0,False,buffered
+324,Deoghar,Jharkhand,-21.0,Deficient,True,deviation,full,43.0,False,buffered
+325,Dhanbad,Jharkhand,-28.0,Deficient,True,"deviation,spi,dry_spell",full,27.0,False,buffered
+326,Dumka,Jharkhand,-33.0,Deficient,True,"deviation,spi",full,39.0,False,buffered
+327,East Singhbum,Jharkhand,-26.0,Deficient,True,"deviation,spi",full,52.0,False,buffered
+328,Garhwa,Jharkhand,-34.0,Deficient,True,"deviation,spi",full,45.0,False,buffered
+329,Giridih,Jharkhand,-26.0,Deficient,True,"deviation,spi",full,47.0,False,buffered
+330,Godda,Jharkhand,-7.0,Normal,False,,full,50.0,False,fine
+331,Gumla,Jharkhand,-26.0,Deficient,True,"deviation,spi",full,90.0,False,buffered
+332,Hazaribagh,Jharkhand,-41.0,Deficient,True,"deviation,spi",short,48.0,False,buffered
+333,Jamtara,Jharkhand,-30.0,Deficient,True,"deviation,spi,dry_spell",short,17.0,True,double_drought
+606,Khunti,Jharkhand,-10.0,Normal,False,,full,65.0,False,fine
+334,Koderma,Jharkhand,-26.0,Deficient,True,"deviation,spi",short,20.0,True,double_drought
+335,Latehar,Jharkhand,-23.0,Deficient,True,"deviation,spi",full,35.0,False,buffered
+336,Lohardaga,Jharkhand,-36.0,Deficient,True,"deviation,spi",full,10.0,True,double_drought
+337,Pakur,Jharkhand,-26.0,Deficient,True,"deviation,spi",full,13.0,True,double_drought
+338,Palamu,Jharkhand,-31.0,Deficient,True,"deviation,spi",full,42.0,False,buffered
+607,Ramgarh,Jharkhand,-20.0,Deficient,True,deviation,short,29.0,False,buffered
+339,Ranchi,Jharkhand,-23.0,Deficient,True,"deviation,spi",full,55.0,False,buffered
+340,Sahebganj,Jharkhand,4.0,Normal,False,,full,29.0,False,fine
+341,Saraikela Kharsawan,Jharkhand,-25.0,Deficient,True,"deviation,spi",short,77.0,False,buffered
+342,Simdega,Jharkhand,-5.0,Normal,False,,full,75.0,False,fine
+343,West Singhbhum,Jharkhand,-2.0,Normal,False,,full,65.0,False,fine
+524,Bagalkote,Karnataka,-28.0,Deficient,True,"deviation,dry_spell",full,27.0,False,buffered
+528,Ballari,Karnataka,-22.0,Deficient,True,"deviation,dry_spell",full,19.0,True,double_drought
+527,Belagavi,Karnataka,-20.0,Deficient,True,"deviation,dry_spell",full,20.0,True,double_drought
+526,Bengaluru Rural,Karnataka,-17.0,Normal,True,dry_spell,full,48.0,False,buffered
+525,Bengaluru Urban,Karnataka,-26.0,Deficient,True,"deviation,dry_spell",full,25.0,False,buffered
+529,Bidar,Karnataka,14.0,Normal,True,dry_spell,full,27.0,False,buffered
+531,Chamarajanagara,Karnataka,-17.0,Normal,False,,full,32.0,False,fine
+630,Chikkaballapura,Karnataka,9.0,Normal,True,dry_spell,full,78.0,False,buffered
+532,Chikkamagaluru,Karnataka,-39.0,Deficient,True,"deviation,spi,dry_spell",full,10.0,True,double_drought
+533,Chitradurga,Karnataka,-9.0,Normal,True,dry_spell,full,35.0,False,buffered
+534,Dakshina Kannada,Karnataka,-26.0,Deficient,True,"deviation,spi,dry_spell",full,40.0,False,buffered
+535,Davangere,Karnataka,-29.0,Deficient,True,"deviation,dry_spell",full,20.0,True,double_drought
+536,Dharwad,Karnataka,-9.0,Normal,True,dry_spell,full,42.0,False,buffered
+537,Gadag,Karnataka,-20.0,Deficient,True,"deviation,dry_spell",full,73.0,False,buffered
+539,Hassan,Karnataka,-20.0,Deficient,True,"deviation,dry_spell",full,20.0,True,double_drought
+540,Haveri,Karnataka,-30.0,Deficient,True,"deviation,dry_spell",full,40.0,False,buffered
+538,Kalaburagi,Karnataka,8.0,Normal,True,dry_spell,full,20.0,True,double_drought
+541,Kodagu,Karnataka,-30.0,Deficient,True,"deviation,spi,dry_spell",full,20.0,True,double_drought
+542,Kolar,Karnataka,-2.0,Normal,True,dry_spell,full,50.0,False,buffered
+543,Koppal,Karnataka,-7.0,Normal,False,,full,58.0,False,fine
+544,Mandya,Karnataka,15.0,Normal,False,,full,19.0,True,hidden_drought
+545,Mysuru,Karnataka,-25.0,Deficient,True,deviation,full,19.0,True,double_drought
+546,Raichur,Karnataka,-10.0,Normal,False,,full,33.0,False,fine
+631,Ramanagara,Karnataka,-34.0,Deficient,True,"deviation,spi",full,38.0,False,buffered
+547,Shivamogga,Karnataka,-27.0,Deficient,True,"deviation,dry_spell",full,7.0,True,double_drought
+548,Tumakuru,Karnataka,-15.0,Normal,True,dry_spell,full,35.0,False,buffered
+549,Udupi,Karnataka,-30.0,Deficient,True,"deviation,spi,dry_spell",full,4.0,True,double_drought
+550,Uttara Kannada,Karnataka,-18.0,Normal,True,dry_spell,full,5.0,True,double_drought
+738,Vijayanagar,Karnataka,-15.0,Normal,True,dry_spell,full,40.0,False,buffered
+530,Vijayapura,Karnataka,-18.0,Normal,True,dry_spell,full,24.0,False,buffered
+635,Yadgir,Karnataka,4.0,Normal,True,dry_spell,full,30.0,False,buffered
+554,Alappuzha,Kerala,-8.0,Normal,True,dry_spell,level_only,,,
+555,Ernakulam,Kerala,-18.0,Normal,True,dry_spell,level_only,,,
+556,Idukki,Kerala,-16.0,Normal,True,dry_spell,level_only,,,
+557,Kannur,Kerala,-32.0,Deficient,True,"deviation,spi,dry_spell",level_only,,,
+558,Kasaragod,Kerala,-27.0,Deficient,True,"deviation,spi,dry_spell",level_only,,,
+559,Kollam,Kerala,-27.0,Deficient,True,"deviation,dry_spell",level_only,,,
+560,Kottayam,Kerala,-13.0,Normal,True,dry_spell,level_only,,,
+561,Kozhikode,Kerala,-24.0,Deficient,True,"deviation,dry_spell",level_only,,,
+562,Malappuram,Kerala,-28.0,Deficient,True,"deviation,spi,dry_spell",level_only,,,
+563,Palakkad,Kerala,-28.0,Deficient,True,"deviation,dry_spell",level_only,,,
+564,Pathanamthitta,Kerala,-21.0,Deficient,True,"deviation,dry_spell",level_only,,,
+565,Thiruvananthapuram,Kerala,-30.0,Deficient,True,"deviation,dry_spell",level_only,,,
+566,Thrissur,Kerala,-25.0,Deficient,True,"deviation,spi,dry_spell",level_only,,,
+567,Wayanad,Kerala,-13.0,Normal,True,dry_spell,level_only,,,
+6,Kargil,Ladakh,-64.0,Large Deficient,True,"deviation,spi,dry_spell",insufficient,,,
+9,Leh Ladakh,Ladakh,-59.0,Deficient,True,"deviation,spi,dry_spell",level_only,,,
+553,Lakshadweep District,Lakshadweep,,,,,insufficient,,,
+667,Agar Malwa,Madhya Pradesh,-6.0,Normal,True,dry_spell,level_only,,,
+639,Alirajpur,Madhya Pradesh,23.0,Excess,False,,level_only,,,
+390,Anuppur,Madhya Pradesh,1.0,Normal,False,,level_only,,,
+391,Ashoknagar,Madhya Pradesh,-19.0,Normal,False,,level_only,,,
+392,Balaghat,Madhya Pradesh,4.0,Normal,False,,level_only,,,
+393,Barwani,Madhya Pradesh,10.0,Normal,False,,level_only,,,
+394,Betul,Madhya Pradesh,6.0,Normal,False,,level_only,,,
+395,Bhind,Madhya Pradesh,34.0,Excess,False,,level_only,,,
+396,Bhopal,Madhya Pradesh,-12.0,Normal,False,,level_only,,,
+397,Burhanpur,Madhya Pradesh,18.0,Normal,False,,insufficient,,,
+398,Chhatarpur,Madhya Pradesh,-13.0,Normal,False,,level_only,,,
+399,Chhindwara,Madhya Pradesh,15.0,Normal,False,,level_only,,,
+400,Damoh,Madhya Pradesh,-10.0,Normal,False,,level_only,,,
+401,Datia,Madhya Pradesh,7.0,Normal,False,,level_only,,,
+402,Dewas,Madhya Pradesh,17.0,Normal,True,dry_spell,level_only,,,
+403,Dhar,Madhya Pradesh,20.0,Excess,False,,level_only,,,
+404,Dindori,Madhya Pradesh,10.0,Normal,False,,level_only,,,
+405,East Nimar,Madhya Pradesh,13.0,Normal,True,dry_spell,level_only,,,
+406,Guna,Madhya Pradesh,-25.0,Deficient,True,deviation,level_only,,,
+407,Gwalior,Madhya Pradesh,-7.0,Normal,False,,level_only,,,
+408,Harda,Madhya Pradesh,18.0,Normal,True,dry_spell,level_only,,,
+410,Indore,Madhya Pradesh,28.0,Excess,True,dry_spell,provisional,40.0,False,buffered
+411,Jabalpur,Madhya Pradesh,5.0,Normal,False,,level_only,,,
+412,Jhabua,Madhya Pradesh,28.0,Excess,True,dry_spell,level_only,,,
+413,Katni,Madhya Pradesh,-1.0,Normal,False,,level_only,,,
+414,Khargone,Madhya Pradesh,22.0,Excess,False,,level_only,,,
+415,Mandla,Madhya Pradesh,1.0,Normal,False,,level_only,,,
+416,Mandsaur,Madhya Pradesh,-11.0,Normal,False,,level_only,,,
+417,Morena,Madhya Pradesh,-5.0,Normal,False,,insufficient,,,
+409,Narmadapuram,Madhya Pradesh,12.0,Normal,False,,insufficient,,,
+418,Narsinghpur,Madhya Pradesh,16.0,Normal,False,,level_only,,,
+419,Neemuch,Madhya Pradesh,-23.0,Deficient,True,deviation,level_only,,,
+722,Niwari,Madhya Pradesh,7.0,Normal,False,,level_only,,,
+420,Panna,Madhya Pradesh,-17.0,Normal,False,,level_only,,,
+421,Raisen,Madhya Pradesh,-2.0,Normal,False,,insufficient,,,
+422,Rajgarh,Madhya Pradesh,-17.0,Normal,False,,provisional,17.0,True,hidden_drought
+423,Ratlam,Madhya Pradesh,25.0,Excess,False,,level_only,,,
+424,Rewa,Madhya Pradesh,-30.0,Deficient,True,"deviation,spi",level_only,,,
+425,Sagar,Madhya Pradesh,-5.0,Normal,True,dry_spell,level_only,,,
+426,Satna,Madhya Pradesh,-31.0,Deficient,True,"deviation,spi,dry_spell",level_only,,,
+427,Sehore,Madhya Pradesh,1.0,Normal,False,,level_only,,,
+428,Seoni,Madhya Pradesh,19.0,Normal,False,,level_only,,,
+429,Shahdol,Madhya Pradesh,-18.0,Normal,True,dry_spell,level_only,,,
+430,Shajapur,Madhya Pradesh,-21.0,Deficient,True,"deviation,dry_spell",level_only,,,
+431,Sheopur,Madhya Pradesh,-8.0,Normal,False,,level_only,,,
+432,Shivpuri,Madhya Pradesh,-4.0,Normal,False,,provisional,90.0,False,fine
+433,Sidhi,Madhya Pradesh,-28.0,Deficient,True,"deviation,spi",level_only,,,
+638,Singrauli,Madhya Pradesh,-22.0,Deficient,True,"deviation,spi",level_only,,,
+434,Tikamgarh,Madhya Pradesh,-0.0,Normal,False,,level_only,,,
+435,Ujjain,Madhya Pradesh,18.0,Normal,True,dry_spell,level_only,,,
+436,Umaria,Madhya Pradesh,4.0,Normal,True,dry_spell,level_only,,,
+437,Vidisha,Madhya Pradesh,-14.0,Normal,False,,level_only,,,
+466,Ahmednagar,Maharashtra,-12.0,Normal,True,dry_spell,level_only,,,
+467,Akola,Maharashtra,-23.0,Deficient,True,"deviation,spi,dry_spell",level_only,,,
+468,Amravati,Maharashtra,-9.0,Normal,False,,level_only,,,
+469,Aurangabad,Maharashtra,-15.0,Normal,True,dry_spell,level_only,,,
+470,Beed,Maharashtra,-24.0,Deficient,True,"deviation,dry_spell",level_only,,,
+471,Bhandara,Maharashtra,-3.0,Normal,False,,level_only,,,
+472,Buldhana,Maharashtra,-15.0,Normal,False,,level_only,,,
+473,Chandrapur,Maharashtra,6.0,Normal,False,,level_only,,,
+474,Dhule,Maharashtra,-1.0,Normal,False,,level_only,,,
+475,Gadchiroli,Maharashtra,3.0,Normal,False,,level_only,,,
+476,Gondia,Maharashtra,-2.0,Normal,False,,level_only,,,
+477,Hingoli,Maharashtra,-16.0,Normal,True,dry_spell,insufficient,,,
+478,Jalgaon,Maharashtra,2.0,Normal,False,,level_only,,,
+479,Jalna,Maharashtra,-24.0,Deficient,True,deviation,level_only,,,
+480,Kolhapur,Maharashtra,-23.0,Deficient,True,"deviation,spi,dry_spell",level_only,,,
+481,Latur,Maharashtra,-6.0,Normal,True,dry_spell,level_only,,,
+482,Mumbai,Maharashtra,21.0,Excess,False,,insufficient,,,
+483,Mumbai Suburban,Maharashtra,22.0,Excess,False,,insufficient,,,
+484,Nagpur,Maharashtra,7.0,Normal,False,,level_only,,,
+485,Nanded,Maharashtra,28.0,Excess,False,,level_only,,,
+486,Nandurbar,Maharashtra,-7.0,Normal,True,dry_spell,level_only,,,
+487,Nashik,Maharashtra,-10.0,Normal,True,dry_spell,level_only,,,
+488,Osmanabad,Maharashtra,-17.0,Normal,True,dry_spell,insufficient,,,
+665,Palghar,Maharashtra,21.0,Excess,False,,insufficient,,,
+489,Parbhani,Maharashtra,-17.0,Normal,False,,level_only,,,
+490,Pune,Maharashtra,-31.0,Deficient,True,"deviation,dry_spell",level_only,,,
+491,Raigad,Maharashtra,10.0,Normal,False,,level_only,,,
+492,Ratnagiri,Maharashtra,-1.0,Normal,False,,level_only,,,
+493,Sangli,Maharashtra,-38.0,Deficient,True,"deviation,spi,dry_spell",insufficient,,,
+494,Satara,Maharashtra,-45.0,Deficient,True,"deviation,spi,dry_spell",level_only,,,
+495,Sindhudurg,Maharashtra,-2.0,Normal,False,,level_only,,,
+496,Solapur,Maharashtra,-28.0,Deficient,True,"deviation,dry_spell",level_only,,,
+497,Thane,Maharashtra,21.0,Excess,False,,insufficient,,,
+498,Wardha,Maharashtra,3.0,Normal,False,,level_only,,,
+499,Washim,Maharashtra,-10.0,Normal,False,,level_only,,,
+500,Yavatmal,Maharashtra,12.0,Normal,False,,level_only,,,
+252,Bishnupur,Manipur,-49.0,Deficient,True,"deviation,spi,dry_spell",insufficient,,,
+253,Chandel,Manipur,-57.0,Deficient,True,"deviation,spi,dry_spell",insufficient,,,
+254,Churachandpur,Manipur,-62.0,Large Deficient,True,"deviation,spi,dry_spell",insufficient,,,
+255,Imphal East,Manipur,-26.0,Deficient,True,"deviation,spi",insufficient,,,
+256,Imphal West,Manipur,-32.0,Deficient,True,"deviation,spi",insufficient,,,
+713,Jiribam,Manipur,-17.0,Normal,False,,insufficient,,,
+711,Kakching,Manipur,-52.0,Deficient,True,"deviation,spi,dry_spell",insufficient,,,
+717,Kamjong,Manipur,-22.0,Deficient,True,deviation,insufficient,,,
+712,Kangpokpi,Manipur,-23.0,Deficient,True,"deviation,spi",insufficient,,,
+714,Noney,Manipur,-32.0,Deficient,True,"deviation,spi",insufficient,,,
+715,Pherzawl,Manipur,-63.0,Large Deficient,True,"deviation,spi,dry_spell",insufficient,,,
+257,Senapati,Manipur,-16.0,Normal,False,,insufficient,,,
+258,Tamenglong,Manipur,-9.0,Normal,False,,insufficient,,,
+716,Tengnoupal,Manipur,-42.0,Deficient,True,deviation,insufficient,,,
+259,Thoubal,Manipur,-41.0,Deficient,True,"deviation,spi",insufficient,,,
+260,Ukhrul,Manipur,-15.0,Normal,False,,insufficient,,,
+273,East Garo Hills,Meghalaya,-3.0,Normal,False,,insufficient,,,
+657,East Jaintia Hills,Meghalaya,-44.0,Deficient,True,"deviation,spi,dry_spell",level_only,,,
+274,East Khasi Hills,Meghalaya,-29.0,Deficient,True,deviation,level_only,,,
+740,Eastern West Khasi Hills,Meghalaya,2.0,Normal,False,,insufficient,,,
+656,North Garo Hills,Meghalaya,17.0,Normal,False,,level_only,,,
+276,Ri Bhoi,Meghalaya,-21.0,Deficient,True,deviation,level_only,,,
+277,South Garo Hills,Meghalaya,-13.0,Normal,False,,insufficient,,,
+663,South West Garo Hills,Meghalaya,37.0,Excess,False,,insufficient,,,
+658,South West Khasi Hills,Meghalaya,8.0,Normal,False,,insufficient,,,
+278,West Garo Hills,Meghalaya,27.0,Excess,False,,insufficient,,,
+275,West Jaintia Hills,Meghalaya,-42.0,Deficient,True,"deviation,spi",insufficient,,,
+279,West Khasi Hills,Meghalaya,-4.0,Normal,False,,insufficient,,,
+261,Aizawl,Mizoram,-38.0,Deficient,True,"deviation,spi",insufficient,,,
+262,Champhai,Mizoram,-42.0,Deficient,True,"deviation,spi",insufficient,,,
+726,Hnahthial,Mizoram,40.0,Excess,False,,insufficient,,,
+728,Khawzawl,Mizoram,-43.0,Deficient,True,"deviation,spi",insufficient,,,
+263,Kolasib,Mizoram,-13.0,Normal,False,,insufficient,,,
+264,Lawngtlai,Mizoram,87.0,Large Excess,False,,insufficient,,,
+265,Lunglei,Mizoram,-20.0,Deficient,True,deviation,insufficient,,,
+266,Mamit,Mizoram,-19.0,Normal,True,spi,insufficient,,,
+267,Saiha,Mizoram,221.0,Large Excess,False,,insufficient,,,
+727,Saitual,Mizoram,-69.0,Large Deficient,True,"deviation,spi,dry_spell",insufficient,,,
+268,Serchhip,Mizoram,-21.0,Deficient,True,deviation,insufficient,,,
+758,Chumoukedima,Nagaland,-11.0,Normal,False,,insufficient,,,
+244,Dimapur,Nagaland,-5.0,Normal,False,,level_only,,,
+614,Kiphire,Nagaland,19.0,Normal,False,,insufficient,,,
+245,Kohima,Nagaland,-5.0,Normal,False,,insufficient,,,
+615,Longleng,Nagaland,13.0,Normal,False,,insufficient,,,
+246,Mokokchung,Nagaland,20.0,Excess,False,,insufficient,,,
+247,Mon,Nagaland,3.0,Normal,False,,insufficient,,,
+764,Niuland,Nagaland,-2.0,Normal,False,,insufficient,,,
+736,Noklak,Nagaland,21.0,Excess,False,,insufficient,,,
+613,Peren,Nagaland,-10.0,Normal,False,,insufficient,,,
+248,Phek,Nagaland,6.0,Normal,False,,insufficient,,,
+765,Shamator,Nagaland,21.0,Excess,False,,insufficient,,,
+757,Tseminyu,Nagaland,32.0,Excess,False,,insufficient,,,
+249,Tuensang,Nagaland,25.0,Excess,False,,insufficient,,,
+250,Wokha,Nagaland,28.0,Excess,False,,insufficient,,,
+251,Zunheboto,Nagaland,22.0,Excess,False,,insufficient,,,
+344,Anugul,Odisha,10.0,Normal,False,,full,70.0,False,fine
+345,Balangir,Odisha,3.0,Normal,False,,full,80.0,False,fine
+346,Baleshwar,Odisha,-11.0,Normal,False,,full,52.0,False,fine
+347,Bargarh,Odisha,6.0,Normal,False,,short,78.0,False,fine
+348,Bhadrak,Odisha,-12.0,Normal,False,,short,81.0,False,fine
+349,Boudh,Odisha,12.0,Normal,False,,full,49.0,False,fine
+350,Cuttack,Odisha,-12.0,Normal,False,,level_only,,,
+351,Deogarh,Odisha,-3.0,Normal,False,,insufficient,,,
+352,Dhenkanal,Odisha,-1.0,Normal,False,,short,18.0,True,hidden_drought
+353,Gajapati,Odisha,-7.0,Normal,False,,full,20.0,True,hidden_drought
+354,Ganjam,Odisha,-4.0,Normal,False,,full,20.0,False,fine
+355,Jagatsinghapur,Odisha,-31.0,Deficient,True,"deviation,spi",insufficient,,,
+356,Jajapur,Odisha,-10.0,Normal,False,,short,33.0,False,fine
+357,Jharsuguda,Odisha,10.0,Normal,False,,level_only,,,
+358,Kalahandi,Odisha,1.0,Normal,False,,provisional,50.0,False,fine
+359,Kandhamal,Odisha,7.0,Normal,False,,full,100.0,False,fine
+360,Kendrapara,Odisha,-30.0,Deficient,True,"deviation,spi",level_only,,,
+361,Kendujhar,Odisha,-1.0,Normal,False,,short,6.0,True,hidden_drought
+362,Khordha,Odisha,-9.0,Normal,False,,full,20.0,True,hidden_drought
+363,Koraput,Odisha,6.0,Normal,False,,full,50.0,False,fine
+364,Malkangiri,Odisha,18.0,Normal,False,,short,85.0,False,fine
+365,Mayurbhanj,Odisha,-11.0,Normal,False,,full,45.0,False,fine
+366,Nabarangpur,Odisha,-18.0,Normal,False,,provisional,65.0,False,fine
+367,Nayagarh,Odisha,1.0,Normal,False,,full,29.0,False,fine
+368,Nuapada,Odisha,-7.0,Normal,False,,short,83.0,False,fine
+369,Puri,Odisha,-22.0,Deficient,True,deviation,full,8.0,True,double_drought
+370,Rayagada,Odisha,-4.0,Normal,False,,provisional,33.0,False,fine
+371,Sambalpur,Odisha,5.0,Normal,False,,insufficient,,,
+372,Sonepur,Odisha,6.0,Normal,False,,short,92.0,False,fine
+373,Sundargarh,Odisha,-4.0,Normal,False,,insufficient,,,
+598,Karaikal,Puducherry,-24.0,Deficient,True,deviation,provisional,23.0,False,buffered
+599,Mahe,Puducherry,-24.0,Deficient,True,"deviation,spi,dry_spell",insufficient,,,
+600,Pondicherry,Puducherry,52.0,Excess,False,,full,32.0,False,fine
+601,Yanam,Puducherry,-36.0,Deficient,True,"deviation,spi",insufficient,,,
+27,Amritsar,Punjab,27.0,Excess,True,dry_spell,short,34.0,False,buffered
+605,Barnala,Punjab,8.0,Normal,False,,short,0.0,True,hidden_drought
+28,Bathinda,Punjab,-33.0,Deficient,True,"deviation,dry_spell",full,0.0,True,double_drought
+29,Faridkot,Punjab,4.0,Normal,True,dry_spell,full,9.0,True,double_drought
+30,Fatehgarh Sahib,Punjab,7.0,Normal,False,,full,23.0,False,fine
+651,Fazilka,Punjab,-26.0,Deficient,True,"deviation,dry_spell",full,20.0,True,double_drought
+31,Ferozepur,Punjab,21.0,Excess,True,dry_spell,short,70.0,False,buffered
+32,Gurdaspur,Punjab,25.0,Excess,False,,full,35.0,False,fine
+33,Hoshiarpur,Punjab,10.0,Normal,False,,full,56.0,False,fine
+34,Jalandhar,Punjab,-9.0,Normal,False,,full,18.0,True,hidden_drought
+35,Kapurthala,Punjab,9.0,Normal,False,,full,18.0,True,hidden_drought
+36,Ludhiana,Punjab,-6.0,Normal,False,,full,13.0,True,hidden_drought
+737,Malerkotla,Punjab,-25.0,Deficient,True,deviation,provisional,0.0,True,double_drought
+37,Mansa,Punjab,-36.0,Deficient,True,"deviation,dry_spell",short,5.0,True,double_drought
+38,Moga,Punjab,-15.0,Normal,False,,short,5.0,True,hidden_drought
+662,Pathankot,Punjab,25.0,Excess,False,,full,40.0,False,fine
+41,Patiala,Punjab,11.0,Normal,False,,full,51.0,False,fine
+42,Rupnagar,Punjab,41.0,Excess,False,,full,70.0,False,fine
+608,S.A.S Nagar,Punjab,17.0,Normal,False,,short,87.0,False,fine
+43,Sangrur,Punjab,-27.0,Deficient,True,"deviation,dry_spell",short,0.0,True,double_drought
+40,Shahid Bhagat Singh Nagar,Punjab,9.0,Normal,False,,full,36.0,False,fine
+39,Sri Muktsar Sahib,Punjab,-25.0,Deficient,True,"deviation,dry_spell",full,44.0,False,buffered
+609,Tarn Taran,Punjab,5.0,Normal,True,dry_spell,short,23.0,False,buffered
+86,Ajmer,Rajasthan,25.0,Excess,False,,full,60.0,False,fine
+87,Alwar,Rajasthan,-13.0,Normal,False,,full,21.0,False,fine
+776,Anoopgarh,Rajasthan,41.0,Excess,True,dry_spell,full,80.0,False,buffered
+775,Balotra,Rajasthan,83.0,Large Excess,True,dry_spell,full,45.0,False,buffered
+88,Banswara,Rajasthan,15.0,Normal,False,,full,35.0,False,fine
+89,Baran,Rajasthan,-30.0,Deficient,True,"deviation,spi",full,39.0,False,buffered
+90,Barmer,Rajasthan,74.0,Large Excess,True,dry_spell,full,50.0,False,buffered
+774,Beawar,Rajasthan,11.0,Normal,True,dry_spell,full,77.0,False,buffered
+91,Bharatpur,Rajasthan,13.0,Normal,False,,full,19.0,True,hidden_drought
+92,Bhilwara,Rajasthan,-7.0,Normal,True,dry_spell,full,78.0,False,buffered
+93,Bikaner,Rajasthan,27.0,Excess,True,dry_spell,full,64.0,False,buffered
+94,Bundi,Rajasthan,-20.0,Deficient,True,"deviation,dry_spell",full,38.0,False,buffered
+95,Chittorgarh,Rajasthan,-15.0,Normal,False,,full,35.0,False,fine
+96,Churu,Rajasthan,1.0,Normal,True,dry_spell,full,34.0,False,buffered
+97,Dausa,Rajasthan,11.0,Normal,False,,full,0.0,True,hidden_drought
+767,Deeg,Rajasthan,-0.0,Normal,False,,full,23.0,False,fine
+98,Dholpur,Rajasthan,10.0,Normal,False,,full,85.0,False,fine
+768,Didwana Kuchaman,Rajasthan,38.0,Excess,False,,full,54.0,False,fine
+769,Dudu,Rajasthan,6.0,Normal,True,dry_spell,short,80.0,False,buffered
+99,Dungarpur,Rajasthan,-26.0,Deficient,True,"deviation,dry_spell",full,24.0,False,buffered
+100,Ganganagar,Rajasthan,41.0,Excess,True,dry_spell,full,92.0,False,buffered
+771,Gangapurcity,Rajasthan,10.0,Normal,False,,full,54.0,False,fine
+101,Hanumangarh,Rajasthan,-17.0,Normal,True,dry_spell,full,3.0,True,double_drought
+102,Jaipur,Rajasthan,-23.0,Deficient,True,"deviation,dry_spell",full,22.0,False,buffered
+783,Jaipur Gramin,Rajasthan,1.0,Normal,True,dry_spell,full,43.0,False,buffered
+103,Jaisalmer,Rajasthan,22.0,Excess,True,dry_spell,full,80.0,False,buffered
+104,Jalore,Rajasthan,87.0,Large Excess,True,dry_spell,short,61.0,False,buffered
+105,Jhalawar,Rajasthan,-24.0,Deficient,True,deviation,full,38.0,False,buffered
+106,Jhunjhunu,Rajasthan,17.0,Normal,True,dry_spell,full,0.0,True,double_drought
+107,Jodhpur,Rajasthan,36.0,Excess,False,,full,90.0,False,fine
+778,Jodhpur Gramin,Rajasthan,24.0,Excess,False,,full,87.0,False,fine
+108,Karauli,Rajasthan,3.0,Normal,False,,full,53.0,False,fine
+781,Kekri,Rajasthan,6.0,Normal,False,,full,72.0,False,fine
+770,Khairthal-Tijara,Rajasthan,-8.0,Normal,False,,full,0.0,True,hidden_drought
+109,Kota,Rajasthan,-20.0,Deficient,True,"deviation,dry_spell",full,52.0,False,buffered
+782,Kotputli-Behror,Rajasthan,-0.0,Normal,False,,short,0.0,True,hidden_drought
+110,Nagaur,Rajasthan,25.0,Excess,True,dry_spell,short,87.0,False,buffered
+773,Neem Ka Thana,Rajasthan,18.0,Normal,True,dry_spell,provisional,62.0,False,buffered
+111,Pali,Rajasthan,66.0,Large Excess,True,dry_spell,full,86.0,False,buffered
+772,Phalodi,Rajasthan,55.0,Excess,False,,provisional,38.0,False,fine
+629,Pratapgarh,Rajasthan,14.0,Normal,False,,full,58.0,False,fine
+112,Rajsamand,Rajasthan,34.0,Excess,False,,full,62.0,False,fine
+777,Salumbar,Rajasthan,-3.0,Normal,True,dry_spell,full,21.0,False,buffered
+779,Sanchor,Rajasthan,66.0,Large Excess,True,dry_spell,insufficient,,,
+113,Sawai Madhopur,Rajasthan,-9.0,Normal,False,,full,46.0,False,fine
+780,Shahpura,Rajasthan,-17.0,Normal,True,dry_spell,full,60.0,False,buffered
+114,Sikar,Rajasthan,19.0,Normal,True,dry_spell,full,0.0,True,double_drought
+115,Sirohi,Rajasthan,58.0,Excess,True,dry_spell,full,76.0,False,buffered
+116,Tonk,Rajasthan,1.0,Normal,True,dry_spell,full,48.0,False,buffered
+117,Udaipur,Rajasthan,13.0,Normal,False,,full,72.0,False,fine
+225,Gangtok,Sikkim,-6.0,Normal,False,,insufficient,,,
+228,Gyalshing,Sikkim,4.0,Normal,False,,insufficient,,,
+226,Mangan,Sikkim,-8.0,Normal,False,,insufficient,,,
+227,Namchi,Sikkim,-0.0,Normal,False,,insufficient,,,
+741,Pakyong,Sikkim,-8.0,Normal,False,,insufficient,,,
+742,Soreng,Sikkim,-10.0,Normal,False,,insufficient,,,
+610,Ariyalur,Tamil Nadu,-17.0,Normal,False,,short,29.0,False,fine
+730,Chengalpattu,Tamil Nadu,66.0,Large Excess,False,,provisional,32.0,False,fine
+568,Chennai,Tamil Nadu,27.0,Excess,False,,level_only,,,
+569,Coimbatore,Tamil Nadu,-24.0,Deficient,True,"deviation,dry_spell",full,45.0,False,buffered
+570,Cuddalore,Tamil Nadu,5.0,Normal,False,,full,18.0,True,hidden_drought
+571,Dharmapuri,Tamil Nadu,14.0,Normal,False,,provisional,60.0,False,fine
+572,Dindigul,Tamil Nadu,-10.0,Normal,False,,full,61.0,False,fine
+573,Erode,Tamil Nadu,-4.0,Normal,False,,full,51.0,False,fine
+729,Kallakurichi,Tamil Nadu,21.0,Excess,False,,full,40.0,False,fine
+574,Kanchipuram,Tamil Nadu,59.0,Excess,False,,provisional,56.0,False,fine
+575,Kanniyakumari,Tamil Nadu,-41.0,Deficient,True,"deviation,dry_spell",provisional,57.0,False,buffered
+576,Karur,Tamil Nadu,-16.0,Normal,True,dry_spell,full,75.0,False,buffered
+577,Krishnagiri,Tamil Nadu,2.0,Normal,False,,full,56.0,False,fine
+578,Madurai,Tamil Nadu,-5.0,Normal,False,,full,82.0,False,fine
+735,Mayiladuthurai,Tamil Nadu,-24.0,Deficient,True,deviation,full,40.0,False,buffered
+579,Nagapattinam,Tamil Nadu,-37.0,Deficient,True,"deviation,dry_spell",full,17.0,True,double_drought
+580,Namakkal,Tamil Nadu,1.0,Normal,False,,full,76.0,False,fine
+581,Perambalur,Tamil Nadu,-21.0,Deficient,True,deviation,full,55.0,False,buffered
+582,Pudukkottai,Tamil Nadu,-14.0,Normal,False,,full,37.0,False,fine
+583,Ramanathapuram,Tamil Nadu,-26.0,Deficient,True,deviation,full,42.0,False,buffered
+731,Ranipet,Tamil Nadu,53.0,Excess,False,,full,77.0,False,fine
+584,Salem,Tamil Nadu,-0.0,Normal,False,,full,42.0,False,fine
+585,Sivaganga,Tamil Nadu,1.0,Normal,False,,full,52.0,False,fine
+733,Tenkasi,Tamil Nadu,-57.0,Deficient,True,"deviation,dry_spell",short,47.0,False,buffered
+586,Thanjavur,Tamil Nadu,-8.0,Normal,False,,full,30.0,False,fine
+587,The Nilgiris,Tamil Nadu,20.0,Excess,False,,full,40.0,False,fine
+588,Theni,Tamil Nadu,-29.0,Deficient,True,deviation,full,94.0,False,buffered
+589,Thiruvallur,Tamil Nadu,54.0,Excess,False,,provisional,21.0,False,fine
+590,Thiruvarur,Tamil Nadu,-13.0,Normal,False,,full,29.0,False,fine
+591,Tiruchirappalli,Tamil Nadu,1.0,Normal,False,,full,60.0,False,fine
+592,Tirunelveli,Tamil Nadu,-33.0,Deficient,True,"deviation,dry_spell",full,35.0,False,buffered
+732,Tirupathur,Tamil Nadu,30.0,Excess,False,,full,86.0,False,fine
+634,Tiruppur,Tamil Nadu,-44.0,Deficient,True,deviation,full,59.0,False,buffered
+593,Tiruvannamalai,Tamil Nadu,40.0,Excess,False,,provisional,57.0,False,fine
+594,Tuticorin,Tamil Nadu,-33.0,Deficient,True,"deviation,dry_spell",full,53.0,False,buffered
+595,Vellore,Tamil Nadu,33.0,Excess,False,,full,79.0,False,fine
+596,Villupuram,Tamil Nadu,59.0,Excess,False,,full,57.0,False,fine
+597,Virudhunagar,Tamil Nadu,-9.0,Normal,False,,full,81.0,False,fine
+501,Adilabad,Telangana,24.0,Excess,False,,level_only,,,
+690,Bhadradri Kothagudem,Telangana,2.0,Normal,False,,level_only,,,
+686,Hanumakonda,Telangana,42.0,Excess,False,,level_only,,,
+507,Hyderabad,Telangana,-2.0,Normal,True,dry_spell,provisional,31.0,False,buffered
+681,Jagitial,Telangana,29.0,Excess,False,,provisional,28.0,False,fine
+689,Jangoan,Telangana,49.0,Excess,False,,provisional,18.0,True,hidden_drought
+687,Jayashankar Bhupalapally,Telangana,21.0,Excess,False,,level_only,,,
+695,Jogulamba Gadwal,Telangana,-11.0,Normal,False,,provisional,0.0,True,hidden_drought
+685,Kamareddy,Telangana,32.0,Excess,False,,level_only,,,
+508,Karimnagar,Telangana,36.0,Excess,False,,provisional,30.0,False,fine
+509,Khammam,Telangana,-2.0,Normal,False,,level_only,,,
+699,Kumuram Bheem Asifabad,Telangana,11.0,Normal,False,,level_only,,,
+688,Mahabubabad,Telangana,20.0,Excess,False,,level_only,,,
+512,Mahabubnagar,Telangana,-1.0,Normal,True,dry_spell,provisional,43.0,False,buffered
+684,Mancherial,Telangana,17.0,Normal,False,,level_only,,,
+513,Medak,Telangana,31.0,Excess,False,,provisional,100.0,False,fine
+700,Medchal Malkajgiri,Telangana,14.0,Normal,True,dry_spell,level_only,,,
+720,Mulugu,Telangana,1.0,Normal,False,,level_only,,,
+694,Nagarkurnool,Telangana,-11.0,Normal,True,dry_spell,provisional,80.0,False,buffered
+514,Nalgonda,Telangana,-17.0,Normal,True,dry_spell,short,20.0,True,double_drought
+721,Narayanpet,Telangana,4.0,Normal,True,dry_spell,level_only,,,
+680,Nirmal,Telangana,42.0,Excess,False,,level_only,,,
+516,Nizamabad,Telangana,57.0,Excess,False,,provisional,31.0,False,fine
+682,Peddapalli,Telangana,22.0,Excess,False,,level_only,,,
+683,Rajanna Sircilla,Telangana,39.0,Excess,False,,provisional,100.0,False,fine
+518,Ranga Reddy,Telangana,1.0,Normal,True,dry_spell,provisional,72.0,False,buffered
+691,Sangareddy,Telangana,24.0,Excess,True,dry_spell,short,50.0,False,buffered
+692,Siddipet,Telangana,30.0,Excess,True,dry_spell,provisional,0.0,True,double_drought
+696,Suryapet,Telangana,9.0,Normal,True,dry_spell,level_only,,,
+698,Vikarabad,Telangana,16.0,Normal,True,dry_spell,provisional,94.0,False,buffered
+693,Wanaparthy,Telangana,-7.0,Normal,True,dry_spell,level_only,,,
+522,Warangal,Telangana,33.0,Excess,False,,provisional,64.0,False,fine
+697,Yadadri Bhuvanagiri,Telangana,18.0,Normal,False,,short,0.0,True,hidden_drought
+269,Dhalai,Tripura,-8.0,Normal,False,,insufficient,,,
+654,Gomati,Tripura,-13.0,Normal,False,,insufficient,,,
+652,Khowai,Tripura,-8.0,Normal,False,,level_only,,,
+270,North Tripura,Tripura,-5.0,Normal,False,,level_only,,,
+653,Sepahijala,Tripura,5.0,Normal,False,,insufficient,,,
+271,South Tripura,Tripura,-11.0,Normal,True,dry_spell,level_only,,,
+655,Unakoti,Tripura,8.0,Normal,False,,insufficient,,,
+272,West Tripura,Tripura,-5.0,Normal,False,,level_only,,,
+118,Agra,Uttar Pradesh,-1.0,Normal,False,,insufficient,,,
+119,Aligarh,Uttar Pradesh,16.0,Normal,False,,insufficient,,,
+121,Ambedkar Nagar,Uttar Pradesh,-43.0,Deficient,True,"deviation,spi",level_only,,,
+640,Amethi,Uttar Pradesh,-40.0,Deficient,True,"deviation,spi",insufficient,,,
+154,Amroha,Uttar Pradesh,15.0,Normal,False,,level_only,,,
+122,Auraiya,Uttar Pradesh,-8.0,Normal,False,,insufficient,,,
+140,Ayodhya,Uttar Pradesh,-30.0,Deficient,True,deviation,level_only,,,
+123,Azamgarh,Uttar Pradesh,-38.0,Deficient,True,"deviation,spi",level_only,,,
+124,Baghpat,Uttar Pradesh,17.0,Normal,False,,level_only,,,
+125,Bahraich,Uttar Pradesh,-22.0,Deficient,True,deviation,level_only,,,
+126,Ballia,Uttar Pradesh,-36.0,Deficient,True,"deviation,spi",insufficient,,,
+127,Balrampur,Uttar Pradesh,-23.0,Deficient,True,"deviation,dry_spell",level_only,,,
+128,Banda,Uttar Pradesh,-29.0,Deficient,True,"deviation,spi",level_only,,,
+129,Barabanki,Uttar Pradesh,2.0,Normal,False,,level_only,,,
+130,Bareilly,Uttar Pradesh,-14.0,Normal,False,,insufficient,,,
+131,Basti,Uttar Pradesh,-42.0,Deficient,True,"deviation,spi",insufficient,,,
+179,Bhadohi,Uttar Pradesh,-46.0,Deficient,True,"deviation,spi",insufficient,,,
+132,Bijnor,Uttar Pradesh,34.0,Excess,False,,level_only,,,
+133,Budaun,Uttar Pradesh,15.0,Normal,False,,insufficient,,,
+134,Bulandshahr,Uttar Pradesh,8.0,Normal,False,,level_only,,,
+135,Chandauli,Uttar Pradesh,-40.0,Deficient,True,"deviation,spi",insufficient,,,
+136,Chitrakoot,Uttar Pradesh,-32.0,Deficient,True,"deviation,spi",insufficient,,,
+137,Deoria,Uttar Pradesh,-46.0,Deficient,True,"deviation,spi",insufficient,,,
+138,Etah,Uttar Pradesh,49.0,Excess,False,,insufficient,,,
+139,Etawah,Uttar Pradesh,9.0,Normal,False,,insufficient,,,
+141,Farrukhabad,Uttar Pradesh,-18.0,Normal,False,,insufficient,,,
+142,Fatehpur,Uttar Pradesh,-50.0,Deficient,True,"deviation,spi",level_only,,,
+143,Firozabad,Uttar Pradesh,41.0,Excess,False,,insufficient,,,
+144,Gautam Buddha Nagar,Uttar Pradesh,-26.0,Deficient,True,deviation,level_only,,,
+145,Ghaziabad,Uttar Pradesh,-35.0,Deficient,True,deviation,level_only,,,
+146,Ghazipur,Uttar Pradesh,-27.0,Deficient,True,"deviation,spi",insufficient,,,
+147,Gonda,Uttar Pradesh,-22.0,Deficient,True,deviation,insufficient,,,
+148,Gorakhpur,Uttar Pradesh,-44.0,Deficient,True,"deviation,spi",insufficient,,,
+149,Hamirpur,Uttar Pradesh,10.0,Normal,False,,insufficient,,,
+661,Hapur,Uttar Pradesh,-32.0,Deficient,True,deviation,level_only,,,
+150,Hardoi,Uttar Pradesh,-13.0,Normal,False,,insufficient,,,
+163,Hathras,Uttar Pradesh,40.0,Excess,False,,insufficient,,,
+151,Jalaun,Uttar Pradesh,-8.0,Normal,False,,insufficient,,,
+152,Jaunpur,Uttar Pradesh,-43.0,Deficient,True,"deviation,spi",insufficient,,,
+153,Jhansi,Uttar Pradesh,-3.0,Normal,False,,insufficient,,,
+155,Kannauj,Uttar Pradesh,14.0,Normal,False,,insufficient,,,
+156,Kanpur Dehat,Uttar Pradesh,-34.0,Deficient,True,deviation,insufficient,,,
+157,Kanpur Nagar,Uttar Pradesh,-23.0,Deficient,True,deviation,insufficient,,,
+633,Kasganj,Uttar Pradesh,27.0,Excess,False,,insufficient,,,
+158,Kaushambi,Uttar Pradesh,-43.0,Deficient,True,"deviation,spi",insufficient,,,
+159,Kheri,Uttar Pradesh,-22.0,Deficient,True,deviation,insufficient,,,
+160,Kushi Nagar,Uttar Pradesh,-46.0,Deficient,True,"deviation,spi,dry_spell",insufficient,,,
+161,Lalitpur,Uttar Pradesh,2.0,Normal,False,,insufficient,,,
+162,Lucknow,Uttar Pradesh,29.0,Excess,False,,level_only,,,
+164,Maharajganj,Uttar Pradesh,-40.0,Deficient,True,"deviation,spi",insufficient,,,
+165,Mahoba,Uttar Pradesh,-6.0,Normal,False,,insufficient,,,
+166,Mainpuri,Uttar Pradesh,33.0,Excess,False,,insufficient,,,
+167,Mathura,Uttar Pradesh,-10.0,Normal,False,,insufficient,,,
+168,Mau,Uttar Pradesh,-35.0,Deficient,True,"deviation,spi",level_only,,,
+169,Meerut,Uttar Pradesh,21.0,Excess,False,,level_only,,,
+170,Mirzapur,Uttar Pradesh,-47.0,Deficient,True,"deviation,spi",insufficient,,,
+171,Moradabad,Uttar Pradesh,-7.0,Normal,False,,insufficient,,,
+172,Muzaffarnagar,Uttar Pradesh,25.0,Excess,False,,level_only,,,
+173,Pilibhit,Uttar Pradesh,-33.0,Deficient,True,"deviation,spi",insufficient,,,
+174,Pratapgarh,Uttar Pradesh,-42.0,Deficient,True,"deviation,spi",insufficient,,,
+120,Prayagraj,Uttar Pradesh,-50.0,Deficient,True,"deviation,spi",insufficient,,,
+175,Rae Bareli,Uttar Pradesh,-21.0,Deficient,True,deviation,level_only,,,
+176,Rampur,Uttar Pradesh,14.0,Normal,False,,insufficient,,,
+177,Saharanpur,Uttar Pradesh,17.0,Normal,False,,level_only,,,
+659,Sambhal,Uttar Pradesh,26.0,Excess,False,,level_only,,,
+178,Sant Kabeer Nagar,Uttar Pradesh,-31.0,Deficient,True,deviation,insufficient,,,
+180,Shahjahanpur,Uttar Pradesh,-19.0,Normal,False,,insufficient,,,
+660,Shamli,Uttar Pradesh,-13.0,Normal,False,,level_only,,,
+181,Shravasti,Uttar Pradesh,-30.0,Deficient,True,"deviation,spi,dry_spell",insufficient,,,
+182,Siddharth Nagar,Uttar Pradesh,-26.0,Deficient,True,deviation,level_only,,,
+183,Sitapur,Uttar Pradesh,-24.0,Deficient,True,deviation,insufficient,,,
+184,Sonbhadra,Uttar Pradesh,-25.0,Deficient,True,"deviation,spi",insufficient,,,
+185,Sultanpur,Uttar Pradesh,-46.0,Deficient,True,"deviation,spi",insufficient,,,
+186,Unnao,Uttar Pradesh,-31.0,Deficient,True,deviation,insufficient,,,
+187,Varanasi,Uttar Pradesh,-47.0,Deficient,True,"deviation,spi",insufficient,,,
+45,Almora,Uttarakhand,-15.0,Normal,False,,level_only,,,
+46,Bageshwar,Uttarakhand,48.0,Excess,False,,insufficient,,,
+47,Chamoli,Uttarakhand,56.0,Excess,False,,insufficient,,,
+48,Champawat,Uttarakhand,-12.0,Normal,False,,provisional,31.0,False,fine
+49,Dehradun,Uttarakhand,27.0,Excess,False,,full,53.0,False,fine
+50,Haridwar,Uttarakhand,47.0,Excess,False,,full,50.0,False,fine
+51,Nainital,Uttarakhand,11.0,Normal,False,,full,61.0,False,fine
+52,Pauri Garhwal,Uttarakhand,-10.0,Normal,False,,level_only,,,
+53,Pithoragarh,Uttarakhand,20.0,Excess,False,,insufficient,,,
+54,Rudra Prayag,Uttarakhand,35.0,Excess,False,,insufficient,,,
+55,Tehri Garhwal,Uttarakhand,13.0,Normal,False,,insufficient,,,
+56,Udam Singh Nagar,Uttarakhand,27.0,Excess,False,,full,25.0,False,fine
+57,Uttar Kashi,Uttarakhand,19.0,Normal,False,,level_only,,,
+303,24 Paraganas North,West Bengal,-14.0,Normal,False,,level_only,,,
+304,24 Paraganas South,West Bengal,1.0,Normal,False,,insufficient,,,
+664,Alipurduar,West Bengal,-0.0,Normal,False,,insufficient,,,
+305,Bankura,West Bengal,-22.0,Deficient,True,"deviation,spi",level_only,,,
+307,Birbhum,West Bengal,-33.0,Deficient,True,"deviation,spi,dry_spell",level_only,,,
+308,Coochbehar,West Bengal,18.0,Normal,False,,insufficient,,,
+309,Darjeeling,West Bengal,-3.0,Normal,False,,insufficient,,,
+310,Dinajpur Dakshin,West Bengal,-29.0,Deficient,True,deviation,insufficient,,,
+311,Dinajpur Uttar,West Bengal,-15.0,Normal,False,,insufficient,,,
+312,Hooghly,West Bengal,-27.0,Deficient,True,"deviation,spi",level_only,,,
+313,Howrah,West Bengal,-10.0,Normal,False,,insufficient,,,
+314,Jalpaiguri,West Bengal,7.0,Normal,False,,insufficient,,,
+703,Jhargram,West Bengal,-32.0,Deficient,True,"deviation,spi",level_only,,,
+702,Kalimpong,West Bengal,1.0,Normal,False,,insufficient,,,
+315,Kolkata,West Bengal,-9.0,Normal,False,,insufficient,,,
+316,Maldah,West Bengal,-10.0,Normal,False,,insufficient,,,
+317,Medinipur East,West Bengal,4.0,Normal,False,,level_only,,,
+318,Medinipur West,West Bengal,-27.0,Deficient,True,"deviation,spi",level_only,,,
+319,Murshidabad,West Bengal,-44.0,Deficient,True,"deviation,spi,dry_spell",level_only,,,
+320,Nadia,West Bengal,-43.0,Deficient,True,"deviation,spi,dry_spell",level_only,,,
+704,Paschim Bardhaman,West Bengal,-23.0,Deficient,True,"deviation,spi",insufficient,,,
+306,Purba Bardhaman,West Bengal,-32.0,Deficient,True,"deviation,spi",level_only,,,
+321,Purulia,West Bengal,-31.0,Deficient,True,"deviation,spi",level_only,,,

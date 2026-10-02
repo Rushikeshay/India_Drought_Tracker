@@ -27,17 +27,21 @@ REPO = Path(__file__).resolve().parents[2]
 WEB = REPO / "web" / "data"
 REF = REPO / "data" / "reference"
 RAIN_SHORT = {"Deficient", "Large Deficient", "No Rain"}
-GW_TIERS_FOR_QUADRANT = {"full", "short"}
+GW_TIERS_FOR_QUADRANT = {"full", "short", "provisional"}
 MIN_SEASON_DAYS = 15
 QUADRANTS = {(False, False): "fine", (False, True): "hidden_drought",
              (True, False): "buffered", (True, True): "double_drought"}
 
 
 def rain_short(r: dict) -> tuple[bool | None, str | None]:
-    if not r or r.get("category") is None:
+    """Uses the combined manual rule (deviation or SPI or dry spell) when the rain record
+    carries it (`short`, from rain_indicators); otherwise the category alone."""
+    if not r or (r.get("category") is None and r.get("short") is None):
         return None, "no_rain_data"
     if r.get("season_days", 999) < MIN_SEASON_DAYS:
         return None, "season_just_started"
+    if r.get("short") is not None:
+        return bool(r["short"]), None
     return r["category"] in RAIN_SHORT, None
 
 
@@ -68,9 +72,11 @@ def main() -> int:
         gl, g_why = gw_low(g)
         q = quadrant(rs, gl)
         rec = {
-            "quadrant": q, "why_none": None if q else (r_why or g_why),
+            "quadrant": q, "provisional": bool(q and g.get("tier") == "provisional"), "why_none": None if q else (r_why or g_why),
             "rain": {"season": r.get("season"), "category": r.get("category"), "departure_pct": r.get("departure_pct"),
-                     "source": r.get("source"), "season_days": r.get("season_days"), "short": rs},
+                     "source": r.get("source"), "season_days": r.get("season_days"), "short": rs,
+                     "short_reasons": r.get("short_reasons"), "spi_season": r.get("spi_season"),
+                     "dry_spell_weeks": r.get("dry_spell_weeks")},
             "gw": {"tier": g.get("tier"), "percentile": g.get("percentile"), "low": gl,
                    "median_depth_m": g.get("median_depth_m"), "change_vs_last_year_m": g.get("change_vs_last_year_m"),
                    "vs_decadal_mean_m": g.get("vs_decadal_mean_m"), "n_live": g.get("n_live")},
@@ -79,9 +85,10 @@ def main() -> int:
             "idm": {"class_of_mean": i.get("class_of_mean"), "pct_in_drought_d0plus": i.get("pct_in_drought_d0plus")},
         }
         out[int(m.dist_lgd)] = rec
-        rows.append({"dist_lgd": m.dist_lgd, "district": m.district, "state": m.state, "quadrant": q,
+        rows.append({"dist_lgd": m.dist_lgd, "district": m.district, "state": m.state, "quadrant": q, "provisional": bool(q and g.get("tier") == "provisional"),
                      "why_none": rec["why_none"], "rain_category": r.get("category"), "rain_departure_pct": r.get("departure_pct"),
-                     "rain_source": r.get("source"), "gw_tier": g.get("tier"), "gw_percentile": g.get("percentile"),
+                     "rain_source": r.get("source"), "rain_short_reasons": ",".join(r.get("short_reasons") or []),
+                     "rain_spi_season": r.get("spi_season"), "rain_dry_spell_weeks": r.get("dry_spell_weeks"), "gw_tier": g.get("tier"), "gw_percentile": g.get("percentile"),
                      "gw_change_vs_last_year_m": g.get("change_vs_last_year_m"), "ingres_category": s.get("category"),
                      "ingres_stage_pct": s.get("stage_pct"), "hidden_block_stress": s.get("hidden_stress"),
                      "idm_class": i.get("class_of_mean")})
@@ -89,7 +96,9 @@ def main() -> int:
     why = pd.Series([v["why_none"] for v in out.values() if v["why_none"]]).value_counts()
     doc = {"as_of": {"rain": rain["as_of"], "groundwater_cycle": f"{gw['cycle_months']} {gw['cycle_year']}",
                      "stress_edition": st["edition"], "idm_week": idm["week"]},
-           "rules": {"rain_short": sorted(RAIN_SHORT), "gw_low": "district percentile <= 20 (tiers full/short only)",
+           "rules": {"rain_short": "IMD category Deficient or worse, OR season SPI <= -1.0, OR a dry spell of >= 4 weeks "
+                                   "(Manual for Drought Management 2020: RF deviation or SPI or dry spell)",
+                     "gw_low": "district percentile <= 20 (tiers full/short; provisional tier gives a provisional quadrant)",
                      "min_season_days": MIN_SEASON_DAYS},
            "quadrant_counts": {str(k): int(v) for k, v in counts.items()},
            "why_no_quadrant": why.to_dict(), "districts": out}

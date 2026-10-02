@@ -21,6 +21,7 @@ from pathlib import Path
 import pandas as pd
 
 from pipeline.process import groundwater as gw
+from pipeline.process import rain_indicators as ri
 from pipeline.process.classify import gw_low, quadrant
 from pipeline.process.rain import PROC, REF
 from pipeline.process.rain_current import category, normal_sum
@@ -40,6 +41,9 @@ def main(argv=None) -> int:
     act = mon[(mon.year == y) & mon.month.between(6, 9)].groupby("dist_lgd").mm.sum(min_count=1)
     nrm = normal_sum(pd.read_parquet(PROC / "rain_daily_normal.parquet"), date(y, 6, 1), date(y, 9, 30))
     dep = ((act - nrm) / nrm * 100).round()
+    spells = ri.dry_spells(pd.read_parquet(PROC / "rain_weekly.parquet"), pd.read_parquet(PROC / "rain_weekly_normal.parquet"),
+                           date(y, 6, 1), date(y, 9, 30))
+    sspi = ri.season_spi(mon, date(y, 6, 1), date(y, 9, 30))
 
     c, units = gw.series()
     g = gw.district_status(c, units, master, y, "NOV", live=None)
@@ -48,10 +52,12 @@ def main(argv=None) -> int:
     for m in master.itertuples():
         d = dep.get(m.dist_lgd)
         cat = category(d) if d is not None and not pd.isna(d) else None
-        rs = None if cat is None else cat in {"Deficient", "Large Deficient", "No Rain"}
+        spi_v = None if m.dist_lgd not in sspi else round(float(sspi[m.dist_lgd]), 2)
+        dry_w = None if m.dist_lgd not in spells else int(spells[m.dist_lgd])
+        rs, rain_why = ri.rain_short(cat, spi_v, dry_w)
         gl, why = gw_low(g.get(m.dist_lgd, {}))
         rows.append({"dist_lgd": m.dist_lgd, "district": m.district, "state": m.state,
-                     "rain_dep_pct": d, "rain_category": cat, "rain_short": rs,
+                     "rain_dep_pct": d, "rain_category": cat, "rain_short": rs, "rain_short_reasons": ",".join(rain_why),
                      "gw_tier": g[m.dist_lgd]["tier"], "gw_percentile": g[m.dist_lgd].get("percentile"),
                      "gw_low": gl, "quadrant": quadrant(rs, gl)})
     df = pd.DataFrame(rows)

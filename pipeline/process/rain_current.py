@@ -165,10 +165,20 @@ def metrics(daily: pd.DataFrame) -> dict:
     spi3, spi6 = spi(monthly, 3, last.year, last.month), spi(monthly, 6, last.year, last.month)
 
     official = load_official()
+    from pipeline.process import rain_indicators as ri
+    from pipeline.process.rain_weekly import weekly_from_daily
+    weekly = pd.read_parquet(PROC / "rain_weekly.parquet")
+    weekly = pd.concat([weekly[weekly.year < as_of.year], weekly_from_daily(act)], ignore_index=True)
+    wnormal = pd.read_parquet(PROC / "rain_weekly_normal.parquet")
+    ind = {}  # (start, end) -> (dry spell weeks, season SPI)
+
     out = {}
     for code in master.dist_lgd:
         is_ne = code in ne
         season, start, end = season_window(as_of, is_ne)
+        if (start, end) not in ind:
+            ind[(start, end)] = (ri.dry_spells(weekly, wnormal, start, end), ri.season_spi(monthly, start, end))
+        spells, sspi = ind[(start, end)]
         g = {"actual_mm": None, "normal_mm": None, "departure_pct": None, "category": None}
         if code in act.columns:
             if pd.Timestamp(start).year == as_of.year:
@@ -193,7 +203,11 @@ def metrics(daily: pd.DataFrame) -> dict:
             "gridded": g,
             "spi3": None if code not in spi3 else round(spi3[code], 2),
             "spi6": None if code not in spi6 else round(spi6[code], 2),
+            "spi_season": None if code not in sspi else round(float(sspi[code]), 2),
+            "dry_spell_weeks": None if code not in spells else int(spells[code]),
         }
+        short, why = ri.rain_short(head.get("category"), out[int(code)]["spi_season"], out[int(code)]["dry_spell_weeks"])
+        out[int(code)].update(short=short, short_reasons=why)
     no_cov = [c for c, d in out.items() if d["source"] is None]
     srcs = pd.Series([d["source"] for d in out.values()]).value_counts(dropna=False).to_dict()
     return {

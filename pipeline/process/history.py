@@ -28,6 +28,7 @@ import numpy as np
 import pandas as pd
 
 from pipeline.process import groundwater as gw
+from pipeline.process import rain_indicators as ri
 from pipeline.process.classify import gw_low, quadrant, rain_short
 from pipeline.process.rain_current import category, ne_districts, normal_sum, season_window
 
@@ -80,6 +81,8 @@ def build(start: int, today: pd.Timestamp) -> pd.DataFrame:
     mon = monthly_rain()
     mon["ym"] = mon.year * 12 + mon.month - 1
     normals = pd.read_parquet(PROC / "rain_daily_normal.parquet")
+    weekly = pd.read_parquet(PROC / "rain_weekly.parquet")
+    wnormal = pd.read_parquet(PROC / "rain_weekly_normal.parquet")
     official = official_windows()
     c, units = gw.series()
     idm = pd.read_parquet(PROC / "idm_weekly.parquet")
@@ -101,22 +104,28 @@ def build(start: int, today: pd.Timestamp) -> pd.DataFrame:
             complete = x.groupby("dist_lgd").ym.nunique() == (ym1 - ym0 + 1)
             act = x.groupby("dist_lgd").mm.sum(min_count=1).where(complete)
             nrm = normal_sum(normals, s0, s1)
-            dep_by_window[is_ne] = (season, s0, s1, ((act - nrm) / nrm * 100).round(), official.get((str(s0), str(s1)), {}))
+            dep_by_window[is_ne] = (season, s0, s1, ((act - nrm) / nrm * 100).round(), official.get((str(s0), str(s1)), {}),
+                                    ri.dry_spells(weekly, wnormal, s0, s1), ri.season_spi(mon, s0, s1))
         for m in master.itertuples():
             code = int(m.dist_lgd)
-            season, s0, s1, dep, off = dep_by_window[code in ne]
+            season, s0, s1, dep, off, spells, sspi = dep_by_window[code in ne]
             if code in off:
                 d, cat, src = off[code][0], off[code][1], "IMD"
             else:
                 d = dep.get(code, np.nan)
                 d = None if pd.isna(d) else float(d)
                 cat, src = (category(d), "gridded") if d is not None else (None, None)
-            r = {"category": cat, "season_days": (s1 - s0).days + 1}
+            spi_v = None if code not in sspi else round(float(sspi[code]), 2)
+            dry_w = None if code not in spells else int(spells[code])
+            short, why = ri.rain_short(cat, spi_v, dry_w)
+            r = {"category": cat, "season_days": (s1 - s0).days + 1, "short": short}
             rs, _ = rain_short(r)
             gl, _ = gw_low(g.get(code, {}))
             rows.append({"snapshot": snap, "year": year, "cycle": cyc, "dist_lgd": code,
                          "quadrant": quadrant(rs, gl), "rain_season": season, "rain_window": f"{s0}..{s1}",
                          "rain_category": cat, "rain_dep_pct": d, "rain_source": src,
+                         "rain_spi_season": spi_v, "rain_dry_spell_weeks": dry_w, "rain_short": rs,
+                         "rain_short_reasons": ",".join(why),
                          "gw_tier": g[code]["tier"], "gw_percentile": g[code].get("percentile"),
                          "gw_median_depth_m": g[code].get("median_depth_m"),
                          "idm_class": idm_cls.get(code) if code in idm_cls.index else None})
@@ -134,7 +143,8 @@ def main(argv=None) -> int:
     df.to_csv(PROC / "status_history.csv", index=False)
 
     snaps = sorted(df.snapshot.unique())
-    fields = ["quadrant", "rain_category", "rain_dep_pct", "rain_source", "gw_tier", "gw_percentile", "idm_class"]
+    fields = ["quadrant", "rain_category", "rain_dep_pct", "rain_source", "rain_short_reasons",
+              "rain_dry_spell_weeks", "rain_spi_season", "gw_tier", "gw_percentile", "idm_class"]
     out = {}
     for code, g in df.sort_values("snapshot").groupby("dist_lgd"):
         out[int(code)] = [[(QCODE.get(q) if pd.notna(q) else None) if f == "quadrant" else (None if pd.isna(v) else v)

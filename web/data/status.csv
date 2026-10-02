@@ -1,784 +1,784 @@
-dist_lgd,district,state,quadrant,why_none,rain_category,rain_departure_pct,rain_source,gw_tier,gw_percentile,gw_change_vs_last_year_m,ingres_category,ingres_stage_pct,hidden_block_stress,idm_class
-603,Nicobars,Andaman and Nicobar,,gw_insufficient,Deficient,-36,IMD,insufficient,,,Safe,0.91,False,
-632,North And Middle Andaman,Andaman and Nicobar,,gw_insufficient,Excess,41,IMD,insufficient,,,Safe,2.35,False,
-602,South Andamans,Andaman and Nicobar,,gw_insufficient,Normal,-14,IMD,insufficient,,,Safe,3.62,False,
-745,Alluri Sitharama Raju,Andhra Pradesh,,season_just_started,No Rain,-100,IMD,level_only,,-0.32,Safe,6.69,False,none
-744,Anakapalli,Andhra Pradesh,,season_just_started,No Rain,-100,IMD,level_only,,-0.76,Safe,30.6,False,none
-502,Anantapur,Andhra Pradesh,,season_just_started,Deficient,-38,IMD,level_only,,0.01,Safe,51.02,True,none
-753,Annamayya,Andhra Pradesh,,season_just_started,Deficient,-46,IMD,level_only,,-0.05,Safe,43.86,True,d1
-750,Bapatla,Andhra Pradesh,,season_just_started,No Rain,-100,IMD,level_only,,-2.33,Safe,21.53,False,d1
-503,Chittoor,Andhra Pradesh,,season_just_started,Normal,6,IMD,short,33.0,-0.77,Safe,67.24,True,d0
-505,East Godavari,Andhra Pradesh,,season_just_started,No Rain,-100,IMD,level_only,,-1.11,Safe,25.84,False,none
-748,Eluru,Andhra Pradesh,,season_just_started,No Rain,-100,IMD,level_only,,4.37,Safe,37.57,False,none
-506,Guntur,Andhra Pradesh,,season_just_started,No Rain,-100,IMD,level_only,,-2.97,Safe,20.7,False,none
-746,Kakinada,Andhra Pradesh,,season_just_started,Large Excess,167,IMD,level_only,,-0.52,Safe,16.8,False,none
-747,Konaseema,Andhra Pradesh,,season_just_started,No Rain,-100,IMD,level_only,,-0.58,Safe,19.07,False,none
-510,Krishna,Andhra Pradesh,,season_just_started,No Rain,-100,IMD,level_only,,-0.95,Safe,33.69,False,none
-511,Kurnool,Andhra Pradesh,,season_just_started,No Rain,-100,IMD,level_only,,-0.3,Safe,37.76,False,d2
-755,Nandyal,Andhra Pradesh,,season_just_started,Large Deficient,-97,IMD,level_only,,-1.4,Safe,9.0,False,d1
-749,Ntr,Andhra Pradesh,,season_just_started,No Rain,-100,IMD,level_only,,-0.74,Safe,33.99,False,d0
-751,Palnadu,Andhra Pradesh,,season_just_started,No Rain,-100,IMD,level_only,,0.32,Safe,31.54,True,d1
-743,Parvathipuram Manyam,Andhra Pradesh,,season_just_started,No Rain,-100,IMD,level_only,,1.56,Safe,26.01,False,none
-517,Prakasam,Andhra Pradesh,,season_just_started,Large Deficient,-84,IMD,level_only,,0.0,Safe,29.73,False,d1
-515,Spsr Nellore,Andhra Pradesh,,season_just_started,No Rain,-100,IMD,level_only,,0.87,Safe,32.35,True,d0
-754,Sri Sathya Sai,Andhra Pradesh,,season_just_started,Deficient,-59,IMD,short,34.0,-1.0,Safe,56.36,True,d1
-519,Srikakulam,Andhra Pradesh,,season_just_started,No Rain,-100,IMD,insufficient,,,Safe,33.7,True,none
-752,Tirupati,Andhra Pradesh,,season_just_started,No Rain,-100,IMD,level_only,,0.18,Safe,36.24,True,d1
-520,Visakhapatanam,Andhra Pradesh,,season_just_started,No Rain,-100,IMD,level_only,,-1.9,Safe,46.16,False,none
-521,Vizianagaram,Andhra Pradesh,,season_just_started,No Rain,-100,IMD,level_only,,0.59,Safe,29.07,False,none
-523,West Godavari,Andhra Pradesh,,season_just_started,No Rain,-100,IMD,level_only,,4.82,Safe,10.29,False,none
-504,Y.S.R.,Andhra Pradesh,,season_just_started,No Rain,-100,IMD,short,62.0,-1.51,Safe,42.51,False,d1
-628,Anjaw,Arunachal Pradesh,,gw_insufficient,Large Deficient,-89,IMD,insufficient,,,Hilly area,,False,d1
-229,Changlang,Arunachal Pradesh,,gw_insufficient,Deficient,-24,IMD,insufficient,,,Safe,0.9,False,d3
-230,Dibang Valley,Arunachal Pradesh,,gw_insufficient,Large Deficient,-65,gridded,insufficient,,,Hilly area,,False,d2
-231,East Kameng,Arunachal Pradesh,,gw_insufficient,Normal,15,IMD,insufficient,,,Safe,0.69,False,d1
-232,East Siang,Arunachal Pradesh,,gw_insufficient,Deficient,-35,IMD,insufficient,,,Safe,0.25,False,d3
-766,Itanagar capital complex,Arunachal Pradesh,,gw_insufficient,Deficient,-22,gridded,insufficient,,,,,,d1
-718,Kamle,Arunachal Pradesh,,gw_insufficient,Deficient,-40,gridded,insufficient,,,,,,d4
-677,Kra Daadi,Arunachal Pradesh,,gw_insufficient,Deficient,-59,gridded,insufficient,,,,,,d4
-233,Kurung Kumey,Arunachal Pradesh,,gw_insufficient,Deficient,-48,IMD,insufficient,,,Hilly area,,False,d3
-724,Leparada,Arunachal Pradesh,,gw_insufficient,Deficient,-36,gridded,insufficient,,,,,,d3
-234,Lohit,Arunachal Pradesh,,gw_insufficient,Deficient,-42,IMD,insufficient,,,Safe,0.26,False,d4
-666,Longding,Arunachal Pradesh,,gw_insufficient,Normal,10,gridded,insufficient,,,,,,d0
-235,Lower Dibang Valley,Arunachal Pradesh,,gw_insufficient,Large Deficient,-66,gridded,insufficient,,,Safe,0.32,False,d4
-719,Lower Siang,Arunachal Pradesh,,gw_insufficient,Deficient,-24,gridded,insufficient,,,,,,d3
-236,Lower Subansiri,Arunachal Pradesh,,gw_insufficient,Deficient,-44,IMD,insufficient,,,Safe,0.9,False,d2
-678,Namsai,Arunachal Pradesh,,gw_level_only,Deficient,-44,gridded,level_only,,0.18,,,,d4
-723,Pakke Kessang,Arunachal Pradesh,,gw_insufficient,Normal,-14,gridded,insufficient,,,,,,d0
-237,Papum Pare,Arunachal Pradesh,,gw_level_only,Deficient,-22,IMD,level_only,,0.11,Safe,2.0,False,d1
-725,Shi Yomi,Arunachal Pradesh,,gw_insufficient,Deficient,-25,gridded,insufficient,,,,,,d0
-679,Siang,Arunachal Pradesh,,gw_insufficient,Deficient,-31,gridded,insufficient,,,,,,d1
-238,Tawang,Arunachal Pradesh,,gw_insufficient,Large Deficient,-65,IMD,insufficient,,,Hilly area,,False,d2
-239,Tirap,Arunachal Pradesh,,gw_insufficient,Normal,-4,IMD,insufficient,,,Safe,0.72,False,d2
-240,Upper Siang,Arunachal Pradesh,,gw_insufficient,Deficient,-33,IMD,insufficient,,,Hilly area,,False,d1
-241,Upper Subansiri,Arunachal Pradesh,,gw_insufficient,Large Deficient,-63,IMD,insufficient,,,Safe,0.88,False,d3
-242,West Kameng,Arunachal Pradesh,,gw_insufficient,Large Deficient,-69,IMD,insufficient,,,Safe,0.44,False,d0
-243,West Siang,Arunachal Pradesh,,gw_insufficient,Large Deficient,-69,IMD,insufficient,,,Safe,0.14,False,d2
-739,Bajali,Assam,,gw_level_only,Deficient,-50,IMD,level_only,,-0.23,,,,d3
-616,Baksa,Assam,,gw_level_only,Deficient,-25,IMD,level_only,,0.96,Safe,3.3,False,d3
-280,Barpeta,Assam,,gw_insufficient,Deficient,-40,IMD,insufficient,,,Safe,28.25,False,d3
-705,Biswanath,Assam,,gw_level_only,Normal,-18,gridded,level_only,,-0.05,,,,d1
-281,Bongaigaon,Assam,,gw_insufficient,Deficient,-59,IMD,insufficient,,,Safe,20.89,False,d2
-282,Cachar,Assam,,gw_insufficient,Normal,-11,IMD,insufficient,,,Safe,3.79,False,d2
-708,Charaideo,Assam,,gw_insufficient,Normal,18,IMD,insufficient,,,,,,d1
-612,Chirang,Assam,,gw_insufficient,Deficient,-44,IMD,insufficient,,,Safe,2.06,False,d3
-283,Darrang,Assam,,gw_level_only,Deficient,-46,IMD,level_only,,0.17,Safe,18.72,False,d1
-284,Dhemaji,Assam,,gw_level_only,Normal,-2,IMD,level_only,,-1.95,Safe,2.17,False,d3
-285,Dhubri,Assam,,gw_level_only,Deficient,-39,IMD,level_only,,-0.16,Safe,25.17,False,d1
-286,Dibrugarh,Assam,,gw_insufficient,Deficient,-26,IMD,insufficient,,,Safe,4.18,False,d2
-299,Dima Hasao,Assam,,gw_insufficient,Deficient,-45,IMD,insufficient,,,Safe,0.8,False,d1
-287,Goalpara,Assam,,gw_level_only,Deficient,-50,IMD,level_only,,0.16,Safe,14.83,False,d1
-288,Golaghat,Assam,,gw_insufficient,Normal,-15,IMD,insufficient,,,Safe,5.82,False,none
-289,Hailakandi,Assam,,gw_level_only,Normal,-11,IMD,level_only,,0.1,Safe,5.97,False,d2
-709,Hojai,Assam,,gw_insufficient,Deficient,-42,IMD,insufficient,,,,,,d3
-290,Jorhat,Assam,,gw_level_only,Deficient,-36,IMD,level_only,,-0.12,Safe,6.61,False,d0
-291,Kamrup,Assam,,gw_level_only,Deficient,-49,IMD,level_only,,0.5,Safe,10.26,False,d1
-618,Kamrup Metro,Assam,,gw_level_only,Deficient,-23,IMD,level_only,,0.32,Safe,25.15,False,d2
-292,Karbi Anglong,Assam,,gw_insufficient,Deficient,-21,IMD,insufficient,,,Safe,1.99,False,d1
-293,Karimganj,Assam,,gw_insufficient,Deficient,-27,IMD,insufficient,,,Safe,5.29,False,d1
-294,Kokrajhar,Assam,,gw_insufficient,Normal,-14,IMD,insufficient,,,Safe,2.62,False,d2
-295,Lakhimpur,Assam,,gw_level_only,Normal,7,IMD,level_only,,0.11,Safe,7.99,False,d0
-706,Majuli,Assam,,gw_insufficient,Deficient,-25,IMD,insufficient,,,,,,d1
-296,Marigaon,Assam,,gw_level_only,Deficient,-41,IMD,level_only,,0.07,Safe,24.95,False,d0
-297,Nagaon,Assam,,gw_level_only,Deficient,-41,IMD,level_only,,-0.13,Safe,13.31,False,d0
-298,Nalbari,Assam,,gw_insufficient,Large Deficient,-61,IMD,insufficient,,,Safe,10.75,False,d2
-300,Sivasagar,Assam,,gw_level_only,Deficient,-27,IMD,level_only,,0.46,Safe,8.69,False,d1
-301,Sonitpur,Assam,,gw_insufficient,Normal,-5,IMD,insufficient,,,Safe,7.82,False,d1
-707,South Salmara Mancachar,Assam,,gw_insufficient,Deficient,-26,gridded,insufficient,,,,,,d1
-756,Tamulpur,Assam,,gw_level_only,Normal,-15,IMD,level_only,,-0.03,,,,d2
-302,Tinsukia,Assam,,gw_insufficient,Normal,-12,IMD,insufficient,,,Safe,5.93,False,d4
-617,Udalguri,Assam,,gw_level_only,Large Deficient,-60,IMD,level_only,,0.12,Safe,3.55,False,d1
-710,West Karbi Anglong,Assam,,gw_insufficient,Normal,0,IMD,insufficient,,,,,,d1
-188,Araria,Bihar,,gw_insufficient,Deficient,-35,IMD,insufficient,,,Safe,23.13,False,d1
-611,Arwal,Bihar,,gw_insufficient,Deficient,-22,IMD,insufficient,,,Safe,48.32,False,d0
-189,Aurangabad,Bihar,,gw_level_only,Normal,4,IMD,level_only,,-0.1,Safe,32.79,False,none
-190,Banka,Bihar,,gw_insufficient,Deficient,-24,IMD,insufficient,,,Safe,42.7,False,none
-191,Begusarai,Bihar,,gw_level_only,Deficient,-32,IMD,level_only,,-2.05,Safe,66.99,False,none
-192,Bhagalpur,Bihar,,gw_level_only,Deficient,-47,IMD,level_only,,-1.79,Safe,41.07,False,d0
-193,Bhojpur,Bihar,,gw_insufficient,Deficient,-33,IMD,insufficient,,,Safe,51.51,False,none
-194,Buxar,Bihar,,gw_level_only,Normal,-5,IMD,level_only,,-0.76,Safe,48.15,False,none
-195,Darbhanga,Bihar,,gw_insufficient,Deficient,-44,IMD,insufficient,,,Safe,57.11,False,none
-196,Gaya,Bihar,,gw_insufficient,Deficient,-20,IMD,insufficient,,,Safe,55.7,False,d0
-197,Gopalganj,Bihar,,gw_insufficient,Deficient,-36,IMD,insufficient,,,Safe,54.51,False,none
-198,Jamui,Bihar,,gw_level_only,Deficient,-38,IMD,level_only,,0.33,Safe,42.17,False,none
-199,Jehanabad,Bihar,,gw_insufficient,Deficient,-53,IMD,insufficient,,,Semi-critical,77.18,True,d0
-200,Kaimur (Bhabua),Bihar,,gw_level_only,Deficient,-38,IMD,level_only,,-4.22,Safe,43.34,False,none
-201,Katihar,Bihar,,gw_level_only,Deficient,-36,IMD,level_only,,-1.16,Safe,43.07,False,none
-202,Khagaria,Bihar,,gw_level_only,Normal,-1,IMD,level_only,,-0.89,Safe,63.65,False,none
-203,Kishanganj,Bihar,,gw_insufficient,Deficient,-31,IMD,insufficient,,,Safe,38.97,False,d2
-204,Lakhisarai,Bihar,,gw_insufficient,Normal,-8,IMD,insufficient,,,Safe,35.36,False,none
-205,Madhepura,Bihar,,gw_insufficient,Deficient,-31,IMD,insufficient,,,Safe,36.34,False,none
-206,Madhubani,Bihar,,gw_insufficient,Deficient,-35,IMD,insufficient,,,Safe,46.31,False,d2
-207,Munger,Bihar,,gw_insufficient,Deficient,-24,IMD,insufficient,,,Safe,39.84,False,none
-208,Muzaffarpur,Bihar,,gw_insufficient,Deficient,-43,IMD,insufficient,,,Safe,64.82,True,d0
-209,Nalanda,Bihar,,gw_insufficient,Deficient,-32,IMD,insufficient,,,Semi-critical,75.73,True,d0
-210,Nawada,Bihar,,gw_insufficient,Deficient,-20,IMD,insufficient,,,Safe,47.76,True,d0
-211,Pashchim Champaran,Bihar,,gw_insufficient,Deficient,-31,IMD,insufficient,,,Safe,29.23,False,d1
-212,Patna,Bihar,,gw_level_only,Deficient,-38,IMD,level_only,,-2.66,Safe,62.36,True,none
-213,Purbi Champaran,Bihar,,gw_insufficient,Deficient,-41,IMD,insufficient,,,Safe,45.77,False,d2
-214,Purnia,Bihar,,gw_insufficient,Deficient,-42,IMD,insufficient,,,Safe,38.4,False,d1
-215,Rohtas,Bihar,,gw_level_only,Deficient,-22,IMD,level_only,,0.17,Safe,30.77,False,none
-216,Saharsa,Bihar,,gw_insufficient,Deficient,-43,IMD,insufficient,,,Safe,36.35,False,none
-217,Samastipur,Bihar,,gw_insufficient,Deficient,-41,IMD,insufficient,,,Safe,67.45,True,none
-218,Saran,Bihar,,gw_insufficient,Deficient,-42,IMD,insufficient,,,Safe,45.52,False,d0
-219,Sheikhpura,Bihar,,gw_insufficient,Deficient,-29,IMD,insufficient,,,Safe,53.18,True,none
-220,Sheohar,Bihar,,gw_insufficient,Deficient,-54,IMD,insufficient,,,Safe,59.88,False,d2
-221,Sitamarhi,Bihar,,gw_insufficient,Deficient,-49,IMD,insufficient,,,Safe,46.14,False,d2
-222,Siwan,Bihar,,gw_insufficient,Normal,-4,IMD,insufficient,,,Safe,52.9,False,none
-223,Supaul,Bihar,,gw_insufficient,Deficient,-25,IMD,insufficient,,,Safe,33.36,False,none
-224,Vaishali,Bihar,,gw_insufficient,Deficient,-37,IMD,insufficient,,,Safe,60.55,True,d1
-44,Chandigarh,Chandigarh,,gw_insufficient,Normal,-14,IMD,insufficient,,,Safe,68.22,False,none
-646,Balod,Chhattisgarh,,gw_level_only,Excess,28,IMD,level_only,,-0.03,Safe,68.57,False,none
-644,Baloda Bazar,Chhattisgarh,,gw_level_only,Excess,21,IMD,level_only,,0.52,Safe,43.1,False,none
-649,Balrampur,Chhattisgarh,,gw_level_only,Excess,57,gridded,level_only,,-0.86,Safe,26.77,False,none
-374,Bastar,Chhattisgarh,,gw_level_only,Normal,17,IMD,level_only,,-1.73,Safe,36.03,False,none
-650,Bemetara,Chhattisgarh,,gw_level_only,Deficient,-36,IMD,level_only,,0.28,Semi-critical,82.09,False,none
-636,Bijapur,Chhattisgarh,,gw_insufficient,Normal,11,IMD,insufficient,,,Safe,10.79,False,none
-375,Bilaspur,Chhattisgarh,,gw_level_only,Normal,11,gridded,level_only,,0.5,Safe,61.91,False,none
-376,Dantewada,Chhattisgarh,,gw_insufficient,Normal,-4,IMD,insufficient,,,Safe,19.74,False,none
-377,Dhamtari,Chhattisgarh,,gw_level_only,Excess,23,IMD,level_only,,0.37,Semi-critical,70.25,False,none
-378,Durg,Chhattisgarh,fine,,Normal,-1,IMD,short,46.0,-1.75,Semi-critical,77.82,False,none
-645,Gariyaband,Chhattisgarh,,gw_level_only,Excess,36,IMD,level_only,,0.92,Safe,61.52,False,none
-734,Gaurella Pendra Marwahi,Chhattisgarh,,gw_level_only,Normal,-2,gridded,level_only,,-0.1,Safe,39.11,False,none
-379,Janjgir-Champa,Chhattisgarh,,gw_level_only,Normal,9,IMD,level_only,,0.11,Safe,25.31,False,d0
-380,Jashpur,Chhattisgarh,buffered,,Deficient,-36,IMD,short,31.0,-0.51,Safe,47.41,False,none
-382,Kabirdham,Chhattisgarh,,gw_level_only,Normal,-8,IMD,level_only,,-0.77,Safe,57.78,False,none
-381,Kanker,Chhattisgarh,,gw_level_only,Normal,-13,IMD,level_only,,-0.51,Safe,42.71,False,none
-759,Khairgarh Chhuikhadan Gandai,Chhattisgarh,,gw_level_only,Normal,19,IMD,level_only,,0.01,Safe,55.83,False,d1
-643,Kondagaon,Chhattisgarh,,gw_level_only,Normal,9,IMD,level_only,,0.04,Safe,44.26,False,none
-383,Korba,Chhattisgarh,,gw_level_only,Normal,-7,IMD,level_only,,-0.7,Safe,35.29,False,d1
-384,Korea,Chhattisgarh,,gw_level_only,Normal,-14,IMD,level_only,,1.28,Safe,46.58,False,none
-385,Mahasamund,Chhattisgarh,,gw_level_only,Normal,17,IMD,level_only,,1.29,Safe,61.16,False,none
-760,Manendragarh Chirimiri Bharatpur,Chhattisgarh,,gw_level_only,Normal,9,IMD,level_only,,1.52,Safe,21.4,False,none
-761,Mohla Manpur Ambagarh Chouki,Chhattisgarh,,gw_level_only,Normal,-2,IMD,level_only,,0.02,Safe,39.57,False,none
-647,Mungeli,Chhattisgarh,,gw_level_only,Excess,32,IMD,level_only,,-2.49,Safe,45.52,False,none
-637,Narayanpur,Chhattisgarh,,gw_insufficient,Excess,40,IMD,insufficient,,,Safe,10.13,False,none
-386,Raigarh,Chhattisgarh,,gw_level_only,Normal,-14,IMD,level_only,,3.15,Safe,41.35,False,d1
-387,Raipur,Chhattisgarh,,gw_level_only,Excess,29,IMD,level_only,,0.24,Safe,59.02,False,none
-388,Rajnandgaon,Chhattisgarh,,gw_level_only,Normal,-3,IMD,level_only,,-0.45,Safe,55.64,False,none
-762,Sakti,Chhattisgarh,,gw_level_only,Normal,-10,IMD,level_only,,0.07,Safe,47.59,False,d2
-763,Sarangarh Bilaigarh,Chhattisgarh,,gw_level_only,Excess,27,IMD,level_only,,6.07,Safe,37.3,False,d0
-642,Sukma,Chhattisgarh,,gw_level_only,Normal,1,IMD,level_only,,-2.02,Safe,5.63,False,none
-648,Surajpur,Chhattisgarh,,gw_level_only,Normal,5,IMD,level_only,,2.11,Safe,59.0,False,none
-389,Surguja,Chhattisgarh,,gw_level_only,Deficient,-41,IMD,level_only,,-0.9,Safe,45.89,False,none
-465,Dadra And Nagar Haveli,"Dadra,Nagar Haveli,Daman and Diu",,gw_insufficient,Excess,38,IMD,insufficient,,,Safe,35.7,False,none
-463,Daman,"Dadra,Nagar Haveli,Daman and Diu",,gw_insufficient,Excess,23,IMD,insufficient,,,Safe,62.85,False,
-464,Diu,"Dadra,Nagar Haveli,Daman and Diu",,gw_level_only,Normal,19,IMD,level_only,,-18.66,Safe,48.52,False,none
-77,Central,Delhi,,gw_level_only,Normal,16,IMD,level_only,,1.46,Semi-critical,88.04,True,d1
-78,East,Delhi,,gw_level_only,Normal,-15,IMD,level_only,,0.25,Over-exploited,104.51,False,d1
-79,New Delhi,Delhi,,gw_level_only,Normal,-6,IMD,level_only,,0.94,Over-exploited,107.77,False,d1
-80,North,Delhi,,gw_level_only,Normal,-13,gridded,level_only,,1.1,Safe,66.78,False,d0
-81,North East,Delhi,,gw_insufficient,Normal,-12,IMD,insufficient,,,Over-exploited,107.33,False,d1
-82,North West,Delhi,,gw_level_only,Normal,3,IMD,level_only,,-0.7,Semi-critical,84.36,False,d1
-671,Shahdara,Delhi,,gw_level_only,Deficient,-43,gridded,level_only,,-0.56,,,,d1
-83,South,Delhi,,gw_insufficient,Normal,-10,IMD,insufficient,,,Over-exploited,121.46,False,d1
-670,South East,Delhi,,gw_insufficient,Normal,5,IMD,insufficient,,,Semi-critical,79.94,True,d1
-84,South West,Delhi,,gw_level_only,Deficient,-25,IMD,level_only,,0.57,Over-exploited,107.77,False,d0
-85,West,Delhi,,gw_level_only,Normal,18,IMD,level_only,,-11.02,Critical,93.44,False,d1
-551,North Goa,Goa,,gw_level_only,Deficient,-40,IMD,level_only,,-0.13,Safe,28.1,False,d3
-552,South Goa,Goa,,gw_level_only,Deficient,-29,IMD,level_only,,0.72,Safe,20.36,False,d3
-438,Ahmadabad,Gujarat,,gw_level_only,Normal,1,IMD,level_only,,-0.03,Semi-critical,79.14,True,none
-439,Amreli,Gujarat,,gw_level_only,Normal,0,IMD,level_only,,-1.53,Safe,58.74,False,none
-440,Anand,Gujarat,,gw_level_only,Normal,9,IMD,level_only,,0.64,Safe,29.91,False,d1
-672,Arvalli,Gujarat,,gw_level_only,Deficient,-36,IMD,level_only,,-1.84,Safe,45.13,False,none
-441,Banas Kantha,Gujarat,,gw_level_only,Deficient,-26,IMD,level_only,,0.49,Over-exploited,116.16,False,d0
-442,Bharuch,Gujarat,,gw_level_only,Excess,27,IMD,level_only,,-0.23,Safe,29.68,False,none
-443,Bhavnagar,Gujarat,,gw_level_only,Normal,10,IMD,level_only,,2.21,Safe,47.07,False,none
-676,Botad,Gujarat,,gw_level_only,Normal,3,IMD,level_only,,,Safe,59.72,False,none
-668,Chhotaudepur,Gujarat,,gw_level_only,Deficient,-30,IMD,level_only,,-3.25,Safe,46.86,False,d1
-444,Dang,Gujarat,,gw_level_only,Normal,13,IMD,level_only,,0.32,Safe,13.23,False,none
-674,Devbhumi Dwarka,Gujarat,,gw_level_only,Large Deficient,-73,IMD,level_only,,4.75,Semi-critical,72.73,False,d0
-445,Dohad,Gujarat,,gw_level_only,Deficient,-41,IMD,level_only,,-2.08,Safe,41.99,False,d1
-446,Gandhinagar,Gujarat,,gw_level_only,Normal,-19,IMD,level_only,,0.08,Over-exploited,111.67,False,none
-675,Gir Somnath,Gujarat,,gw_level_only,Deficient,-28,IMD,level_only,,1.89,Safe,50.07,False,none
-447,Jamnagar,Gujarat,,gw_level_only,Deficient,-50,IMD,level_only,,1.0,Safe,46.16,True,none
-448,Junagadh,Gujarat,,gw_level_only,Deficient,-20,IMD,level_only,,-0.29,Safe,48.71,False,none
-449,Kachchh,Gujarat,,gw_level_only,Deficient,-36,IMD,level_only,,-0.34,Safe,52.53,True,none
-450,Kheda,Gujarat,,gw_level_only,Excess,28,IMD,level_only,,0.62,Safe,43.94,False,none
-451,Mahesana,Gujarat,,gw_level_only,Normal,-18,IMD,level_only,,0.09,Over-exploited,107.98,False,d0
-669,Mahisagar,Gujarat,,gw_level_only,Normal,-3,IMD,level_only,,,Safe,52.5,False,d0
-673,Morbi,Gujarat,,gw_level_only,Normal,10,IMD,level_only,,,Safe,51.65,False,none
-452,Narmada,Gujarat,,gw_level_only,Normal,-3,IMD,level_only,,-15.67,Semi-critical,71.43,False,d1
-453,Navsari,Gujarat,,gw_level_only,Excess,30,IMD,level_only,,0.43,Safe,31.6,False,none
-454,Panch Mahals,Gujarat,,gw_level_only,Normal,-11,IMD,level_only,,-0.67,Safe,26.96,False,d1
-455,Patan,Gujarat,,gw_level_only,Normal,-10,IMD,level_only,,0.33,Over-exploited,120.04,False,none
-456,Porbandar,Gujarat,,gw_level_only,Large Deficient,-61,IMD,level_only,,-3.0,Safe,56.43,False,d0
-457,Rajkot,Gujarat,,gw_level_only,Deficient,-28,IMD,level_only,,-0.56,Safe,66.44,False,none
-458,Sabar Kantha,Gujarat,,gw_level_only,Deficient,-34,IMD,level_only,,-1.18,Semi-critical,76.45,True,d0
-459,Surat,Gujarat,,gw_level_only,Excess,23,IMD,level_only,,-3.38,Safe,45.96,True,none
-460,Surendranagar,Gujarat,,gw_level_only,Normal,5,gridded,level_only,,1.01,Safe,54.59,False,none
-641,Tapi,Gujarat,,gw_level_only,Normal,3,IMD,level_only,,0.76,Safe,39.79,False,none
-461,Vadodara,Gujarat,,gw_level_only,Deficient,-29,IMD,level_only,,0.61,Safe,66.51,True,d1
-462,Valsad,Gujarat,,gw_level_only,Excess,39,IMD,level_only,,-0.12,Safe,31.49,False,none
-58,Ambala,Haryana,,gw_insufficient,Deficient,-48,IMD,insufficient,,,Over-exploited,126.64,False,d2
-59,Bhiwani,Haryana,,gw_insufficient,Normal,-8,IMD,insufficient,,,Critical,99.31,False,d1
-701,Charki Dadri,Haryana,,gw_insufficient,Normal,-13,IMD,insufficient,,,Over-exploited,136.6,False,none
-60,Faridabad,Haryana,,gw_insufficient,Normal,-5,IMD,insufficient,,,Over-exploited,156.21,False,d0
-61,Fatehabad,Haryana,,gw_insufficient,Normal,-10,IMD,insufficient,,,Over-exploited,183.79,False,d1
-62,Gurugram,Haryana,,gw_insufficient,Normal,-2,IMD,insufficient,,,Over-exploited,180.58,False,none
-63,Hisar,Haryana,,gw_insufficient,Deficient,-23,IMD,insufficient,,,Semi-critical,87.34,True,d1
-64,Jhajjar,Haryana,,gw_insufficient,Normal,-19,IMD,insufficient,,,Safe,28.55,False,none
-65,Jind,Haryana,,gw_insufficient,Deficient,-57,IMD,insufficient,,,Over-exploited,100.52,False,d2
-66,Kaithal,Haryana,,gw_insufficient,Deficient,-44,IMD,insufficient,,,Over-exploited,186.06,False,d1
-67,Karnal,Haryana,,gw_level_only,Deficient,-36,IMD,level_only,,-0.38,Over-exploited,166.82,False,d2
-68,Kurukshetra,Haryana,,gw_level_only,Normal,-10,IMD,level_only,,,Over-exploited,205.68,False,d2
-69,Mahendragarh,Haryana,,gw_insufficient,Deficient,-24,IMD,insufficient,,,Over-exploited,144.95,False,none
-604,Nuh,Haryana,,gw_insufficient,Normal,-4,IMD,insufficient,,,Safe,62.27,True,none
-619,Palwal,Haryana,,gw_insufficient,Excess,20,IMD,insufficient,,,Safe,66.41,True,d0
-70,Panchkula,Haryana,,gw_insufficient,Normal,-19,IMD,insufficient,,,Safe,63.65,True,none
-71,Panipat,Haryana,,gw_insufficient,Deficient,-28,IMD,insufficient,,,Over-exploited,208.32,False,d3
-72,Rewari,Haryana,,gw_insufficient,Normal,-13,IMD,insufficient,,,Over-exploited,110.73,False,none
-73,Rohtak,Haryana,,gw_insufficient,Deficient,-47,IMD,insufficient,,,Safe,32.26,False,d1
-74,Sirsa,Haryana,,gw_level_only,Deficient,-55,IMD,level_only,,-0.13,Over-exploited,161.25,False,d2
-75,Sonipat,Haryana,,gw_level_only,Deficient,-32,IMD,level_only,,-25.66,Semi-critical,83.79,True,d1
-76,Yamunanagar,Haryana,,gw_level_only,Normal,-15,IMD,level_only,,5.52,Over-exploited,118.7,False,d1
-15,Bilaspur,Himachal Pradesh,,gw_level_only,Normal,-18,gridded,level_only,,-13.09,,,,d1
-16,Chamba,Himachal Pradesh,,gw_insufficient,Normal,-17,IMD,insufficient,,,,,,none
-17,Hamirpur,Himachal Pradesh,,gw_insufficient,Normal,-10,gridded,insufficient,,,,,,d0
-18,Kangra,Himachal Pradesh,,gw_insufficient,Normal,-5,IMD,insufficient,,,Safe,28.13,False,none
-19,Kinnaur,Himachal Pradesh,,gw_insufficient,Excess,35,IMD,insufficient,,,,,,none
-20,Kullu,Himachal Pradesh,,gw_insufficient,Normal,0,IMD,insufficient,,,,,,none
-21,Lahul And Spiti,Himachal Pradesh,,gw_insufficient,Large Deficient,-69,IMD,insufficient,,,,,,none
-22,Mandi,Himachal Pradesh,,gw_insufficient,Normal,-5,IMD,insufficient,,,Safe,37.97,False,none
-23,Shimla,Himachal Pradesh,,gw_insufficient,Excess,29,IMD,insufficient,,,,,,none
-24,Sirmaur,Himachal Pradesh,,gw_insufficient,Normal,11,IMD,insufficient,,,Safe,29.12,False,none
-25,Solan,Himachal Pradesh,,gw_insufficient,Normal,-3,IMD,insufficient,,,Safe,62.44,False,none
-26,Una,Himachal Pradesh,,gw_level_only,Normal,-16,IMD,level_only,,-1.22,Safe,56.66,False,d1
-1,Anantnag,Jammu and Kashmir,,gw_insufficient,Normal,1,IMD,insufficient,,,Safe,23.7,False,d0
-623,Bandipora,Jammu and Kashmir,,gw_insufficient,Normal,-1,IMD,insufficient,,,Safe,15.82,False,d1
-3,Baramulla,Jammu and Kashmir,,gw_insufficient,Excess,47,IMD,insufficient,,,Safe,22.35,False,d0
-2,Budgam,Jammu and Kashmir,,gw_insufficient,Deficient,-34,IMD,insufficient,,,Safe,27.93,False,d0
-4,Doda,Jammu and Kashmir,,gw_insufficient,Normal,-10,IMD,insufficient,,,Safe,20.54,False,d1
-626,Ganderbal,Jammu and Kashmir,,gw_insufficient,Excess,21,IMD,insufficient,,,Safe,45.65,False,d1
-5,Jammu,Jammu and Kashmir,,gw_level_only,Normal,-14,IMD,level_only,,-10.56,Safe,32.7,False,none
-7,Kathua,Jammu and Kashmir,,gw_level_only,Normal,-10,IMD,level_only,,0.0,Safe,23.5,False,none
-620,Kishtwar,Jammu and Kashmir,,gw_insufficient,Deficient,-53,IMD,insufficient,,,Safe,15.67,False,d0
-622,Kulgam,Jammu and Kashmir,,gw_insufficient,Normal,-11,IMD,insufficient,,,Safe,20.53,False,d1
-8,Kupwara,Jammu and Kashmir,,gw_insufficient,Normal,-10,IMD,insufficient,,,Hilly area,,False,d3
-10,Poonch,Jammu and Kashmir,,gw_level_only,Excess,27,IMD,level_only,,0.05,Safe,16.52,False,none
-11,Pulwama,Jammu and Kashmir,,gw_insufficient,Excess,38,IMD,insufficient,,,Safe,38.17,False,none
-12,Rajouri,Jammu and Kashmir,,gw_level_only,Normal,-2,IMD,level_only,,1.92,Safe,12.23,False,none
-621,Ramban,Jammu and Kashmir,,gw_insufficient,Normal,13,IMD,insufficient,,,Safe,31.72,False,d1
-627,Reasi,Jammu and Kashmir,,gw_level_only,Normal,-14,IMD,level_only,,-2.98,Safe,11.02,False,none
-624,Samba,Jammu and Kashmir,,gw_level_only,Normal,18,IMD,level_only,,1.25,Safe,16.86,False,none
-625,Shopian,Jammu and Kashmir,,gw_insufficient,Deficient,-51,IMD,insufficient,,,Safe,21.62,False,d1
-13,Srinagar,Jammu and Kashmir,,gw_insufficient,Normal,4,IMD,insufficient,,,Safe,54.12,False,d2
-14,Udhampur,Jammu and Kashmir,,gw_level_only,Excess,54,IMD,level_only,,-15.68,Safe,20.98,False,d0
-322,Bokaro,Jharkhand,,gw_level_only,Normal,-3,IMD,level_only,,1.12,Safe,58.44,True,none
-323,Chatra,Jharkhand,,gw_level_only,Deficient,-27,IMD,level_only,,-0.66,Safe,32.8,False,d0
-324,Deoghar,Jharkhand,,gw_level_only,Deficient,-30,IMD,level_only,,,Safe,55.63,False,none
-325,Dhanbad,Jharkhand,,gw_insufficient,Normal,3,IMD,insufficient,,,Semi-critical,72.18,True,none
-326,Dumka,Jharkhand,,gw_insufficient,Normal,1,IMD,insufficient,,,Safe,23.43,False,d1
-327,East Singhbum,Jharkhand,,gw_level_only,Normal,10,IMD,level_only,,-7.26,Safe,24.67,True,none
-328,Garhwa,Jharkhand,,gw_insufficient,Deficient,-29,IMD,insufficient,,,Safe,31.24,False,none
-329,Giridih,Jharkhand,,gw_insufficient,Normal,-18,IMD,insufficient,,,Safe,34.96,False,d1
-330,Godda,Jharkhand,,gw_insufficient,Normal,-16,IMD,insufficient,,,Safe,16.61,False,d3
-331,Gumla,Jharkhand,,gw_level_only,Deficient,-28,IMD,level_only,,,Safe,17.1,False,none
-332,Hazaribagh,Jharkhand,,gw_insufficient,Normal,-18,IMD,insufficient,,,Safe,33.93,False,d0
-333,Jamtara,Jharkhand,,gw_insufficient,Normal,1,IMD,insufficient,,,Safe,40.89,False,none
-606,Khunti,Jharkhand,,gw_insufficient,Normal,-1,IMD,insufficient,,,Safe,22.88,False,none
-334,Koderma,Jharkhand,,gw_insufficient,Deficient,-23,IMD,insufficient,,,Safe,44.16,False,d1
-335,Latehar,Jharkhand,,gw_insufficient,Excess,20,IMD,insufficient,,,Safe,23.54,False,none
-336,Lohardaga,Jharkhand,,gw_insufficient,Normal,3,IMD,insufficient,,,Safe,19.54,False,none
-337,Pakur,Jharkhand,,gw_insufficient,Deficient,-55,IMD,insufficient,,,Safe,16.9,False,d2
-338,Palamu,Jharkhand,,gw_insufficient,Normal,-12,IMD,insufficient,,,Safe,33.06,False,none
-607,Ramgarh,Jharkhand,,gw_level_only,Normal,2,IMD,level_only,,26.53,Safe,69.11,True,none
-339,Ranchi,Jharkhand,,gw_level_only,Normal,11,IMD,level_only,,-2.79,Safe,38.3,True,none
-340,Sahebganj,Jharkhand,,gw_insufficient,Deficient,-59,IMD,insufficient,,,Safe,11.09,False,d0
-341,Saraikela Kharsawan,Jharkhand,,gw_insufficient,Normal,11,gridded,insufficient,,,Safe,30.65,False,none
-342,Simdega,Jharkhand,,gw_insufficient,Normal,0,IMD,insufficient,,,Safe,18.35,False,none
-343,West Singhbhum,Jharkhand,,gw_level_only,Excess,38,IMD,level_only,,,Safe,16.37,False,none
-524,Bagalkote,Karnataka,,gw_level_only,Deficient,-21,IMD,level_only,,-1.73,Semi-critical,75.94,True,d1
-528,Ballari,Karnataka,,season_just_started,No Rain,-100,IMD,level_only,,-3.59,Safe,31.4,False,d1
-527,Belagavi,Karnataka,,gw_level_only,Normal,2,IMD,level_only,,-0.35,Semi-critical,71.34,True,d0
-526,Bengaluru Rural,Karnataka,,season_just_started,Large Excess,166,IMD,insufficient,,,Over-exploited,148.31,False,d0
-525,Bengaluru Urban,Karnataka,,season_just_started,Normal,-15,IMD,insufficient,,,Over-exploited,179.4,False,none
-529,Bidar,Karnataka,,gw_level_only,Deficient,-24,IMD,level_only,,-0.54,Safe,69.72,False,d0
-531,Chamarajanagara,Karnataka,,season_just_started,Large Excess,119,IMD,insufficient,,,Critical,90.16,False,none
-630,Chikkaballapura,Karnataka,,season_just_started,No Rain,-100,IMD,level_only,,-4.02,Over-exploited,151.41,False,d1
-532,Chikkamagaluru,Karnataka,,season_just_started,Large Deficient,-68,IMD,insufficient,,,Safe,54.77,True,d1
-533,Chitradurga,Karnataka,,season_just_started,No Rain,-100,IMD,level_only,,-5.86,Over-exploited,116.14,False,none
-534,Dakshina Kannada,Karnataka,,gw_insufficient,Deficient,-24,IMD,insufficient,,,Safe,46.41,False,d2
-535,Davangere,Karnataka,,season_just_started,Large Deficient,-81,IMD,level_only,,-2.71,Semi-critical,82.11,True,none
-536,Dharwad,Karnataka,,gw_level_only,Deficient,-51,IMD,level_only,,0.14,Safe,54.33,False,none
-537,Gadag,Karnataka,,gw_level_only,Deficient,-25,IMD,level_only,,-2.27,Semi-critical,76.31,True,none
-539,Hassan,Karnataka,,season_just_started,Large Excess,300,IMD,insufficient,,,Safe,54.19,True,none
-540,Haveri,Karnataka,,gw_level_only,Deficient,-42,IMD,level_only,,-7.61,Safe,63.79,False,d1
-538,Kalaburagi,Karnataka,,gw_level_only,Deficient,-54,IMD,level_only,,,Safe,48.81,False,d3
-541,Kodagu,Karnataka,,season_just_started,Large Deficient,-89,IMD,insufficient,,,Safe,35.25,False,d0
-542,Kolar,Karnataka,,season_just_started,Deficient,-22,IMD,insufficient,,,Over-exploited,185.86,False,d0
-543,Koppal,Karnataka,,gw_level_only,Deficient,-36,IMD,level_only,,-3.24,Safe,59.26,True,d1
-544,Mandya,Karnataka,,season_just_started,Normal,-5,IMD,insufficient,,,Safe,66.09,False,none
-545,Mysuru,Karnataka,,season_just_started,Large Excess,78,IMD,insufficient,,,Safe,46.39,False,none
-546,Raichur,Karnataka,,gw_level_only,Deficient,-41,IMD,level_only,,-1.28,Safe,42.19,False,d1
-631,Ramanagara,Karnataka,,season_just_started,No Rain,-100,IMD,insufficient,,,Semi-critical,89.7,True,none
-547,Shivamogga,Karnataka,,season_just_started,Large Deficient,-97,IMD,insufficient,,,Safe,42.54,False,d0
-548,Tumakuru,Karnataka,,season_just_started,No Rain,-100,IMD,level_only,,-2.56,Critical,91.08,False,none
-549,Udupi,Karnataka,,gw_insufficient,Deficient,-30,IMD,insufficient,,,Safe,33.0,False,d3
-550,Uttara Kannada,Karnataka,,gw_insufficient,Deficient,-30,IMD,insufficient,,,Safe,31.52,False,d2
-738,Vijayanagar,Karnataka,,season_just_started,Large Deficient,-89,IMD,level_only,,-0.0,Semi-critical,86.4,True,d0
-530,Vijayapura,Karnataka,,gw_level_only,Deficient,-41,IMD,level_only,,-2.5,Safe,46.11,False,d2
-635,Yadgir,Karnataka,,gw_level_only,Deficient,-30,IMD,level_only,,-0.68,Safe,38.64,False,d1
-554,Alappuzha,Kerala,,season_just_started,Large Deficient,-99,IMD,insufficient,,,Safe,37.56,False,none
-555,Ernakulam,Kerala,,season_just_started,No Rain,-100,IMD,insufficient,,,Safe,42.84,False,none
-556,Idukki,Kerala,,season_just_started,Large Deficient,-90,IMD,insufficient,,,Safe,49.38,False,none
-557,Kannur,Kerala,,season_just_started,No Rain,-100,IMD,insufficient,,,Safe,45.47,False,d2
-558,Kasaragod,Kerala,,season_just_started,Large Deficient,-62,IMD,insufficient,,,Safe,69.33,False,d3
-559,Kollam,Kerala,,season_just_started,No Rain,-100,IMD,insufficient,,,Safe,47.27,False,none
-560,Kottayam,Kerala,,season_just_started,No Rain,-100,IMD,insufficient,,,Safe,32.6,False,none
-561,Kozhikode,Kerala,,season_just_started,Large Deficient,-99,IMD,insufficient,,,Safe,57.84,False,d1
-562,Malappuram,Kerala,,season_just_started,No Rain,-100,IMD,insufficient,,,Safe,68.25,False,d1
-563,Palakkad,Kerala,,season_just_started,No Rain,-100,IMD,insufficient,,,Safe,55.23,True,none
-564,Pathanamthitta,Kerala,,season_just_started,No Rain,-100,IMD,insufficient,,,Safe,31.23,False,none
-565,Thiruvananthapuram,Kerala,,season_just_started,No Rain,-100,IMD,insufficient,,,Safe,62.87,False,none
-566,Thrissur,Kerala,,season_just_started,No Rain,-100,IMD,insufficient,,,Safe,57.03,False,d1
-567,Wayanad,Kerala,,season_just_started,No Rain,-100,IMD,insufficient,,,Safe,24.69,False,none
-6,Kargil,Ladakh,,gw_insufficient,Large Excess,90,IMD,insufficient,,,Safe,36.1,False,d1
-9,Leh Ladakh,Ladakh,,gw_insufficient,Large Excess,120,IMD,insufficient,,,Safe,33.83,False,d1
-553,Lakshadweep District,Lakshadweep,,gw_insufficient,Deficient,-29,IMD,insufficient,,,,,,
-667,Agar Malwa,Madhya Pradesh,,gw_level_only,Normal,8,IMD,level_only,,-0.4,Critical,93.36,False,none
-639,Alirajpur,Madhya Pradesh,,gw_level_only,Deficient,-45,IMD,level_only,,-1.99,Safe,42.06,False,d2
-390,Anuppur,Madhya Pradesh,,gw_level_only,Normal,17,IMD,level_only,,0.58,Safe,27.8,False,none
-391,Ashoknagar,Madhya Pradesh,,gw_level_only,Normal,-9,IMD,level_only,,-4.2,Safe,61.02,False,none
-392,Balaghat,Madhya Pradesh,,gw_level_only,Normal,-6,IMD,level_only,,-0.5,Safe,24.23,False,none
-393,Barwani,Madhya Pradesh,,gw_level_only,Normal,-11,IMD,level_only,,-0.45,Semi-critical,71.61,True,d1
-394,Betul,Madhya Pradesh,,gw_level_only,Deficient,-31,IMD,level_only,,-0.03,Safe,52.03,False,d1
-395,Bhind,Madhya Pradesh,,gw_insufficient,Excess,36,IMD,insufficient,,,Safe,32.41,False,none
-396,Bhopal,Madhya Pradesh,,gw_level_only,Normal,9,IMD,level_only,,-4.42,Semi-critical,82.97,False,none
-397,Burhanpur,Madhya Pradesh,,gw_insufficient,Normal,5,IMD,insufficient,,,Safe,69.78,False,d1
-398,Chhatarpur,Madhya Pradesh,,gw_level_only,Normal,17,IMD,level_only,,-3.17,Safe,65.06,False,none
-399,Chhindwara,Madhya Pradesh,,gw_level_only,Deficient,-21,IMD,level_only,,-0.13,Safe,59.99,True,d0
-400,Damoh,Madhya Pradesh,,gw_level_only,Normal,-3,IMD,level_only,,-0.58,Safe,59.24,False,none
-401,Datia,Madhya Pradesh,,gw_level_only,Normal,8,IMD,level_only,,-1.49,Safe,34.94,False,none
-402,Dewas,Madhya Pradesh,,gw_level_only,Normal,-13,IMD,level_only,,0.8,Semi-critical,79.56,True,d0
-403,Dhar,Madhya Pradesh,,gw_level_only,Deficient,-40,IMD,level_only,,-0.08,Safe,67.66,True,d1
-404,Dindori,Madhya Pradesh,,gw_level_only,Normal,0,IMD,level_only,,0.03,Safe,15.46,False,none
-405,East Nimar,Madhya Pradesh,,gw_level_only,Normal,-10,IMD,level_only,,2.81,Safe,40.36,False,d1
-406,Guna,Madhya Pradesh,,gw_level_only,Normal,12,IMD,level_only,,-0.53,Safe,65.27,False,none
-407,Gwalior,Madhya Pradesh,,gw_level_only,Normal,5,IMD,level_only,,-1.18,Safe,33.53,False,none
-408,Harda,Madhya Pradesh,,gw_level_only,Deficient,-34,IMD,level_only,,-2.12,Safe,38.14,False,d1
-410,Indore,Madhya Pradesh,,gw_level_only,Deficient,-27,IMD,level_only,,0.06,Over-exploited,118.13,False,d1
-411,Jabalpur,Madhya Pradesh,,gw_level_only,Normal,-12,IMD,level_only,,-2.67,Safe,55.58,False,none
-412,Jhabua,Madhya Pradesh,,gw_level_only,Deficient,-35,IMD,level_only,,,Safe,43.87,False,d1
-413,Katni,Madhya Pradesh,,gw_level_only,Normal,2,IMD,level_only,,-6.02,Safe,47.64,False,none
-414,Khargone,Madhya Pradesh,,gw_level_only,Normal,5,IMD,level_only,,0.42,Safe,45.49,False,d1
-415,Mandla,Madhya Pradesh,,gw_level_only,Normal,2,IMD,level_only,,-0.16,Safe,26.03,False,none
-416,Mandsaur,Madhya Pradesh,,gw_level_only,Normal,-9,IMD,level_only,,0.64,Critical,98.93,False,none
-417,Morena,Madhya Pradesh,,gw_insufficient,Normal,-9,IMD,insufficient,,,Safe,42.24,False,none
-409,Narmadapuram,Madhya Pradesh,,gw_insufficient,Deficient,-34,IMD,insufficient,,,Safe,27.16,False,none
-418,Narsinghpur,Madhya Pradesh,,gw_insufficient,Normal,-3,IMD,insufficient,,,Safe,67.2,False,none
-419,Neemuch,Madhya Pradesh,,gw_level_only,Normal,-12,IMD,level_only,,-1.02,Over-exploited,102.37,False,d0
-722,Niwari,Madhya Pradesh,,gw_level_only,Excess,59,IMD,level_only,,-3.43,Safe,68.52,False,none
-420,Panna,Madhya Pradesh,,gw_level_only,Normal,16,IMD,level_only,,0.04,Safe,38.75,False,none
-421,Raisen,Madhya Pradesh,,gw_insufficient,Normal,-18,IMD,insufficient,,,Safe,52.98,False,none
-422,Rajgarh,Madhya Pradesh,,gw_level_only,Normal,18,IMD,level_only,,-0.26,Semi-critical,89.53,True,none
-423,Ratlam,Madhya Pradesh,,gw_level_only,Deficient,-35,IMD,level_only,,-1.29,Over-exploited,133.37,False,none
-424,Rewa,Madhya Pradesh,,gw_level_only,Normal,-13,IMD,level_only,,-5.97,Safe,58.78,False,none
-425,Sagar,Madhya Pradesh,,gw_level_only,Normal,-13,IMD,level_only,,-0.5,Safe,59.73,False,none
-426,Satna,Madhya Pradesh,,gw_level_only,Excess,52,IMD,level_only,,-0.02,Safe,64.03,True,none
-427,Sehore,Madhya Pradesh,,gw_level_only,Normal,-17,IMD,level_only,,-0.32,Safe,65.13,True,d0
-428,Seoni,Madhya Pradesh,,gw_level_only,Normal,-16,IMD,level_only,,0.2,Safe,45.91,False,none
-429,Shahdol,Madhya Pradesh,,gw_level_only,Excess,22,IMD,level_only,,0.94,Safe,17.12,False,none
-430,Shajapur,Madhya Pradesh,,gw_level_only,Deficient,-21,IMD,level_only,,-0.31,Over-exploited,105.94,False,none
-431,Sheopur,Madhya Pradesh,,gw_level_only,Normal,17,IMD,level_only,,-11.72,Safe,38.08,False,none
-432,Shivpuri,Madhya Pradesh,,gw_level_only,Excess,24,IMD,level_only,,-1.32,Safe,66.75,False,none
-433,Sidhi,Madhya Pradesh,,gw_level_only,Normal,15,IMD,level_only,,-0.11,Safe,37.42,False,none
-638,Singrauli,Madhya Pradesh,,gw_level_only,Normal,11,IMD,level_only,,-0.41,Safe,44.36,False,none
-434,Tikamgarh,Madhya Pradesh,,gw_level_only,Normal,6,IMD,level_only,,-0.86,Semi-critical,79.92,False,none
-435,Ujjain,Madhya Pradesh,,gw_level_only,Deficient,-27,IMD,level_only,,-0.02,Over-exploited,108.41,False,none
-436,Umaria,Madhya Pradesh,,gw_level_only,Excess,21,IMD,level_only,,-0.42,Safe,20.48,False,none
-437,Vidisha,Madhya Pradesh,,gw_level_only,Normal,-18,IMD,level_only,,-1.04,Safe,65.49,False,none
-466,Ahmednagar,Maharashtra,,gw_level_only,Deficient,-47,IMD,level_only,,1.48,Semi-critical,75.8,True,d2
-467,Akola,Maharashtra,,gw_insufficient,Deficient,-41,IMD,insufficient,,,Safe,60.88,False,d3
-468,Amravati,Maharashtra,,gw_level_only,Deficient,-43,IMD,level_only,,-1.6,Semi-critical,75.01,True,d2
-469,Aurangabad,Maharashtra,,gw_level_only,Normal,-19,IMD,level_only,,3.7,Safe,62.22,False,d1
-470,Beed,Maharashtra,,gw_level_only,Deficient,-49,IMD,level_only,,-4.25,Safe,57.95,False,d3
-471,Bhandara,Maharashtra,,gw_insufficient,Normal,-16,IMD,insufficient,,,Safe,30.24,False,none
-472,Buldhana,Maharashtra,,gw_insufficient,Deficient,-21,IMD,insufficient,,,Semi-critical,72.01,True,d2
-473,Chandrapur,Maharashtra,,gw_level_only,Deficient,-33,IMD,level_only,,0.16,Safe,29.67,False,d1
-474,Dhule,Maharashtra,,gw_level_only,Normal,-19,IMD,level_only,,-1.97,Safe,51.88,False,d0
-475,Gadchiroli,Maharashtra,,gw_level_only,Normal,-16,IMD,level_only,,-1.36,Safe,26.09,False,none
-476,Gondia,Maharashtra,,gw_insufficient,Normal,-1,IMD,insufficient,,,Safe,29.0,False,d0
-477,Hingoli,Maharashtra,,gw_insufficient,Deficient,-49,IMD,insufficient,,,Safe,37.18,False,d3
-478,Jalgaon,Maharashtra,,gw_level_only,Normal,-11,IMD,level_only,,1.2,Semi-critical,77.46,True,d1
-479,Jalna,Maharashtra,,gw_insufficient,Deficient,-48,IMD,insufficient,,,Safe,33.97,False,d2
-480,Kolhapur,Maharashtra,,gw_level_only,Normal,-15,IMD,level_only,,-0.62,Safe,42.77,False,d1
-481,Latur,Maharashtra,,gw_level_only,Deficient,-39,IMD,level_only,,-0.31,Safe,50.92,False,d2
-482,Mumbai,Maharashtra,,gw_insufficient,Normal,-8,IMD,insufficient,,,Safe,47.06,False,
-483,Mumbai Suburban,Maharashtra,,gw_insufficient,Normal,10,IMD,insufficient,,,Safe,33.94,False,d0
-484,Nagpur,Maharashtra,,gw_insufficient,Deficient,-34,IMD,insufficient,,,Safe,45.3,False,d1
-485,Nanded,Maharashtra,,gw_insufficient,Deficient,-35,IMD,insufficient,,,Safe,32.48,False,d1
-486,Nandurbar,Maharashtra,,gw_level_only,Deficient,-39,IMD,level_only,,-12.6,Safe,43.25,False,d2
-487,Nashik,Maharashtra,,gw_level_only,Excess,33,IMD,level_only,,-0.91,Safe,56.81,True,none
-488,Osmanabad,Maharashtra,,gw_insufficient,Deficient,-45,IMD,insufficient,,,Safe,59.56,False,d3
-665,Palghar,Maharashtra,,gw_insufficient,Normal,18,IMD,insufficient,,,Safe,24.8,False,none
-489,Parbhani,Maharashtra,,gw_insufficient,Deficient,-40,IMD,insufficient,,,Safe,46.48,False,d2
-490,Pune,Maharashtra,,gw_level_only,Normal,13,IMD,level_only,,-0.25,Safe,63.73,True,d0
-491,Raigad,Maharashtra,,gw_insufficient,Normal,-6,IMD,insufficient,,,Safe,18.27,False,d0
-492,Ratnagiri,Maharashtra,,gw_insufficient,Normal,-18,IMD,insufficient,,,Safe,17.92,False,d2
-493,Sangli,Maharashtra,,gw_insufficient,Deficient,-24,IMD,insufficient,,,Safe,52.94,False,d2
-494,Satara,Maharashtra,,gw_level_only,Normal,15,IMD,level_only,,-4.96,Safe,55.82,False,d2
-495,Sindhudurg,Maharashtra,,gw_level_only,Deficient,-37,IMD,level_only,,0.85,Safe,44.68,False,d0
-496,Solapur,Maharashtra,,gw_level_only,Deficient,-59,IMD,level_only,,-1.62,Safe,68.43,False,d4
-497,Thane,Maharashtra,,gw_insufficient,Normal,-10,IMD,insufficient,,,Safe,19.46,False,d0
-498,Wardha,Maharashtra,,gw_insufficient,Deficient,-34,IMD,insufficient,,,Safe,46.24,False,d2
-499,Washim,Maharashtra,,gw_level_only,Deficient,-37,IMD,level_only,,1.2,Safe,51.79,False,d2
-500,Yavatmal,Maharashtra,,gw_insufficient,Deficient,-27,IMD,insufficient,,,Safe,37.82,False,d2
-252,Bishnupur,Manipur,,gw_insufficient,Large Deficient,-63,IMD,insufficient,,,Safe,9.06,False,d1
-253,Chandel,Manipur,,gw_insufficient,Deficient,-55,IMD,insufficient,,,Hilly area,,False,d2
-254,Churachandpur,Manipur,,gw_insufficient,Deficient,-47,gridded,insufficient,,,Safe,7.75,False,d3
-255,Imphal East,Manipur,,gw_insufficient,Deficient,-36,IMD,insufficient,,,Safe,9.76,False,none
-256,Imphal West,Manipur,,gw_insufficient,Deficient,-58,IMD,insufficient,,,Safe,10.78,False,none
-713,Jiribam,Manipur,,gw_insufficient,Deficient,-33,gridded,insufficient,,,,,,d1
-711,Kakching,Manipur,,gw_insufficient,Deficient,-38,gridded,insufficient,,,,,,d1
-717,Kamjong,Manipur,,gw_insufficient,Normal,-5,gridded,insufficient,,,,,,none
-712,Kangpokpi,Manipur,,gw_insufficient,Normal,-11,gridded,insufficient,,,,,,none
-714,Noney,Manipur,,gw_insufficient,Deficient,-34,gridded,insufficient,,,,,,d2
-715,Pherzawl,Manipur,,gw_insufficient,Deficient,-53,gridded,insufficient,,,,,,d4
-257,Senapati,Manipur,,gw_insufficient,Normal,-18,IMD,insufficient,,,Hilly area,,False,none
-258,Tamenglong,Manipur,,gw_insufficient,Large Deficient,-61,IMD,insufficient,,,Hilly area,,False,d1
-716,Tengnoupal,Manipur,,gw_insufficient,Deficient,-25,gridded,insufficient,,,,,,d0
-259,Thoubal,Manipur,,gw_insufficient,Deficient,-55,IMD,insufficient,,,Safe,12.86,False,none
-260,Ukhrul,Manipur,,gw_insufficient,Normal,-10,IMD,insufficient,,,Hilly area,,False,none
-273,East Garo Hills,Meghalaya,,gw_insufficient,Normal,-11,IMD,insufficient,,,Safe,4.62,False,none
-657,East Jaintia Hills,Meghalaya,,gw_insufficient,Deficient,-52,IMD,insufficient,,,Safe,1.83,False,d2
-274,East Khasi Hills,Meghalaya,,gw_level_only,Deficient,-40,IMD,level_only,,-0.5,Safe,3.65,False,d1
-740,Eastern West Khasi Hills,Meghalaya,,gw_insufficient,Normal,3,gridded,insufficient,,,,,,none
-656,North Garo Hills,Meghalaya,,gw_level_only,Deficient,-57,IMD,level_only,,5.57,Safe,6.9,False,d0
-276,Ri Bhoi,Meghalaya,,gw_level_only,Deficient,-33,IMD,level_only,,0.27,Safe,6.35,False,d1
-277,South Garo Hills,Meghalaya,,gw_insufficient,Deficient,-32,gridded,insufficient,,,Safe,1.24,False,none
-663,South West Garo Hills,Meghalaya,,gw_insufficient,Normal,-5,gridded,insufficient,,,Safe,34.13,False,d0
-658,South West Khasi Hills,Meghalaya,,gw_insufficient,Large Excess,178,IMD,insufficient,,,Safe,1.06,False,none
-278,West Garo Hills,Meghalaya,,gw_level_only,Large Deficient,-66,IMD,level_only,,0.17,Safe,18.87,False,d0
-275,West Jaintia Hills,Meghalaya,,gw_insufficient,Large Deficient,-74,IMD,insufficient,,,Safe,6.23,False,d1
-279,West Khasi Hills,Meghalaya,,gw_insufficient,Large Deficient,-60,IMD,insufficient,,,Safe,1.57,False,none
-261,Aizawl,Mizoram,,gw_insufficient,Normal,-12,IMD,insufficient,,,Safe,14.9,False,d2
-262,Champhai,Mizoram,,gw_insufficient,Deficient,-30,IMD,insufficient,,,Safe,3.16,False,d3
-726,Hnahthial,Mizoram,,gw_insufficient,Large Excess,70,gridded,insufficient,,,,,,none
-728,Khawzawl,Mizoram,,gw_insufficient,Deficient,-28,gridded,insufficient,,,,,,d3
-263,Kolasib,Mizoram,,gw_insufficient,Normal,-1,IMD,insufficient,,,Safe,1.28,False,d1
-264,Lawngtlai,Mizoram,,gw_insufficient,Deficient,-28,IMD,insufficient,,,Safe,3.52,False,none
-265,Lunglei,Mizoram,,gw_insufficient,Deficient,-40,IMD,insufficient,,,Safe,4.31,False,none
-266,Mamit,Mizoram,,gw_insufficient,Normal,-11,IMD,insufficient,,,Safe,2.28,False,d1
-267,Saiha,Mizoram,,gw_insufficient,Normal,-16,IMD,insufficient,,,Safe,5.92,False,
-727,Saitual,Mizoram,,gw_insufficient,Deficient,-47,gridded,insufficient,,,,,,d4
-268,Serchhip,Mizoram,,gw_insufficient,Normal,-10,IMD,insufficient,,,Safe,6.02,False,d1
-758,Chumoukedima,Nagaland,,gw_insufficient,Normal,3,gridded,insufficient,,,,,,none
-244,Dimapur,Nagaland,,gw_insufficient,Normal,-5,IMD,insufficient,,,Safe,6.83,False,none
-614,Kiphire,Nagaland,,gw_insufficient,Excess,24,IMD,insufficient,,,Safe,1.66,False,none
-245,Kohima,Nagaland,,gw_insufficient,Normal,-14,IMD,insufficient,,,Safe,7.92,False,none
-615,Longleng,Nagaland,,gw_insufficient,Normal,1,gridded,insufficient,,,Safe,0.32,False,none
-246,Mokokchung,Nagaland,,gw_insufficient,Excess,24,IMD,insufficient,,,Safe,1.67,False,none
-247,Mon,Nagaland,,gw_insufficient,Normal,-12,IMD,insufficient,,,Safe,3.66,False,none
-764,Niuland,Nagaland,,gw_insufficient,Normal,19,gridded,insufficient,,,,,,none
-736,Noklak,Nagaland,,gw_insufficient,Excess,34,gridded,insufficient,,,,,,none
-613,Peren,Nagaland,,gw_insufficient,Normal,-1,IMD,insufficient,,,Safe,4.24,False,d0
-248,Phek,Nagaland,,gw_insufficient,Normal,-9,IMD,insufficient,,,Safe,3.58,False,none
-765,Shamator,Nagaland,,gw_insufficient,Excess,29,gridded,insufficient,,,,,,none
-757,Tseminyu,Nagaland,,gw_insufficient,Excess,52,gridded,insufficient,,,,,,none
-249,Tuensang,Nagaland,,gw_insufficient,Excess,29,gridded,insufficient,,,Safe,3.59,False,none
-250,Wokha,Nagaland,,gw_insufficient,Normal,3,IMD,insufficient,,,Safe,2.6,False,none
-251,Zunheboto,Nagaland,,gw_insufficient,Excess,47,IMD,insufficient,,,Safe,3.42,False,none
-344,Anugul,Odisha,fine,,Excess,21,IMD,full,100.0,1.87,Safe,54.43,False,none
-345,Balangir,Odisha,,gw_insufficient,Excess,26,IMD,insufficient,,,Safe,52.67,False,none
-346,Baleshwar,Odisha,,gw_level_only,Excess,56,IMD,level_only,,0.06,Safe,60.76,False,none
-347,Bargarh,Odisha,,gw_insufficient,Excess,43,IMD,insufficient,,,Safe,56.56,False,none
-348,Bhadrak,Odisha,,gw_insufficient,Excess,37,IMD,insufficient,,,Safe,62.13,False,none
-349,Boudh,Odisha,,gw_insufficient,Large Excess,70,IMD,insufficient,,,Safe,46.37,False,none
-350,Cuttack,Odisha,,gw_level_only,Excess,39,IMD,level_only,,1.83,Safe,48.07,False,none
-351,Deogarh,Odisha,,gw_insufficient,Excess,35,IMD,insufficient,,,Safe,58.74,False,none
-352,Dhenkanal,Odisha,,gw_level_only,Excess,47,IMD,level_only,,1.43,Safe,38.7,False,none
-353,Gajapati,Odisha,,gw_level_only,Normal,-1,IMD,level_only,,0.72,Safe,37.07,False,none
-354,Ganjam,Odisha,,gw_level_only,Normal,5,IMD,level_only,,0.06,Safe,45.14,False,none
-355,Jagatsinghapur,Odisha,,gw_insufficient,Excess,30,IMD,insufficient,,,Safe,59.76,False,none
-356,Jajapur,Odisha,fine,,Excess,23,IMD,short,100.0,1.45,Safe,65.32,False,none
-357,Jharsuguda,Odisha,,gw_level_only,Normal,4,IMD,level_only,,3.59,Safe,53.33,False,none
-358,Kalahandi,Odisha,,gw_level_only,Normal,-3,IMD,level_only,,-1.0,Safe,45.54,False,none
-359,Kandhamal,Odisha,,gw_level_only,Excess,29,IMD,level_only,,,Safe,31.89,False,none
-360,Kendrapara,Odisha,,gw_level_only,Excess,54,IMD,level_only,,-0.72,Safe,64.26,False,none
-361,Kendujhar,Odisha,fine,,Excess,55,IMD,short,88.0,0.5,Safe,46.13,False,none
-362,Khordha,Odisha,,gw_level_only,Excess,31,IMD,level_only,,1.32,Safe,63.93,False,none
-363,Koraput,Odisha,,gw_level_only,Excess,27,IMD,level_only,,-1.59,Safe,27.34,False,none
-364,Malkangiri,Odisha,,gw_level_only,Normal,15,IMD,level_only,,-1.51,Safe,22.08,False,none
-365,Mayurbhanj,Odisha,,gw_insufficient,Excess,55,IMD,insufficient,,,Safe,46.12,False,none
-366,Nabarangpur,Odisha,,gw_level_only,Normal,9,IMD,level_only,,-12.15,Safe,39.19,False,none
-367,Nayagarh,Odisha,,gw_level_only,Excess,27,IMD,level_only,,0.09,Safe,48.85,False,none
-368,Nuapada,Odisha,,gw_insufficient,Excess,32,IMD,insufficient,,,Safe,64.53,False,none
-369,Puri,Odisha,,gw_level_only,Excess,39,IMD,level_only,,0.19,Safe,55.51,False,none
-370,Rayagada,Odisha,,gw_level_only,Normal,4,IMD,level_only,,3.32,Safe,38.29,False,none
-371,Sambalpur,Odisha,,gw_insufficient,Excess,29,IMD,insufficient,,,Safe,36.02,False,none
-372,Sonepur,Odisha,,gw_insufficient,Excess,45,IMD,insufficient,,,Safe,52.32,False,none
-373,Sundargarh,Odisha,,gw_insufficient,Excess,21,IMD,insufficient,,,Safe,45.9,False,none
-598,Karaikal,Puducherry,,season_just_started,Large Excess,992,IMD,level_only,,1.13,Safe,50.37,False,none
-599,Mahe,Puducherry,,season_just_started,No Rain,-100,gridded,insufficient,,,,,,
-600,Pondicherry,Puducherry,,season_just_started,No Rain,-100,IMD,level_only,,-1.68,Semi-critical,87.05,False,none
-601,Yanam,Puducherry,,season_just_started,No Rain,-100,IMD,insufficient,,,,,,none
-27,Amritsar,Punjab,,gw_insufficient,Normal,-19,IMD,insufficient,,,Over-exploited,148.78,False,none
-605,Barnala,Punjab,,gw_insufficient,Large Deficient,-63,IMD,insufficient,,,Over-exploited,215.64,False,d1
-28,Bathinda,Punjab,,gw_insufficient,Deficient,-55,IMD,insufficient,,,Over-exploited,129.35,False,d4
-29,Faridkot,Punjab,,gw_insufficient,Deficient,-21,IMD,insufficient,,,Over-exploited,128.94,False,d4
-30,Fatehgarh Sahib,Punjab,,gw_insufficient,Large Deficient,-67,IMD,insufficient,,,Over-exploited,179.54,False,d3
-651,Fazilka,Punjab,,gw_insufficient,Deficient,-51,IMD,insufficient,,,Safe,55.79,True,d3
-31,Ferozepur,Punjab,,gw_insufficient,Deficient,-47,IMD,insufficient,,,Critical,98.05,False,d3
-32,Gurdaspur,Punjab,,gw_insufficient,Excess,27,IMD,insufficient,,,Over-exploited,112.21,False,none
-33,Hoshiarpur,Punjab,,gw_insufficient,Deficient,-52,IMD,insufficient,,,Over-exploited,118.84,False,d0
-34,Jalandhar,Punjab,,gw_level_only,Deficient,-48,IMD,level_only,,1.59,Over-exploited,273.27,False,d3
-35,Kapurthala,Punjab,,gw_insufficient,Large Deficient,-71,IMD,insufficient,,,Over-exploited,250.65,False,d2
-36,Ludhiana,Punjab,,gw_level_only,Deficient,-49,IMD,level_only,,0.46,Over-exploited,197.42,False,d3
-737,Malerkotla,Punjab,,gw_level_only,Deficient,-48,gridded,level_only,,5.39,Over-exploited,281.75,False,d3
-37,Mansa,Punjab,,gw_level_only,Large Deficient,-72,IMD,level_only,,-0.17,Over-exploited,109.82,False,d2
-38,Moga,Punjab,,gw_level_only,Deficient,-42,IMD,level_only,,0.0,Over-exploited,221.67,False,d3
-662,Pathankot,Punjab,,gw_insufficient,Excess,35,IMD,insufficient,,,Safe,42.09,False,none
-41,Patiala,Punjab,,gw_level_only,Deficient,-47,IMD,level_only,,0.0,Over-exploited,207.37,False,d2
-42,Rupnagar,Punjab,,gw_insufficient,Deficient,-29,IMD,insufficient,,,Critical,92.48,False,d0
-608,S.A.S Nagar,Punjab,,gw_level_only,Deficient,-38,gridded,level_only,,-0.05,Over-exploited,118.32,False,d0
-43,Sangrur,Punjab,,gw_insufficient,Deficient,-53,IMD,insufficient,,,Over-exploited,308.96,False,d2
-40,Shahid Bhagat Singh Nagar,Punjab,,gw_insufficient,Deficient,-54,IMD,insufficient,,,Over-exploited,116.15,False,none
-39,Sri Muktsar Sahib,Punjab,,gw_level_only,Large Deficient,-68,IMD,level_only,,0.0,Safe,28.73,False,d4
-609,Tarn Taran,Punjab,,gw_level_only,Deficient,-55,IMD,level_only,,-1.58,Over-exploited,195.6,False,d3
-86,Ajmer,Rajasthan,,gw_level_only,Normal,-18,IMD,level_only,,-7.19,Over-exploited,131.92,False,none
-87,Alwar,Rajasthan,,gw_level_only,Normal,-7,IMD,level_only,,-0.23,Over-exploited,182.17,False,none
-776,Anoopgarh,Rajasthan,,gw_level_only,Normal,-13,gridded,level_only,,,,,,none
-775,Balotra,Rajasthan,buffered,,Deficient,-29,gridded,short,69.0,0.31,,,,none
-88,Banswara,Rajasthan,,gw_level_only,Deficient,-41,IMD,level_only,,-0.77,Semi-critical,70.29,True,d0
-89,Baran,Rajasthan,,gw_insufficient,Normal,-18,IMD,insufficient,,,Over-exploited,131.28,False,none
-90,Barmer,Rajasthan,,gw_level_only,Deficient,-27,IMD,level_only,,0.06,Over-exploited,131.01,False,none
-774,Beawar,Rajasthan,,gw_level_only,Deficient,-22,gridded,level_only,,,,,,none
-91,Bharatpur,Rajasthan,,gw_level_only,Excess,25,IMD,level_only,,1.09,Over-exploited,114.37,False,none
-92,Bhilwara,Rajasthan,,gw_level_only,Deficient,-30,IMD,level_only,,-0.13,Over-exploited,142.91,False,d0
-93,Bikaner,Rajasthan,hidden_drought,,Normal,-4,IMD,short,0.0,-0.59,Over-exploited,143.09,False,none
-94,Bundi,Rajasthan,,gw_level_only,Normal,-10,IMD,level_only,,-3.71,Critical,90.17,False,none
-95,Chittorgarh,Rajasthan,,gw_level_only,Deficient,-24,IMD,level_only,,-0.87,Over-exploited,151.17,False,none
-96,Churu,Rajasthan,,gw_level_only,Normal,-11,IMD,level_only,,0.28,Over-exploited,129.59,False,none
-97,Dausa,Rajasthan,,gw_level_only,Normal,9,IMD,level_only,,1.36,Over-exploited,227.35,False,none
-767,Deeg,Rajasthan,,gw_level_only,Normal,9,gridded,level_only,,-0.36,,,,d1
-98,Dholpur,Rajasthan,,gw_level_only,Excess,26,IMD,level_only,,1.36,Over-exploited,126.71,False,none
-768,Didwana Kuchaman,Rajasthan,,gw_level_only,Normal,-6,gridded,level_only,,-0.07,,,,none
-769,Dudu,Rajasthan,,gw_level_only,Normal,-19,gridded,level_only,,-1.82,,,,none
-99,Dungarpur,Rajasthan,,gw_level_only,Deficient,-28,IMD,level_only,,-0.96,Safe,59.46,False,none
-100,Ganganagar,Rajasthan,,gw_level_only,Normal,-13,IMD,level_only,,-3.32,Safe,42.35,False,d0
-771,Gangapurcity,Rajasthan,,gw_level_only,Normal,-3,gridded,level_only,,-0.18,,,,none
-101,Hanumangarh,Rajasthan,buffered,,Deficient,-41,IMD,short,55.0,0.75,Safe,64.36,False,d1
-102,Jaipur,Rajasthan,fine,,Normal,-19,IMD,short,47.0,1.19,Over-exploited,210.41,False,none
-783,Jaipur Gramin,Rajasthan,fine,,Normal,-10,gridded,short,29.0,0.7,,,,none
-103,Jaisalmer,Rajasthan,,gw_level_only,Deficient,-50,IMD,level_only,,-0.2,Over-exploited,297.21,False,d0
-104,Jalore,Rajasthan,,gw_level_only,Deficient,-59,IMD,level_only,,1.64,Over-exploited,167.37,False,d1
-105,Jhalawar,Rajasthan,,gw_level_only,Normal,-8,IMD,level_only,,,Over-exploited,104.05,False,none
-106,Jhunjhunu,Rajasthan,hidden_drought,,Normal,2,IMD,short,0.0,-0.75,Over-exploited,223.34,False,none
-107,Jodhpur,Rajasthan,,gw_level_only,Deficient,-33,IMD,level_only,,3.01,Over-exploited,251.34,False,d1
-778,Jodhpur Gramin,Rajasthan,,gw_level_only,Deficient,-31,gridded,level_only,,-1.55,,,,d0
-108,Karauli,Rajasthan,,gw_level_only,Normal,-5,IMD,level_only,,5.83,Over-exploited,150.29,False,none
-781,Kekri,Rajasthan,,gw_level_only,Normal,-13,gridded,level_only,,-1.61,,,,none
-770,Khairthal-Tijara,Rajasthan,,gw_level_only,Normal,7,gridded,level_only,,-0.25,,,,none
-109,Kota,Rajasthan,,gw_level_only,Deficient,-22,IMD,level_only,,,Over-exploited,110.32,False,none
-782,Kotputli-Behror,Rajasthan,,gw_level_only,Normal,-12,gridded,level_only,,-0.8,,,,none
-110,Nagaur,Rajasthan,,gw_level_only,Normal,-11,IMD,level_only,,1.68,Over-exploited,177.23,False,none
-773,Neem Ka Thana,Rajasthan,,gw_level_only,Normal,-3,gridded,level_only,,3.94,,,,none
-111,Pali,Rajasthan,,gw_level_only,Deficient,-54,IMD,level_only,,,Over-exploited,153.49,False,d1
-772,Phalodi,Rajasthan,,gw_level_only,Normal,-5,gridded,level_only,,-2.62,,,,none
-629,Pratapgarh,Rajasthan,,gw_insufficient,Normal,-11,gridded,insufficient,,,Over-exploited,117.87,False,none
-112,Rajsamand,Rajasthan,,gw_level_only,Deficient,-33,IMD,level_only,,-2.78,Over-exploited,116.34,False,d0
-777,Salumbar,Rajasthan,,gw_insufficient,Normal,-9,gridded,insufficient,,,,,,none
-779,Sanchor,Rajasthan,,gw_insufficient,Deficient,-55,gridded,insufficient,,,,,,d1
-113,Sawai Madhopur,Rajasthan,,gw_level_only,Normal,-13,IMD,level_only,,,Over-exploited,148.09,False,none
-780,Shahpura,Rajasthan,,gw_level_only,Normal,-17,gridded,level_only,,-2.44,,,,none
-114,Sikar,Rajasthan,hidden_drought,,Normal,-7,IMD,full,10.0,-0.45,Over-exploited,191.98,False,none
-115,Sirohi,Rajasthan,double_drought,,Deficient,-46,IMD,short,0.0,-3.34,Over-exploited,115.14,False,d1
-116,Tonk,Rajasthan,,gw_level_only,Normal,-16,IMD,level_only,,-1.01,Critical,91.73,False,none
-117,Udaipur,Rajasthan,,gw_level_only,Deficient,-27,IMD,level_only,,0.54,Critical,97.8,False,d1
-225,Gangtok,Sikkim,,gw_insufficient,Normal,-7,IMD,insufficient,,,Safe,6.7,False,d3
-228,Gyalshing,Sikkim,,gw_insufficient,Excess,38,IMD,insufficient,,,Safe,6.97,False,none
-226,Mangan,Sikkim,,gw_insufficient,Normal,7,IMD,insufficient,,,Safe,3.14,False,d2
-227,Namchi,Sikkim,,gw_insufficient,Normal,16,IMD,insufficient,,,Safe,6.72,False,d1
-741,Pakyong,Sikkim,,gw_insufficient,Normal,-17,gridded,insufficient,,,Safe,4.88,False,d1
-742,Soreng,Sikkim,,gw_insufficient,Normal,-1,gridded,insufficient,,,Safe,7.89,False,none
-610,Ariyalur,Tamil Nadu,,season_just_started,Excess,51,IMD,level_only,,-2.22,Safe,53.3,False,none
-730,Chengalpattu,Tamil Nadu,,season_just_started,No Rain,-100,IMD,level_only,,-0.17,Safe,65.14,False,d1
-568,Chennai,Tamil Nadu,,season_just_started,No Rain,-100,IMD,level_only,,0.08,Over-exploited,120.62,False,d2
-569,Coimbatore,Tamil Nadu,,season_just_started,Deficient,-42,IMD,full,57.0,-2.15,Critical,98.23,False,none
-570,Cuddalore,Tamil Nadu,,season_just_started,Excess,36,IMD,short,15.0,-1.91,Safe,56.91,True,none
-571,Dharmapuri,Tamil Nadu,,season_just_started,Normal,-13,IMD,level_only,,-1.04,Semi-critical,86.77,True,none
-572,Dindigul,Tamil Nadu,,season_just_started,Large Excess,62,IMD,short,46.0,-1.28,Over-exploited,115.68,False,none
-573,Erode,Tamil Nadu,,season_just_started,Large Excess,83,IMD,short,31.0,-2.14,Semi-critical,75.85,True,none
-729,Kallakurichi,Tamil Nadu,,season_just_started,Large Excess,383,IMD,full,26.0,-3.42,Semi-critical,80.11,True,none
-574,Kanchipuram,Tamil Nadu,,season_just_started,No Rain,-100,IMD,level_only,,-0.3,Safe,46.43,False,d1
-575,Kanniyakumari,Tamil Nadu,,season_just_started,No Rain,-100,IMD,level_only,,-0.38,Safe,14.11,False,none
-576,Karur,Tamil Nadu,,season_just_started,Large Excess,232,IMD,level_only,,-0.74,Critical,99.64,False,d1
-577,Krishnagiri,Tamil Nadu,,season_just_started,Large Excess,72,IMD,full,41.0,-2.7,Critical,97.13,False,none
-578,Madurai,Tamil Nadu,,season_just_started,Large Deficient,-84,IMD,short,78.0,-0.56,Safe,64.75,True,none
-735,Mayiladuthurai,Tamil Nadu,,season_just_started,Large Excess,121,IMD,level_only,,-0.18,Over-exploited,114.11,False,none
-579,Nagapattinam,Tamil Nadu,,season_just_started,Large Deficient,-63,IMD,level_only,,-0.83,Saline,-100000.0,False,none
-580,Namakkal,Tamil Nadu,,season_just_started,Large Excess,219,IMD,level_only,,-0.78,Over-exploited,121.7,False,d0
-581,Perambalur,Tamil Nadu,,season_just_started,Large Excess,575,IMD,level_only,,-2.18,Over-exploited,114.65,False,none
-582,Pudukkottai,Tamil Nadu,,season_just_started,Large Excess,125,IMD,level_only,,-0.49,Safe,49.03,False,none
-583,Ramanathapuram,Tamil Nadu,,season_just_started,Large Deficient,-64,IMD,level_only,,-2.89,Safe,13.2,False,none
-731,Ranipet,Tamil Nadu,,season_just_started,Large Deficient,-79,IMD,level_only,,-1.31,Semi-critical,82.55,True,none
-584,Salem,Tamil Nadu,,season_just_started,Deficient,-58,IMD,short,68.0,-1.1,Over-exploited,150.56,False,d0
-585,Sivaganga,Tamil Nadu,,season_just_started,Deficient,-37,IMD,level_only,,-0.52,Safe,26.05,False,none
-733,Tenkasi,Tamil Nadu,,season_just_started,No Rain,-100,IMD,short,61.0,-0.46,Semi-critical,77.44,True,none
-586,Thanjavur,Tamil Nadu,,season_just_started,Large Excess,73,IMD,level_only,,-3.05,Over-exploited,102.09,False,none
-587,The Nilgiris,Tamil Nadu,,season_just_started,Deficient,-36,IMD,level_only,,0.48,Safe,9.52,False,none
-588,Theni,Tamil Nadu,,season_just_started,Deficient,-33,IMD,level_only,,-1.87,Semi-critical,75.28,True,none
-589,Thiruvallur,Tamil Nadu,,season_just_started,No Rain,-100,IMD,level_only,,-0.79,Safe,57.03,False,d1
-590,Thiruvarur,Tamil Nadu,,season_just_started,Excess,45,IMD,level_only,,-8.47,Safe,54.77,True,none
-591,Tiruchirappalli,Tamil Nadu,,season_just_started,Large Excess,120,IMD,short,45.0,-0.34,Semi-critical,75.04,True,none
-592,Tirunelveli,Tamil Nadu,,season_just_started,Deficient,-42,IMD,full,38.0,0.55,Safe,39.96,True,none
-732,Tirupathur,Tamil Nadu,,season_just_started,Normal,-9,IMD,level_only,,-6.62,Over-exploited,140.64,False,none
-634,Tiruppur,Tamil Nadu,,season_just_started,Excess,30,IMD,full,57.0,-3.02,Semi-critical,85.5,True,none
-593,Tiruvannamalai,Tamil Nadu,,season_just_started,Large Excess,140,IMD,level_only,,-1.76,Semi-critical,84.1,True,none
-594,Tuticorin,Tamil Nadu,,season_just_started,Large Deficient,-66,IMD,full,52.0,-0.61,Safe,28.21,False,none
-595,Vellore,Tamil Nadu,,season_just_started,Normal,-4,IMD,short,36.0,-0.86,Over-exploited,117.3,False,none
-596,Villupuram,Tamil Nadu,,season_just_started,Normal,-11,IMD,level_only,,-2.21,Semi-critical,89.67,True,none
-597,Virudhunagar,Tamil Nadu,,season_just_started,Large Excess,193,IMD,short,33.0,-1.43,Safe,59.64,True,none
-501,Adilabad,Telangana,,gw_level_only,Deficient,-27,IMD,level_only,,-0.76,Safe,37.57,True,d1
-690,Bhadradri Kothagudem,Telangana,,gw_level_only,Deficient,-21,IMD,level_only,,-0.7,Safe,32.04,False,d0
-686,Hanumakonda,Telangana,,gw_level_only,Deficient,-24,IMD,level_only,,-1.72,Safe,56.3,True,d1
-507,Hyderabad,Telangana,,gw_level_only,Deficient,-31,IMD,level_only,,-2.86,Over-exploited,101.94,False,d1
-681,Jagitial,Telangana,,gw_level_only,Normal,8,IMD,level_only,,1.35,Safe,44.51,False,none
-689,Jangoan,Telangana,,gw_level_only,Deficient,-21,IMD,level_only,,-0.68,Safe,58.18,False,d0
-687,Jayashankar Bhupalapally,Telangana,,gw_level_only,Normal,-11,IMD,level_only,,0.14,Safe,43.63,False,d0
-695,Jogulamba Gadwal,Telangana,,gw_level_only,Deficient,-45,IMD,level_only,,-1.37,Safe,28.29,False,d2
-685,Kamareddy,Telangana,,gw_level_only,Normal,8,IMD,level_only,,-1.07,Safe,48.19,False,none
-508,Karimnagar,Telangana,,gw_level_only,Normal,-1,IMD,level_only,,-2.9,Safe,37.0,False,none
-509,Khammam,Telangana,,gw_level_only,Normal,-17,IMD,level_only,,-2.39,Safe,41.18,True,d0
-699,Kumuram Bheem Asifabad,Telangana,,gw_level_only,Normal,13,IMD,level_only,,0.0,Safe,22.04,False,d0
-688,Mahabubabad,Telangana,,gw_level_only,Normal,-19,IMD,level_only,,-1.38,Safe,53.86,False,d0
-512,Mahabubnagar,Telangana,,gw_level_only,Deficient,-21,IMD,level_only,,-0.7,Semi-critical,73.56,True,d1
-684,Mancherial,Telangana,,gw_level_only,Normal,11,IMD,level_only,,1.57,Safe,37.83,False,none
-513,Medak,Telangana,,gw_level_only,Normal,-9,IMD,level_only,,-0.17,Safe,65.68,False,none
-700,Medchal Malkajgiri,Telangana,,gw_level_only,Deficient,-41,IMD,level_only,,-2.3,Semi-critical,71.26,True,none
-720,Mulugu,Telangana,,gw_level_only,Normal,1,IMD,level_only,,-0.02,Safe,28.82,False,d0
-694,Nagarkurnool,Telangana,,gw_level_only,Deficient,-27,IMD,level_only,,-1.52,Safe,38.11,False,d1
-514,Nalgonda,Telangana,double_drought,,Deficient,-56,IMD,short,0.0,-0.64,Safe,49.62,True,d1
-721,Narayanpet,Telangana,,gw_level_only,Normal,-14,IMD,level_only,,-0.61,Safe,41.5,False,d3
-680,Nirmal,Telangana,,gw_level_only,Deficient,-51,IMD,level_only,,-1.02,Safe,35.89,False,d1
-516,Nizamabad,Telangana,,gw_level_only,Normal,-14,IMD,level_only,,0.07,Safe,51.05,True,d0
-682,Peddapalli,Telangana,,gw_level_only,Normal,-9,IMD,level_only,,0.7,Safe,48.79,False,d0
-683,Rajanna Sircilla,Telangana,,gw_level_only,Normal,4,IMD,level_only,,-0.74,Safe,68.09,False,none
-518,Ranga Reddy,Telangana,,gw_level_only,Deficient,-30,IMD,level_only,,-0.54,Safe,62.72,True,d1
-691,Sangareddy,Telangana,buffered,,Deficient,-34,IMD,short,65.0,-0.7,Safe,45.63,True,d0
-692,Siddipet,Telangana,,gw_level_only,Normal,6,IMD,level_only,,-0.88,Safe,67.94,False,none
-696,Suryapet,Telangana,,gw_level_only,Deficient,-22,IMD,level_only,,-0.5,Safe,40.99,False,d0
-698,Vikarabad,Telangana,,gw_level_only,Deficient,-27,IMD,level_only,,-1.25,Safe,62.39,False,d1
-693,Wanaparthy,Telangana,,gw_level_only,Deficient,-35,IMD,level_only,,-0.9,Safe,43.64,False,d1
-522,Warangal,Telangana,,gw_level_only,Deficient,-38,IMD,level_only,,-1.91,Safe,56.3,False,d1
-697,Yadadri Bhuvanagiri,Telangana,double_drought,,Deficient,-35,IMD,short,0.0,-0.55,Safe,65.41,True,none
-269,Dhalai,Tripura,,gw_insufficient,Normal,-13,IMD,insufficient,,,Safe,8.36,False,none
-654,Gomati,Tripura,,gw_insufficient,Deficient,-23,IMD,insufficient,,,Safe,4.64,False,d1
-652,Khowai,Tripura,,gw_level_only,Normal,-2,IMD,level_only,,-0.15,Safe,7.51,False,none
-270,North Tripura,Tripura,,gw_level_only,Deficient,-20,IMD,level_only,,0.33,Safe,12.1,False,none
-653,Sepahijala,Tripura,,gw_insufficient,Normal,-18,IMD,insufficient,,,Safe,9.93,False,d2
-271,South Tripura,Tripura,,gw_level_only,Deficient,-30,IMD,level_only,,-0.32,Safe,10.01,False,d1
-655,Unakoti,Tripura,,gw_insufficient,Normal,-8,IMD,insufficient,,,Safe,9.9,False,none
-272,West Tripura,Tripura,,gw_level_only,Normal,5,IMD,level_only,,2.01,Safe,21.39,False,d0
-118,Agra,Uttar Pradesh,,gw_level_only,Normal,-1,IMD,level_only,,1.01,Over-exploited,108.45,False,none
-119,Aligarh,Uttar Pradesh,,gw_level_only,Deficient,-43,IMD,level_only,,-1.01,Semi-critical,78.31,True,none
-121,Ambedkar Nagar,Uttar Pradesh,,gw_level_only,Normal,0,IMD,level_only,,-0.99,Safe,62.25,False,none
-640,Amethi,Uttar Pradesh,,gw_insufficient,Deficient,-36,IMD,insufficient,,,Safe,63.71,False,d0
-154,Amroha,Uttar Pradesh,,gw_level_only,Normal,1,IMD,level_only,,0.85,Critical,90.59,False,none
-122,Auraiya,Uttar Pradesh,,gw_insufficient,Excess,25,IMD,insufficient,,,Safe,63.46,False,none
-140,Ayodhya,Uttar Pradesh,,gw_insufficient,Normal,-6,IMD,insufficient,,,Safe,61.99,False,none
-123,Azamgarh,Uttar Pradesh,,gw_level_only,Normal,-15,IMD,level_only,,-0.05,Safe,59.62,False,d0
-124,Baghpat,Uttar Pradesh,,gw_level_only,Normal,1,IMD,level_only,,0.13,Critical,96.54,False,none
-125,Bahraich,Uttar Pradesh,,gw_level_only,Excess,36,IMD,level_only,,0.38,Safe,59.24,False,none
-126,Ballia,Uttar Pradesh,,gw_insufficient,Normal,-12,IMD,insufficient,,,Safe,62.74,False,none
-127,Balrampur,Uttar Pradesh,,gw_level_only,Normal,-10,gridded,level_only,,-0.31,Safe,54.73,False,none
-128,Banda,Uttar Pradesh,,gw_level_only,Large Excess,77,IMD,level_only,,-0.34,Semi-critical,70.82,False,none
-129,Barabanki,Uttar Pradesh,,gw_level_only,Normal,14,IMD,level_only,,-0.4,Safe,62.1,False,none
-130,Bareilly,Uttar Pradesh,,gw_insufficient,Excess,26,IMD,insufficient,,,Semi-critical,71.73,True,none
-131,Basti,Uttar Pradesh,,gw_insufficient,Normal,-5,IMD,insufficient,,,Safe,61.18,False,d0
-179,Bhadohi,Uttar Pradesh,,gw_insufficient,Large Deficient,-61,IMD,insufficient,,,Semi-critical,73.96,False,d1
-132,Bijnor,Uttar Pradesh,,gw_level_only,Excess,45,IMD,level_only,,-0.05,Safe,69.79,False,none
-133,Budaun,Uttar Pradesh,,gw_level_only,Normal,16,IMD,level_only,,0.01,Semi-critical,82.69,True,none
-134,Bulandshahr,Uttar Pradesh,,gw_level_only,Normal,-5,IMD,level_only,,-0.06,Critical,91.04,False,none
-135,Chandauli,Uttar Pradesh,,gw_level_only,Normal,-19,IMD,level_only,,-2.8,Safe,59.9,False,none
-136,Chitrakoot,Uttar Pradesh,,gw_insufficient,Large Excess,76,IMD,insufficient,,,Semi-critical,81.58,True,none
-137,Deoria,Uttar Pradesh,,gw_insufficient,Large Deficient,-67,IMD,insufficient,,,Safe,62.98,False,none
-138,Etah,Uttar Pradesh,,gw_insufficient,Large Excess,61,IMD,insufficient,,,Semi-critical,72.25,False,none
-139,Etawah,Uttar Pradesh,,gw_insufficient,Excess,32,IMD,insufficient,,,Safe,57.82,False,none
-141,Farrukhabad,Uttar Pradesh,,gw_insufficient,Normal,8,IMD,insufficient,,,Semi-critical,75.09,True,none
-142,Fatehpur,Uttar Pradesh,,gw_level_only,Normal,9,IMD,level_only,,-0.19,Safe,69.93,False,none
-143,Firozabad,Uttar Pradesh,,gw_insufficient,Excess,34,IMD,insufficient,,,Critical,95.49,False,none
-144,Gautam Buddha Nagar,Uttar Pradesh,,gw_level_only,Large Excess,104,IMD,level_only,,-0.77,Over-exploited,106.31,False,d0
-145,Ghaziabad,Uttar Pradesh,,gw_level_only,Large Deficient,-60,IMD,level_only,,0.2,Over-exploited,127.6,False,none
-146,Ghazipur,Uttar Pradesh,,gw_level_only,Normal,-15,IMD,level_only,,0.23,Safe,56.06,False,none
-147,Gonda,Uttar Pradesh,,gw_insufficient,Normal,3,IMD,insufficient,,,Safe,55.43,False,none
-148,Gorakhpur,Uttar Pradesh,,gw_level_only,Deficient,-20,IMD,level_only,,0.08,Safe,62.95,False,d1
-149,Hamirpur,Uttar Pradesh,,gw_insufficient,Large Excess,83,gridded,insufficient,,,Safe,65.3,False,none
-661,Hapur,Uttar Pradesh,,gw_level_only,Deficient,-47,IMD,level_only,,0.3,Critical,96.07,False,none
-150,Hardoi,Uttar Pradesh,,gw_insufficient,Normal,10,IMD,insufficient,,,Safe,62.07,False,none
-163,Hathras,Uttar Pradesh,,gw_level_only,Normal,-13,IMD,level_only,,0.06,Critical,91.29,False,none
-151,Jalaun,Uttar Pradesh,,gw_insufficient,Excess,32,IMD,insufficient,,,Safe,55.11,False,none
-152,Jaunpur,Uttar Pradesh,,gw_level_only,Deficient,-56,IMD,level_only,,0.05,Safe,69.03,False,d0
-153,Jhansi,Uttar Pradesh,,gw_insufficient,Normal,-16,IMD,insufficient,,,Safe,66.59,False,none
-155,Kannauj,Uttar Pradesh,,gw_insufficient,Large Excess,64,IMD,insufficient,,,Semi-critical,78.53,True,none
-156,Kanpur Dehat,Uttar Pradesh,,gw_insufficient,Deficient,-49,IMD,insufficient,,,Semi-critical,71.13,False,none
-157,Kanpur Nagar,Uttar Pradesh,,gw_insufficient,Large Excess,77,IMD,insufficient,,,Semi-critical,80.62,True,none
-633,Kasganj,Uttar Pradesh,,gw_insufficient,Normal,10,IMD,insufficient,,,Semi-critical,72.37,False,none
-158,Kaushambi,Uttar Pradesh,,gw_insufficient,Deficient,-33,IMD,insufficient,,,Semi-critical,81.96,True,none
-159,Kheri,Uttar Pradesh,,gw_insufficient,Excess,34,IMD,insufficient,,,Safe,61.14,False,none
-160,Kushi Nagar,Uttar Pradesh,,gw_insufficient,Deficient,-58,IMD,insufficient,,,Safe,52.42,False,none
-161,Lalitpur,Uttar Pradesh,,gw_insufficient,Excess,24,IMD,insufficient,,,Semi-critical,80.5,False,none
-162,Lucknow,Uttar Pradesh,,gw_level_only,Excess,24,IMD,level_only,,-1.09,Safe,67.3,True,none
-164,Maharajganj,Uttar Pradesh,,gw_insufficient,Normal,-4,IMD,insufficient,,,Safe,64.59,False,none
-165,Mahoba,Uttar Pradesh,,gw_insufficient,Large Excess,87,IMD,insufficient,,,Semi-critical,82.83,True,none
-166,Mainpuri,Uttar Pradesh,,gw_insufficient,Deficient,-25,IMD,insufficient,,,Semi-critical,71.61,True,none
-167,Mathura,Uttar Pradesh,,gw_insufficient,Deficient,-46,IMD,insufficient,,,Safe,66.95,True,d1
-168,Mau,Uttar Pradesh,,gw_level_only,Deficient,-47,IMD,level_only,,2.22,Safe,64.89,False,d1
-169,Meerut,Uttar Pradesh,,gw_level_only,Large Excess,64,IMD,level_only,,0.61,Semi-critical,80.74,True,none
-170,Mirzapur,Uttar Pradesh,,gw_insufficient,Normal,-1,IMD,insufficient,,,Safe,65.11,True,none
-171,Moradabad,Uttar Pradesh,,gw_insufficient,Excess,26,IMD,insufficient,,,Semi-critical,85.41,True,none
-172,Muzaffarnagar,Uttar Pradesh,,gw_level_only,Excess,57,IMD,level_only,,1.27,Semi-critical,78.38,True,none
-173,Pilibhit,Uttar Pradesh,,gw_insufficient,Deficient,-44,IMD,insufficient,,,Safe,63.9,False,none
-174,Pratapgarh,Uttar Pradesh,,gw_level_only,Normal,0,gridded,level_only,,-0.24,Semi-critical,76.36,True,none
-120,Prayagraj,Uttar Pradesh,,gw_insufficient,Excess,36,IMD,insufficient,,,Semi-critical,74.04,True,none
-175,Rae Bareli,Uttar Pradesh,,gw_level_only,Normal,-13,IMD,level_only,,0.64,Safe,60.17,False,none
-176,Rampur,Uttar Pradesh,,gw_level_only,Normal,3,IMD,level_only,,0.48,Safe,69.06,False,none
-177,Saharanpur,Uttar Pradesh,,gw_level_only,Deficient,-29,IMD,level_only,,-0.02,Critical,97.64,False,d1
-659,Sambhal,Uttar Pradesh,,gw_level_only,Large Excess,97,IMD,level_only,,-0.24,Semi-critical,80.42,False,none
-178,Sant Kabeer Nagar,Uttar Pradesh,,gw_insufficient,Deficient,-40,IMD,insufficient,,,Safe,62.67,False,none
-180,Shahjahanpur,Uttar Pradesh,,gw_insufficient,Excess,33,IMD,insufficient,,,Safe,65.03,False,none
-660,Shamli,Uttar Pradesh,,gw_level_only,Large Deficient,-68,IMD,level_only,,0.75,Over-exploited,100.29,False,d1
-181,Shravasti,Uttar Pradesh,,gw_level_only,Normal,-15,IMD,level_only,,-0.1,Safe,59.95,False,none
-182,Siddharth Nagar,Uttar Pradesh,,gw_level_only,Deficient,-22,IMD,level_only,,0.08,Safe,61.13,False,none
-183,Sitapur,Uttar Pradesh,,gw_insufficient,Normal,-13,IMD,insufficient,,,Safe,59.22,False,d0
-184,Sonbhadra,Uttar Pradesh,,gw_insufficient,Normal,1,IMD,insufficient,,,Safe,49.11,False,none
-185,Sultanpur,Uttar Pradesh,,gw_insufficient,Normal,10,IMD,insufficient,,,Safe,63.43,False,d0
-186,Unnao,Uttar Pradesh,,gw_insufficient,Normal,-17,IMD,insufficient,,,Safe,62.3,False,none
-187,Varanasi,Uttar Pradesh,,gw_level_only,Excess,21,IMD,level_only,,,Critical,90.21,False,d0
-45,Almora,Uttarakhand,,gw_insufficient,Excess,35,IMD,insufficient,,,,,,none
-46,Bageshwar,Uttarakhand,,gw_insufficient,Large Excess,163,IMD,insufficient,,,,,,none
-47,Chamoli,Uttarakhand,,gw_insufficient,Large Excess,75,IMD,insufficient,,,,,,none
-48,Champawat,Uttarakhand,,gw_insufficient,Normal,-16,IMD,insufficient,,,,,,none
-49,Dehradun,Uttarakhand,,gw_insufficient,Normal,-1,IMD,insufficient,,,Safe,44.97,False,none
-50,Haridwar,Uttarakhand,,gw_insufficient,Normal,18,IMD,insufficient,,,Safe,65.75,False,d1
-51,Nainital,Uttarakhand,,gw_insufficient,Normal,-13,IMD,insufficient,,,Safe,54.57,False,none
-52,Pauri Garhwal,Uttarakhand,,gw_insufficient,Deficient,-40,IMD,insufficient,,,,,,none
-53,Pithoragarh,Uttarakhand,,gw_insufficient,Normal,5,IMD,insufficient,,,,,,none
-54,Rudra Prayag,Uttarakhand,,gw_insufficient,Normal,-2,IMD,insufficient,,,,,,none
-55,Tehri Garhwal,Uttarakhand,,gw_insufficient,Excess,33,IMD,insufficient,,,,,,none
-56,Udam Singh Nagar,Uttarakhand,,gw_level_only,Normal,15,IMD,level_only,,-0.49,Safe,56.7,False,none
-57,Uttar Kashi,Uttarakhand,,gw_insufficient,Normal,-9,IMD,insufficient,,,,,,none
-303,24 Paraganas North,West Bengal,,gw_level_only,Normal,5,gridded,level_only,,-0.21,Safe,68.34,True,none
-304,24 Paraganas South,West Bengal,,gw_level_only,Normal,17,gridded,level_only,,-0.62,Saline,-100000.0,False,none
-664,Alipurduar,West Bengal,,gw_insufficient,Normal,-14,IMD,insufficient,,,Safe,11.26,False,d2
-305,Bankura,West Bengal,,gw_insufficient,Normal,11,IMD,insufficient,,,Safe,37.15,False,none
-307,Birbhum,West Bengal,,gw_level_only,Normal,-14,IMD,level_only,,-0.46,Safe,35.21,False,d1
-308,Coochbehar,West Bengal,,gw_insufficient,Normal,-15,IMD,insufficient,,,Safe,47.11,False,d2
-309,Darjeeling,West Bengal,,gw_insufficient,Deficient,-21,IMD,insufficient,,,Safe,9.74,False,none
-310,Dinajpur Dakshin,West Bengal,,gw_level_only,Deficient,-25,IMD,level_only,,1.79,Safe,61.54,False,d0
-311,Dinajpur Uttar,West Bengal,,gw_insufficient,Deficient,-33,IMD,insufficient,,,Safe,47.52,False,d1
-312,Hooghly,West Bengal,,gw_level_only,Normal,2,IMD,level_only,,-0.38,Safe,55.23,False,none
-313,Howrah,West Bengal,,gw_level_only,Normal,10,IMD,level_only,,-1.64,Safe,24.33,False,none
-314,Jalpaiguri,West Bengal,,gw_insufficient,Deficient,-26,IMD,insufficient,,,Safe,12.82,False,d0
-703,Jhargram,West Bengal,,gw_level_only,Normal,1,IMD,level_only,,6.65,Safe,25.54,False,none
-702,Kalimpong,West Bengal,,gw_insufficient,Normal,-19,IMD,insufficient,,,Safe,3.19,False,d1
-315,Kolkata,West Bengal,,gw_insufficient,Excess,28,IMD,insufficient,,,Saline,-100000.0,False,none
-316,Maldah,West Bengal,,gw_level_only,Deficient,-29,IMD,level_only,,-0.22,Safe,34.71,False,none
-317,Medinipur East,West Bengal,,gw_level_only,Excess,48,IMD,level_only,,0.05,Safe,37.31,False,none
-318,Medinipur West,West Bengal,,gw_level_only,Excess,40,IMD,level_only,,-0.08,Safe,53.84,False,none
-319,Murshidabad,West Bengal,,gw_level_only,Normal,-16,IMD,level_only,,-0.85,Safe,60.25,True,d2
-320,Nadia,West Bengal,,gw_level_only,Deficient,-22,IMD,level_only,,-0.4,Semi-critical,81.39,True,d0
-704,Paschim Bardhaman,West Bengal,,gw_level_only,Normal,18,IMD,level_only,,-2.59,Safe,57.26,False,d0
-306,Purba Bardhaman,West Bengal,,gw_level_only,Normal,-4,IMD,level_only,,0.0,Safe,53.95,False,d1
-321,Purulia,West Bengal,,gw_level_only,Normal,-10,IMD,level_only,,-0.7,Safe,13.81,False,none
+dist_lgd,district,state,quadrant,provisional,why_none,rain_category,rain_departure_pct,rain_source,rain_short_reasons,rain_spi_season,rain_dry_spell_weeks,gw_tier,gw_percentile,gw_change_vs_last_year_m,ingres_category,ingres_stage_pct,hidden_block_stress,idm_class
+603,Nicobars,Andaman and Nicobar,,False,gw_insufficient,Deficient,-36,IMD,deviation,,,insufficient,,,Safe,0.91,False,
+632,North And Middle Andaman,Andaman and Nicobar,,False,gw_insufficient,Excess,41,IMD,,,,insufficient,,,Safe,2.35,False,
+602,South Andamans,Andaman and Nicobar,,False,gw_insufficient,Normal,-14,IMD,,,,insufficient,,,Safe,3.62,False,
+745,Alluri Sitharama Raju,Andhra Pradesh,,False,season_just_started,No Rain,-100,IMD,deviation,,,provisional,25.0,-0.32,Safe,6.69,False,none
+744,Anakapalli,Andhra Pradesh,,False,season_just_started,No Rain,-100,IMD,deviation,,,provisional,50.0,-0.76,Safe,30.6,False,none
+502,Anantapur,Andhra Pradesh,,False,season_just_started,Deficient,-38,IMD,deviation,,,provisional,50.0,0.01,Safe,51.02,True,none
+753,Annamayya,Andhra Pradesh,,False,season_just_started,Deficient,-46,IMD,deviation,,,provisional,33.0,-0.05,Safe,43.86,True,d1
+750,Bapatla,Andhra Pradesh,,False,season_just_started,No Rain,-100,IMD,deviation,,,provisional,0.0,-2.33,Safe,21.53,False,d1
+503,Chittoor,Andhra Pradesh,,False,season_just_started,Normal,6,IMD,,,,short,33.0,-0.77,Safe,67.24,True,d0
+505,East Godavari,Andhra Pradesh,,False,season_just_started,No Rain,-100,IMD,deviation,,,provisional,0.0,-1.11,Safe,25.84,False,none
+748,Eluru,Andhra Pradesh,,False,season_just_started,No Rain,-100,IMD,deviation,,,provisional,75.0,4.37,Safe,37.57,False,none
+506,Guntur,Andhra Pradesh,,False,season_just_started,No Rain,-100,IMD,deviation,,,provisional,0.0,-2.97,Safe,20.7,False,none
+746,Kakinada,Andhra Pradesh,,False,season_just_started,Large Excess,167,IMD,,,,provisional,0.0,-0.52,Safe,16.8,False,none
+747,Konaseema,Andhra Pradesh,,False,season_just_started,No Rain,-100,IMD,deviation,,,provisional,0.0,-0.58,Safe,19.07,False,none
+510,Krishna,Andhra Pradesh,,False,season_just_started,No Rain,-100,IMD,deviation,,,provisional,0.0,-0.95,Safe,33.69,False,none
+511,Kurnool,Andhra Pradesh,,False,season_just_started,No Rain,-100,IMD,deviation,,,provisional,58.0,-0.3,Safe,37.76,False,d2
+755,Nandyal,Andhra Pradesh,,False,season_just_started,Large Deficient,-97,IMD,deviation,,,provisional,0.0,-1.4,Safe,9.0,False,d1
+749,Ntr,Andhra Pradesh,,False,season_just_started,No Rain,-100,IMD,deviation,,,provisional,0.0,-0.74,Safe,33.99,False,d0
+751,Palnadu,Andhra Pradesh,,False,season_just_started,No Rain,-100,IMD,deviation,,,provisional,33.0,0.32,Safe,31.54,True,d1
+743,Parvathipuram Manyam,Andhra Pradesh,,False,season_just_started,No Rain,-100,IMD,deviation,,,provisional,50.0,1.56,Safe,26.01,False,none
+517,Prakasam,Andhra Pradesh,,False,season_just_started,Large Deficient,-84,IMD,deviation,,,provisional,67.0,0.0,Safe,29.73,False,d1
+515,Spsr Nellore,Andhra Pradesh,,False,season_just_started,No Rain,-100,IMD,deviation,,,provisional,50.0,0.87,Safe,32.35,True,d0
+754,Sri Sathya Sai,Andhra Pradesh,,False,season_just_started,Deficient,-59,IMD,deviation,,,short,34.0,-1.0,Safe,56.36,True,d1
+519,Srikakulam,Andhra Pradesh,,False,season_just_started,No Rain,-100,IMD,deviation,,,insufficient,,,Safe,33.7,True,none
+752,Tirupati,Andhra Pradesh,,False,season_just_started,No Rain,-100,IMD,deviation,,,provisional,50.0,0.18,Safe,36.24,True,d1
+520,Visakhapatanam,Andhra Pradesh,,False,season_just_started,No Rain,-100,IMD,deviation,,,provisional,0.0,-1.9,Safe,46.16,False,none
+521,Vizianagaram,Andhra Pradesh,,False,season_just_started,No Rain,-100,IMD,deviation,,,provisional,100.0,0.59,Safe,29.07,False,none
+523,West Godavari,Andhra Pradesh,,False,season_just_started,No Rain,-100,IMD,deviation,,,provisional,67.0,4.82,Safe,10.29,False,none
+504,Y.S.R.,Andhra Pradesh,,False,season_just_started,No Rain,-100,IMD,deviation,,,short,62.0,-1.51,Safe,42.51,False,d1
+628,Anjaw,Arunachal Pradesh,,False,gw_insufficient,Large Deficient,-89,IMD,"deviation,spi,dry_spell",-1.3,12.0,insufficient,,,Hilly area,,False,d1
+229,Changlang,Arunachal Pradesh,,False,gw_insufficient,Deficient,-24,IMD,"deviation,spi,dry_spell",-1.55,4.0,insufficient,,,Safe,0.9,False,d3
+230,Dibang Valley,Arunachal Pradesh,,False,gw_insufficient,Large Deficient,-65,gridded,"deviation,spi,dry_spell",-1.03,8.0,insufficient,,,Hilly area,,False,d2
+231,East Kameng,Arunachal Pradesh,,False,gw_insufficient,Normal,15,IMD,,-0.88,1.0,insufficient,,,Safe,0.69,False,d1
+232,East Siang,Arunachal Pradesh,,False,gw_insufficient,Deficient,-35,IMD,"deviation,spi",-1.69,3.0,insufficient,,,Safe,0.25,False,d3
+766,Itanagar capital complex,Arunachal Pradesh,,False,gw_insufficient,Deficient,-22,gridded,"deviation,spi",-1.4,3.0,insufficient,,,,,,d1
+718,Kamle,Arunachal Pradesh,,False,gw_insufficient,Deficient,-40,gridded,"deviation,spi,dry_spell",-2.02,4.0,insufficient,,,,,,d4
+677,Kra Daadi,Arunachal Pradesh,,False,gw_insufficient,Deficient,-59,gridded,"deviation,spi,dry_spell",-3.33,8.0,insufficient,,,,,,d4
+233,Kurung Kumey,Arunachal Pradesh,,False,gw_insufficient,Deficient,-48,IMD,"deviation,spi,dry_spell",-2.63,4.0,insufficient,,,Hilly area,,False,d3
+724,Leparada,Arunachal Pradesh,,False,gw_insufficient,Deficient,-36,gridded,"deviation,spi",-1.55,2.0,insufficient,,,,,,d3
+234,Lohit,Arunachal Pradesh,,False,gw_insufficient,Deficient,-42,IMD,"deviation,spi,dry_spell",-2.81,12.0,insufficient,,,Safe,0.26,False,d4
+666,Longding,Arunachal Pradesh,,False,gw_insufficient,Normal,10,gridded,,0.61,1.0,insufficient,,,,,,d0
+235,Lower Dibang Valley,Arunachal Pradesh,,False,gw_insufficient,Large Deficient,-66,gridded,"deviation,spi,dry_spell",-2.42,8.0,insufficient,,,Safe,0.32,False,d4
+719,Lower Siang,Arunachal Pradesh,,False,gw_insufficient,Deficient,-24,gridded,"deviation,spi",-1.31,2.0,insufficient,,,,,,d3
+236,Lower Subansiri,Arunachal Pradesh,,False,gw_insufficient,Deficient,-44,IMD,"deviation,spi",-1.38,3.0,insufficient,,,Safe,0.9,False,d2
+678,Namsai,Arunachal Pradesh,buffered,True,,Deficient,-44,gridded,"deviation,spi",-1.94,3.0,provisional,33.0,0.18,,,,d4
+723,Pakke Kessang,Arunachal Pradesh,,False,gw_insufficient,Normal,-14,gridded,,-0.56,1.0,insufficient,,,,,,d0
+237,Papum Pare,Arunachal Pradesh,buffered,True,,Deficient,-22,IMD,"deviation,spi",-1.4,3.0,provisional,100.0,0.11,Safe,2.0,False,d1
+725,Shi Yomi,Arunachal Pradesh,,False,gw_insufficient,Deficient,-25,gridded,deviation,-0.56,2.0,insufficient,,,,,,d0
+679,Siang,Arunachal Pradesh,,False,gw_insufficient,Deficient,-31,gridded,deviation,-0.98,2.0,insufficient,,,,,,d1
+238,Tawang,Arunachal Pradesh,,False,gw_insufficient,Large Deficient,-65,IMD,"deviation,spi,dry_spell",-1.35,4.0,insufficient,,,Hilly area,,False,d2
+239,Tirap,Arunachal Pradesh,,False,gw_insufficient,Normal,-4,IMD,,0.29,2.0,insufficient,,,Safe,0.72,False,d2
+240,Upper Siang,Arunachal Pradesh,,False,gw_insufficient,Deficient,-33,IMD,deviation,-0.26,1.0,insufficient,,,Hilly area,,False,d1
+241,Upper Subansiri,Arunachal Pradesh,,False,gw_insufficient,Large Deficient,-63,IMD,"deviation,spi,dry_spell",-2.84,8.0,insufficient,,,Safe,0.88,False,d3
+242,West Kameng,Arunachal Pradesh,,False,gw_insufficient,Large Deficient,-69,IMD,deviation,-0.76,3.0,insufficient,,,Safe,0.44,False,d0
+243,West Siang,Arunachal Pradesh,,False,gw_insufficient,Large Deficient,-69,IMD,"deviation,spi,dry_spell",-1.66,4.0,insufficient,,,Safe,0.14,False,d2
+739,Bajali,Assam,buffered,True,,Deficient,-50,IMD,"deviation,spi",-1.93,2.0,provisional,50.0,-0.23,,,,d3
+616,Baksa,Assam,buffered,True,,Deficient,-25,IMD,"deviation,spi",-1.78,2.0,provisional,50.0,0.96,Safe,3.3,False,d3
+280,Barpeta,Assam,,False,gw_insufficient,Deficient,-40,IMD,"deviation,spi",-1.51,2.0,insufficient,,,Safe,28.25,False,d3
+705,Biswanath,Assam,buffered,True,,Normal,-18,gridded,spi,-1.06,1.0,provisional,42.0,-0.05,,,,d1
+281,Bongaigaon,Assam,,False,gw_insufficient,Deficient,-59,IMD,"deviation,spi",-1.34,3.0,insufficient,,,Safe,20.89,False,d2
+282,Cachar,Assam,,False,gw_insufficient,Normal,-11,IMD,,-0.8,1.0,insufficient,,,Safe,3.79,False,d2
+708,Charaideo,Assam,,False,gw_insufficient,Normal,18,IMD,,0.22,1.0,insufficient,,,,,,d1
+612,Chirang,Assam,,False,gw_insufficient,Deficient,-44,IMD,"deviation,spi",-2.11,3.0,insufficient,,,Safe,2.06,False,d3
+283,Darrang,Assam,buffered,True,,Deficient,-46,IMD,"deviation,spi",-1.24,2.0,provisional,75.0,0.17,Safe,18.72,False,d1
+284,Dhemaji,Assam,buffered,True,,Normal,-2,IMD,spi,-1.3,1.0,provisional,33.0,-1.95,Safe,2.17,False,d3
+285,Dhubri,Assam,buffered,True,,Deficient,-39,IMD,"deviation,spi",-1.5,2.0,provisional,50.0,-0.16,Safe,25.17,False,d1
+286,Dibrugarh,Assam,,False,gw_insufficient,Deficient,-26,IMD,deviation,-0.6,2.0,insufficient,,,Safe,4.18,False,d2
+299,Dima Hasao,Assam,,False,gw_insufficient,Deficient,-45,IMD,deviation,0.02,3.0,insufficient,,,Safe,0.8,False,d1
+287,Goalpara,Assam,buffered,True,,Deficient,-50,IMD,"deviation,spi",-1.36,2.0,provisional,50.0,0.16,Safe,14.83,False,d1
+288,Golaghat,Assam,,False,gw_insufficient,Normal,-15,IMD,,0.98,0.0,insufficient,,,Safe,5.82,False,none
+289,Hailakandi,Assam,fine,True,,Normal,-11,IMD,,-0.01,1.0,provisional,50.0,0.1,Safe,5.97,False,d2
+709,Hojai,Assam,,False,gw_insufficient,Deficient,-42,IMD,"deviation,spi",-1.05,3.0,insufficient,,,,,,d3
+290,Jorhat,Assam,double_drought,True,,Deficient,-36,IMD,deviation,-0.5,1.0,provisional,0.0,-0.12,Safe,6.61,False,d0
+291,Kamrup,Assam,buffered,True,,Deficient,-49,IMD,deviation,0.2,1.0,provisional,33.0,0.5,Safe,10.26,False,d1
+618,Kamrup Metro,Assam,buffered,True,,Deficient,-23,IMD,"deviation,spi",-1.01,2.0,provisional,50.0,0.32,Safe,25.15,False,d2
+292,Karbi Anglong,Assam,,False,gw_insufficient,Deficient,-21,IMD,"deviation,spi",-1.14,2.0,insufficient,,,Safe,1.99,False,d1
+293,Karimganj,Assam,,False,gw_insufficient,Deficient,-27,IMD,deviation,-0.34,1.0,insufficient,,,Safe,5.29,False,d1
+294,Kokrajhar,Assam,,False,gw_insufficient,Normal,-14,IMD,spi,-1.48,1.0,insufficient,,,Safe,2.62,False,d2
+295,Lakhimpur,Assam,fine,True,,Normal,7,IMD,,-0.31,1.0,provisional,50.0,0.11,Safe,7.99,False,d0
+706,Majuli,Assam,,False,gw_insufficient,Deficient,-25,IMD,"deviation,spi",-1.65,1.0,insufficient,,,,,,d1
+296,Marigaon,Assam,buffered,True,,Deficient,-41,IMD,deviation,-0.26,1.0,provisional,50.0,0.07,Safe,24.95,False,d0
+297,Nagaon,Assam,buffered,True,,Deficient,-41,IMD,deviation,-0.05,1.0,provisional,33.0,-0.13,Safe,13.31,False,d0
+298,Nalbari,Assam,,False,gw_insufficient,Large Deficient,-61,IMD,"deviation,spi",-1.36,2.0,insufficient,,,Safe,10.75,False,d2
+300,Sivasagar,Assam,buffered,True,,Deficient,-27,IMD,deviation,-0.46,1.0,provisional,75.0,0.46,Safe,8.69,False,d1
+301,Sonitpur,Assam,,False,gw_insufficient,Normal,-5,IMD,,-0.55,1.0,insufficient,,,Safe,7.82,False,d1
+707,South Salmara Mancachar,Assam,,False,gw_insufficient,Deficient,-26,gridded,"deviation,dry_spell",-0.85,4.0,insufficient,,,,,,d1
+756,Tamulpur,Assam,buffered,True,,Normal,-15,IMD,"spi,dry_spell",-1.18,4.0,provisional,50.0,-0.03,,,,d2
+302,Tinsukia,Assam,,False,gw_insufficient,Normal,-12,IMD,spi,-1.2,1.0,insufficient,,,Safe,5.93,False,d4
+617,Udalguri,Assam,buffered,True,,Large Deficient,-60,IMD,"deviation,spi",-1.32,2.0,provisional,50.0,0.12,Safe,3.55,False,d1
+710,West Karbi Anglong,Assam,,False,gw_insufficient,Normal,0,IMD,,-0.9,2.0,insufficient,,,,,,d1
+188,Araria,Bihar,,False,gw_insufficient,Deficient,-35,IMD,"deviation,spi",-1.51,3.0,insufficient,,,Safe,23.13,False,d1
+611,Arwal,Bihar,,False,gw_insufficient,Deficient,-22,IMD,"deviation,spi,dry_spell",-2.02,5.0,insufficient,,,Safe,48.32,False,d0
+189,Aurangabad,Bihar,fine,True,,Normal,4,IMD,,-0.41,2.0,provisional,25.0,-0.1,Safe,32.79,False,none
+190,Banka,Bihar,,False,gw_insufficient,Deficient,-24,IMD,"deviation,spi,dry_spell",-1.02,4.0,insufficient,,,Safe,42.7,False,none
+191,Begusarai,Bihar,double_drought,True,,Deficient,-32,IMD,deviation,0.59,2.0,provisional,0.0,-2.05,Safe,66.99,False,none
+192,Bhagalpur,Bihar,double_drought,True,,Deficient,-47,IMD,"deviation,spi",-1.59,3.0,provisional,0.0,-1.79,Safe,41.07,False,d0
+193,Bhojpur,Bihar,,False,gw_insufficient,Deficient,-33,IMD,"deviation,spi",-1.22,3.0,insufficient,,,Safe,51.51,False,none
+194,Buxar,Bihar,buffered,True,,Normal,-5,IMD,dry_spell,-0.24,4.0,provisional,50.0,-0.76,Safe,48.15,False,none
+195,Darbhanga,Bihar,,False,gw_insufficient,Deficient,-44,IMD,deviation,-0.74,2.0,insufficient,,,Safe,57.11,False,none
+196,Gaya,Bihar,,False,gw_insufficient,Deficient,-20,IMD,"deviation,spi",-1.11,2.0,insufficient,,,Safe,55.7,False,d0
+197,Gopalganj,Bihar,,False,gw_insufficient,Deficient,-36,IMD,deviation,-0.86,2.0,insufficient,,,Safe,54.51,False,none
+198,Jamui,Bihar,buffered,True,,Deficient,-38,IMD,"deviation,spi,dry_spell",-1.82,5.0,provisional,50.0,0.33,Safe,42.17,False,none
+199,Jehanabad,Bihar,,False,gw_insufficient,Deficient,-53,IMD,"deviation,spi",-1.51,2.0,insufficient,,,Semi-critical,77.18,True,d0
+200,Kaimur (Bhabua),Bihar,double_drought,True,,Deficient,-38,IMD,deviation,-0.7,2.0,provisional,0.0,-4.22,Safe,43.34,False,none
+201,Katihar,Bihar,,False,gw_level_only,Deficient,-36,IMD,"deviation,spi",-1.51,3.0,level_only,,-1.16,Safe,43.07,False,none
+202,Khagaria,Bihar,hidden_drought,True,,Normal,-1,IMD,,-0.21,3.0,provisional,0.0,-0.89,Safe,63.65,False,none
+203,Kishanganj,Bihar,,False,gw_insufficient,Deficient,-31,IMD,"deviation,spi",-1.13,3.0,insufficient,,,Safe,38.97,False,d2
+204,Lakhisarai,Bihar,,False,gw_insufficient,Normal,-8,IMD,,-0.73,2.0,insufficient,,,Safe,35.36,False,none
+205,Madhepura,Bihar,,False,gw_insufficient,Deficient,-31,IMD,deviation,-0.66,2.0,insufficient,,,Safe,36.34,False,none
+206,Madhubani,Bihar,,False,gw_insufficient,Deficient,-35,IMD,"deviation,spi",-1.01,3.0,insufficient,,,Safe,46.31,False,d2
+207,Munger,Bihar,,False,gw_insufficient,Deficient,-24,IMD,"deviation,dry_spell",-0.52,4.0,insufficient,,,Safe,39.84,False,none
+208,Muzaffarpur,Bihar,,False,gw_insufficient,Deficient,-43,IMD,"deviation,spi",-1.35,2.0,insufficient,,,Safe,64.82,True,d0
+209,Nalanda,Bihar,,False,gw_insufficient,Deficient,-32,IMD,deviation,-0.97,2.0,insufficient,,,Semi-critical,75.73,True,d0
+210,Nawada,Bihar,,False,gw_insufficient,Deficient,-20,IMD,"deviation,spi",-1.43,3.0,insufficient,,,Safe,47.76,True,d0
+211,Pashchim Champaran,Bihar,,False,gw_insufficient,Deficient,-31,IMD,deviation,-0.77,2.0,insufficient,,,Safe,29.23,False,d1
+212,Patna,Bihar,buffered,True,,Deficient,-38,IMD,deviation,-0.97,1.0,provisional,33.0,-2.66,Safe,62.36,True,none
+213,Purbi Champaran,Bihar,,False,gw_insufficient,Deficient,-41,IMD,"deviation,spi",-1.95,2.0,insufficient,,,Safe,45.77,False,d2
+214,Purnia,Bihar,,False,gw_insufficient,Deficient,-42,IMD,"deviation,spi",-1.85,3.0,insufficient,,,Safe,38.4,False,d1
+215,Rohtas,Bihar,buffered,True,,Deficient,-22,IMD,deviation,-0.68,2.0,provisional,50.0,0.17,Safe,30.77,False,none
+216,Saharsa,Bihar,,False,gw_insufficient,Deficient,-43,IMD,"deviation,spi",-1.16,2.0,insufficient,,,Safe,36.35,False,none
+217,Samastipur,Bihar,,False,gw_insufficient,Deficient,-41,IMD,"deviation,spi",-1.23,2.0,insufficient,,,Safe,67.45,True,none
+218,Saran,Bihar,,False,gw_insufficient,Deficient,-42,IMD,"deviation,spi",-1.25,2.0,insufficient,,,Safe,45.52,False,d0
+219,Sheikhpura,Bihar,,False,gw_insufficient,Deficient,-29,IMD,deviation,-0.15,2.0,insufficient,,,Safe,53.18,True,none
+220,Sheohar,Bihar,,False,gw_insufficient,Deficient,-54,IMD,"deviation,spi,dry_spell",-1.27,4.0,insufficient,,,Safe,59.88,False,d2
+221,Sitamarhi,Bihar,,False,gw_insufficient,Deficient,-49,IMD,"deviation,spi",-1.8,2.0,insufficient,,,Safe,46.14,False,d2
+222,Siwan,Bihar,,False,gw_insufficient,Normal,-4,IMD,,-0.81,1.0,insufficient,,,Safe,52.9,False,none
+223,Supaul,Bihar,,False,gw_insufficient,Deficient,-25,IMD,deviation,-0.82,3.0,insufficient,,,Safe,33.36,False,none
+224,Vaishali,Bihar,,False,gw_insufficient,Deficient,-37,IMD,"deviation,spi",-1.55,2.0,insufficient,,,Safe,60.55,True,d1
+44,Chandigarh,Chandigarh,,False,gw_insufficient,Normal,-14,IMD,,-0.32,3.0,insufficient,,,Safe,68.22,False,none
+646,Balod,Chhattisgarh,fine,True,,Excess,28,IMD,,0.98,3.0,provisional,67.0,-0.03,Safe,68.57,False,none
+644,Baloda Bazar,Chhattisgarh,fine,True,,Excess,21,IMD,,1.13,1.0,provisional,100.0,0.52,Safe,43.1,False,none
+649,Balrampur,Chhattisgarh,fine,True,,Excess,57,gridded,,2.21,2.0,provisional,50.0,-0.86,Safe,26.77,False,none
+374,Bastar,Chhattisgarh,hidden_drought,True,,Normal,17,IMD,,0.99,1.0,provisional,0.0,-1.73,Safe,36.03,False,none
+650,Bemetara,Chhattisgarh,buffered,True,,Deficient,-36,IMD,deviation,-0.23,3.0,provisional,25.0,0.28,Semi-critical,82.09,False,none
+636,Bijapur,Chhattisgarh,,False,gw_insufficient,Normal,11,IMD,,0.3,2.0,insufficient,,,Safe,10.79,False,none
+375,Bilaspur,Chhattisgarh,fine,True,,Normal,11,gridded,,0.6,3.0,provisional,100.0,0.5,Safe,61.91,False,none
+376,Dantewada,Chhattisgarh,,False,gw_insufficient,Normal,-4,IMD,,0.08,2.0,insufficient,,,Safe,19.74,False,none
+377,Dhamtari,Chhattisgarh,fine,True,,Excess,23,IMD,,1.54,1.0,provisional,67.0,0.37,Semi-critical,70.25,False,none
+378,Durg,Chhattisgarh,fine,False,,Normal,-1,IMD,,0.28,3.0,short,46.0,-1.75,Semi-critical,77.82,False,none
+645,Gariyaband,Chhattisgarh,fine,True,,Excess,36,IMD,,1.53,1.0,provisional,83.0,0.92,Safe,61.52,False,none
+734,Gaurella Pendra Marwahi,Chhattisgarh,hidden_drought,True,,Normal,-2,gridded,,-0.04,2.0,provisional,0.0,-0.1,Safe,39.11,False,none
+379,Janjgir-Champa,Chhattisgarh,fine,True,,Normal,9,IMD,,0.15,2.0,provisional,67.0,0.11,Safe,25.31,False,d0
+380,Jashpur,Chhattisgarh,buffered,False,,Deficient,-36,IMD,deviation,-0.38,2.0,short,31.0,-0.51,Safe,47.41,False,none
+382,Kabirdham,Chhattisgarh,fine,True,,Normal,-8,IMD,,-0.52,2.0,provisional,25.0,-0.77,Safe,57.78,False,none
+381,Kanker,Chhattisgarh,hidden_drought,True,,Normal,-13,IMD,,0.35,3.0,provisional,0.0,-0.51,Safe,42.71,False,none
+759,Khairgarh Chhuikhadan Gandai,Chhattisgarh,fine,True,,Normal,19,IMD,,-0.48,2.0,provisional,33.0,0.01,Safe,55.83,False,d1
+643,Kondagaon,Chhattisgarh,fine,True,,Normal,9,IMD,,0.65,2.0,provisional,100.0,0.04,Safe,44.26,False,none
+383,Korba,Chhattisgarh,fine,True,,Normal,-7,IMD,,-0.92,3.0,provisional,50.0,-0.7,Safe,35.29,False,d1
+384,Korea,Chhattisgarh,fine,True,,Normal,-14,IMD,,0.65,2.0,provisional,100.0,1.28,Safe,46.58,False,none
+385,Mahasamund,Chhattisgarh,fine,True,,Normal,17,IMD,,1.63,1.0,provisional,100.0,1.29,Safe,61.16,False,none
+760,Manendragarh Chirimiri Bharatpur,Chhattisgarh,fine,True,,Normal,9,IMD,,0.09,2.0,provisional,75.0,1.52,Safe,21.4,False,none
+761,Mohla Manpur Ambagarh Chouki,Chhattisgarh,,False,gw_level_only,Normal,-2,IMD,,-0.28,3.0,level_only,,0.02,Safe,39.57,False,none
+647,Mungeli,Chhattisgarh,hidden_drought,True,,Excess,32,IMD,,0.54,2.0,provisional,0.0,-2.49,Safe,45.52,False,none
+637,Narayanpur,Chhattisgarh,,False,gw_insufficient,Excess,40,IMD,,1.08,2.0,insufficient,,,Safe,10.13,False,none
+386,Raigarh,Chhattisgarh,buffered,True,,Normal,-14,IMD,dry_spell,-0.7,4.0,provisional,100.0,3.15,Safe,41.35,False,d1
+387,Raipur,Chhattisgarh,fine,True,,Excess,29,IMD,,0.95,3.0,provisional,50.0,0.24,Safe,59.02,False,none
+388,Rajnandgaon,Chhattisgarh,hidden_drought,True,,Normal,-3,IMD,,0.34,3.0,provisional,0.0,-0.45,Safe,55.64,False,none
+762,Sakti,Chhattisgarh,fine,True,,Normal,-10,IMD,,-0.46,2.0,provisional,83.0,0.07,Safe,47.59,False,d2
+763,Sarangarh Bilaigarh,Chhattisgarh,fine,True,,Excess,27,IMD,,1.14,1.0,provisional,100.0,6.07,Safe,37.3,False,d0
+642,Sukma,Chhattisgarh,,False,gw_level_only,Normal,1,IMD,,0.22,2.0,level_only,,-2.02,Safe,5.63,False,none
+648,Surajpur,Chhattisgarh,fine,True,,Normal,5,IMD,,0.37,3.0,provisional,83.0,2.11,Safe,59.0,False,none
+389,Surguja,Chhattisgarh,double_drought,True,,Deficient,-41,IMD,"deviation,spi",-1.21,3.0,provisional,0.0,-0.9,Safe,45.89,False,none
+465,Dadra And Nagar Haveli,"Dadra,Nagar Haveli,Daman and Diu",,False,gw_insufficient,Excess,38,IMD,,1.31,3.0,insufficient,,,Safe,35.7,False,none
+463,Daman,"Dadra,Nagar Haveli,Daman and Diu",,False,gw_insufficient,Excess,23,IMD,,1.56,3.0,insufficient,,,Safe,62.85,False,
+464,Diu,"Dadra,Nagar Haveli,Daman and Diu",double_drought,True,,Normal,19,IMD,dry_spell,0.09,8.0,provisional,0.0,-18.66,Safe,48.52,False,none
+77,Central,Delhi,fine,True,,Normal,16,IMD,,-0.77,2.0,provisional,67.0,1.46,Semi-critical,88.04,True,d1
+78,East,Delhi,fine,True,,Normal,-15,IMD,,-0.43,2.0,provisional,50.0,0.25,Over-exploited,104.51,False,d1
+79,New Delhi,Delhi,fine,True,,Normal,-6,IMD,,0.12,2.0,provisional,100.0,0.94,Over-exploited,107.77,False,d1
+80,North,Delhi,fine,True,,Normal,-13,gridded,,-0.22,2.0,provisional,100.0,1.1,Safe,66.78,False,d0
+81,North East,Delhi,,False,gw_insufficient,Normal,-12,IMD,,-0.85,2.0,insufficient,,,Over-exploited,107.33,False,d1
+82,North West,Delhi,fine,True,,Normal,3,IMD,,0.09,2.0,provisional,50.0,-0.7,Semi-critical,84.36,False,d1
+671,Shahdara,Delhi,buffered,True,,Deficient,-43,gridded,deviation,-0.85,2.0,provisional,50.0,-0.56,,,,d1
+83,South,Delhi,,False,gw_insufficient,Normal,-10,IMD,dry_spell,-0.06,4.0,insufficient,,,Over-exploited,121.46,False,d1
+670,South East,Delhi,,False,gw_insufficient,Normal,5,IMD,dry_spell,-0.07,4.0,insufficient,,,Semi-critical,79.94,True,d1
+84,South West,Delhi,buffered,True,,Deficient,-25,IMD,deviation,0.63,2.0,provisional,100.0,0.57,Over-exploited,107.77,False,d0
+85,West,Delhi,fine,True,,Normal,18,IMD,,0.17,2.0,provisional,50.0,-11.02,Critical,93.44,False,d1
+551,North Goa,Goa,buffered,True,,Deficient,-40,IMD,"deviation,spi",-2.07,2.0,provisional,50.0,-0.13,Safe,28.1,False,d3
+552,South Goa,Goa,buffered,True,,Deficient,-29,IMD,"deviation,spi",-1.65,1.0,provisional,100.0,0.72,Safe,20.36,False,d3
+438,Ahmadabad,Gujarat,buffered,True,,Normal,1,IMD,dry_spell,0.38,5.0,provisional,50.0,-0.03,Semi-critical,79.14,True,none
+439,Amreli,Gujarat,buffered,True,,Normal,0,IMD,dry_spell,0.13,5.0,provisional,50.0,-1.53,Safe,58.74,False,none
+440,Anand,Gujarat,fine,True,,Normal,9,IMD,,0.21,3.0,provisional,100.0,0.64,Safe,29.91,False,d1
+672,Arvalli,Gujarat,buffered,True,,Deficient,-36,IMD,deviation,-0.67,3.0,provisional,58.0,-1.84,Safe,45.13,False,none
+441,Banas Kantha,Gujarat,buffered,True,,Deficient,-26,IMD,deviation,-0.28,3.0,provisional,100.0,0.49,Over-exploited,116.16,False,d0
+442,Bharuch,Gujarat,fine,True,,Excess,27,IMD,,0.52,3.0,provisional,38.0,-0.23,Safe,29.68,False,none
+443,Bhavnagar,Gujarat,buffered,True,,Normal,10,IMD,dry_spell,0.27,4.0,provisional,50.0,2.21,Safe,47.07,False,none
+676,Botad,Gujarat,,False,gw_level_only,Normal,3,IMD,dry_spell,0.4,4.0,level_only,,,Safe,59.72,False,none
+668,Chhotaudepur,Gujarat,buffered,True,,Deficient,-30,IMD,"deviation,dry_spell",-0.77,5.0,provisional,58.0,-3.25,Safe,46.86,False,d1
+444,Dang,Gujarat,,False,gw_level_only,Normal,13,IMD,,1.24,3.0,level_only,,0.32,Safe,13.23,False,none
+674,Devbhumi Dwarka,Gujarat,buffered,True,,Large Deficient,-73,IMD,"deviation,spi,dry_spell",-1.48,6.0,provisional,100.0,4.75,Semi-critical,72.73,False,d0
+445,Dohad,Gujarat,buffered,True,,Deficient,-41,IMD,"deviation,spi,dry_spell",-1.09,5.0,provisional,50.0,-2.08,Safe,41.99,False,d1
+446,Gandhinagar,Gujarat,buffered,True,,Normal,-19,IMD,dry_spell,0.01,5.0,provisional,100.0,0.08,Over-exploited,111.67,False,none
+675,Gir Somnath,Gujarat,buffered,True,,Deficient,-28,IMD,"deviation,dry_spell",-0.3,6.0,provisional,100.0,1.89,Safe,50.07,False,none
+447,Jamnagar,Gujarat,buffered,True,,Deficient,-50,IMD,"deviation,dry_spell",-0.83,5.0,provisional,100.0,1.0,Safe,46.16,True,none
+448,Junagadh,Gujarat,buffered,True,,Deficient,-20,IMD,deviation,-0.45,3.0,provisional,50.0,-0.29,Safe,48.71,False,none
+449,Kachchh,Gujarat,buffered,True,,Deficient,-36,IMD,"deviation,dry_spell",-0.05,5.0,provisional,50.0,-0.34,Safe,52.53,True,none
+450,Kheda,Gujarat,fine,True,,Excess,28,IMD,,0.44,3.0,provisional,100.0,0.62,Safe,43.94,False,none
+451,Mahesana,Gujarat,fine,True,,Normal,-18,IMD,,-0.13,3.0,provisional,67.0,0.09,Over-exploited,107.98,False,d0
+669,Mahisagar,Gujarat,,False,gw_level_only,Normal,-3,IMD,,-0.35,3.0,level_only,,,Safe,52.5,False,d0
+673,Morbi,Gujarat,,False,gw_level_only,Normal,10,IMD,dry_spell,0.22,5.0,level_only,,,Safe,51.65,False,none
+452,Narmada,Gujarat,double_drought,True,,Normal,-3,IMD,dry_spell,-0.01,4.0,provisional,0.0,-15.67,Semi-critical,71.43,False,d1
+453,Navsari,Gujarat,fine,True,,Excess,30,IMD,,1.47,3.0,provisional,50.0,0.43,Safe,31.6,False,none
+454,Panch Mahals,Gujarat,hidden_drought,True,,Normal,-11,IMD,,-0.33,3.0,provisional,0.0,-0.67,Safe,26.96,False,d1
+455,Patan,Gujarat,buffered,True,,Normal,-10,IMD,dry_spell,0.1,5.0,provisional,100.0,0.33,Over-exploited,120.04,False,none
+456,Porbandar,Gujarat,double_drought,True,,Large Deficient,-61,IMD,deviation,-0.93,3.0,provisional,0.0,-3.0,Safe,56.43,False,d0
+457,Rajkot,Gujarat,buffered,True,,Deficient,-28,IMD,"deviation,dry_spell",-0.38,5.0,provisional,50.0,-0.56,Safe,66.44,False,none
+458,Sabar Kantha,Gujarat,double_drought,True,,Deficient,-34,IMD,deviation,-0.76,3.0,provisional,0.0,-1.18,Semi-critical,76.45,True,d0
+459,Surat,Gujarat,hidden_drought,True,,Excess,23,IMD,,0.58,3.0,provisional,0.0,-3.38,Safe,45.96,True,none
+460,Surendranagar,Gujarat,buffered,True,,Normal,5,gridded,dry_spell,0.26,5.0,provisional,100.0,1.01,Safe,54.59,False,none
+641,Tapi,Gujarat,fine,True,,Normal,3,IMD,,0.46,3.0,provisional,100.0,0.76,Safe,39.79,False,none
+461,Vadodara,Gujarat,buffered,True,,Deficient,-29,IMD,"deviation,dry_spell",-0.44,5.0,provisional,100.0,0.61,Safe,66.51,True,d1
+462,Valsad,Gujarat,fine,True,,Excess,39,IMD,,1.45,3.0,provisional,50.0,-0.12,Safe,31.49,False,none
+58,Ambala,Haryana,,False,gw_insufficient,Deficient,-48,IMD,"deviation,spi",-1.25,3.0,insufficient,,,Over-exploited,126.64,False,d2
+59,Bhiwani,Haryana,,False,gw_insufficient,Normal,-8,IMD,dry_spell,0.2,5.0,insufficient,,,Critical,99.31,False,d1
+701,Charki Dadri,Haryana,,False,gw_insufficient,Normal,-13,IMD,dry_spell,0.32,4.0,insufficient,,,Over-exploited,136.6,False,none
+60,Faridabad,Haryana,,False,gw_insufficient,Normal,-5,IMD,,0.03,2.0,insufficient,,,Over-exploited,156.21,False,d0
+61,Fatehabad,Haryana,,False,gw_insufficient,Normal,-10,IMD,,-0.53,3.0,insufficient,,,Over-exploited,183.79,False,d1
+62,Gurugram,Haryana,,False,gw_insufficient,Normal,-2,IMD,,0.77,1.0,insufficient,,,Over-exploited,180.58,False,none
+63,Hisar,Haryana,,False,gw_insufficient,Deficient,-23,IMD,"deviation,dry_spell",-0.63,5.0,insufficient,,,Semi-critical,87.34,True,d1
+64,Jhajjar,Haryana,,False,gw_insufficient,Normal,-19,IMD,,0.07,1.0,insufficient,,,Safe,28.55,False,none
+65,Jind,Haryana,,False,gw_insufficient,Deficient,-57,IMD,"deviation,spi,dry_spell",-1.37,5.0,insufficient,,,Over-exploited,100.52,False,d2
+66,Kaithal,Haryana,,False,gw_insufficient,Deficient,-44,IMD,"deviation,spi",-1.1,3.0,insufficient,,,Over-exploited,186.06,False,d1
+67,Karnal,Haryana,double_drought,True,,Deficient,-36,IMD,"deviation,spi",-1.12,3.0,provisional,0.0,-0.38,Over-exploited,166.82,False,d2
+68,Kurukshetra,Haryana,buffered,True,,Normal,-10,IMD,"spi,dry_spell",-1.17,4.0,provisional,100.0,,Over-exploited,205.68,False,d2
+69,Mahendragarh,Haryana,,False,gw_insufficient,Deficient,-24,IMD,deviation,-0.07,3.0,insufficient,,,Over-exploited,144.95,False,none
+604,Nuh,Haryana,,False,gw_insufficient,Normal,-4,IMD,,0.74,2.0,insufficient,,,Safe,62.27,True,none
+619,Palwal,Haryana,,False,gw_insufficient,Excess,20,IMD,,0.07,2.0,insufficient,,,Safe,66.41,True,d0
+70,Panchkula,Haryana,,False,gw_insufficient,Normal,-19,IMD,,-0.34,2.0,insufficient,,,Safe,63.65,True,none
+71,Panipat,Haryana,,False,gw_insufficient,Deficient,-28,IMD,"deviation,spi",-1.32,3.0,insufficient,,,Over-exploited,208.32,False,d3
+72,Rewari,Haryana,,False,gw_insufficient,Normal,-13,IMD,,0.1,1.0,insufficient,,,Over-exploited,110.73,False,none
+73,Rohtak,Haryana,,False,gw_insufficient,Deficient,-47,IMD,deviation,-0.57,1.0,insufficient,,,Safe,32.26,False,d1
+74,Sirsa,Haryana,,False,gw_level_only,Deficient,-55,IMD,"deviation,spi,dry_spell",-1.34,5.0,level_only,,-0.13,Over-exploited,161.25,False,d2
+75,Sonipat,Haryana,double_drought,True,,Deficient,-32,IMD,deviation,-0.87,2.0,provisional,0.0,-25.66,Semi-critical,83.79,True,d1
+76,Yamunanagar,Haryana,buffered,True,,Normal,-15,IMD,spi,-1.06,2.0,provisional,100.0,5.52,Over-exploited,118.7,False,d1
+15,Bilaspur,Himachal Pradesh,hidden_drought,True,,Normal,-18,gridded,,-0.72,1.0,provisional,0.0,-13.09,,,,d1
+16,Chamba,Himachal Pradesh,,False,gw_insufficient,Normal,-17,IMD,,-0.16,2.0,insufficient,,,,,,none
+17,Hamirpur,Himachal Pradesh,,False,gw_insufficient,Normal,-10,gridded,,-0.35,1.0,insufficient,,,,,,d0
+18,Kangra,Himachal Pradesh,,False,gw_insufficient,Normal,-5,IMD,,0.36,1.0,insufficient,,,Safe,28.13,False,none
+19,Kinnaur,Himachal Pradesh,,False,gw_insufficient,Excess,35,IMD,,0.44,2.0,insufficient,,,,,,none
+20,Kullu,Himachal Pradesh,,False,gw_insufficient,Normal,0,IMD,,1.22,0.0,insufficient,,,,,,none
+21,Lahul And Spiti,Himachal Pradesh,,False,gw_insufficient,Large Deficient,-69,IMD,deviation,0.12,1.0,insufficient,,,,,,none
+22,Mandi,Himachal Pradesh,,False,gw_insufficient,Normal,-5,IMD,,0.32,1.0,insufficient,,,Safe,37.97,False,none
+23,Shimla,Himachal Pradesh,,False,gw_insufficient,Excess,29,IMD,,0.99,1.0,insufficient,,,,,,none
+24,Sirmaur,Himachal Pradesh,,False,gw_insufficient,Normal,11,IMD,,0.52,1.0,insufficient,,,Safe,29.12,False,none
+25,Solan,Himachal Pradesh,,False,gw_insufficient,Normal,-3,IMD,,0.29,1.0,insufficient,,,Safe,62.44,False,none
+26,Una,Himachal Pradesh,fine,True,,Normal,-16,IMD,,-0.71,1.0,provisional,50.0,-1.22,Safe,56.66,False,d1
+1,Anantnag,Jammu and Kashmir,,False,gw_insufficient,Normal,1,IMD,,0.2,2.0,insufficient,,,Safe,23.7,False,d0
+623,Bandipora,Jammu and Kashmir,,False,gw_insufficient,Normal,-1,IMD,,-0.28,3.0,insufficient,,,Safe,15.82,False,d1
+3,Baramulla,Jammu and Kashmir,,False,gw_insufficient,Excess,47,IMD,,0.1,3.0,insufficient,,,Safe,22.35,False,d0
+2,Budgam,Jammu and Kashmir,,False,gw_insufficient,Deficient,-34,IMD,deviation,-0.62,3.0,insufficient,,,Safe,27.93,False,d0
+4,Doda,Jammu and Kashmir,,False,gw_insufficient,Normal,-10,IMD,,-0.23,2.0,insufficient,,,Safe,20.54,False,d1
+626,Ganderbal,Jammu and Kashmir,,False,gw_insufficient,Excess,21,IMD,,-0.04,2.0,insufficient,,,Safe,45.65,False,d1
+5,Jammu,Jammu and Kashmir,fine,True,,Normal,-14,IMD,,1.14,1.0,provisional,50.0,-10.56,Safe,32.7,False,none
+7,Kathua,Jammu and Kashmir,fine,True,,Normal,-10,IMD,,1.37,1.0,provisional,25.0,0.0,Safe,23.5,False,none
+620,Kishtwar,Jammu and Kashmir,,False,gw_insufficient,Deficient,-53,IMD,deviation,-0.53,3.0,insufficient,,,Safe,15.67,False,d0
+622,Kulgam,Jammu and Kashmir,,False,gw_insufficient,Normal,-11,IMD,,-0.41,3.0,insufficient,,,Safe,20.53,False,d1
+8,Kupwara,Jammu and Kashmir,,False,gw_insufficient,Normal,-10,IMD,dry_spell,-0.88,4.0,insufficient,,,Hilly area,,False,d3
+10,Poonch,Jammu and Kashmir,fine,True,,Excess,27,IMD,,1.06,2.0,provisional,75.0,0.05,Safe,16.52,False,none
+11,Pulwama,Jammu and Kashmir,,False,gw_insufficient,Excess,38,IMD,,0.66,2.0,insufficient,,,Safe,38.17,False,none
+12,Rajouri,Jammu and Kashmir,fine,True,,Normal,-2,IMD,,1.2,1.0,provisional,75.0,1.92,Safe,12.23,False,none
+621,Ramban,Jammu and Kashmir,,False,gw_insufficient,Normal,13,IMD,,0.46,2.0,insufficient,,,Safe,31.72,False,d1
+627,Reasi,Jammu and Kashmir,hidden_drought,True,,Normal,-14,IMD,,1.89,0.0,provisional,0.0,-2.98,Safe,11.02,False,none
+624,Samba,Jammu and Kashmir,fine,True,,Normal,18,IMD,,1.43,1.0,provisional,100.0,1.25,Safe,16.86,False,none
+625,Shopian,Jammu and Kashmir,,False,gw_insufficient,Deficient,-51,IMD,deviation,-0.95,3.0,insufficient,,,Safe,21.62,False,d1
+13,Srinagar,Jammu and Kashmir,,False,gw_insufficient,Normal,4,IMD,,0.39,2.0,insufficient,,,Safe,54.12,False,d2
+14,Udhampur,Jammu and Kashmir,hidden_drought,True,,Excess,54,IMD,,0.96,1.0,provisional,0.0,-15.68,Safe,20.98,False,d0
+322,Bokaro,Jharkhand,fine,True,,Normal,-3,IMD,,0.11,3.0,provisional,100.0,1.12,Safe,58.44,True,none
+323,Chatra,Jharkhand,double_drought,True,,Deficient,-27,IMD,deviation,-0.96,3.0,provisional,0.0,-0.66,Safe,32.8,False,d0
+324,Deoghar,Jharkhand,,False,gw_level_only,Deficient,-30,IMD,deviation,-0.62,1.0,level_only,,,Safe,55.63,False,none
+325,Dhanbad,Jharkhand,,False,gw_insufficient,Normal,3,IMD,,-0.06,1.0,insufficient,,,Semi-critical,72.18,True,none
+326,Dumka,Jharkhand,,False,gw_insufficient,Normal,1,IMD,,-0.93,1.0,insufficient,,,Safe,23.43,False,d1
+327,East Singhbum,Jharkhand,fine,True,,Normal,10,IMD,,0.76,3.0,provisional,67.0,-7.26,Safe,24.67,True,none
+328,Garhwa,Jharkhand,,False,gw_insufficient,Deficient,-29,IMD,deviation,-0.32,3.0,insufficient,,,Safe,31.24,False,none
+329,Giridih,Jharkhand,,False,gw_insufficient,Normal,-18,IMD,spi,-1.08,1.0,insufficient,,,Safe,34.96,False,d1
+330,Godda,Jharkhand,,False,gw_insufficient,Normal,-16,IMD,"spi,dry_spell",-2.41,5.0,insufficient,,,Safe,16.61,False,d3
+331,Gumla,Jharkhand,,False,gw_level_only,Deficient,-28,IMD,deviation,-0.05,2.0,level_only,,,Safe,17.1,False,none
+332,Hazaribagh,Jharkhand,,False,gw_insufficient,Normal,-18,IMD,spi,-1.06,3.0,insufficient,,,Safe,33.93,False,d0
+333,Jamtara,Jharkhand,,False,gw_insufficient,Normal,1,IMD,,-0.09,1.0,insufficient,,,Safe,40.89,False,none
+606,Khunti,Jharkhand,,False,gw_insufficient,Normal,-1,IMD,,1.18,1.0,insufficient,,,Safe,22.88,False,none
+334,Koderma,Jharkhand,,False,gw_insufficient,Deficient,-23,IMD,"deviation,spi",-1.57,3.0,insufficient,,,Safe,44.16,False,d1
+335,Latehar,Jharkhand,,False,gw_insufficient,Excess,20,IMD,,0.19,2.0,insufficient,,,Safe,23.54,False,none
+336,Lohardaga,Jharkhand,,False,gw_insufficient,Normal,3,IMD,,-0.96,3.0,insufficient,,,Safe,19.54,False,none
+337,Pakur,Jharkhand,,False,gw_insufficient,Deficient,-55,IMD,"deviation,spi",-1.72,2.0,insufficient,,,Safe,16.9,False,d2
+338,Palamu,Jharkhand,,False,gw_insufficient,Normal,-12,IMD,,-0.07,1.0,insufficient,,,Safe,33.06,False,none
+607,Ramgarh,Jharkhand,fine,True,,Normal,2,IMD,,0.36,3.0,provisional,100.0,26.53,Safe,69.11,True,none
+339,Ranchi,Jharkhand,fine,True,,Normal,11,IMD,,0.48,1.0,provisional,42.0,-2.79,Safe,38.3,True,none
+340,Sahebganj,Jharkhand,,False,gw_insufficient,Deficient,-59,IMD,"deviation,spi",-1.51,3.0,insufficient,,,Safe,11.09,False,d0
+341,Saraikela Kharsawan,Jharkhand,,False,gw_insufficient,Normal,11,gridded,,0.52,3.0,insufficient,,,Safe,30.65,False,none
+342,Simdega,Jharkhand,,False,gw_insufficient,Normal,0,IMD,,0.84,1.0,insufficient,,,Safe,18.35,False,none
+343,West Singhbhum,Jharkhand,,False,gw_level_only,Excess,38,IMD,,1.66,2.0,level_only,,,Safe,16.37,False,none
+524,Bagalkote,Karnataka,double_drought,True,,Deficient,-21,IMD,"deviation,spi,dry_spell",-1.12,4.0,provisional,0.0,-1.73,Semi-critical,75.94,True,d1
+528,Ballari,Karnataka,,False,season_just_started,No Rain,-100,IMD,deviation,,,provisional,0.0,-3.59,Safe,31.4,False,d1
+527,Belagavi,Karnataka,buffered,True,,Normal,2,IMD,spi,-1.27,3.0,provisional,50.0,-0.35,Semi-critical,71.34,True,d0
+526,Bengaluru Rural,Karnataka,,False,season_just_started,Large Excess,166,IMD,,,,insufficient,,,Over-exploited,148.31,False,d0
+525,Bengaluru Urban,Karnataka,,False,season_just_started,Normal,-15,IMD,,,,insufficient,,,Over-exploited,179.4,False,none
+529,Bidar,Karnataka,buffered,True,,Deficient,-24,IMD,deviation,-0.78,3.0,provisional,50.0,-0.54,Safe,69.72,False,d0
+531,Chamarajanagara,Karnataka,,False,season_just_started,Large Excess,119,IMD,,,,insufficient,,,Critical,90.16,False,none
+630,Chikkaballapura,Karnataka,,False,season_just_started,No Rain,-100,IMD,deviation,,,provisional,33.0,-4.02,Over-exploited,151.41,False,d1
+532,Chikkamagaluru,Karnataka,,False,season_just_started,Large Deficient,-68,IMD,deviation,,,insufficient,,,Safe,54.77,True,d1
+533,Chitradurga,Karnataka,,False,season_just_started,No Rain,-100,IMD,deviation,,,provisional,0.0,-5.86,Over-exploited,116.14,False,none
+534,Dakshina Kannada,Karnataka,,False,gw_insufficient,Deficient,-24,IMD,"deviation,spi",-1.78,2.0,insufficient,,,Safe,46.41,False,d2
+535,Davangere,Karnataka,,False,season_just_started,Large Deficient,-81,IMD,deviation,,,provisional,0.0,-2.71,Semi-critical,82.11,True,none
+536,Dharwad,Karnataka,buffered,True,,Deficient,-51,IMD,"deviation,spi",-1.03,3.0,provisional,100.0,0.14,Safe,54.33,False,none
+537,Gadag,Karnataka,double_drought,True,,Deficient,-25,IMD,deviation,-0.41,2.0,provisional,0.0,-2.27,Semi-critical,76.31,True,none
+539,Hassan,Karnataka,,False,season_just_started,Large Excess,300,IMD,,,,insufficient,,,Safe,54.19,True,none
+540,Haveri,Karnataka,buffered,True,,Deficient,-42,IMD,"deviation,spi,dry_spell",-1.52,4.0,provisional,25.0,-7.61,Safe,63.79,False,d1
+538,Kalaburagi,Karnataka,,False,gw_level_only,Deficient,-54,IMD,"deviation,spi",-1.73,3.0,level_only,,,Safe,48.81,False,d3
+541,Kodagu,Karnataka,,False,season_just_started,Large Deficient,-89,IMD,deviation,,,insufficient,,,Safe,35.25,False,d0
+542,Kolar,Karnataka,,False,season_just_started,Deficient,-22,IMD,deviation,,,insufficient,,,Over-exploited,185.86,False,d0
+543,Koppal,Karnataka,double_drought,True,,Deficient,-36,IMD,deviation,-0.96,3.0,provisional,0.0,-3.24,Safe,59.26,True,d1
+544,Mandya,Karnataka,,False,season_just_started,Normal,-5,IMD,,,,insufficient,,,Safe,66.09,False,none
+545,Mysuru,Karnataka,,False,season_just_started,Large Excess,78,IMD,,,,insufficient,,,Safe,46.39,False,none
+546,Raichur,Karnataka,buffered,True,,Deficient,-41,IMD,"deviation,spi,dry_spell",-1.26,6.0,provisional,25.0,-1.28,Safe,42.19,False,d1
+631,Ramanagara,Karnataka,,False,season_just_started,No Rain,-100,IMD,deviation,,,insufficient,,,Semi-critical,89.7,True,none
+547,Shivamogga,Karnataka,,False,season_just_started,Large Deficient,-97,IMD,deviation,,,insufficient,,,Safe,42.54,False,d0
+548,Tumakuru,Karnataka,,False,season_just_started,No Rain,-100,IMD,deviation,,,provisional,0.0,-2.56,Critical,91.08,False,none
+549,Udupi,Karnataka,,False,gw_insufficient,Deficient,-30,IMD,deviation,-0.96,2.0,insufficient,,,Safe,33.0,False,d3
+550,Uttara Kannada,Karnataka,,False,gw_insufficient,Deficient,-30,IMD,"deviation,spi",-1.73,2.0,insufficient,,,Safe,31.52,False,d2
+738,Vijayanagar,Karnataka,,False,season_just_started,Large Deficient,-89,IMD,deviation,,,provisional,50.0,-0.0,Semi-critical,86.4,True,d0
+530,Vijayapura,Karnataka,buffered,True,,Deficient,-41,IMD,"deviation,spi",-1.5,3.0,provisional,50.0,-2.5,Safe,46.11,False,d2
+635,Yadgir,Karnataka,buffered,True,,Deficient,-30,IMD,"deviation,spi",-1.05,3.0,provisional,50.0,-0.68,Safe,38.64,False,d1
+554,Alappuzha,Kerala,,False,season_just_started,Large Deficient,-99,IMD,deviation,,,insufficient,,,Safe,37.56,False,none
+555,Ernakulam,Kerala,,False,season_just_started,No Rain,-100,IMD,deviation,,,insufficient,,,Safe,42.84,False,none
+556,Idukki,Kerala,,False,season_just_started,Large Deficient,-90,IMD,deviation,,,insufficient,,,Safe,49.38,False,none
+557,Kannur,Kerala,,False,season_just_started,No Rain,-100,IMD,deviation,,,insufficient,,,Safe,45.47,False,d2
+558,Kasaragod,Kerala,,False,season_just_started,Large Deficient,-62,IMD,deviation,,,insufficient,,,Safe,69.33,False,d3
+559,Kollam,Kerala,,False,season_just_started,No Rain,-100,IMD,deviation,,,insufficient,,,Safe,47.27,False,none
+560,Kottayam,Kerala,,False,season_just_started,No Rain,-100,IMD,deviation,,,insufficient,,,Safe,32.6,False,none
+561,Kozhikode,Kerala,,False,season_just_started,Large Deficient,-99,IMD,deviation,,,insufficient,,,Safe,57.84,False,d1
+562,Malappuram,Kerala,,False,season_just_started,No Rain,-100,IMD,deviation,,,insufficient,,,Safe,68.25,False,d1
+563,Palakkad,Kerala,,False,season_just_started,No Rain,-100,IMD,deviation,,,insufficient,,,Safe,55.23,True,none
+564,Pathanamthitta,Kerala,,False,season_just_started,No Rain,-100,IMD,deviation,,,insufficient,,,Safe,31.23,False,none
+565,Thiruvananthapuram,Kerala,,False,season_just_started,No Rain,-100,IMD,deviation,,,insufficient,,,Safe,62.87,False,none
+566,Thrissur,Kerala,,False,season_just_started,No Rain,-100,IMD,deviation,,,insufficient,,,Safe,57.03,False,d1
+567,Wayanad,Kerala,,False,season_just_started,No Rain,-100,IMD,deviation,,,insufficient,,,Safe,24.69,False,none
+6,Kargil,Ladakh,,False,gw_insufficient,Large Excess,90,IMD,"spi,dry_spell",-1.12,6.0,insufficient,,,Safe,36.1,False,d1
+9,Leh Ladakh,Ladakh,,False,gw_insufficient,Large Excess,120,IMD,spi,-1.13,2.0,insufficient,,,Safe,33.83,False,d1
+553,Lakshadweep District,Lakshadweep,,False,gw_insufficient,Deficient,-29,IMD,deviation,,,insufficient,,,,,,
+667,Agar Malwa,Madhya Pradesh,fine,True,,Normal,8,IMD,,0.49,2.0,provisional,50.0,-0.4,Critical,93.36,False,none
+639,Alirajpur,Madhya Pradesh,double_drought,True,,Deficient,-45,IMD,"deviation,spi,dry_spell",-1.63,5.0,provisional,0.0,-1.99,Safe,42.06,False,d2
+390,Anuppur,Madhya Pradesh,fine,True,,Normal,17,IMD,,0.03,2.0,provisional,100.0,0.58,Safe,27.8,False,none
+391,Ashoknagar,Madhya Pradesh,hidden_drought,True,,Normal,-9,IMD,,0.21,2.0,provisional,0.0,-4.2,Safe,61.02,False,none
+392,Balaghat,Madhya Pradesh,hidden_drought,True,,Normal,-6,IMD,,0.31,1.0,provisional,0.0,-0.5,Safe,24.23,False,none
+393,Barwani,Madhya Pradesh,hidden_drought,True,,Normal,-11,IMD,,-0.33,3.0,provisional,0.0,-0.45,Semi-critical,71.61,True,d1
+394,Betul,Madhya Pradesh,double_drought,True,,Deficient,-31,IMD,"deviation,spi",-1.24,1.0,provisional,0.0,-0.03,Safe,52.03,False,d1
+395,Bhind,Madhya Pradesh,,False,gw_insufficient,Excess,36,IMD,,1.25,1.0,insufficient,,,Safe,32.41,False,none
+396,Bhopal,Madhya Pradesh,hidden_drought,True,,Normal,9,IMD,,-0.65,3.0,provisional,0.0,-4.42,Semi-critical,82.97,False,none
+397,Burhanpur,Madhya Pradesh,,False,gw_insufficient,Normal,5,IMD,,-0.6,3.0,insufficient,,,Safe,69.78,False,d1
+398,Chhatarpur,Madhya Pradesh,fine,True,,Normal,17,IMD,,0.91,2.0,provisional,25.0,-3.17,Safe,65.06,False,none
+399,Chhindwara,Madhya Pradesh,double_drought,True,,Deficient,-21,IMD,"deviation,spi",-1.08,2.0,provisional,0.0,-0.13,Safe,59.99,True,d0
+400,Damoh,Madhya Pradesh,fine,True,,Normal,-3,IMD,,0.24,2.0,provisional,50.0,-0.58,Safe,59.24,False,none
+401,Datia,Madhya Pradesh,fine,True,,Normal,8,IMD,,0.85,1.0,provisional,50.0,-1.49,Safe,34.94,False,none
+402,Dewas,Madhya Pradesh,fine,True,,Normal,-13,IMD,,-0.58,3.0,provisional,50.0,0.8,Semi-critical,79.56,True,d0
+403,Dhar,Madhya Pradesh,buffered,True,,Deficient,-40,IMD,"deviation,spi,dry_spell",-1.29,4.0,provisional,50.0,-0.08,Safe,67.66,True,d1
+404,Dindori,Madhya Pradesh,fine,True,,Normal,0,IMD,,0.39,2.0,provisional,100.0,0.03,Safe,15.46,False,none
+405,East Nimar,Madhya Pradesh,buffered,True,,Normal,-10,IMD,dry_spell,-0.76,4.0,provisional,50.0,2.81,Safe,40.36,False,d1
+406,Guna,Madhya Pradesh,fine,True,,Normal,12,IMD,,0.3,1.0,provisional,33.0,-0.53,Safe,65.27,False,none
+407,Gwalior,Madhya Pradesh,fine,True,,Normal,5,IMD,,0.75,1.0,provisional,50.0,-1.18,Safe,33.53,False,none
+408,Harda,Madhya Pradesh,double_drought,True,,Deficient,-34,IMD,"deviation,dry_spell",-0.72,4.0,provisional,0.0,-2.12,Safe,38.14,False,d1
+410,Indore,Madhya Pradesh,buffered,True,,Deficient,-27,IMD,deviation,-0.87,3.0,provisional,33.0,0.06,Over-exploited,118.13,False,d1
+411,Jabalpur,Madhya Pradesh,hidden_drought,True,,Normal,-12,IMD,,-0.17,2.0,provisional,0.0,-2.67,Safe,55.58,False,none
+412,Jhabua,Madhya Pradesh,,False,gw_level_only,Deficient,-35,IMD,"deviation,spi,dry_spell",-1.29,4.0,level_only,,,Safe,43.87,False,d1
+413,Katni,Madhya Pradesh,hidden_drought,True,,Normal,2,IMD,,0.4,1.0,provisional,0.0,-6.02,Safe,47.64,False,none
+414,Khargone,Madhya Pradesh,fine,True,,Normal,5,IMD,,0.11,3.0,provisional,50.0,0.42,Safe,45.49,False,d1
+415,Mandla,Madhya Pradesh,fine,True,,Normal,2,IMD,,0.28,1.0,provisional,38.0,-0.16,Safe,26.03,False,none
+416,Mandsaur,Madhya Pradesh,fine,True,,Normal,-9,IMD,,-0.2,2.0,provisional,50.0,0.64,Critical,98.93,False,none
+417,Morena,Madhya Pradesh,,False,gw_insufficient,Normal,-9,IMD,,0.32,3.0,insufficient,,,Safe,42.24,False,none
+409,Narmadapuram,Madhya Pradesh,,False,gw_insufficient,Deficient,-34,IMD,deviation,-0.55,1.0,insufficient,,,Safe,27.16,False,none
+418,Narsinghpur,Madhya Pradesh,,False,gw_insufficient,Normal,-3,IMD,,-0.17,2.0,insufficient,,,Safe,67.2,False,none
+419,Neemuch,Madhya Pradesh,hidden_drought,True,,Normal,-12,IMD,,-0.69,2.0,provisional,0.0,-1.02,Over-exploited,102.37,False,d0
+722,Niwari,Madhya Pradesh,hidden_drought,True,,Excess,59,IMD,,0.33,2.0,provisional,0.0,-3.43,Safe,68.52,False,none
+420,Panna,Madhya Pradesh,fine,True,,Normal,16,IMD,,0.82,1.0,provisional,50.0,0.04,Safe,38.75,False,none
+421,Raisen,Madhya Pradesh,,False,gw_insufficient,Normal,-18,IMD,,-0.9,1.0,insufficient,,,Safe,52.98,False,none
+422,Rajgarh,Madhya Pradesh,fine,True,,Normal,18,IMD,,0.03,2.0,provisional,58.0,-0.26,Semi-critical,89.53,True,none
+423,Ratlam,Madhya Pradesh,buffered,True,,Deficient,-35,IMD,deviation,-0.95,3.0,provisional,33.0,-1.29,Over-exploited,133.37,False,none
+424,Rewa,Madhya Pradesh,hidden_drought,True,,Normal,-13,IMD,,1.1,2.0,provisional,0.0,-5.97,Safe,58.78,False,none
+425,Sagar,Madhya Pradesh,fine,True,,Normal,-13,IMD,,-0.17,1.0,provisional,50.0,-0.5,Safe,59.73,False,none
+426,Satna,Madhya Pradesh,fine,True,,Excess,52,IMD,,1.42,2.0,provisional,50.0,-0.02,Safe,64.03,True,none
+427,Sehore,Madhya Pradesh,fine,True,,Normal,-17,IMD,,-0.72,2.0,provisional,33.0,-0.32,Safe,65.13,True,d0
+428,Seoni,Madhya Pradesh,fine,True,,Normal,-16,IMD,,-0.27,2.0,provisional,50.0,0.2,Safe,45.91,False,none
+429,Shahdol,Madhya Pradesh,fine,True,,Excess,22,IMD,,0.72,2.0,provisional,100.0,0.94,Safe,17.12,False,none
+430,Shajapur,Madhya Pradesh,buffered,True,,Deficient,-21,IMD,deviation,-0.33,2.0,provisional,50.0,-0.31,Over-exploited,105.94,False,none
+431,Sheopur,Madhya Pradesh,hidden_drought,True,,Normal,17,IMD,,0.34,3.0,provisional,17.0,-11.72,Safe,38.08,False,none
+432,Shivpuri,Madhya Pradesh,fine,True,,Excess,24,IMD,,1.0,1.0,provisional,45.0,-1.32,Safe,66.75,False,none
+433,Sidhi,Madhya Pradesh,fine,True,,Normal,15,IMD,,1.15,2.0,provisional,50.0,-0.11,Safe,37.42,False,none
+638,Singrauli,Madhya Pradesh,fine,True,,Normal,11,IMD,,0.85,1.0,provisional,50.0,-0.41,Safe,44.36,False,none
+434,Tikamgarh,Madhya Pradesh,hidden_drought,True,,Normal,6,IMD,,0.81,2.0,provisional,0.0,-0.86,Semi-critical,79.92,False,none
+435,Ujjain,Madhya Pradesh,buffered,True,,Deficient,-27,IMD,deviation,-0.86,3.0,provisional,33.0,-0.02,Over-exploited,108.41,False,none
+436,Umaria,Madhya Pradesh,fine,True,,Excess,21,IMD,,1.14,1.0,provisional,50.0,-0.42,Safe,20.48,False,none
+437,Vidisha,Madhya Pradesh,hidden_drought,True,,Normal,-18,IMD,,-0.65,1.0,provisional,17.0,-1.04,Safe,65.49,False,none
+466,Ahmednagar,Maharashtra,buffered,True,,Deficient,-47,IMD,"deviation,spi,dry_spell",-1.42,8.0,provisional,100.0,1.48,Semi-critical,75.8,True,d2
+467,Akola,Maharashtra,,False,gw_insufficient,Deficient,-41,IMD,"deviation,spi,dry_spell",-1.91,5.0,insufficient,,,Safe,60.88,False,d3
+468,Amravati,Maharashtra,double_drought,True,,Deficient,-43,IMD,"deviation,spi,dry_spell",-1.73,5.0,provisional,0.0,-1.6,Semi-critical,75.01,True,d2
+469,Aurangabad,Maharashtra,buffered,True,,Normal,-19,IMD,dry_spell,-0.77,5.0,provisional,100.0,3.7,Safe,62.22,False,d1
+470,Beed,Maharashtra,buffered,True,,Deficient,-49,IMD,"deviation,spi,dry_spell",-1.87,6.0,provisional,50.0,-4.25,Safe,57.95,False,d3
+471,Bhandara,Maharashtra,,False,gw_insufficient,Normal,-16,IMD,,-0.18,2.0,insufficient,,,Safe,30.24,False,none
+472,Buldhana,Maharashtra,,False,gw_insufficient,Deficient,-21,IMD,"deviation,dry_spell",-0.97,5.0,insufficient,,,Semi-critical,72.01,True,d2
+473,Chandrapur,Maharashtra,buffered,True,,Deficient,-33,IMD,"deviation,spi",-1.23,2.0,provisional,50.0,0.16,Safe,29.67,False,d1
+474,Dhule,Maharashtra,fine,True,,Normal,-19,IMD,,-0.23,3.0,provisional,50.0,-1.97,Safe,51.88,False,d0
+475,Gadchiroli,Maharashtra,hidden_drought,True,,Normal,-16,IMD,,-0.39,2.0,provisional,0.0,-1.36,Safe,26.09,False,none
+476,Gondia,Maharashtra,,False,gw_insufficient,Normal,-1,IMD,,-0.03,2.0,insufficient,,,Safe,29.0,False,d0
+477,Hingoli,Maharashtra,,False,gw_insufficient,Deficient,-49,IMD,"deviation,spi,dry_spell",-2.18,6.0,insufficient,,,Safe,37.18,False,d3
+478,Jalgaon,Maharashtra,buffered,True,,Normal,-11,IMD,dry_spell,-0.28,5.0,provisional,50.0,1.2,Semi-critical,77.46,True,d1
+479,Jalna,Maharashtra,,False,gw_insufficient,Deficient,-48,IMD,"deviation,spi,dry_spell",-1.96,5.0,insufficient,,,Safe,33.97,False,d2
+480,Kolhapur,Maharashtra,fine,True,,Normal,-15,IMD,,-0.65,2.0,provisional,25.0,-0.62,Safe,42.77,False,d1
+481,Latur,Maharashtra,double_drought,True,,Deficient,-39,IMD,"deviation,spi",-1.46,3.0,provisional,0.0,-0.31,Safe,50.92,False,d2
+482,Mumbai,Maharashtra,,False,gw_insufficient,Normal,-8,IMD,,0.04,3.0,insufficient,,,Safe,47.06,False,
+483,Mumbai Suburban,Maharashtra,,False,gw_insufficient,Normal,10,IMD,,0.01,3.0,insufficient,,,Safe,33.94,False,d0
+484,Nagpur,Maharashtra,,False,gw_insufficient,Deficient,-34,IMD,"deviation,spi,dry_spell",-1.52,4.0,insufficient,,,Safe,45.3,False,d1
+485,Nanded,Maharashtra,,False,gw_insufficient,Deficient,-35,IMD,"deviation,spi,dry_spell",-1.05,5.0,insufficient,,,Safe,32.48,False,d1
+486,Nandurbar,Maharashtra,double_drought,True,,Deficient,-39,IMD,"deviation,spi",-1.12,3.0,provisional,0.0,-12.6,Safe,43.25,False,d2
+487,Nashik,Maharashtra,hidden_drought,True,,Excess,33,IMD,,0.86,3.0,provisional,0.0,-0.91,Safe,56.81,True,none
+488,Osmanabad,Maharashtra,,False,gw_insufficient,Deficient,-45,IMD,"deviation,spi,dry_spell",-1.93,6.0,insufficient,,,Safe,59.56,False,d3
+665,Palghar,Maharashtra,,False,gw_insufficient,Normal,18,IMD,,0.87,3.0,insufficient,,,Safe,24.8,False,none
+489,Parbhani,Maharashtra,,False,gw_insufficient,Deficient,-40,IMD,"deviation,spi,dry_spell",-1.46,6.0,insufficient,,,Safe,46.48,False,d2
+490,Pune,Maharashtra,buffered,True,,Normal,13,IMD,dry_spell,-0.24,6.0,provisional,25.0,-0.25,Safe,63.73,True,d0
+491,Raigad,Maharashtra,,False,gw_insufficient,Normal,-6,IMD,,0.06,2.0,insufficient,,,Safe,18.27,False,d0
+492,Ratnagiri,Maharashtra,,False,gw_insufficient,Normal,-18,IMD,,-0.61,1.0,insufficient,,,Safe,17.92,False,d2
+493,Sangli,Maharashtra,,False,gw_insufficient,Deficient,-24,IMD,"deviation,spi,dry_spell",-1.44,6.0,insufficient,,,Safe,52.94,False,d2
+494,Satara,Maharashtra,buffered,True,,Normal,15,IMD,"spi,dry_spell",-1.37,8.0,provisional,25.0,-4.96,Safe,55.82,False,d2
+495,Sindhudurg,Maharashtra,buffered,True,,Deficient,-37,IMD,deviation,-0.92,1.0,provisional,50.0,0.85,Safe,44.68,False,d0
+496,Solapur,Maharashtra,double_drought,True,,Deficient,-59,IMD,"deviation,spi,dry_spell",-2.2,6.0,provisional,0.0,-1.62,Safe,68.43,False,d4
+497,Thane,Maharashtra,,False,gw_insufficient,Normal,-10,IMD,,0.02,3.0,insufficient,,,Safe,19.46,False,d0
+498,Wardha,Maharashtra,,False,gw_insufficient,Deficient,-34,IMD,"deviation,spi",-1.51,2.0,insufficient,,,Safe,46.24,False,d2
+499,Washim,Maharashtra,buffered,True,,Deficient,-37,IMD,"deviation,spi,dry_spell",-1.32,5.0,provisional,100.0,1.2,Safe,51.79,False,d2
+500,Yavatmal,Maharashtra,,False,gw_insufficient,Deficient,-27,IMD,"deviation,spi,dry_spell",-1.06,5.0,insufficient,,,Safe,37.82,False,d2
+252,Bishnupur,Manipur,,False,gw_insufficient,Large Deficient,-63,IMD,"deviation,spi,dry_spell",-1.47,4.0,insufficient,,,Safe,9.06,False,d1
+253,Chandel,Manipur,,False,gw_insufficient,Deficient,-55,IMD,"deviation,spi,dry_spell",-1.25,4.0,insufficient,,,Hilly area,,False,d2
+254,Churachandpur,Manipur,,False,gw_insufficient,Deficient,-47,gridded,"deviation,spi,dry_spell",-1.66,4.0,insufficient,,,Safe,7.75,False,d3
+255,Imphal East,Manipur,,False,gw_insufficient,Deficient,-36,IMD,deviation,-0.29,2.0,insufficient,,,Safe,9.76,False,none
+256,Imphal West,Manipur,,False,gw_insufficient,Deficient,-58,IMD,"deviation,spi",-1.02,2.0,insufficient,,,Safe,10.78,False,none
+713,Jiribam,Manipur,,False,gw_insufficient,Deficient,-33,gridded,"deviation,spi,dry_spell",-1.66,4.0,insufficient,,,,,,d1
+711,Kakching,Manipur,,False,gw_insufficient,Deficient,-38,gridded,"deviation,spi,dry_spell",-1.14,4.0,insufficient,,,,,,d1
+717,Kamjong,Manipur,,False,gw_insufficient,Normal,-5,gridded,,0.1,2.0,insufficient,,,,,,none
+712,Kangpokpi,Manipur,,False,gw_insufficient,Normal,-11,gridded,,-0.5,2.0,insufficient,,,,,,none
+714,Noney,Manipur,,False,gw_insufficient,Deficient,-34,gridded,"deviation,spi",-1.35,2.0,insufficient,,,,,,d2
+715,Pherzawl,Manipur,,False,gw_insufficient,Deficient,-53,gridded,"deviation,spi,dry_spell",-3.01,6.0,insufficient,,,,,,d4
+257,Senapati,Manipur,,False,gw_insufficient,Normal,-18,IMD,,-0.16,1.0,insufficient,,,Hilly area,,False,none
+258,Tamenglong,Manipur,,False,gw_insufficient,Large Deficient,-61,IMD,deviation,-0.79,2.0,insufficient,,,Hilly area,,False,d1
+716,Tengnoupal,Manipur,,False,gw_insufficient,Deficient,-25,gridded,deviation,-0.45,2.0,insufficient,,,,,,d0
+259,Thoubal,Manipur,,False,gw_insufficient,Deficient,-55,IMD,deviation,-0.91,2.0,insufficient,,,Safe,12.86,False,none
+260,Ukhrul,Manipur,,False,gw_insufficient,Normal,-10,IMD,,-0.08,2.0,insufficient,,,Hilly area,,False,none
+273,East Garo Hills,Meghalaya,,False,gw_insufficient,Normal,-11,IMD,dry_spell,-0.87,5.0,insufficient,,,Safe,4.62,False,none
+657,East Jaintia Hills,Meghalaya,,False,gw_insufficient,Deficient,-52,IMD,deviation,-0.9,1.0,insufficient,,,Safe,1.83,False,d2
+274,East Khasi Hills,Meghalaya,double_drought,True,,Deficient,-40,IMD,deviation,-0.91,2.0,provisional,17.0,-0.5,Safe,3.65,False,d1
+740,Eastern West Khasi Hills,Meghalaya,,False,gw_insufficient,Normal,3,gridded,,0.2,1.0,insufficient,,,,,,none
+656,North Garo Hills,Meghalaya,buffered,True,,Deficient,-57,IMD,deviation,-0.94,2.0,provisional,75.0,5.57,Safe,6.9,False,d0
+276,Ri Bhoi,Meghalaya,buffered,True,,Deficient,-33,IMD,deviation,-0.28,2.0,provisional,67.0,0.27,Safe,6.35,False,d1
+277,South Garo Hills,Meghalaya,,False,gw_insufficient,Deficient,-32,gridded,"deviation,dry_spell",-0.56,5.0,insufficient,,,Safe,1.24,False,none
+663,South West Garo Hills,Meghalaya,,False,gw_insufficient,Normal,-5,gridded,dry_spell,-0.01,6.0,insufficient,,,Safe,34.13,False,d0
+658,South West Khasi Hills,Meghalaya,,False,gw_insufficient,Large Excess,178,IMD,,-0.24,1.0,insufficient,,,Safe,1.06,False,none
+278,West Garo Hills,Meghalaya,buffered,True,,Large Deficient,-66,IMD,"deviation,dry_spell",-0.4,4.0,provisional,100.0,0.17,Safe,18.87,False,d0
+275,West Jaintia Hills,Meghalaya,,False,gw_insufficient,Large Deficient,-74,IMD,deviation,-0.71,2.0,insufficient,,,Safe,6.23,False,d1
+279,West Khasi Hills,Meghalaya,,False,gw_insufficient,Large Deficient,-60,IMD,deviation,-0.07,2.0,insufficient,,,Safe,1.57,False,none
+261,Aizawl,Mizoram,,False,gw_insufficient,Normal,-12,IMD,,-0.64,1.0,insufficient,,,Safe,14.9,False,d2
+262,Champhai,Mizoram,,False,gw_insufficient,Deficient,-30,IMD,deviation,-0.83,2.0,insufficient,,,Safe,3.16,False,d3
+726,Hnahthial,Mizoram,,False,gw_insufficient,Large Excess,70,gridded,,0.93,0.0,insufficient,,,,,,none
+728,Khawzawl,Mizoram,,False,gw_insufficient,Deficient,-28,gridded,deviation,-0.98,2.0,insufficient,,,,,,d3
+263,Kolasib,Mizoram,,False,gw_insufficient,Normal,-1,IMD,,0.08,1.0,insufficient,,,Safe,1.28,False,d1
+264,Lawngtlai,Mizoram,,False,gw_insufficient,Deficient,-28,IMD,deviation,1.37,0.0,insufficient,,,Safe,3.52,False,none
+265,Lunglei,Mizoram,,False,gw_insufficient,Deficient,-40,IMD,deviation,0.03,1.0,insufficient,,,Safe,4.31,False,none
+266,Mamit,Mizoram,,False,gw_insufficient,Normal,-11,IMD,,-0.04,1.0,insufficient,,,Safe,2.28,False,d1
+267,Saiha,Mizoram,,False,gw_insufficient,Normal,-16,IMD,,1.37,0.0,insufficient,,,Safe,5.92,False,
+727,Saitual,Mizoram,,False,gw_insufficient,Deficient,-47,gridded,"deviation,spi,dry_spell",-2.31,4.0,insufficient,,,,,,d4
+268,Serchhip,Mizoram,,False,gw_insufficient,Normal,-10,IMD,,0.01,1.0,insufficient,,,Safe,6.02,False,d1
+758,Chumoukedima,Nagaland,,False,gw_insufficient,Normal,3,gridded,,0.21,1.0,insufficient,,,,,,none
+244,Dimapur,Nagaland,,False,gw_insufficient,Normal,-5,IMD,,-0.36,3.0,insufficient,,,Safe,6.83,False,none
+614,Kiphire,Nagaland,,False,gw_insufficient,Excess,24,IMD,,1.75,0.0,insufficient,,,Safe,1.66,False,none
+245,Kohima,Nagaland,,False,gw_insufficient,Normal,-14,IMD,,1.02,0.0,insufficient,,,Safe,7.92,False,none
+615,Longleng,Nagaland,,False,gw_insufficient,Normal,1,gridded,,0.13,1.0,insufficient,,,Safe,0.32,False,none
+246,Mokokchung,Nagaland,,False,gw_insufficient,Excess,24,IMD,,0.69,0.0,insufficient,,,Safe,1.67,False,none
+247,Mon,Nagaland,,False,gw_insufficient,Normal,-12,IMD,,0.41,1.0,insufficient,,,Safe,3.66,False,none
+764,Niuland,Nagaland,,False,gw_insufficient,Normal,19,gridded,,0.93,1.0,insufficient,,,,,,none
+736,Noklak,Nagaland,,False,gw_insufficient,Excess,34,gridded,,1.23,0.0,insufficient,,,,,,none
+613,Peren,Nagaland,,False,gw_insufficient,Normal,-1,IMD,,-0.34,3.0,insufficient,,,Safe,4.24,False,d0
+248,Phek,Nagaland,,False,gw_insufficient,Normal,-9,IMD,,1.27,0.0,insufficient,,,Safe,3.58,False,none
+765,Shamator,Nagaland,,False,gw_insufficient,Excess,29,gridded,,1.11,0.0,insufficient,,,,,,none
+757,Tseminyu,Nagaland,,False,gw_insufficient,Excess,52,gridded,,2.36,0.0,insufficient,,,,,,none
+249,Tuensang,Nagaland,,False,gw_insufficient,Excess,29,gridded,,1.2,0.0,insufficient,,,Safe,3.59,False,none
+250,Wokha,Nagaland,,False,gw_insufficient,Normal,3,IMD,,2.66,0.0,insufficient,,,Safe,2.6,False,none
+251,Zunheboto,Nagaland,,False,gw_insufficient,Excess,47,IMD,,1.92,0.0,insufficient,,,Safe,3.42,False,none
+344,Anugul,Odisha,fine,False,,Excess,21,IMD,,1.81,1.0,full,100.0,1.87,Safe,54.43,False,none
+345,Balangir,Odisha,,False,gw_insufficient,Excess,26,IMD,,1.36,1.0,insufficient,,,Safe,52.67,False,none
+346,Baleshwar,Odisha,fine,True,,Excess,56,IMD,,2.0,1.0,provisional,100.0,0.06,Safe,60.76,False,none
+347,Bargarh,Odisha,,False,gw_insufficient,Excess,43,IMD,,1.4,2.0,insufficient,,,Safe,56.56,False,none
+348,Bhadrak,Odisha,,False,gw_insufficient,Excess,37,IMD,,1.46,1.0,insufficient,,,Safe,62.13,False,none
+349,Boudh,Odisha,,False,gw_insufficient,Large Excess,70,IMD,,1.2,2.0,insufficient,,,Safe,46.37,False,none
+350,Cuttack,Odisha,fine,True,,Excess,39,IMD,,1.67,1.0,provisional,75.0,1.83,Safe,48.07,False,none
+351,Deogarh,Odisha,,False,gw_insufficient,Excess,35,IMD,,1.52,2.0,insufficient,,,Safe,58.74,False,none
+352,Dhenkanal,Odisha,fine,True,,Excess,47,IMD,,1.78,2.0,provisional,95.0,1.43,Safe,38.7,False,none
+353,Gajapati,Odisha,fine,True,,Normal,-1,IMD,,0.03,2.0,provisional,100.0,0.72,Safe,37.07,False,none
+354,Ganjam,Odisha,fine,True,,Normal,5,IMD,,1.19,2.0,provisional,100.0,0.06,Safe,45.14,False,none
+355,Jagatsinghapur,Odisha,,False,gw_insufficient,Excess,30,IMD,,1.03,1.0,insufficient,,,Safe,59.76,False,none
+356,Jajapur,Odisha,fine,False,,Excess,23,IMD,,1.62,1.0,short,100.0,1.45,Safe,65.32,False,none
+357,Jharsuguda,Odisha,fine,True,,Normal,4,IMD,,0.88,2.0,provisional,83.0,3.59,Safe,53.33,False,none
+358,Kalahandi,Odisha,hidden_drought,True,,Normal,-3,IMD,,0.34,3.0,provisional,0.0,-1.0,Safe,45.54,False,none
+359,Kandhamal,Odisha,,False,gw_level_only,Excess,29,IMD,,1.56,1.0,level_only,,,Safe,31.89,False,none
+360,Kendrapara,Odisha,hidden_drought,True,,Excess,54,IMD,,1.41,1.0,provisional,0.0,-0.72,Safe,64.26,False,none
+361,Kendujhar,Odisha,fine,False,,Excess,55,IMD,,2.63,1.0,short,88.0,0.5,Safe,46.13,False,none
+362,Khordha,Odisha,fine,True,,Excess,31,IMD,,1.45,2.0,provisional,100.0,1.32,Safe,63.93,False,none
+363,Koraput,Odisha,hidden_drought,True,,Excess,27,IMD,,0.87,1.0,provisional,0.0,-1.59,Safe,27.34,False,none
+364,Malkangiri,Odisha,hidden_drought,True,,Normal,15,IMD,,0.96,2.0,provisional,0.0,-1.51,Safe,22.08,False,none
+365,Mayurbhanj,Odisha,,False,gw_insufficient,Excess,55,IMD,,2.78,1.0,insufficient,,,Safe,46.12,False,none
+366,Nabarangpur,Odisha,hidden_drought,True,,Normal,9,IMD,,0.78,1.0,provisional,0.0,-12.15,Safe,39.19,False,none
+367,Nayagarh,Odisha,fine,True,,Excess,27,IMD,,1.91,1.0,provisional,100.0,0.09,Safe,48.85,False,none
+368,Nuapada,Odisha,,False,gw_insufficient,Excess,32,IMD,,1.13,3.0,insufficient,,,Safe,64.53,False,none
+369,Puri,Odisha,fine,True,,Excess,39,IMD,,1.44,2.0,provisional,100.0,0.19,Safe,55.51,False,none
+370,Rayagada,Odisha,fine,True,,Normal,4,IMD,,0.08,2.0,provisional,100.0,3.32,Safe,38.29,False,none
+371,Sambalpur,Odisha,,False,gw_insufficient,Excess,29,IMD,,1.33,2.0,insufficient,,,Safe,36.02,False,none
+372,Sonepur,Odisha,,False,gw_insufficient,Excess,45,IMD,,1.14,2.0,insufficient,,,Safe,52.32,False,none
+373,Sundargarh,Odisha,,False,gw_insufficient,Excess,21,IMD,,1.47,2.0,insufficient,,,Safe,45.9,False,none
+598,Karaikal,Puducherry,,False,season_just_started,Large Excess,992,IMD,,,,provisional,50.0,1.13,Safe,50.37,False,none
+599,Mahe,Puducherry,,False,season_just_started,No Rain,-100,gridded,deviation,,,insufficient,,,,,,
+600,Pondicherry,Puducherry,,False,season_just_started,No Rain,-100,IMD,deviation,,,provisional,0.0,-1.68,Semi-critical,87.05,False,none
+601,Yanam,Puducherry,,False,season_just_started,No Rain,-100,IMD,deviation,,,insufficient,,,,,,none
+27,Amritsar,Punjab,,False,gw_insufficient,Normal,-19,IMD,,-0.25,3.0,insufficient,,,Over-exploited,148.78,False,none
+605,Barnala,Punjab,,False,gw_insufficient,Large Deficient,-63,IMD,deviation,-0.75,2.0,insufficient,,,Over-exploited,215.64,False,d1
+28,Bathinda,Punjab,,False,gw_insufficient,Deficient,-55,IMD,"deviation,spi,dry_spell",-1.75,5.0,insufficient,,,Over-exploited,129.35,False,d4
+29,Faridkot,Punjab,,False,gw_insufficient,Deficient,-21,IMD,"deviation,spi",-1.06,3.0,insufficient,,,Over-exploited,128.94,False,d4
+30,Fatehgarh Sahib,Punjab,,False,gw_insufficient,Large Deficient,-67,IMD,"deviation,spi",-2.06,2.0,insufficient,,,Over-exploited,179.54,False,d3
+651,Fazilka,Punjab,,False,gw_insufficient,Deficient,-51,IMD,"deviation,spi,dry_spell",-1.16,5.0,insufficient,,,Safe,55.79,True,d3
+31,Ferozepur,Punjab,,False,gw_insufficient,Deficient,-47,IMD,"deviation,spi",-1.16,3.0,insufficient,,,Critical,98.05,False,d3
+32,Gurdaspur,Punjab,,False,gw_insufficient,Excess,27,IMD,,0.07,2.0,insufficient,,,Over-exploited,112.21,False,none
+33,Hoshiarpur,Punjab,,False,gw_insufficient,Deficient,-52,IMD,deviation,-0.32,1.0,insufficient,,,Over-exploited,118.84,False,d0
+34,Jalandhar,Punjab,buffered,True,,Deficient,-48,IMD,"deviation,spi,dry_spell",-1.73,4.0,provisional,100.0,1.59,Over-exploited,273.27,False,d3
+35,Kapurthala,Punjab,,False,gw_insufficient,Large Deficient,-71,IMD,"deviation,spi,dry_spell",-1.47,4.0,insufficient,,,Over-exploited,250.65,False,d2
+36,Ludhiana,Punjab,buffered,True,,Deficient,-49,IMD,"deviation,spi",-1.35,3.0,provisional,50.0,0.46,Over-exploited,197.42,False,d3
+737,Malerkotla,Punjab,buffered,True,,Deficient,-48,gridded,"deviation,spi",-1.12,2.0,provisional,75.0,5.39,Over-exploited,281.75,False,d3
+37,Mansa,Punjab,double_drought,True,,Large Deficient,-72,IMD,"deviation,spi",-1.13,3.0,provisional,8.0,-0.17,Over-exploited,109.82,False,d2
+38,Moga,Punjab,buffered,True,,Deficient,-42,IMD,deviation,-0.95,3.0,provisional,75.0,0.0,Over-exploited,221.67,False,d3
+662,Pathankot,Punjab,,False,gw_insufficient,Excess,35,IMD,,1.01,1.0,insufficient,,,Safe,42.09,False,none
+41,Patiala,Punjab,buffered,True,,Deficient,-47,IMD,"deviation,spi",-1.6,2.0,provisional,75.0,0.0,Over-exploited,207.37,False,d2
+42,Rupnagar,Punjab,,False,gw_insufficient,Deficient,-29,IMD,"deviation,spi",-1.15,1.0,insufficient,,,Critical,92.48,False,d0
+608,S.A.S Nagar,Punjab,buffered,True,,Deficient,-38,gridded,"deviation,spi",-1.46,2.0,provisional,75.0,-0.05,Over-exploited,118.32,False,d0
+43,Sangrur,Punjab,,False,gw_insufficient,Deficient,-53,IMD,"deviation,spi",-1.22,2.0,insufficient,,,Over-exploited,308.96,False,d2
+40,Shahid Bhagat Singh Nagar,Punjab,,False,gw_insufficient,Deficient,-54,IMD,"deviation,spi,dry_spell",-1.3,4.0,insufficient,,,Over-exploited,116.15,False,none
+39,Sri Muktsar Sahib,Punjab,double_drought,True,,Large Deficient,-68,IMD,"deviation,spi,dry_spell",-1.79,5.0,provisional,17.0,0.0,Safe,28.73,False,d4
+609,Tarn Taran,Punjab,double_drought,True,,Deficient,-55,IMD,"deviation,spi,dry_spell",-1.69,7.0,provisional,0.0,-1.58,Over-exploited,195.6,False,d3
+86,Ajmer,Rajasthan,buffered,True,,Normal,-18,IMD,dry_spell,-0.72,4.0,provisional,61.0,-7.19,Over-exploited,131.92,False,none
+87,Alwar,Rajasthan,fine,True,,Normal,-7,IMD,,0.39,1.0,provisional,42.0,-0.23,Over-exploited,182.17,False,none
+776,Anoopgarh,Rajasthan,,False,gw_level_only,Normal,-13,gridded,,-0.15,3.0,level_only,,,,,,none
+775,Balotra,Rajasthan,buffered,False,,Deficient,-29,gridded,deviation,-0.5,3.0,short,69.0,0.31,,,,none
+88,Banswara,Rajasthan,buffered,True,,Deficient,-41,IMD,"deviation,spi,dry_spell",-1.17,4.0,provisional,25.0,-0.77,Semi-critical,70.29,True,d0
+89,Baran,Rajasthan,,False,gw_insufficient,Normal,-18,IMD,,-0.08,1.0,insufficient,,,Over-exploited,131.28,False,none
+90,Barmer,Rajasthan,buffered,True,,Deficient,-27,IMD,"deviation,dry_spell",-0.38,6.0,provisional,50.0,0.06,Over-exploited,131.01,False,none
+774,Beawar,Rajasthan,,False,gw_level_only,Deficient,-22,gridded,deviation,-0.51,3.0,level_only,,,,,,none
+91,Bharatpur,Rajasthan,fine,True,,Excess,25,IMD,,0.82,2.0,provisional,100.0,1.09,Over-exploited,114.37,False,none
+92,Bhilwara,Rajasthan,buffered,True,,Deficient,-30,IMD,"deviation,spi",-1.01,2.0,provisional,67.0,-0.13,Over-exploited,142.91,False,d0
+93,Bikaner,Rajasthan,double_drought,False,,Normal,-4,IMD,dry_spell,0.23,4.0,short,0.0,-0.59,Over-exploited,143.09,False,none
+94,Bundi,Rajasthan,fine,True,,Normal,-10,IMD,,-0.19,1.0,provisional,50.0,-3.71,Critical,90.17,False,none
+95,Chittorgarh,Rajasthan,buffered,True,,Deficient,-24,IMD,deviation,-0.66,2.0,provisional,44.0,-0.87,Over-exploited,151.17,False,none
+96,Churu,Rajasthan,fine,True,,Normal,-11,IMD,,-0.1,3.0,provisional,27.0,0.28,Over-exploited,129.59,False,none
+97,Dausa,Rajasthan,fine,True,,Normal,9,IMD,,0.26,1.0,provisional,100.0,1.36,Over-exploited,227.35,False,none
+767,Deeg,Rajasthan,fine,True,,Normal,9,gridded,,0.38,2.0,provisional,50.0,-0.36,,,,d1
+98,Dholpur,Rajasthan,fine,True,,Excess,26,IMD,,0.68,1.0,provisional,100.0,1.36,Over-exploited,126.71,False,none
+768,Didwana Kuchaman,Rajasthan,fine,True,,Normal,-6,gridded,,-0.01,3.0,provisional,50.0,-0.07,,,,none
+769,Dudu,Rajasthan,fine,True,,Normal,-19,gridded,,-0.41,2.0,provisional,67.0,-1.82,,,,none
+99,Dungarpur,Rajasthan,buffered,True,,Deficient,-28,IMD,deviation,-0.94,3.0,provisional,50.0,-0.96,Safe,59.46,False,none
+100,Ganganagar,Rajasthan,buffered,True,,Normal,-13,IMD,dry_spell,0.04,6.0,provisional,40.0,-3.32,Safe,42.35,False,d0
+771,Gangapurcity,Rajasthan,fine,True,,Normal,-3,gridded,,0.02,2.0,provisional,50.0,-0.18,,,,none
+101,Hanumangarh,Rajasthan,buffered,False,,Deficient,-41,IMD,"deviation,dry_spell",-0.78,5.0,short,55.0,0.75,Safe,64.36,False,d1
+102,Jaipur,Rajasthan,buffered,False,,Normal,-19,IMD,dry_spell,-0.5,4.0,short,47.0,1.19,Over-exploited,210.41,False,none
+783,Jaipur Gramin,Rajasthan,fine,False,,Normal,-10,gridded,,-0.16,3.0,short,29.0,0.7,,,,none
+103,Jaisalmer,Rajasthan,buffered,True,,Deficient,-50,IMD,deviation,-0.75,3.0,provisional,47.0,-0.2,Over-exploited,297.21,False,d0
+104,Jalore,Rajasthan,buffered,True,,Deficient,-59,IMD,"deviation,spi,dry_spell",-1.08,6.0,provisional,100.0,1.64,Over-exploited,167.37,False,d1
+105,Jhalawar,Rajasthan,,False,gw_level_only,Normal,-8,IMD,,-0.16,2.0,level_only,,,Over-exploited,104.05,False,none
+106,Jhunjhunu,Rajasthan,hidden_drought,False,,Normal,2,IMD,,0.27,3.0,short,0.0,-0.75,Over-exploited,223.34,False,none
+107,Jodhpur,Rajasthan,buffered,True,,Deficient,-33,IMD,"deviation,dry_spell",-0.72,6.0,provisional,100.0,3.01,Over-exploited,251.34,False,d1
+778,Jodhpur Gramin,Rajasthan,double_drought,True,,Deficient,-31,gridded,"deviation,dry_spell",-0.72,4.0,provisional,0.0,-1.55,,,,d0
+108,Karauli,Rajasthan,fine,True,,Normal,-5,IMD,,0.32,2.0,provisional,75.0,5.83,Over-exploited,150.29,False,none
+781,Kekri,Rajasthan,,False,gw_level_only,Normal,-13,gridded,,-0.35,2.0,level_only,,-1.61,,,,none
+770,Khairthal-Tijara,Rajasthan,fine,True,,Normal,7,gridded,,0.31,1.0,provisional,50.0,-0.25,,,,none
+109,Kota,Rajasthan,,False,gw_level_only,Deficient,-22,IMD,deviation,-0.67,1.0,level_only,,,Over-exploited,110.32,False,none
+782,Kotputli-Behror,Rajasthan,fine,True,,Normal,-12,gridded,,-0.18,2.0,provisional,50.0,-0.8,,,,none
+110,Nagaur,Rajasthan,fine,True,,Normal,-11,IMD,,-0.14,3.0,provisional,75.0,1.68,Over-exploited,177.23,False,none
+773,Neem Ka Thana,Rajasthan,fine,True,,Normal,-3,gridded,,0.03,2.0,provisional,100.0,3.94,,,,none
+111,Pali,Rajasthan,buffered,True,,Deficient,-54,IMD,"deviation,spi,dry_spell",-1.33,5.0,provisional,100.0,,Over-exploited,153.49,False,d1
+772,Phalodi,Rajasthan,double_drought,True,,Normal,-5,gridded,dry_spell,0.03,4.0,provisional,0.0,-2.62,,,,none
+629,Pratapgarh,Rajasthan,,False,gw_insufficient,Normal,-11,gridded,,-0.25,2.0,insufficient,,,Over-exploited,117.87,False,none
+112,Rajsamand,Rajasthan,double_drought,True,,Deficient,-33,IMD,"deviation,spi,dry_spell",-1.05,6.0,provisional,17.0,-2.78,Over-exploited,116.34,False,d0
+777,Salumbar,Rajasthan,,False,gw_insufficient,Normal,-9,gridded,,-0.2,3.0,insufficient,,,,,,none
+779,Sanchor,Rajasthan,,False,gw_insufficient,Deficient,-55,gridded,"deviation,dry_spell",-0.89,6.0,insufficient,,,,,,d1
+113,Sawai Madhopur,Rajasthan,,False,gw_level_only,Normal,-13,IMD,,-0.19,2.0,level_only,,,Over-exploited,148.09,False,none
+780,Shahpura,Rajasthan,fine,True,,Normal,-17,gridded,,-0.56,2.0,provisional,33.0,-2.44,,,,none
+114,Sikar,Rajasthan,hidden_drought,False,,Normal,-7,IMD,,-0.19,3.0,full,10.0,-0.45,Over-exploited,191.98,False,none
+115,Sirohi,Rajasthan,double_drought,False,,Deficient,-46,IMD,deviation,-0.9,3.0,short,0.0,-3.34,Over-exploited,115.14,False,d1
+116,Tonk,Rajasthan,fine,True,,Normal,-16,IMD,,-0.37,2.0,provisional,50.0,-1.01,Critical,91.73,False,none
+117,Udaipur,Rajasthan,buffered,True,,Deficient,-27,IMD,"deviation,spi",-1.05,3.0,provisional,75.0,0.54,Critical,97.8,False,d1
+225,Gangtok,Sikkim,,False,gw_insufficient,Normal,-7,IMD,,-0.98,1.0,insufficient,,,Safe,6.7,False,d3
+228,Gyalshing,Sikkim,,False,gw_insufficient,Excess,38,IMD,,0.8,1.0,insufficient,,,Safe,6.97,False,none
+226,Mangan,Sikkim,,False,gw_insufficient,Normal,7,IMD,spi,-1.06,2.0,insufficient,,,Safe,3.14,False,d2
+227,Namchi,Sikkim,,False,gw_insufficient,Normal,16,IMD,,-0.24,1.0,insufficient,,,Safe,6.72,False,d1
+741,Pakyong,Sikkim,,False,gw_insufficient,Normal,-17,gridded,,-0.94,1.0,insufficient,,,Safe,4.88,False,d1
+742,Soreng,Sikkim,,False,gw_insufficient,Normal,-1,gridded,,-0.0,1.0,insufficient,,,Safe,7.89,False,none
+610,Ariyalur,Tamil Nadu,,False,season_just_started,Excess,51,IMD,,,,provisional,50.0,-2.22,Safe,53.3,False,none
+730,Chengalpattu,Tamil Nadu,,False,season_just_started,No Rain,-100,IMD,deviation,,,provisional,6.0,-0.17,Safe,65.14,False,d1
+568,Chennai,Tamil Nadu,,False,season_just_started,No Rain,-100,IMD,deviation,,,provisional,33.0,0.08,Over-exploited,120.62,False,d2
+569,Coimbatore,Tamil Nadu,,False,season_just_started,Deficient,-42,IMD,deviation,,,full,57.0,-2.15,Critical,98.23,False,none
+570,Cuddalore,Tamil Nadu,,False,season_just_started,Excess,36,IMD,,,,short,15.0,-1.91,Safe,56.91,True,none
+571,Dharmapuri,Tamil Nadu,,False,season_just_started,Normal,-13,IMD,,,,provisional,50.0,-1.04,Semi-critical,86.77,True,none
+572,Dindigul,Tamil Nadu,,False,season_just_started,Large Excess,62,IMD,,,,short,46.0,-1.28,Over-exploited,115.68,False,none
+573,Erode,Tamil Nadu,,False,season_just_started,Large Excess,83,IMD,,,,short,31.0,-2.14,Semi-critical,75.85,True,none
+729,Kallakurichi,Tamil Nadu,,False,season_just_started,Large Excess,383,IMD,,,,full,26.0,-3.42,Semi-critical,80.11,True,none
+574,Kanchipuram,Tamil Nadu,,False,season_just_started,No Rain,-100,IMD,deviation,,,provisional,33.0,-0.3,Safe,46.43,False,d1
+575,Kanniyakumari,Tamil Nadu,,False,season_just_started,No Rain,-100,IMD,deviation,,,provisional,10.0,-0.38,Safe,14.11,False,none
+576,Karur,Tamil Nadu,,False,season_just_started,Large Excess,232,IMD,,,,provisional,0.0,-0.74,Critical,99.64,False,d1
+577,Krishnagiri,Tamil Nadu,,False,season_just_started,Large Excess,72,IMD,,,,full,41.0,-2.7,Critical,97.13,False,none
+578,Madurai,Tamil Nadu,,False,season_just_started,Large Deficient,-84,IMD,deviation,,,short,78.0,-0.56,Safe,64.75,True,none
+735,Mayiladuthurai,Tamil Nadu,,False,season_just_started,Large Excess,121,IMD,,,,provisional,17.0,-0.18,Over-exploited,114.11,False,none
+579,Nagapattinam,Tamil Nadu,,False,season_just_started,Large Deficient,-63,IMD,deviation,,,provisional,17.0,-0.83,Saline,-100000.0,False,none
+580,Namakkal,Tamil Nadu,,False,season_just_started,Large Excess,219,IMD,,,,provisional,0.0,-0.78,Over-exploited,121.7,False,d0
+581,Perambalur,Tamil Nadu,,False,season_just_started,Large Excess,575,IMD,,,,provisional,44.0,-2.18,Over-exploited,114.65,False,none
+582,Pudukkottai,Tamil Nadu,,False,season_just_started,Large Excess,125,IMD,,,,provisional,2.0,-0.49,Safe,49.03,False,none
+583,Ramanathapuram,Tamil Nadu,,False,season_just_started,Large Deficient,-64,IMD,deviation,,,provisional,0.0,-2.89,Safe,13.2,False,none
+731,Ranipet,Tamil Nadu,,False,season_just_started,Large Deficient,-79,IMD,deviation,,,provisional,56.0,-1.31,Semi-critical,82.55,True,none
+584,Salem,Tamil Nadu,,False,season_just_started,Deficient,-58,IMD,deviation,,,short,68.0,-1.1,Over-exploited,150.56,False,d0
+585,Sivaganga,Tamil Nadu,,False,season_just_started,Deficient,-37,IMD,deviation,,,provisional,18.0,-0.52,Safe,26.05,False,none
+733,Tenkasi,Tamil Nadu,,False,season_just_started,No Rain,-100,IMD,deviation,,,short,61.0,-0.46,Semi-critical,77.44,True,none
+586,Thanjavur,Tamil Nadu,,False,season_just_started,Large Excess,73,IMD,,,,provisional,25.0,-3.05,Over-exploited,102.09,False,none
+587,The Nilgiris,Tamil Nadu,,False,season_just_started,Deficient,-36,IMD,deviation,,,provisional,50.0,0.48,Safe,9.52,False,none
+588,Theni,Tamil Nadu,,False,season_just_started,Deficient,-33,IMD,deviation,,,provisional,25.0,-1.87,Semi-critical,75.28,True,none
+589,Thiruvallur,Tamil Nadu,,False,season_just_started,No Rain,-100,IMD,deviation,,,provisional,33.0,-0.79,Safe,57.03,False,d1
+590,Thiruvarur,Tamil Nadu,,False,season_just_started,Excess,45,IMD,,,,provisional,0.0,-8.47,Safe,54.77,True,none
+591,Tiruchirappalli,Tamil Nadu,,False,season_just_started,Large Excess,120,IMD,,,,short,45.0,-0.34,Semi-critical,75.04,True,none
+592,Tirunelveli,Tamil Nadu,,False,season_just_started,Deficient,-42,IMD,deviation,,,full,38.0,0.55,Safe,39.96,True,none
+732,Tirupathur,Tamil Nadu,,False,season_just_started,Normal,-9,IMD,,,,provisional,0.0,-6.62,Over-exploited,140.64,False,none
+634,Tiruppur,Tamil Nadu,,False,season_just_started,Excess,30,IMD,,,,full,57.0,-3.02,Semi-critical,85.5,True,none
+593,Tiruvannamalai,Tamil Nadu,,False,season_just_started,Large Excess,140,IMD,,,,provisional,0.0,-1.76,Semi-critical,84.1,True,none
+594,Tuticorin,Tamil Nadu,,False,season_just_started,Large Deficient,-66,IMD,deviation,,,full,52.0,-0.61,Safe,28.21,False,none
+595,Vellore,Tamil Nadu,,False,season_just_started,Normal,-4,IMD,,,,short,36.0,-0.86,Over-exploited,117.3,False,none
+596,Villupuram,Tamil Nadu,,False,season_just_started,Normal,-11,IMD,,,,provisional,0.0,-2.21,Semi-critical,89.67,True,none
+597,Virudhunagar,Tamil Nadu,,False,season_just_started,Large Excess,193,IMD,,,,short,33.0,-1.43,Safe,59.64,True,none
+501,Adilabad,Telangana,double_drought,True,,Deficient,-27,IMD,"deviation,dry_spell",-0.91,5.0,provisional,0.0,-0.76,Safe,37.57,True,d1
+690,Bhadradri Kothagudem,Telangana,double_drought,True,,Deficient,-21,IMD,deviation,-0.69,3.0,provisional,0.0,-0.7,Safe,32.04,False,d0
+686,Hanumakonda,Telangana,double_drought,True,,Deficient,-24,IMD,deviation,-0.63,2.0,provisional,0.0,-1.72,Safe,56.3,True,d1
+507,Hyderabad,Telangana,double_drought,True,,Deficient,-31,IMD,"deviation,spi",-1.34,3.0,provisional,0.0,-2.86,Over-exploited,101.94,False,d1
+681,Jagitial,Telangana,fine,True,,Normal,8,IMD,,0.06,3.0,provisional,81.0,1.35,Safe,44.51,False,none
+689,Jangoan,Telangana,double_drought,True,,Deficient,-21,IMD,deviation,-0.38,1.0,provisional,0.0,-0.68,Safe,58.18,False,d0
+687,Jayashankar Bhupalapally,Telangana,fine,True,,Normal,-11,IMD,,-0.09,2.0,provisional,50.0,0.14,Safe,43.63,False,d0
+695,Jogulamba Gadwal,Telangana,double_drought,True,,Deficient,-45,IMD,"deviation,spi,dry_spell",-1.6,6.0,provisional,12.0,-1.37,Safe,28.29,False,d2
+685,Kamareddy,Telangana,fine,True,,Normal,8,IMD,,0.28,2.0,provisional,33.0,-1.07,Safe,48.19,False,none
+508,Karimnagar,Telangana,double_drought,True,,Normal,-1,IMD,dry_spell,-0.23,5.0,provisional,12.0,-2.9,Safe,37.0,False,none
+509,Khammam,Telangana,hidden_drought,True,,Normal,-17,IMD,,-0.22,2.0,provisional,0.0,-2.39,Safe,41.18,True,d0
+699,Kumuram Bheem Asifabad,Telangana,fine,True,,Normal,13,IMD,,-0.15,2.0,provisional,38.0,0.0,Safe,22.04,False,d0
+688,Mahabubabad,Telangana,hidden_drought,True,,Normal,-19,IMD,,-0.36,2.0,provisional,0.0,-1.38,Safe,53.86,False,d0
+512,Mahabubnagar,Telangana,buffered,True,,Deficient,-21,IMD,deviation,-0.97,3.0,provisional,31.0,-0.7,Semi-critical,73.56,True,d1
+684,Mancherial,Telangana,fine,True,,Normal,11,IMD,,-0.24,2.0,provisional,67.0,1.57,Safe,37.83,False,none
+513,Medak,Telangana,fine,True,,Normal,-9,IMD,,0.29,2.0,provisional,33.0,-0.17,Safe,65.68,False,none
+700,Medchal Malkajgiri,Telangana,double_drought,True,,Deficient,-41,IMD,"deviation,spi",-1.23,2.0,provisional,0.0,-2.3,Semi-critical,71.26,True,none
+720,Mulugu,Telangana,fine,True,,Normal,1,IMD,,-0.66,2.0,provisional,50.0,-0.02,Safe,28.82,False,d0
+694,Nagarkurnool,Telangana,buffered,True,,Deficient,-27,IMD,deviation,-0.9,3.0,provisional,33.0,-1.52,Safe,38.11,False,d1
+514,Nalgonda,Telangana,double_drought,False,,Deficient,-56,IMD,"deviation,spi",-1.28,2.0,short,0.0,-0.64,Safe,49.62,True,d1
+721,Narayanpet,Telangana,buffered,True,,Normal,-14,IMD,spi,-1.2,3.0,provisional,33.0,-0.61,Safe,41.5,False,d3
+680,Nirmal,Telangana,double_drought,True,,Deficient,-51,IMD,"deviation,spi,dry_spell",-1.19,5.0,provisional,0.0,-1.02,Safe,35.89,False,d1
+516,Nizamabad,Telangana,fine,True,,Normal,-14,IMD,,-0.19,2.0,provisional,44.0,0.07,Safe,51.05,True,d0
+682,Peddapalli,Telangana,fine,True,,Normal,-9,IMD,,-0.05,2.0,provisional,83.0,0.7,Safe,48.79,False,d0
+683,Rajanna Sircilla,Telangana,fine,True,,Normal,4,IMD,,0.21,2.0,provisional,25.0,-0.74,Safe,68.09,False,none
+518,Ranga Reddy,Telangana,buffered,True,,Deficient,-30,IMD,"deviation,spi",-1.28,2.0,provisional,50.0,-0.54,Safe,62.72,True,d1
+691,Sangareddy,Telangana,buffered,False,,Deficient,-34,IMD,deviation,-0.74,2.0,short,65.0,-0.7,Safe,45.63,True,d0
+692,Siddipet,Telangana,fine,True,,Normal,6,IMD,,0.05,2.0,provisional,33.0,-0.88,Safe,67.94,False,none
+696,Suryapet,Telangana,double_drought,True,,Deficient,-22,IMD,"deviation,dry_spell",-0.63,4.0,provisional,0.0,-0.5,Safe,40.99,False,d0
+698,Vikarabad,Telangana,buffered,True,,Deficient,-27,IMD,deviation,-0.72,3.0,provisional,50.0,-1.25,Safe,62.39,False,d1
+693,Wanaparthy,Telangana,buffered,True,,Deficient,-35,IMD,deviation,-0.9,3.0,provisional,33.0,-0.9,Safe,43.64,False,d1
+522,Warangal,Telangana,double_drought,True,,Deficient,-38,IMD,deviation,-0.89,2.0,provisional,0.0,-1.91,Safe,56.3,False,d1
+697,Yadadri Bhuvanagiri,Telangana,double_drought,False,,Deficient,-35,IMD,deviation,-0.61,2.0,short,0.0,-0.55,Safe,65.41,True,none
+269,Dhalai,Tripura,,False,gw_insufficient,Normal,-13,IMD,,0.11,1.0,insufficient,,,Safe,8.36,False,none
+654,Gomati,Tripura,,False,gw_insufficient,Deficient,-23,IMD,deviation,-0.84,3.0,insufficient,,,Safe,4.64,False,d1
+652,Khowai,Tripura,fine,True,,Normal,-2,IMD,,0.13,3.0,provisional,67.0,-0.15,Safe,7.51,False,none
+270,North Tripura,Tripura,buffered,True,,Deficient,-20,IMD,deviation,0.19,1.0,provisional,67.0,0.33,Safe,12.1,False,none
+653,Sepahijala,Tripura,,False,gw_insufficient,Normal,-18,IMD,,-0.33,2.0,insufficient,,,Safe,9.93,False,d2
+271,South Tripura,Tripura,double_drought,True,,Deficient,-30,IMD,deviation,-0.83,3.0,provisional,0.0,-0.32,Safe,10.01,False,d1
+655,Unakoti,Tripura,,False,gw_insufficient,Normal,-8,IMD,,0.46,0.0,insufficient,,,Safe,9.9,False,none
+272,West Tripura,Tripura,fine,True,,Normal,5,IMD,,0.07,3.0,provisional,100.0,2.01,Safe,21.39,False,d0
+118,Agra,Uttar Pradesh,fine,True,,Normal,-1,IMD,,0.67,1.0,provisional,100.0,1.01,Over-exploited,108.45,False,none
+119,Aligarh,Uttar Pradesh,buffered,True,,Deficient,-43,IMD,deviation,0.35,2.0,provisional,50.0,-1.01,Semi-critical,78.31,True,none
+121,Ambedkar Nagar,Uttar Pradesh,hidden_drought,True,,Normal,0,IMD,,-0.46,2.0,provisional,0.0,-0.99,Safe,62.25,False,none
+640,Amethi,Uttar Pradesh,,False,gw_insufficient,Deficient,-36,IMD,deviation,-0.91,3.0,insufficient,,,Safe,63.71,False,d0
+154,Amroha,Uttar Pradesh,fine,True,,Normal,1,IMD,,0.76,2.0,provisional,100.0,0.85,Critical,90.59,False,none
+122,Auraiya,Uttar Pradesh,,False,gw_insufficient,Excess,25,IMD,,0.54,2.0,insufficient,,,Safe,63.46,False,none
+140,Ayodhya,Uttar Pradesh,,False,gw_insufficient,Normal,-6,IMD,,-0.53,2.0,insufficient,,,Safe,61.99,False,none
+123,Azamgarh,Uttar Pradesh,fine,True,,Normal,-15,IMD,,-0.56,2.0,provisional,50.0,-0.05,Safe,59.62,False,d0
+124,Baghpat,Uttar Pradesh,fine,True,,Normal,1,IMD,,0.66,1.0,provisional,50.0,0.13,Critical,96.54,False,none
+125,Bahraich,Uttar Pradesh,fine,True,,Excess,36,IMD,,0.41,2.0,provisional,58.0,0.38,Safe,59.24,False,none
+126,Ballia,Uttar Pradesh,,False,gw_insufficient,Normal,-12,IMD,spi,-1.09,3.0,insufficient,,,Safe,62.74,False,none
+127,Balrampur,Uttar Pradesh,hidden_drought,True,,Normal,-10,gridded,,-0.23,2.0,provisional,0.0,-0.31,Safe,54.73,False,none
+128,Banda,Uttar Pradesh,fine,True,,Large Excess,77,IMD,,2.36,2.0,provisional,67.0,-0.34,Semi-critical,70.82,False,none
+129,Barabanki,Uttar Pradesh,hidden_drought,True,,Normal,14,IMD,,0.1,2.0,provisional,0.0,-0.4,Safe,62.1,False,none
+130,Bareilly,Uttar Pradesh,,False,gw_insufficient,Excess,26,IMD,,0.47,2.0,insufficient,,,Semi-critical,71.73,True,none
+131,Basti,Uttar Pradesh,,False,gw_insufficient,Normal,-5,IMD,,-0.79,2.0,insufficient,,,Safe,61.18,False,d0
+179,Bhadohi,Uttar Pradesh,,False,gw_insufficient,Large Deficient,-61,IMD,deviation,0.04,2.0,insufficient,,,Semi-critical,73.96,False,d1
+132,Bijnor,Uttar Pradesh,fine,True,,Excess,45,IMD,,0.85,2.0,provisional,100.0,-0.05,Safe,69.79,False,none
+133,Budaun,Uttar Pradesh,fine,True,,Normal,16,IMD,,0.72,2.0,provisional,75.0,0.01,Semi-critical,82.69,True,none
+134,Bulandshahr,Uttar Pradesh,fine,True,,Normal,-5,IMD,,1.01,2.0,provisional,50.0,-0.06,Critical,91.04,False,none
+135,Chandauli,Uttar Pradesh,fine,True,,Normal,-19,IMD,,-0.95,2.0,provisional,25.0,-2.8,Safe,59.9,False,none
+136,Chitrakoot,Uttar Pradesh,,False,gw_insufficient,Large Excess,76,IMD,,0.69,2.0,insufficient,,,Semi-critical,81.58,True,none
+137,Deoria,Uttar Pradesh,,False,gw_insufficient,Large Deficient,-67,IMD,"deviation,spi,dry_spell",-1.38,5.0,insufficient,,,Safe,62.98,False,none
+138,Etah,Uttar Pradesh,,False,gw_insufficient,Large Excess,61,IMD,,0.94,2.0,insufficient,,,Semi-critical,72.25,False,none
+139,Etawah,Uttar Pradesh,,False,gw_insufficient,Excess,32,IMD,,0.9,1.0,insufficient,,,Safe,57.82,False,none
+141,Farrukhabad,Uttar Pradesh,,False,gw_insufficient,Normal,8,IMD,,0.37,2.0,insufficient,,,Semi-critical,75.09,True,none
+142,Fatehpur,Uttar Pradesh,buffered,True,,Normal,9,IMD,dry_spell,-0.24,4.0,provisional,58.0,-0.19,Safe,69.93,False,none
+143,Firozabad,Uttar Pradesh,,False,gw_insufficient,Excess,34,IMD,,0.42,1.0,insufficient,,,Critical,95.49,False,none
+144,Gautam Buddha Nagar,Uttar Pradesh,fine,True,,Large Excess,104,IMD,,-0.17,3.0,provisional,33.0,-0.77,Over-exploited,106.31,False,d0
+145,Ghaziabad,Uttar Pradesh,buffered,True,,Large Deficient,-60,IMD,deviation,-0.35,2.0,provisional,100.0,0.2,Over-exploited,127.6,False,none
+146,Ghazipur,Uttar Pradesh,buffered,True,,Normal,-15,IMD,dry_spell,0.06,4.0,provisional,50.0,0.23,Safe,56.06,False,none
+147,Gonda,Uttar Pradesh,,False,gw_insufficient,Normal,3,IMD,,-0.13,2.0,insufficient,,,Safe,55.43,False,none
+148,Gorakhpur,Uttar Pradesh,buffered,True,,Deficient,-20,IMD,"deviation,dry_spell",-0.98,5.0,provisional,50.0,0.08,Safe,62.95,False,d1
+149,Hamirpur,Uttar Pradesh,,False,gw_insufficient,Large Excess,83,gridded,,2.19,1.0,insufficient,,,Safe,65.3,False,none
+661,Hapur,Uttar Pradesh,buffered,True,,Deficient,-47,IMD,deviation,-0.69,2.0,provisional,67.0,0.3,Critical,96.07,False,none
+150,Hardoi,Uttar Pradesh,,False,gw_insufficient,Normal,10,IMD,,0.93,2.0,insufficient,,,Safe,62.07,False,none
+163,Hathras,Uttar Pradesh,fine,True,,Normal,-13,IMD,,0.76,2.0,provisional,100.0,0.06,Critical,91.29,False,none
+151,Jalaun,Uttar Pradesh,,False,gw_insufficient,Excess,32,IMD,,0.9,2.0,insufficient,,,Safe,55.11,False,none
+152,Jaunpur,Uttar Pradesh,buffered,True,,Deficient,-56,IMD,"deviation,spi",-1.33,3.0,provisional,50.0,0.05,Safe,69.03,False,d0
+153,Jhansi,Uttar Pradesh,,False,gw_insufficient,Normal,-16,IMD,,0.75,2.0,insufficient,,,Safe,66.59,False,none
+155,Kannauj,Uttar Pradesh,,False,gw_insufficient,Large Excess,64,IMD,,1.44,2.0,insufficient,,,Semi-critical,78.53,True,none
+156,Kanpur Dehat,Uttar Pradesh,,False,gw_insufficient,Deficient,-49,IMD,deviation,0.27,2.0,insufficient,,,Semi-critical,71.13,False,none
+157,Kanpur Nagar,Uttar Pradesh,,False,gw_insufficient,Large Excess,77,IMD,,0.99,2.0,insufficient,,,Semi-critical,80.62,True,none
+633,Kasganj,Uttar Pradesh,,False,gw_insufficient,Normal,10,IMD,,0.92,2.0,insufficient,,,Semi-critical,72.37,False,none
+158,Kaushambi,Uttar Pradesh,,False,gw_insufficient,Deficient,-33,IMD,deviation,0.58,2.0,insufficient,,,Semi-critical,81.96,True,none
+159,Kheri,Uttar Pradesh,,False,gw_insufficient,Excess,34,IMD,,0.58,1.0,insufficient,,,Safe,61.14,False,none
+160,Kushi Nagar,Uttar Pradesh,,False,gw_insufficient,Deficient,-58,IMD,"deviation,spi",-1.12,3.0,insufficient,,,Safe,52.42,False,none
+161,Lalitpur,Uttar Pradesh,,False,gw_insufficient,Excess,24,IMD,,0.42,2.0,insufficient,,,Semi-critical,80.5,False,none
+162,Lucknow,Uttar Pradesh,hidden_drought,True,,Excess,24,IMD,,0.48,2.0,provisional,0.0,-1.09,Safe,67.3,True,none
+164,Maharajganj,Uttar Pradesh,,False,gw_insufficient,Normal,-4,IMD,,-0.49,2.0,insufficient,,,Safe,64.59,False,none
+165,Mahoba,Uttar Pradesh,,False,gw_insufficient,Large Excess,87,IMD,,1.95,2.0,insufficient,,,Semi-critical,82.83,True,none
+166,Mainpuri,Uttar Pradesh,,False,gw_insufficient,Deficient,-25,IMD,deviation,0.85,2.0,insufficient,,,Semi-critical,71.61,True,none
+167,Mathura,Uttar Pradesh,,False,gw_insufficient,Deficient,-46,IMD,deviation,-0.82,2.0,insufficient,,,Safe,66.95,True,d1
+168,Mau,Uttar Pradesh,buffered,True,,Deficient,-47,IMD,"deviation,spi",-1.26,3.0,provisional,100.0,2.22,Safe,64.89,False,d1
+169,Meerut,Uttar Pradesh,fine,True,,Large Excess,64,IMD,,1.54,1.0,provisional,83.0,0.61,Semi-critical,80.74,True,none
+170,Mirzapur,Uttar Pradesh,,False,gw_insufficient,Normal,-1,IMD,,0.24,2.0,insufficient,,,Safe,65.11,True,none
+171,Moradabad,Uttar Pradesh,,False,gw_insufficient,Excess,26,IMD,,-0.27,3.0,insufficient,,,Semi-critical,85.41,True,none
+172,Muzaffarnagar,Uttar Pradesh,fine,True,,Excess,57,IMD,,1.92,1.0,provisional,100.0,1.27,Semi-critical,78.38,True,none
+173,Pilibhit,Uttar Pradesh,,False,gw_insufficient,Deficient,-44,IMD,deviation,0.18,2.0,insufficient,,,Safe,63.9,False,none
+174,Pratapgarh,Uttar Pradesh,,False,gw_level_only,Normal,0,gridded,,0.09,3.0,level_only,,-0.24,Semi-critical,76.36,True,none
+120,Prayagraj,Uttar Pradesh,,False,gw_insufficient,Excess,36,IMD,,0.14,2.0,insufficient,,,Semi-critical,74.04,True,none
+175,Rae Bareli,Uttar Pradesh,fine,True,,Normal,-13,IMD,,0.09,2.0,provisional,83.0,0.64,Safe,60.17,False,none
+176,Rampur,Uttar Pradesh,fine,True,,Normal,3,IMD,,0.28,3.0,provisional,100.0,0.48,Safe,69.06,False,none
+177,Saharanpur,Uttar Pradesh,buffered,True,,Deficient,-29,IMD,deviation,-0.18,2.0,provisional,50.0,-0.02,Critical,97.64,False,d1
+659,Sambhal,Uttar Pradesh,fine,True,,Large Excess,97,IMD,,1.42,1.0,provisional,67.0,-0.24,Semi-critical,80.42,False,none
+178,Sant Kabeer Nagar,Uttar Pradesh,,False,gw_insufficient,Deficient,-40,IMD,deviation,-0.42,2.0,insufficient,,,Safe,62.67,False,none
+180,Shahjahanpur,Uttar Pradesh,,False,gw_insufficient,Excess,33,IMD,,1.52,2.0,insufficient,,,Safe,65.03,False,none
+660,Shamli,Uttar Pradesh,buffered,True,,Large Deficient,-68,IMD,deviation,-0.32,3.0,provisional,100.0,0.75,Over-exploited,100.29,False,d1
+181,Shravasti,Uttar Pradesh,fine,True,,Normal,-15,IMD,,-0.46,3.0,provisional,25.0,-0.1,Safe,59.95,False,none
+182,Siddharth Nagar,Uttar Pradesh,buffered,True,,Deficient,-22,IMD,deviation,-0.38,3.0,provisional,50.0,0.08,Safe,61.13,False,none
+183,Sitapur,Uttar Pradesh,,False,gw_insufficient,Normal,-13,IMD,,-0.77,3.0,insufficient,,,Safe,59.22,False,d0
+184,Sonbhadra,Uttar Pradesh,,False,gw_insufficient,Normal,1,IMD,,0.29,2.0,insufficient,,,Safe,49.11,False,none
+185,Sultanpur,Uttar Pradesh,,False,gw_insufficient,Normal,10,IMD,,-0.69,3.0,insufficient,,,Safe,63.43,False,d0
+186,Unnao,Uttar Pradesh,,False,gw_insufficient,Normal,-17,IMD,,0.11,3.0,insufficient,,,Safe,62.3,False,none
+187,Varanasi,Uttar Pradesh,,False,gw_level_only,Excess,21,IMD,,-0.67,2.0,level_only,,,Critical,90.21,False,d0
+45,Almora,Uttarakhand,,False,gw_insufficient,Excess,35,IMD,,0.61,1.0,insufficient,,,,,,none
+46,Bageshwar,Uttarakhand,,False,gw_insufficient,Large Excess,163,IMD,,1.09,1.0,insufficient,,,,,,none
+47,Chamoli,Uttarakhand,,False,gw_insufficient,Large Excess,75,IMD,,2.18,1.0,insufficient,,,,,,none
+48,Champawat,Uttarakhand,,False,gw_insufficient,Normal,-16,IMD,,0.47,1.0,insufficient,,,,,,none
+49,Dehradun,Uttarakhand,,False,gw_insufficient,Normal,-1,IMD,,0.7,0.0,insufficient,,,Safe,44.97,False,none
+50,Haridwar,Uttarakhand,,False,gw_insufficient,Normal,18,IMD,,0.53,2.0,insufficient,,,Safe,65.75,False,d1
+51,Nainital,Uttarakhand,,False,gw_insufficient,Normal,-13,IMD,,0.75,1.0,insufficient,,,Safe,54.57,False,none
+52,Pauri Garhwal,Uttarakhand,,False,gw_insufficient,Deficient,-40,IMD,deviation,-0.49,2.0,insufficient,,,,,,none
+53,Pithoragarh,Uttarakhand,,False,gw_insufficient,Normal,5,IMD,,1.0,1.0,insufficient,,,,,,none
+54,Rudra Prayag,Uttarakhand,,False,gw_insufficient,Normal,-2,IMD,,1.82,1.0,insufficient,,,,,,none
+55,Tehri Garhwal,Uttarakhand,,False,gw_insufficient,Excess,33,IMD,,1.28,2.0,insufficient,,,,,,none
+56,Udam Singh Nagar,Uttarakhand,fine,True,,Normal,15,IMD,,0.77,2.0,provisional,38.0,-0.49,Safe,56.7,False,none
+57,Uttar Kashi,Uttarakhand,,False,gw_insufficient,Normal,-9,IMD,,1.02,0.0,insufficient,,,,,,none
+303,24 Paraganas North,West Bengal,fine,True,,Normal,5,gridded,,0.26,1.0,provisional,46.0,-0.21,Safe,68.34,True,none
+304,24 Paraganas South,West Bengal,fine,True,,Normal,17,gridded,,0.86,1.0,provisional,25.0,-0.62,Saline,-100000.0,False,none
+664,Alipurduar,West Bengal,,False,gw_insufficient,Normal,-14,IMD,,-0.71,2.0,insufficient,,,Safe,11.26,False,d2
+305,Bankura,West Bengal,,False,gw_insufficient,Normal,11,IMD,,0.79,1.0,insufficient,,,Safe,37.15,False,none
+307,Birbhum,West Bengal,fine,True,,Normal,-14,IMD,,-0.85,2.0,provisional,58.0,-0.46,Safe,35.21,False,d1
+308,Coochbehar,West Bengal,,False,gw_insufficient,Normal,-15,IMD,,-0.07,3.0,insufficient,,,Safe,47.11,False,d2
+309,Darjeeling,West Bengal,,False,gw_insufficient,Deficient,-21,IMD,"deviation,spi",-1.29,1.0,insufficient,,,Safe,9.74,False,none
+310,Dinajpur Dakshin,West Bengal,buffered,True,,Deficient,-25,IMD,"deviation,spi",-1.22,3.0,provisional,100.0,1.79,Safe,61.54,False,d0
+311,Dinajpur Uttar,West Bengal,,False,gw_insufficient,Deficient,-33,IMD,"deviation,spi",-1.66,3.0,insufficient,,,Safe,47.52,False,d1
+312,Hooghly,West Bengal,fine,True,,Normal,2,IMD,,0.49,0.0,provisional,67.0,-0.38,Safe,55.23,False,none
+313,Howrah,West Bengal,hidden_drought,True,,Normal,10,IMD,,0.92,0.0,provisional,0.0,-1.64,Safe,24.33,False,none
+314,Jalpaiguri,West Bengal,,False,gw_insufficient,Deficient,-26,IMD,deviation,-0.49,2.0,insufficient,,,Safe,12.82,False,d0
+703,Jhargram,West Bengal,fine,True,,Normal,1,IMD,,1.2,1.0,provisional,100.0,6.65,Safe,25.54,False,none
+702,Kalimpong,West Bengal,,False,gw_insufficient,Normal,-19,IMD,spi,-1.45,3.0,insufficient,,,Safe,3.19,False,d1
+315,Kolkata,West Bengal,,False,gw_insufficient,Excess,28,IMD,,-0.18,1.0,insufficient,,,Saline,-100000.0,False,none
+316,Maldah,West Bengal,buffered,True,,Deficient,-29,IMD,"deviation,spi",-1.15,2.0,provisional,100.0,-0.22,Safe,34.71,False,none
+317,Medinipur East,West Bengal,hidden_drought,True,,Excess,48,IMD,,1.86,0.0,provisional,0.0,0.05,Safe,37.31,False,none
+318,Medinipur West,West Bengal,fine,True,,Excess,40,IMD,,0.99,0.0,provisional,67.0,-0.08,Safe,53.84,False,none
+319,Murshidabad,West Bengal,buffered,True,,Normal,-16,IMD,spi,-1.12,2.0,provisional,33.0,-0.85,Safe,60.25,True,d2
+320,Nadia,West Bengal,buffered,True,,Deficient,-22,IMD,deviation,-0.47,1.0,provisional,67.0,-0.4,Semi-critical,81.39,True,d0
+704,Paschim Bardhaman,West Bengal,,False,gw_level_only,Normal,18,IMD,,-0.13,1.0,level_only,,-2.59,Safe,57.26,False,d0
+306,Purba Bardhaman,West Bengal,fine,True,,Normal,-4,IMD,,-0.84,1.0,provisional,50.0,0.0,Safe,53.95,False,d1
+321,Purulia,West Bengal,fine,True,,Normal,-10,IMD,,0.19,1.0,provisional,50.0,-0.7,Safe,13.81,False,none

@@ -16,3 +16,5 @@ data/reference/*.parquet
 !data/processed/gw_tele_latest.parquet
 !data/processed/idm_weekly.parquet
 data/processed/status_history.csv
+!data/processed/rain_weekly.parquet
+!data/processed/rain_weekly_normal.parquet

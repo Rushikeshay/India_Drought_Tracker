@@ -3,56 +3,60 @@
  "rain": "SW season Jun-Sep, gridded",
  "groundwater": "NOV 2023 cycle",
  "quadrant_counts": {
-  "nan": 568,
-  "fine": 128,
-  "buffered": 40,
-  "hidden_drought": 27,
-  "double_drought": 20
+  "nan": 524,
+  "fine": 117,
+  "buffered": 88,
+  "double_drought": 30,
+  "hidden_drought": 24
  },
  "gw_tier_counts": {
-  "level_only": 310,
+  "level_only": 266,
   "insufficient": 258,
   "full": 175,
+  "provisional": 44,
   "short": 40
  },
- "rain_short_districts": 215,
+ "rain_short_districts": 351,
  "by_state": {
   "Karnataka": {
    "districts": 31,
-   "rain_short": 15,
+   "rain_short": 27,
    "gw_classified": 31,
    "gw_low": 12,
    "quadrants": {
-    "fine": 13,
-    "double_drought": 9,
-    "buffered": 6,
-    "hidden_drought": 3
+    "buffered": 16,
+    "double_drought": 11,
+    "fine": 3,
+    "hidden_drought": 1
    }
   },
   "Maharashtra": {
    "districts": 36,
-   "rain_short": 8,
+   "rain_short": 15,
    "gw_classified": 0,
    "gw_low": 0,
    "quadrants": {}
   },
   "Telangana": {
    "districts": 33,
-   "rain_short": 0,
-   "gw_classified": 3,
-   "gw_low": 2,
+   "rain_short": 12,
+   "gw_classified": 17,
+   "gw_low": 5,
    "quadrants": {
-    "hidden_drought": 2,
-    "fine": 1
+    "buffered": 6,
+    "fine": 6,
+    "hidden_drought": 3,
+    "double_drought": 2
    }
   },
   "Andhra Pradesh": {
    "districts": 26,
-   "rain_short": 6,
-   "gw_classified": 3,
-   "gw_low": 0,
+   "rain_short": 7,
+   "gw_classified": 7,
+   "gw_low": 1,
    "quadrants": {
-    "fine": 2,
+    "fine": 5,
+    "hidden_drought": 1,
     "buffered": 1
    }
   },
@@ -69,49 +73,50 @@
   },
   "Bihar": {
    "districts": 38,
-   "rain_short": 21,
+   "rain_short": 24,
    "gw_classified": 0,
    "gw_low": 0,
    "quadrants": {}
   },
   "Punjab": {
    "districts": 23,
-   "rain_short": 6,
-   "gw_classified": 22,
-   "gw_low": 10,
+   "rain_short": 10,
+   "gw_classified": 23,
+   "gw_low": 11,
    "quadrants": {
-    "fine": 11,
-    "hidden_drought": 6,
-    "double_drought": 4,
-    "buffered": 1
+    "fine": 8,
+    "double_drought": 6,
+    "hidden_drought": 5,
+    "buffered": 4
    }
   },
   "Rajasthan": {
    "districts": 50,
-   "rain_short": 6,
-   "gw_classified": 47,
+   "rain_short": 29,
+   "gw_classified": 49,
    "gw_low": 7,
    "quadrants": {
-    "fine": 34,
-    "hidden_drought": 7,
-    "buffered": 6
+    "buffered": 25,
+    "fine": 17,
+    "hidden_drought": 4,
+    "double_drought": 3
    }
   },
   "Gujarat": {
    "districts": 33,
-   "rain_short": 0,
+   "rain_short": 30,
    "gw_classified": 0,
    "gw_low": 0,
    "quadrants": {}
   },
   "Tamil Nadu": {
    "districts": 38,
-   "rain_short": 11,
-   "gw_classified": 31,
+   "rain_short": 12,
+   "gw_classified": 37,
    "gw_low": 2,
    "quadrants": {
-    "fine": 20,
-    "buffered": 9,
+    "fine": 24,
+    "buffered": 11,
     "hidden_drought": 1,
     "double_drought": 1
    }
@@ -119,16 +124,22 @@
  },
  "hidden_drought": [
   {
+   "district": "Nandyal",
+   "state": "Andhra Pradesh",
+   "rain_dep_pct": -19.0,
+   "gw_percentile": 10.0
+  },
+  {
+   "district": "Rajnandgaon",
+   "state": "Chhattisgarh",
+   "rain_dep_pct": 13.0,
+   "gw_percentile": 4.0
+  },
+  {
    "district": "Faridabad",
    "state": "Haryana",
    "rain_dep_pct": -3.0,
    "gw_percentile": 10.0
-  },
-  {
-   "district": "Kaithal",
-   "state": "Haryana",
-   "rain_dep_pct": 33.0,
-   "gw_percentile": 16.0
   },
   {
    "district": "Kurukshetra",
@@ -143,22 +154,16 @@
    "gw_percentile": 12.0
   },
   {
-   "district": "Kalaburagi",
-   "state": "Karnataka",
-   "rain_dep_pct": 8.0,
-   "gw_percentile": 20.0
-  },
-  {
    "district": "Mandya",
    "state": "Karnataka",
    "rain_dep_pct": 15.0,
    "gw_percentile": 19.0
   },
   {
-   "district": "Uttara Kannada",
-   "state": "Karnataka",
-   "rain_dep_pct": -18.0,
-   "gw_percentile": 5.0
+   "district": "Rajgarh",
+   "state": "Madhya Pradesh",
+   "rain_dep_pct": -17.0,
+   "gw_percentile": 17.0
   },
   {
    "district": "Dhenkanal",
@@ -189,12 +194,6 @@
    "state": "Punjab",
    "rain_dep_pct": 8.0,
    "gw_percentile": 0.0
-  },
-  {
-   "district": "Faridkot",
-   "state": "Punjab",
-   "rain_dep_pct": 4.0,
-   "gw_percentile": 9.0
   },
   {
    "district": "Jalandhar",
@@ -233,18 +232,6 @@
    "gw_percentile": 0.0
   },
   {
-   "district": "Hanumangarh",
-   "state": "Rajasthan",
-   "rain_dep_pct": -17.0,
-   "gw_percentile": 3.0
-  },
-  {
-   "district": "Jhunjhunu",
-   "state": "Rajasthan",
-   "rain_dep_pct": 17.0,
-   "gw_percentile": 0.0
-  },
-  {
    "district": "Khairthal-Tijara",
    "state": "Rajasthan",
    "rain_dep_pct": -8.0,
@@ -257,22 +244,22 @@
    "gw_percentile": 0.0
   },
   {
-   "district": "Sikar",
-   "state": "Rajasthan",
-   "rain_dep_pct": 19.0,
-   "gw_percentile": 0.0
-  },
-  {
    "district": "Cuddalore",
    "state": "Tamil Nadu",
    "rain_dep_pct": 5.0,
    "gw_percentile": 18.0
   },
   {
-   "district": "Nalgonda",
+   "district": "Jangoan",
    "state": "Telangana",
-   "rain_dep_pct": -17.0,
-   "gw_percentile": 20.0
+   "rain_dep_pct": 49.0,
+   "gw_percentile": 18.0
+  },
+  {
+   "district": "Jogulamba Gadwal",
+   "state": "Telangana",
+   "rain_dep_pct": -11.0,
+   "gw_percentile": 0.0
   },
   {
    "district": "Yadadri Bhuvanagiri",

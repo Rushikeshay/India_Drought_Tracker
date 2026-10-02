@@ -226,10 +226,31 @@ def idm_checks() -> list[dict]:
 
 def classify_checks() -> list[dict]:
     st = json.loads((WEB / "status.json").read_text())["districts"][str(SIKAR)]
-    rain_short = st["rain"]["category"] in ("Deficient", "Large Deficient", "No Rain")
+    r = st["rain"]
+    rain_short = (r["category"] in ("Deficient", "Large Deficient", "No Rain")
+                  or (r["spi_season"] is not None and r["spi_season"] <= -1.0)
+                  or (r["dry_spell_weeks"] is not None and r["dry_spell_weeks"] >= 4))
     gw_low = st["gw"]["percentile"] <= 20
     q = {(False, False): "fine", (False, True): "hidden_drought", (True, False): "buffered", (True, True): "double_drought"}[(rain_short, gw_low)]
-    out = [_check("classify", f"rain {st['rain']['category']} + GW pct {st['gw']['percentile']} -> quadrant", q, st["quadrant"])]
+    out = [_check("classify", f"rain {r['category']}, SPI {r['spi_season']}, dry spell {r['dry_spell_weeks']} wk + GW pct {st['gw']['percentile']} -> quadrant",
+                  q, st["quadrant"])]
+    # dry spell recomputed from raw weekly sums of the daily series
+    daily = pd.read_parquet(PROC / "rain_current_daily.parquet")
+    daily["date"] = pd.to_datetime(daily.date)
+    d = daily[(daily.dist_lgd == SIKAR) & daily.date.between("2026-06-01", "2026-09-30")].set_index("date").mm
+    wn = pd.read_parquet(PROC / "rain_weekly_normal.parquet")
+    wn = wn[wn.dist_lgd == SIKAR].set_index("week").mm
+    run = best = 0
+    weeks = [k for k in range(1, 53) if pd.Timestamp(2026, 1, 1) + pd.Timedelta(days=7 * (k - 1)) >= pd.Timestamp("2026-06-01")
+             and pd.Timestamp(2026, 1, 1) + pd.Timedelta(days=7 * k - 1) <= pd.Timestamp("2026-09-30")]
+    mean_n = wn.loc[weeks].mean()
+    for k in weeks:
+        ws = pd.Timestamp(2026, 1, 1) + pd.Timedelta(days=7 * (k - 1))
+        a = d.loc[ws:ws + pd.Timedelta(days=6)].sum()
+        dry = wn[k] >= 0.5 * mean_n and a < 0.5 * wn[k]
+        run = run + 1 if dry else 0
+        best = max(best, run)
+    out.append(_check("rain", "dry spell (longest run of weeks < 50% of normal), Sikar SW 2026", best, r["dry_spell_weeks"]))
     h = pd.read_csv(PROC / "status_history.csv", low_memory=False)
     h = h[(h.dist_lgd == SIKAR) & (h.snapshot == "2026-08-31")].iloc[0]
     gj = json.loads((WEB / "groundwater.json").read_text())

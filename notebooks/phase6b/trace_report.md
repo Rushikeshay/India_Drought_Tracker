@@ -24,6 +24,7 @@ Generated 2026-10-01. Districts: Sikar (114), Beed (470).
 | stress | number of units | 9 | 9 | ✅ |
 | idm | raw CDI 2026-09-30 -> Sikar area-weighted mean | -0.09 | -0.09 | ✅ |
 | idm | share of Sikar area at D1 or worse (%) | 0.0 | 0.0 | ✅ |
-| classify | rain Normal + GW pct 10 -> quadrant | hidden_drought | hidden_drought | ✅ |
+| classify | rain Normal, SPI -0.19, dry spell 3 wk + GW pct 10 -> quadrant | hidden_drought | hidden_drought | ✅ |
+| rain | dry spell (longest run of weeks < 50% of normal), Sikar SW 2026 | 3 | 3 | ✅ |
 | history | 2026-08-31 snapshot GW percentile = current Aug 2026 | 10 | 10 | ✅ |
 | history | 2026-08-31 snapshot rain departure (Jun-Aug, gridded) | -15 | -15.0 | ✅ |

@@ -61,7 +61,9 @@ PAIR_MAX_DIFF_M = 1.5
 CYCLE_END = {"JAN": (1, 31), "PRE": (5, 31), "AUG": (8, 31), "NOV": (11, 30)}
 CYCLES = ["JAN", "PRE", "AUG", "NOV"]
 LIVE_DAYS = 60
-TIERS = [("full", 5, 10), ("short", 3, 5)]  # (name, min wells, min same-cycle history years)
+TIERS = [("full", 5, 10), ("short", 3, 5), ("provisional", 1, 2)]  # (name, min wells, min same-cycle history years)
+# provisional: owner's decision 2026-10-01. Short records (2-4 years, mostly telemetry since 2023);
+# shown with a provisional quadrant, never mixed silently with full/short.
 LOW_PCT = 20
 BASELINE = (2000, 2023)
 WEB = REPO / "web" / "data"
