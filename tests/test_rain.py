@@ -87,5 +87,19 @@ class TestToDistricts(unittest.TestCase):
         self.assertAlmostEqual(to_districts(grid, W)[0, 0], 17.5)
 
 
+
+class TestImdPdfValues(unittest.TestCase):
+    def test_full_row(self):
+        from pipeline.validate.imd_district import _values
+        v = _values("13.8 9.4 47% E 20.1 30.0 -33% D".split())
+        self.assertEqual((v["period_actual_mm"], v["period_normal_mm"], v["period_dep_pct"], v["period_cat"]), (20.1, 30.0, -33.0, "D"))
+
+    def test_no_data_row(self):
+        from pipeline.validate.imd_district import _values
+        v = _values("7.6 ND 7.6 ND".split())
+        self.assertIsNone(v["period_dep_pct"])
+        self.assertEqual((v["period_normal_mm"], v["period_cat"]), (7.6, "ND"))
+
+
 if __name__ == "__main__":
     unittest.main()

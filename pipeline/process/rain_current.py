@@ -164,34 +164,81 @@ def metrics(daily: pd.DataFrame) -> dict:
     last = pd.Timestamp(as_of.year, as_of.month, 1) - pd.Timedelta(days=1)
     spi3, spi6 = spi(monthly, 3, last.year, last.month), spi(monthly, 6, last.year, last.month)
 
+    official = load_official()
     out = {}
-    for code in act.columns:
+    for code in master.dist_lgd:
         is_ne = code in ne
         season, start, end = season_window(as_of, is_ne)
-        if pd.Timestamp(start).year == as_of.year:
-            a = act.loc[pd.Timestamp(start):pd.Timestamp(end), code].sum(min_count=1)
-        else:  # previous year's season comes from the history file
-            h = hist[(hist.dist_lgd == code) & (hist.year == start.year) & hist.month.between(start.month, end.month)]
-            a = h.mm.sum(min_count=1)
-        nrm = normal_sum(normals[normals.dist_lgd == code], start, end).get(code, np.nan)
-        dep = (a - nrm) / nrm * 100 if nrm and not np.isnan(nrm) and nrm > 0 else np.nan
+        g = {"actual_mm": None, "normal_mm": None, "departure_pct": None, "category": None}
+        if code in act.columns:
+            if pd.Timestamp(start).year == as_of.year:
+                a_ = act.loc[pd.Timestamp(start):pd.Timestamp(end), code].sum(min_count=1)
+            else:  # previous year's season comes from the history file
+                h = hist[(hist.dist_lgd == code) & (hist.year == start.year) & hist.month.between(start.month, end.month)]
+                a_ = h.mm.sum(min_count=1)
+            nrm = normal_sum(normals[normals.dist_lgd == code], start, end).get(code, np.nan)
+            dep = (a_ - nrm) / nrm * 100 if nrm and not np.isnan(nrm) and nrm > 0 else np.nan
+            g = {"actual_mm": _r(a_, 1), "normal_mm": _r(nrm, 1), "departure_pct": _r(dep, 0), "category": category(dep)}
+        imd_row = official.get((season, str(start), str(end) if end < as_of else None), {}).get(code)
+        if imd_row is not None and imd_row.get("departure_pct") is not None:
+            head, src = imd_row, "IMD"
+        elif g["departure_pct"] is not None:
+            head, src = g, "gridded"
+        else:
+            head, src = {"actual_mm": None, "normal_mm": None, "departure_pct": None, "category": None}, None
         out[int(code)] = {
             "season": season, "start": str(start), "end": str(end),
-            "actual_mm": None if np.isnan(a) else round(float(a), 1),
-            "normal_mm": None if np.isnan(nrm) else round(float(nrm), 1),
-            "departure_pct": None if np.isnan(dep) else round(float(dep)),
-            "category": category(dep),
+            "season_days": (end - start).days + 1,
+            "source": src, **{k: head.get(k) for k in ("actual_mm", "normal_mm", "departure_pct", "category")},
+            "gridded": g,
             "spi3": None if code not in spi3 else round(spi3[code], 2),
             "spi6": None if code not in spi6 else round(spi6[code], 2),
         }
-    no_cov = set(master.dist_lgd) - set(out)
+    no_cov = [c for c, d in out.items() if d["source"] is None]
+    srcs = pd.Series([d["source"] for d in out.values()]).value_counts(dropna=False).to_dict()
     return {
         "as_of": str(as_of), "spi_month": f"{last.year}-{last.month:02d}",
         "normal_period": f"{NORMAL_PERIOD[0]}-{NORMAL_PERIOD[1]}",
-        "source": "IMD 0.25 deg gridded rainfall (real-time for the current year); district = area-weighted mean",
-        "no_coverage": sorted(int(c) for c in no_cov),
+        "source": "Headline: IMD official district figures (mausam.imd.gov.in), else IMD 0.25 deg gridded "
+                  "rainfall averaged over the district ('gridded'). SPI from gridded data.",
+        "headline_sources": {str(k): v for k, v in srcs.items()},
+        "no_coverage": sorted(no_cov),
         "districts": out,
     }
+
+
+def _r(x, nd):
+    return None if x is None or (isinstance(x, float) and np.isnan(x)) else round(float(x), nd) if nd else int(round(float(x)))
+
+
+def load_official() -> dict:
+    """{(season, start, end-or-None-if-running): {dist_lgd: {...}}} from rain_official.py outputs."""
+    d = PROC / "imd_official"
+    out = {}
+
+    def rows(df):
+        r = {}
+        for x in df.itertuples():
+            dep = getattr(x, "period_dep_pct", None)
+            if dep is None or pd.isna(dep):
+                continue
+            r[int(x.dist_lgd)] = {"actual_mm": _r(getattr(x, "period_actual_mm", None), 1),
+                                 "normal_mm": _r(getattr(x, "period_normal_mm", None), 1),
+                                 "departure_pct": int(round(dep)), "category": x.category}
+        return r
+
+    for p in d.glob("season_*_*.csv"):
+        df = pd.read_csv(p)
+        y, s = p.stem.split("_")[1:]
+        start = df.period_start.iloc[0]
+        out[(s, start, df.period_end.iloc[0])] = rows(df)
+    if (d / "latest.csv").exists():
+        df = pd.read_csv(d / "latest.csv")
+        st = date.fromisoformat(df.period_start.iloc[0])
+        s = {(6, 1): "SW", (10, 1): "NE"}.get((st.month, st.day))
+        if s:
+            out[(s, str(st), None)] = rows(df)
+    return out
 
 
 def main(argv=None) -> int:
@@ -207,7 +254,7 @@ def main(argv=None) -> int:
     WEB.mkdir(parents=True, exist_ok=True)
     (WEB / "rain.json").write_text(json.dumps(m, separators=(",", ":")))
     cats = pd.Series([d["category"] for d in m["districts"].values()]).value_counts()
-    log.info("as of %s: %s", m["as_of"], cats.to_dict())
+    log.info("as of %s: %s; headline sources %s", m["as_of"], cats.to_dict(), m["headline_sources"])
     return 0
 
 
