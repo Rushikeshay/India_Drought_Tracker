@@ -85,7 +85,8 @@ Secondary marks: GW confidence tier, IN-GRES category and worst block, IDM droug
 | 3 | Groundwater pipeline (NWDP) | ✅ **Done 2026-10-01** (awaiting review). See §10 for results | History + telemetry merged; signs, envelope, pairing, tiers; sane for Punjab, Marathwada, Delhi |
 | 4 | Stress layer (IN-GRES) | ✅ **Done 2026-10-01** (awaiting review). See §10 | 2025-26 edition joined incl. worst block; unmatched listed |
 | 5 | IDM drought layer | ✅ **Done 2026-10-01** (awaiting review): 775 districts weekly since 2021-07-14 | Weekly CDI grids → district stats with our own boundaries (back to Jul 2021); crosswalk of IDM names → LGD |
-| 6 | Classification + validation | ⏭ **Next** | Both tiers; unit tests; back-test 2023 vs known droughts |
+| 6 | Classification + validation | ✅ **Done 2026-10-01** (awaiting review). See §10 | Both tiers; unit tests; back-test 2023 vs known droughts |
+| 6b | **Whiteboard: end-to-end data chain review** | ⏭ **Next** (agreed 2026-10-01): source → fetch → transform → output for every layer, with a worked district example, before building the site |
 | 7 | Front end v1 | — | Map, district panel, hidden-drought table, methods page; phone + laptop |
 | 8 | Automation | — | `refresh.yml` daily on Actions, unattended for 2 weeks |
 | 9 | Outlook | — | Scenario engine + ENSO/NMME; back-test |
@@ -96,6 +97,16 @@ Secondary marks: GW confidence tier, IN-GRES category and worst block, IDM droug
 `pipeline/` (sources → process → outlook → `run.py`) → `web/data/*.json` (committed) → GitHub Pages (plain HTML/JS + D3, no build). Raw downloads go in `data/raw/` (gitignored). Python 3.11 in `.venv` via uv; dependencies are in `requirements.txt` only (pandas, geopandas, xarray, imdlib, duckdb, requests). Ask before adding any others. `pyarrow` approved 2026-10-01 (parquet). Tests use stdlib `unittest`: `.venv/bin/python -m unittest discover -s tests -t .`
 
 ## 10. Open items
+
+**Phase 6 results (2026-10-01):**
+- **Current (rain = SW 2026 / NE season, GW = Aug 2026):** only **16 districts** get a quadrant: fine 6, buffered 4, hidden drought 3 (Bikaner, Jhunjhunu, Sikar: normal rain, GW at record lows, all Over-exploited), double drought 3 (Sirohi, Nalgonda, Yadadri Bhuvanagiri). Not classified: GW level-only 349, GW insufficient 319, NE season < 15 days 99.
+- **Back-test 2023 (gridded rain Jun–Sep, GW Nov 2023 manual network):** 215 districts classified (fine 128, buffered 40, hidden 27, double 20). Jharkhand 19/24 rain-short, matching its 2023 drought. Hidden drought in Punjab (6) and Rajasthan (7). **Karnataka: only 15/31 districts rain-short, though 223 taluks were declared.** Seasonal departure misses dry-spell droughts like August 2023. Maharashtra, Gujarat and Bihar lack Nov 2023 manual readings on NWDP.
+- Groundwater QA: 242 live wells changed > 10 m vs last year (both directions, spread across states). **Flagged, not excluded**; district values use medians.
+
+**Questions for the whiteboard review (6b):**
+1. Current-tier coverage (16 districts): accept, add a provisional GW signal for level-only districts (e.g. fell vs last year / vs decadal mean), or revisit Oracle/WRIS?
+2. Rain axis: add a dry-spell / SPI-3 criterion so droughts like Karnataka 2023 aren't missed?
+3. Large-jump wells: keep flagging, or exclude?
 
 **Phase 4 results (2026-10-01):** IN-GRES 2025-26, figures used as published. 719 districts assessed, 64 not in IN-GRES (carved-out districts still inside their parent, Uttarakhand hills). District categories: Safe 519, Semi-critical 67, Critical 22, Over-exploited 91, Hilly 10, Saline 3; 7 Himachal districts assessed by valley only (no district category). 7,000+ blocks/units fetched. **Hidden stress** (district not Critical/OE but ≥ 1 block is) in **105 districts**, e.g. Pune Safe 63.7% with Shirur Critical 95.7%. Extremes: Sangrur 309%, Jaisalmer 297%, Kolar 186%. Unmatched: 3 Delhi IN-GRES units (Central North, Old Delhi, Outer North) with no LGD equivalent.
 
