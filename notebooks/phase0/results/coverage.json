@@ -1,0 +1,67 @@
+{
+  "denominator_districts": 785,
+  "as_of": "2026-10-01",
+  "rain": {
+    "districts_with_>=1_grid_centre": 752,
+    "districts_with_0_grid_centres_(use_area_weighting)": 33,
+    "note": "IMD 1901-present and real-time cover all of India; small districts need area-weighted overlay"
+  },
+  "wells": {
+    "manual": 34613,
+    "telemetry": 5753,
+    "manual_outside_polygons": 41,
+    "telemetry_outside_polygons": 7
+  },
+  "gw_2000_2023": {
+    ">=1 well with any reading": {
+      "districts": 711,
+      "pct": 90.6
+    },
+    ">=3 wells with >=5 post-monsoon years": {
+      "districts": 663,
+      "pct": 84.5
+    },
+    ">=5 wells with >=10 post-monsoon years (plan rule)": {
+      "districts": 609,
+      "pct": 77.6
+    },
+    ">=5 wells with >=10 pre-monsoon years": {
+      "districts": 587,
+      "pct": 74.8
+    }
+  },
+  "gw_2024_now": {
+    ">=1 well with a 2024+ reading (manual or telemetry)": {
+      "districts": 593,
+      "pct": 75.5
+    },
+    ">=1 live telemetry well (last 60 days)": {
+      "districts": 446,
+      "pct": 56.8
+    },
+    ">=3 live wells": {
+      "districts": 311,
+      "pct": 39.6
+    },
+    ">=3 live wells with >=5 post-monsoon years (telemetry + co-located manual, upper bound)": {
+      "districts": 180,
+      "pct": 22.9
+    },
+    ">=3 live wells with >=5 post-monsoon years (telemetry only)": {
+      "districts": 16,
+      "pct": 2.0
+    },
+    ">=5 live wells with >=10 post-monsoon years (plan rule, upper bound)": {
+      "districts": 72,
+      "pct": 9.2
+    }
+  },
+  "telemetry_first_year_counts": {
+    "2021": 527,
+    "2022": 354,
+    "2023": 3802,
+    "2024": 925,
+    "2025": 143,
+    "2026": 2
+  }
+}
