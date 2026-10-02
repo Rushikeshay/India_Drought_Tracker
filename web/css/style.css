@@ -151,6 +151,17 @@ table.data th { position: sticky; top: 0; background: var(--surface); cursor: po
 table.data td.num { text-align: right; font-variant-numeric: tabular-nums; }
 table.data tr:hover td { background: var(--page); }
 
+.layer-notice {
+  position: absolute; top: 12px; left: 50%; transform: translateX(-50%); max-width: 80%;
+  background: var(--surface); border: 1px solid var(--ring); border-radius: 8px; padding: 8px 12px;
+  font-size: 13px; color: var(--ink); box-shadow: 0 4px 14px rgba(0,0,0,0.10); text-align: center;
+}
+.col-help { flex-basis: 100%; font-size: 13px; color: var(--ink-2); }
+.col-help summary { cursor: pointer; color: var(--accent); }
+.col-help dl { display: grid; grid-template-columns: max-content 1fr; gap: 4px 14px; margin: 8px 0 0; }
+.col-help dt { font-weight: 600; color: var(--ink); }
+.col-help dd { margin: 0; }
+@media (max-width: 900px) { .col-help dl { grid-template-columns: 1fr; } }
 .site-foot { padding: 14px 16px 28px; font-size: 12px; color: var(--muted); border-top: 1px solid var(--ring); }
 
 /* methods page */

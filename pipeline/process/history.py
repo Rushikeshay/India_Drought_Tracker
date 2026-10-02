@@ -32,6 +32,7 @@ import pandas as pd
 from pipeline.process import groundwater as gw
 from pipeline.process import rain_indicators as ri
 from pipeline.process.classify import gw_low, quadrant, rain_short
+from pipeline.process.stress_history import edition_for
 from pipeline.process.rain_current import category, ne_districts, normal_sum, season_window
 
 REPO = Path(__file__).resolve().parents[2]
@@ -86,6 +87,7 @@ def build(start: int, today: pd.Timestamp) -> pd.DataFrame:
     weekly = pd.read_parquet(PROC / "rain_weekly.parquet")
     wnormal = pd.read_parquet(PROC / "rain_weekly_normal.parquet")
     official = official_windows()
+    eds = pd.read_csv(PROC / "ingres_editions.csv").set_index(["edition", "dist_lgd"])
     c, units = gw.series()
     idm = pd.read_parquet(PROC / "idm_weekly.parquet")
     idm["cls"] = pd.cut(idm.cdi_mean, [-np.inf, -2.0, -1.6, -1.3, -0.8, -0.5, np.inf],
@@ -95,6 +97,7 @@ def build(start: int, today: pd.Timestamp) -> pd.DataFrame:
     rows = []
     for snap, year, cyc in snapshot_dates(start, today):
         g = gw.district_status(c, units, master, year, cyc, live=None)
+        ed = edition_for(snap.year, snap.month)
         wk = idm[idm.week <= pd.Timestamp(snap)]
         idm_cls = wk[wk.week == wk.week.max()].set_index("dist_lgd").cls if len(wk) and wk.week.max() >= pd.Timestamp(snap) - pd.Timedelta(days=7) else pd.Series(dtype=object)
         # rain: one window for non-NE and one for NE districts
@@ -130,7 +133,10 @@ def build(start: int, today: pd.Timestamp) -> pd.DataFrame:
                          "rain_short_reasons": ",".join(why),
                          "gw_tier": g[code]["tier"], "gw_percentile": g[code].get("percentile"),
                          "gw_median_depth_m": g[code].get("median_depth_m"),
-                         "idm_class": idm_cls.get(code) if code in idm_cls.index else None})
+                         "idm_class": idm_cls.get(code) if code in idm_cls.index else None,
+                         "stress_edition": ed,
+                         "stress_category": eds.category.get((ed, code)) if ed else None,
+                         "stress_stage_pct": eds.stage_pct.get((ed, code)) if ed else None})
         log.info("%s: %s", snap, pd.Series([r["quadrant"] for r in rows[-len(master):]]).value_counts().to_dict())
     return pd.DataFrame(rows)
 
@@ -146,7 +152,8 @@ def main(argv=None) -> int:
 
     snaps = sorted(df.snapshot.astype(str).unique())
     fields = ["quadrant", "rain_category", "rain_dep_pct", "rain_source", "rain_short_reasons",
-              "rain_dry_spell_weeks", "rain_spi_season", "gw_tier", "gw_percentile", "idm_class"]
+              "rain_dry_spell_weeks", "rain_spi_season", "gw_tier", "gw_percentile", "idm_class",
+              "stress_edition", "stress_category", "stress_stage_pct"]
 
     def row(r):
         return [(QCODE.get(r["quadrant"]) if pd.notna(r["quadrant"]) else None) if f == "quadrant"

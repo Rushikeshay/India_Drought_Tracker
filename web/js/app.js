@@ -32,7 +32,7 @@ const fmt = (x, d = 0) => (x === null || x === undefined || Number.isNaN(x) ? "�
 const signed = (x, d = 0) => (x === null || x === undefined ? "–" : (x > 0 ? "+" : "") + Number(x).toFixed(d));
 const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 async function json(path) {
-  const r = await fetch(path);
+  const r = await fetch(path, { cache: "no-cache" });
   if (!r.ok) throw new Error(`${path}: ${r.status}`);
   return r.json();
 }
@@ -55,7 +55,7 @@ function record(lgd) {
     if (!r) return null;
     return {
       quadrant: r.quadrant, provisional: r.provisional, why: r.why_none,
-      rain: r.rain, gw: r.gw, stress: r.stress, idm: r.idm,
+      rain: r.rain, gw: r.gw, stress: { ...r.stress, edition: "2025-2026" }, idm: r.idm,
     };
   }
   const s = cache.snaps[st.snapshot];
@@ -73,10 +73,31 @@ function record(lgd) {
       dry_spell_weeks: f.rain_dry_spell_weeks, spi_season: f.rain_spi_season,
     },
     gw: { tier: f.gw_tier, percentile: f.gw_percentile },
-    stress: now.stress || {},
+    stress: f.stress_edition
+      ? { category: f.stress_category, stage_pct: f.stress_stage_pct, edition: f.stress_edition,
+          status: f.stress_category || f.stress_stage_pct !== null ? "assessed" : "not_in_ingres" }
+      : { status: "no_edition" },
     idm: { class_of_mean: f.idm_class },
   };
 }
+
+// ---------------- why no data (short, per layer) ----------------
+function noDataReason(r) {
+  if (!r) return t("why_no_rain_data");
+  switch (st.layer) {
+    case "quadrant": return r.why ? t("why_" + r.why) : "";
+    case "rain": return t("why_no_rain_data");
+    case "gw": return r.gw?.tier === "level_only" ? t("why_gw_level_only") : t("why_gw_insufficient");
+    case "stress":
+      if (r.stress?.status === "no_edition") return t("stress_unavailable");
+      return t("stress_not_in");
+    case "idm":
+      if (st.snapshot !== "now" && st.snapshot < "2021-07-14") return t("idm_unavailable");
+      return t("why_idm_none");
+  }
+  return "";
+}
+function layerHasData(lgd) { return fillFor(lgd) !== "url(#nodata)"; }
 
 // ---------------- colour per layer ----------------
 function fillFor(lgd) {
@@ -128,11 +149,23 @@ function drawMap() {
   json(DATA + "india_outline.geojson").then((o) => outlinePath.attr("d", path(o)));
   recolor();
 }
+function layerNotice() {
+  let n = $("#layer-notice");
+  if (!n) { n = document.createElement("div"); n.id = "layer-notice"; n.className = "layer-notice"; $("#map-wrap").appendChild(n); }
+  const any = geo.features.some((f) => f.properties.lgd && layerHasData(f.properties.lgd));
+  let msg = "";
+  if (!any) {
+    msg = st.layer === "idm" ? t("idm_unavailable") : st.layer === "stress" ? t("stress_unavailable") : t("layer_empty");
+  }
+  n.textContent = msg;
+  n.hidden = !msg;
+}
 function recolor() {
   paths.style("fill", (f) => (f.properties.lgd ? fillFor(f.properties.lgd) : "url(#nodata)"))
     .style("fill-opacity", (f) => (f.properties.lgd ? opacityFor(f.properties.lgd) : 1))
     .classed("sel", (f) => f.properties.lgd === st.selected);
   drawLegend();
+  layerNotice();
 }
 
 function showTip(ev, f) {
@@ -143,12 +176,13 @@ function showTip(ev, f) {
   const wrap = $("#map-wrap").getBoundingClientRect();
   let line = "";
   if (r) {
-    const q = r.quadrant ? t(`q_${r.quadrant}`) + (r.provisional ? ` (${t("panel_provisional")})` : "") : t("q_none");
+    const q = r.quadrant ? t(`q_${r.quadrant}`) + (r.provisional ? ` (${t("panel_provisional")})` : "") : t("q_none") + ": " + t("why_" + (r.why || "no_rain_data"));
     const rain = r.rain?.category ? `${t("panel_rain")}: ${t("rain_cat_" + r.rain.category)} (${signed(r.rain.departure_pct)}%)` : "";
     const gw = r.gw?.percentile !== null && r.gw?.percentile !== undefined ? `${t("panel_gw")}: ${t("gw_percentile").toLowerCase()} ${fmt(r.gw.percentile)}` : "";
     line = [q, rain, gw].filter(Boolean).map(esc).join("<br>");
   }
-  tip.innerHTML = `<b>${esc(f.properties.n)}, ${esc(f.properties.s)}</b>${line}`;
+  const layerNote = st.layer !== "quadrant" && !layerHasData(lgd) ? `<br><em>${esc(t("layer_" + st.layer))}: ${esc(t("no_data"))} (${esc(noDataReason(r))})</em>` : "";
+  tip.innerHTML = `<b>${esc(f.properties.n)}, ${esc(f.properties.s)}</b>${line}${layerNote}`;
   tip.style.display = "block";
   const x = ev.clientX - wrap.left + 14, y = ev.clientY - wrap.top + 14;
   tip.style.left = Math.min(x, wrap.width - 270) + "px";
@@ -222,7 +256,7 @@ async function renderPanel() {
       <dt>${esc(t("rain_source"))}</dt><dd>${esc(t("src_" + rain.source))}</dd>
     </dl>
     ${rain.short_reasons && rain.short_reasons.length ? `<p class="explain">${esc(t("rain_reasons"))}: ${esc(reasonText(rain.short_reasons, rain))}.</p>` : ""}`
-    : `<p class="empty">${esc(t("no_data"))}</p>`;
+    : `<p class="empty">${esc(t("no_data"))}: ${esc(t("why_no_rain_data"))}</p>`;
 
   const gw = r.gw || {};
   const gwHtml = `
@@ -239,8 +273,10 @@ async function renderPanel() {
     <div class="chart" id="gw-chart"></div>`;
 
   const s = r.stress || {};
-  const stressHtml = s.status === "not_in_ingres" || !s.status ? `<p class="empty">${esc(t("stress_not_in"))}</p>` : `
+  const stressHtml = s.status === "no_edition" ? `<p class="empty">${esc(t("stress_unavailable"))}</p>`
+    : s.status === "not_in_ingres" || !s.status ? `<p class="empty">${esc(t("stress_not_in"))}</p>` : `
     <dl class="kv">
+      <dt>${esc(t("stress_edition"))}</dt><dd>IN-GRES ${esc(s.edition || "")}</dd>
       <dt>${esc(t("stress_category"))}</dt><dd>${esc(s.category ? t("stress_" + s.category) : t("stress_none"))}</dd>
       <dt>${esc(t("stress_stage"))}</dt><dd>${fmt(s.stage_pct, 1)}%</dd>
       ${s.worst_unit ? `<dt>${esc(t("stress_worst"))}</dt><dd>${esc(s.worst_unit.name)}: ${esc(t("stress_" + s.worst_unit.category))} (${fmt(s.worst_unit.stage_pct, 1)}%)</dd>` : ""}
@@ -248,9 +284,9 @@ async function renderPanel() {
     ${s.hidden_stress ? `<p class="explain">${esc(t("stress_hidden"))}</p>` : ""}`;
 
   const idm = r.idm || {};
-  const idmHtml = idm.class_of_mean ? `
+  const idmHtml = !idm.class_of_mean ? `<p class="empty">${esc(t("no_data"))}: ${esc(st.snapshot !== "now" && st.snapshot < "2021-07-14" ? t("idm_unavailable") : t("why_idm_none"))}</p>` : `
     <dl class="kv"><dt>${esc(t("idm_class"))}</dt><dd>${esc(t("idm_" + idm.class_of_mean))}</dd></dl>
-    <div class="chart" id="idm-chart"></div>` : `<p class="empty">${esc(t("no_data"))}</p>`;
+    <div class="chart" id="idm-chart"></div>`;
 
   P.innerHTML = `
     <h2>${esc(nm?.n || lgd)}</h2>
@@ -392,7 +428,7 @@ function tableRows() {
     const lgd = f.properties.lgd, r = record(lgd) || {};
     return {
       lgd, district: f.properties.n, state: f.properties.s,
-      category: r.quadrant ? t("q_" + r.quadrant) + (r.provisional ? "*" : "") : "",
+      category: r.quadrant ? t("q_" + r.quadrant) + (r.provisional ? " (" + t("panel_provisional") + ")" : "") : t("q_none"),
       quadrant: r.quadrant || "none",
       rank: { double_drought: 0, hidden_drought: 1, buffered: 2, fine: 3 }[r.quadrant] ?? 4,
       rain: r.rain?.category ? t("rain_cat_" + r.rain.category) + rainWhy(r.rain) : "",
@@ -406,13 +442,17 @@ function tableRows() {
 }
 const COLS = [["district", "col_district"], ["state", "col_state"], ["category", "col_category"], ["rain", "col_rain"],
   ["rain_dep", "col_rain_dep", true], ["gw_pct", "col_gw_pct", true], ["gw_tier", "col_gw_tier"], ["stress", "col_stress"], ["idm", "col_idm"]];
+const COL_HELP = { category: "#categories", rain: "#rain", rain_dep: "#rain", gw_pct: "#groundwater", gw_tier: "#groundwater", stress: "#stress", idm: "#drought-index" };
 function renderTable() {
   const tools = $("#table-tools");
   const qs = ["hidden_drought", "double_drought", "buffered", "fine", "none"];
   tools.innerHTML = `<strong>${esc(t("table_title"))}</strong>
     <button class="filter-chip" data-q="" aria-pressed="${!st.filter}">${esc(t("table_all"))}</button>
     ${qs.map((q) => `<button class="filter-chip" data-q="${q}" aria-pressed="${st.filter === q}">${esc(t(q === "none" ? "q_none" : "q_" + q))}</button>`).join("")}
-    <button class="btn" id="dl">${esc(t("table_download"))}</button>`;
+    <button class="btn" id="dl">${esc(t("table_download"))}</button>
+    <details class="col-help"><summary>${esc(t("table_help_title"))}</summary><dl>
+      ${COLS.filter(([c]) => COL_HELP[c]).map(([c, lab]) => `<dt>${esc(t(lab))}</dt><dd>${esc(t(lab + "_help"))} <a href="methods.html${COL_HELP[c]}">${esc(t("more_in_methods"))}</a></dd>`).join("")}
+    </dl></details>`;
   tools.querySelectorAll(".filter-chip").forEach((b) => b.onclick = () => { st.filter = b.dataset.q || null; renderTable(); });
   let rows = tableRows();
   if (st.filter) rows = rows.filter((r) => r.quadrant === st.filter);
@@ -424,7 +464,7 @@ function renderTable() {
     if (y === null || y === "") return -1;
     return (typeof x === "number" ? x - y : String(x).localeCompare(String(y))) * dir;
   });
-  $("#table").innerHTML = `<thead><tr>${COLS.map(([c, lab]) => `<th data-k="${c}" aria-sort="${k === c ? (dir > 0 ? "ascending" : "descending") : "none"}">${esc(t(lab))}${k === c ? (dir > 0 ? " ▲" : " ▼") : ""}</th>`).join("")}</tr></thead>
+  $("#table").innerHTML = `<thead><tr>${COLS.map(([c, lab]) => `<th data-k="${c}" title="${esc(t(lab + "_help"))}" aria-sort="${k === c ? (dir > 0 ? "ascending" : "descending") : "none"}">${esc(t(lab))}${k === c ? (dir > 0 ? " ▲" : " ▼") : ""}</th>`).join("")}</tr></thead>
     <tbody>${rows.map((r) => `<tr data-lgd="${r.lgd}">${COLS.map(([c, , num]) => `<td class="${num ? "num" : ""}">${esc(r[c] === null ? "–" : num ? (c === "rain_dep" ? signed(r[c]) : fmt(r[c])) : r[c])}</td>`).join("")}</tr>`).join("")}</tbody>`;
   $("#table").querySelectorAll("th").forEach((th) => th.onclick = () => {
     st.sort = [th.dataset.k, st.sort[0] === th.dataset.k ? -st.sort[1] : 1];
@@ -456,7 +496,10 @@ function asofLine() {
     const a = status.as_of;
     $("#asof").textContent = t("asof_line", { rain: a.rain, gw: a.groundwater_cycle, idm: a.idm_week });
   } else {
-    $("#asof").textContent = t("snapshot_note", { date: snapLabel(st.snapshot) });
+    const sn = cache.snaps[st.snapshot];
+    const fi = sn.fields.indexOf("stress_edition");
+    const ed = Object.values(sn.districts).map((r) => r[fi]).find(Boolean);
+    $("#asof").textContent = t("snapshot_note", { date: snapLabel(st.snapshot), edition: ed ? "IN-GRES " + ed : t("stress_none_for_date") });
   }
 }
 async function setSnapshot(d) {
@@ -487,19 +530,10 @@ function initControls() {
   };
   $("#nav-map").onclick = () => setView("map");
   $("#nav-table").onclick = () => setView("table");
-  $("#theme").onclick = () => {
-    const cur = document.documentElement.dataset.theme ||
-      (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-    const next = cur === "dark" ? "light" : "dark";
-    document.documentElement.dataset.theme = next;
-    storage("theme", next);
-  };
 }
 
 // ---------------- boot ----------------
 async function main() {
-  const saved = storage("theme");
-  if (saved) document.documentElement.dataset.theme = saved;
   S = await json("i18n/en.json");
   document.querySelectorAll("[data-i18n]").forEach((el) => { el.textContent = t(el.dataset.i18n); });
   [geo, status, histIndex] = await Promise.all([json(DATA + "districts.geojson"), json(DATA + "status.json"), json(DATA + "history/index.json")]);
@@ -507,6 +541,7 @@ async function main() {
   initControls();
   asofLine();
   drawMap();
+  if (location.hash === "#table") setView("table");
   const want = new URLSearchParams(location.search).get("d");
   if (want && names[want]) select(+want); else renderPanel();
 }

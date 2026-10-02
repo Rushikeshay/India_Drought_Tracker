@@ -6,6 +6,7 @@
   <title>Methods · India Drought & Groundwater Watch</title>
   <meta name="description" content="How the India Drought & Groundwater Watch categories are calculated: sources, definitions, thresholds and limits.">
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/theme.js"></script>
 </head>
 <body>
   <header class="site-head">
@@ -15,37 +16,41 @@
     </div>
     <nav class="site-nav" aria-label="Views">
       <a href="index.html">Map</a>
+      <a href="index.html#table">Table</a>
       <a href="methods.html" aria-current="page">Methods</a>
+      <button id="theme" aria-label="Toggle dark mode" title="Toggle dark mode">◐</button>
     </nav>
   </header>
 
   <article class="doc">
     <h1>How this works</h1>
-    <p>India's drought declarations are triggered mainly by rainfall (Manual for Drought Management 2020). Groundwater is only an optional impact indicator. So a district with normal rain but falling groundwater can't be declared ("hidden drought"), and a district with poor rain but healthy groundwater may be declared while it is actually buffered. This site puts both signals side by side for every district.</p>
+    <p>In India, a district can be declared in drought mainly on the basis of rainfall. Groundwater is only an optional "impact indicator" (<a href="https://vedas.sac.gov.in/static/pdf/Drought%20Manual-2020.pdf">Manual for Drought Management 2020</a>, Ministry of Agriculture & Farmers Welfare, §3.2–3.3). So a district with normal rain but falling groundwater can't be declared ("hidden drought"), and a district with poor rain but healthy groundwater may be declared while it is actually buffered. This site puts both signals side by side for every district.</p>
     <p><strong>This site is not an official drought declaration.</strong> It is an independent view built from public government data.</p>
 
-    <h2>The four categories</h2>
+    <h2 id="categories">The four categories</h2>
     <table>
       <tr><th></th><th>Groundwater OK</th><th>Groundwater low</th></tr>
       <tr><th>Rain OK</th><td><strong>Fine</strong></td><td><strong>Hidden drought</strong></td></tr>
       <tr><th>Rain short</th><td><strong>Buffered</strong></td><td><strong>Double drought</strong></td></tr>
     </table>
-    <p>A district gets no category when either side is unknown: too few wells, no rain data, or a rain season that started less than 15 days ago (for example the October–December monsoon districts in early October).</p>
+    <p>A district shows <strong>No data</strong> when either side can't be judged: too few groundwater wells, wells too new to compare with past years, no rain data, or a rain season that started less than 15 days ago (for example the October–December monsoon districts in early October). Hover over the district to see which.</p>
 
-    <h2>Rain: when is it "short"?</h2>
-    <p>Following the Drought Manual 2020, rain counts as short if <strong>any one</strong> of these holds for the district's current or most recent season:</p>
+    <h2 id="rain">Rain: when is it "short"?</h2>
+    <p>The Drought Manual's first trigger is "rainfall deviation <em>or</em> SPI <em>or</em> dry spell" (<a href="https://vedas.sac.gov.in/static/pdf/Drought%20Manual-2020.pdf">Drought Manual 2020</a>, §3.2.1 and §3.3.1). Rain therefore counts as short if <strong>any one</strong> of these holds for the district's current or most recent season:</p>
     <table>
-      <tr><th>Test</th><th>Rule</th></tr>
-      <tr><td>Rainfall deviation</td><td>IMD category <em>Deficient</em> or worse (20% or more below normal)</td></tr>
-      <tr><td>SPI</td><td>Standardised Precipitation Index for the season of −1.0 or lower ("moderately dry")</td></tr>
-      <tr><td>Dry spell</td><td>4 or more consecutive weeks, each with less than half the normal rain for that week (the manual: "usually 4 weeks"). Weeks only count once the season's rain is normally under way, so dry weeks before the monsoon's usual arrival don't count.</td></tr>
+      <tr><th>Test</th><th>Rule</th><th>Based on</th></tr>
+      <tr><td>Rainfall deviation</td><td>IMD category <em>Deficient</em> or worse (20% or more below normal)</td><td>IMD's rainfall categories (Drought Manual Table 3.1)</td></tr>
+      <tr><td>SPI</td><td>Standardised Precipitation Index for the season of −1.0 or lower ("moderately dry")</td><td>McKee, Doesken & Kleist (1993), <em>8th Conference on Applied Climatology</em>; SPI is recommended in the Drought Manual §3.2.1(C)</td></tr>
+      <tr><td>Dry spell</td><td>4 or more consecutive weeks, each with less than half the normal rain for that week</td><td>Drought Manual §3.2.1(B): "consecutive 3–4 weeks… with rainfall less than 50% of the normal in each of the weeks"; "usually 4 weeks"</td></tr>
     </table>
+    <p>Weeks are IMD's standard meteorological weeks. A week only counts once the season's rain is normally under way (its normal is at least half the season's average week), standing in for the manual's "after the due date for the onset of monsoon". We chose 4 weeks rather than 3 after testing every season since 1971: at 3 weeks the test fired in 41% of all district-seasons, at 4 weeks in 19%.</p>
     <p>The dry-spell test catches badly timed seasons. Gujarat in 2023 had above-normal rain overall but almost no rain for five weeks in August, so its districts count as rain short. The district panel always says which test applied.</p>
-    <p><strong>Seasons.</strong> June–September (south-west monsoon) for most districts. For the 99 districts IMD reports under the October–December monsoon (all of Tamil Nadu, Kerala, Andhra Pradesh and Puducherry, and South Interior Karnataka), the season switches on 1 October. Outside a season, the last completed season is shown.</p>
-    <p><strong>Which number.</strong> The headline departure is IMD's official district figure where IMD publishes one. Otherwise (about 70 districts) it is IMD's 0.25° gridded rainfall averaged over the district area, labelled "gridded". Normals are 1971–2020, the same period IMD uses. At the level of IMD's 36 subdivisions, our gridded figures match IMD's to within 2 percentage points (median).</p>
+    <p><strong>Seasons.</strong> June–September (south-west monsoon) for most districts. For the 99 districts IMD reports under the October–December monsoon (its subdivisions Coastal Andhra Pradesh & Yanam, Rayalaseema, Tamil Nadu–Puducherry–Karaikal, South Interior Karnataka, and Kerala & Mahe, taken from <a href="https://mausam.imd.gov.in/responsive/rainfall_statistics.php">IMD's district rainfall statistics</a>), the season switches on 1 October. Outside a season, the last completed season is shown.</p>
+    <p><strong>Which number.</strong> The headline departure is <strong>IMD's official district figure</strong>, read daily from <a href="https://mausam.imd.gov.in/responsive/rainfall_statistics.php">IMD's district rainfall statistics</a> (mausam.imd.gov.in). Where IMD doesn't list a district (about 70), we use <strong>IMD's 0.25° gridded daily rainfall</strong> (Pai et al., 2014, <em>Mausam</em> 65(1):1–18; downloaded from <a href="https://imdpune.gov.in/">imdpune.gov.in</a>) averaged over the district's area, labelled "gridded". The grid also provides the dry-spell and SPI tests and all past years. Normals are 1971–2020, the period IMD uses. At the level of IMD's 36 subdivisions, our gridded departures match IMD's published ones to within 2 percentage points (median).</p>
 
-    <h2>Groundwater: when is it "low"?</h2>
-    <p>Wells are measured by the Central Ground Water Board (CGWB) four times a year (January, pre-monsoon April–May, August, November), and many newer wells report every six hours. Each well is compared only with <strong>its own past readings at the same time of year</strong>:</p>
+    <h2 id="groundwater">Groundwater: when is it "low"?</h2>
+    <p>Well levels come from the <a href="https://cgwb.gov.in/">Central Ground Water Board (CGWB)</a>, downloaded from the <a href="https://nwdp.nwic.gov.in/organization/cgwb">National Water Data Portal</a> (Ministry of Jal Shakti): the "Ground Water Level (Manual – Quarterly)" records from 1994 and the "Ground Water Level (Telemetry – Six Hourly)" records from automatic wells. Manual wells are read four times a year (January, pre-monsoon April–May, August, November); automatic wells every six hours, which we reduce to the same four seasons.</p>
+    <p>Each well is compared only with <strong>its own past readings at the same time of year</strong>:</p>
     <ul>
       <li><strong>Percentile</strong>: the share of past years in which water was <em>shallower</em> than now. 10 means water is deeper now than in 90% of past years. <strong>20 or less counts as low.</strong></li>
       <li>The district value is the median across its wells.</li>
@@ -54,39 +59,33 @@
       <tr><th>Confidence</th><th>Rule</th></tr>
       <tr><td>Full</td><td>5 or more wells, each with 10 or more years of history for that time of year</td></tr>
       <tr><td>Short record</td><td>3 or more wells with 5 or more years</td></tr>
-      <tr><td>Provisional</td><td>at least 1 well with 2–4 years. Shown in a lighter shade. With so few years, "deepest on record" is easy to reach, so treat provisional results as an early signal.</td></tr>
+      <tr><td>Provisional</td><td>at least 1 well with 2–4 years. Shown in a lighter shade. With so few years, "deepest on record" is easy to reach, so treat it as an early signal.</td></tr>
       <tr><td>Level only</td><td>wells are reporting but have no history yet: depth and change are shown, but no category</td></tr>
     </table>
-    <p>Most automatic wells started in 2023, so many districts are provisional today. Each year adds one more year of history. Where a new automatic well sits at the same site as an older manual well and their readings agree (within 1.5 m in at least two shared seasons), the old manual record becomes its history. Wells are assigned to districts by their location, not by the district name in the source file. Physically impossible values (shallower than −5 m or deeper than 150 m) are removed. Big year-to-year changes are normal and are kept.</p>
-    <p><strong>Long-term trend</strong> is the median rate of change in each well's pre-monsoon depth from 2000 to 2023 (Sen's slope), for wells with 10 or more years.</p>
+    <p>Most automatic wells started in 2023, so many districts are provisional today. Each year adds one more year of history. Where a new automatic well sits at the same site as an older manual well (within 50 m) and their readings agree (within 1.5 m in at least two shared seasons), the old manual record becomes its history. Wells are assigned to districts by their location, not by the district name in the source file. Physically impossible values (shallower than −5 m or deeper than 150 m) are removed. Large year-to-year changes are normal and are kept.</p>
+    <p><strong>Long-term trend</strong> is the median of each well's rate of change in pre-monsoon depth from 2000 to 2023 (Sen's slope; Sen, 1968, <em>Journal of the American Statistical Association</em> 63:1379–1389), for wells with 10 or more years.</p>
 
-    <h2>Groundwater stress</h2>
-    <p>From IN-GRES (CGWB and IIT Hyderabad), Dynamic Ground Water Resources 2025-26, used exactly as published: <em>stage of extraction</em> = annual extraction ÷ extractable resource. Categories: Safe, Semi-critical, Critical, Over-exploited, and Saline (assessed separately). District totals can hide stressed blocks, so each district also shows its worst block, and flags districts where any block is Critical or Over-exploited.</p>
+    <h2 id="stress">Groundwater stress</h2>
+    <p>From <a href="https://ingres.iith.ac.in/">IN-GRES</a>, the official Dynamic Ground Water Resources assessment run by CGWB, the state groundwater departments and IIT Hyderabad, used exactly as published. <em>Stage of extraction</em> = annual groundwater extraction ÷ extractable resource. Categories: Safe (up to 70%), Semi-critical, Critical, Over-exploited (above 100%), and Saline (assessed separately). District totals can hide stressed blocks, so each district also shows its worst block and flags districts where any block is Critical or Over-exploited.</p>
+    <p>For past dates, the map shows the most recent assessment available at that date: editions 2019-20 and 2021-22 to 2025-26. Earlier dates have no stress data. The 2016-17 edition is served by IN-GRES but most of its district rows lack a usable category, so it isn't used. Block-level detail ("worst block") is from the 2025-26 edition only.</p>
 
-    <h2>Drought index</h2>
-    <p>The Combined Drought Index from the India Drought Monitor (Water and Climate Lab, IIT Gandhinagar), weekly since July 2021, averaged over each district's area. Classes D0 (abnormally dry) to D4 (exceptional) use IDM's own thresholds. This is a <em>detected</em> drought measure, not an official declaration.</p>
+    <h2 id="drought-index">Drought index</h2>
+    <p>The Combined Drought Index from the <a href="https://indiadroughtmonitor.in/">India Drought Monitor</a> (Water and Climate Lab, IIT Gandhinagar; data files from its <a href="https://github.com/wcl-iitgn/IndianDroughtMonitor">public repository</a>), which combines precipitation, soil moisture and runoff. It is published weekly since July 2021 on a 0.25° grid, and we average it over each district's area. Classes D0 (abnormally dry) to D4 (exceptional) use IDM's own thresholds. This is a <em>detected</em> drought measure, not an official declaration.</p>
 
-    <h2>Looking back</h2>
-    <p>Use the Date menu to see the categories at the end of January, May (mid-summer), August and November of any year since 2000, the times groundwater is measured. Some dates have few or no categories because the source data is missing: May 2020 and May 2021 (no pre-monsoon survey during COVID), August 2012 and January 2016 (survey rounds largely absent from the public data), and 2024 onward (newer wells, short history). For past years, rain is our gridded figure. Official IMD figures are kept from October 2026 onward.</p>
+    <h2 id="history">Looking back</h2>
+    <p>Use the Date menu to see the categories at the end of January, May (mid-summer), August and November of any year since 2000, the times groundwater is measured. Some dates have few or no categories because the source data is missing: May 2020 and May 2021 (no pre-monsoon survey during COVID), August 2012 and January 2016 (survey rounds largely absent from the public data), and 2024 onward (newer wells, short history). For past years, rain comes from the IMD grid. Official IMD district figures are kept from October 2026 onward.</p>
 
-    <h2>Sources</h2>
-    <table>
-      <tr><th>Layer</th><th>Source</th><th>Updated</th></tr>
-      <tr><td>Rain</td><td>India Meteorological Department: district rainfall statistics (mausam.imd.gov.in) and 0.25° gridded rainfall (imdpune.gov.in)</td><td>Daily</td></tr>
-      <tr><td>Groundwater levels</td><td>CGWB via the National Water Data Portal (nwdp.nwic.gov.in), manual quarterly and telemetry records</td><td>Daily (wells report every 6 hours)</td></tr>
-      <tr><td>Groundwater stress</td><td>IN-GRES, CGWB & IIT Hyderabad (ingres.iith.ac.in), 2025-26 edition</td><td>Yearly</td></tr>
-      <tr><td>Drought index</td><td>India Drought Monitor, IIT Gandhinagar (indiadroughtmonitor.in)</td><td>Weekly</td></tr>
-      <tr><td>District boundaries</td><td>LGD/Survey of India districts via india-geodata (December 2023)</td><td>Fixed</td></tr>
-    </table>
+    <h2 id="boundaries">District boundaries</h2>
+    <p>LGD / Survey of India district boundaries (December 2023) from the open <a href="https://github.com/yashveeeeeeer/india-geodata">india-geodata</a> collection (CC0), keyed on official LGD district codes.</p>
 
-    <h2>Limits</h2>
+    <h2 id="limits">Limits</h2>
     <ul>
       <li>Groundwater is local. A district median can hide very different aquifers and wells.</li>
       <li>The district map is the December 2023 version. Rajasthan's nine districts abolished in December 2024 are still shown, and districts created since then (e.g. Pandhurna, Maihar, Mauganj, Vav-Tharad) are not.</li>
       <li>Four island districts (Andaman & Nicobar, Lakshadweep) are outside IMD's gridded rainfall; where IMD lists them, the official figure is used.</li>
       <li>The Drought Manual's full decision also uses crop, vegetation and soil-moisture evidence and field checks, which this site does not replicate.</li>
     </ul>
-    <p>Code and data processing are open: <a href="https://github.com/Rushikeshay/India_Drought_Tracker">github.com/Rushikeshay/India_Drought_Tracker</a>.</p>
+    <p>Code and processing are open: <a href="https://github.com/Rushikeshay/India_Drought_Tracker">github.com/Rushikeshay/India_Drought_Tracker</a>.</p>
   </article>
   <footer class="site-foot">Not an official drought declaration.</footer>
 </body>

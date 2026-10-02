@@ -38,7 +38,8 @@ ALIASES = {
     "HIMACHAL PRADESH": {"SLN": "Solan", "KIN": "Kinnaur", "SRM": "Sirmaur", "KNG": "Kangra", "KUL": "Kullu",
                          "MND": "Mandi", "SHM": "Shimla", "BLS": "Bilaspur", "CHM": "Chamba",
                          "LAS": "Lahul And Spiti", "HMP": "Hamirpur"},
-    "JAMMU AND KASHMIR": {"Srinagar Hilly Area": "Srinagar", "Kupwarar": "Kupwara", "Barmulla": "Baramulla"},
+    "JAMMU AND KASHMIR": {"Srinagar Hilly Area": "Srinagar", "Kupwarar": "Kupwara", "Barmulla": "Baramulla",
+                          "SRINAGAR URBAN": "Srinagar"},
     "JHARKHAND": {"EAST SINGHBHUM": "East Singhbum"},
     "KARNATAKA": {"Bengaluru South": "Ramanagara"},
     "LADAKH": {"LEH": "Leh Ladakh"},
@@ -46,10 +47,12 @@ ALIASES = {
     "MAHARASHTRA": {"Dharashiv": "Osmanabad", "Ahilyanagar": "Ahmednagar", "Ch.Sambhajinagar": "Aurangabad"},
     "ODISHA": {"KEONJHAR": "Kendujhar", "BALASORE": "Baleshwar", "KHURDA": "Khordha", "SUBARNAPUR": "Sonepur"},
     "PUDUCHERRY": {"PUDUCHERRY": "Pondicherry"},
-    "PUNJAB": {"Muktsar": "Sri Muktsar Sahib", "Firozpur": "Ferozepur", "SBS Nagar": "Shahid Bhagat Singh Nagar"},
+    "PUNJAB": {"Muktsar": "Sri Muktsar Sahib", "Firozpur": "Ferozepur", "SBS Nagar": "Shahid Bhagat Singh Nagar",
+               "NAWANSHAHAR": "Shahid Bhagat Singh Nagar", "MOHALI": "S.A.S Nagar"},  # older-edition names
+    "MEGHALAYA": {"GREATER SHILLONG": "East Khasi Hills"},
     "RAJASTHAN": {"DHAULPUR": "Dholpur"},
     "TAMILNADU": {"THOOTHUKUDI": "Tuticorin"},
-    "UTTAR PRADESH": {"MAUNATH BHANJAN": "Mau", "G.B.NAGAR": "Gautam Buddha Nagar",
+    "UTTAR PRADESH": {"JP NAGAR": "Amroha", "MAUNATH BHANJAN": "Mau", "G.B.NAGAR": "Gautam Buddha Nagar",
                       "LAKHIMPUR KHERI": "Kheri", "SANT RAVIDAS NAGAR": "Bhadohi"},
     "WEST BENGAL": {"NORTH 24 PARGANAS": "24 Paraganas North", "SOUTH 24 PARGANAS": "24 Paraganas South",
                     "KOCH BIHAR": "Coochbehar", "UTTAR DINAJPUR": "Dinajpur Uttar",
@@ -60,7 +63,8 @@ ALIASES = {
 }
 # Source units that are a PART of an LGD district (several units map to one code).
 PART_OF = {("JAMMU AND KASHMIR", "Srinagar Hilly Area"), ("JAMMU AND KASHMIR", "Kupwarar"),
-           ("JAMMU AND KASHMIR", "Barmulla"), ("GUJARAT", "RANA AND KUTCH")}
+           ("JAMMU AND KASHMIR", "Barmulla"), ("GUJARAT", "RANA AND KUTCH"),
+           ("JAMMU AND KASHMIR", "SRINAGAR URBAN"), ("MEGHALAYA", "GREATER SHILLONG")}
 # Districts created after our Dec 2023 boundary map: state -> {name: parent on our map or None}.
 NOT_ON_MAP = {
     "MADHYA PRADESH": {"PANDHURNA": "Chhindwara", "MAIHAR": "Satna", "MAUGANJ": "Rewa"},
@@ -127,13 +131,17 @@ def match(master: pd.DataFrame, src: pd.DataFrame, source: str) -> pd.DataFrame:
     return pd.DataFrame(out)
 
 
-def ingres_crosswalk(master: pd.DataFrame) -> pd.DataFrame:
+def ingres_crosswalk(master: pd.DataFrame, year: str = ingres.YEAR) -> pd.DataFrame:
     rows = []
-    for st in ingres.states():
-        for d in ingres.districts(st):
+    for st in ingres.states(year):
+        try:
+            ds = ingres.districts(st, year)
+        except ingres.IngresError:
+            continue  # a state/UT may be absent from an older edition
+        for d in ds:
             rows.append({"state": st["locationName"], "name": d["locationName"],
                          "ingres_uuid": d["locationUUID"], "ingres_state_uuid": st["locationUUID"]})
-    return match(master, pd.DataFrame(rows), "ingres_" + ingres.YEAR)
+    return match(master, pd.DataFrame(rows), "ingres_" + year)
 
 
 def main() -> int:
