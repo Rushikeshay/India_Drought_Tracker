@@ -83,8 +83,8 @@ Secondary marks: GW confidence tier, IN-GRES category and worst block, IDM droug
 | 1 | Boundaries + district master | ✅ **Done 2026-10-01** (awaiting review) | 783 districts + 2 PoK outline polygons; `web/data/districts.geojson` 1.9 MB (simplified GeoJSON; no TopoJSON needed); IN-GRES crosswalk 723/733 rows; 11 tests pass |
 | 2 | Rainfall pipeline | ✅ **Done 2026-10-01**: headline = IMD official district figure (711), gridded fallback (72); history/SPI gridded | Season-to-date departure + SPI per district; matches IMD district pages within a few % |
 | 3 | Groundwater pipeline (NWDP) | ✅ **Done 2026-10-01** (awaiting review). See §10 for results | History + telemetry merged; signs, envelope, pairing, tiers; sane for Punjab, Marathwada, Delhi |
-| 4 | Stress layer (IN-GRES) | ⏭ **Next** | 2025-26 edition joined incl. worst block; unmatched listed |
-| 5 | IDM drought layer | — | Weekly CDI grids → district stats with our own boundaries (back to Jul 2021); crosswalk of IDM names → LGD |
+| 4 | Stress layer (IN-GRES) | ✅ **Done 2026-10-01** (awaiting review). See §10 | 2025-26 edition joined incl. worst block; unmatched listed |
+| 5 | IDM drought layer | ⏭ **Next** | Weekly CDI grids → district stats with our own boundaries (back to Jul 2021); crosswalk of IDM names → LGD |
 | 6 | Classification + validation | — | Both tiers; unit tests; back-test 2023 vs known droughts |
 | 7 | Front end v1 | — | Map, district panel, hidden-drought table, methods page; phone + laptop |
 | 8 | Automation | — | `refresh.yml` daily on Actions, unattended for 2 weeks |
@@ -96,6 +96,8 @@ Secondary marks: GW confidence tier, IN-GRES category and worst block, IDM droug
 `pipeline/` (sources → process → outlook → `run.py`) → `web/data/*.json` (committed) → GitHub Pages (plain HTML/JS + D3, no build). Raw downloads go in `data/raw/` (gitignored). Python 3.11 in `.venv` via uv; dependencies are in `requirements.txt` only (pandas, geopandas, xarray, imdlib, duckdb, requests). Ask before adding any others. `pyarrow` approved 2026-10-01 (parquet). Tests use stdlib `unittest`: `.venv/bin/python -m unittest discover -s tests -t .`
 
 ## 10. Open items
+
+**Phase 4 results (2026-10-01):** IN-GRES 2025-26, figures used as published. 719 districts assessed, 64 not in IN-GRES (carved-out districts still inside their parent, Uttarakhand hills). District categories: Safe 519, Semi-critical 67, Critical 22, Over-exploited 91, Hilly 10, Saline 3; 7 Himachal districts assessed by valley only (no district category). 7,000+ blocks/units fetched. **Hidden stress** (district not Critical/OE but ≥ 1 block is) in **105 districts**, e.g. Pune Safe 63.7% with Shirur Critical 95.7%. Extremes: Sangrur 309%, Jaisalmer 297%, Kolar 186%. Unmatched: 3 Delhi IN-GRES units (Central North, Old Delhi, Outer North) with no LGD equivalent.
 
 **Phase 3 results (2026-10-01):** 42,618 wells (36,887 manual + 5,745 telemetry), 1.4M well-cycles. 1,142 impossible values dropped (outside −5 to 150 m). 701 telemetry↔manual pairs accepted (≤ 50 m, ≥ 2 shared cycles agreeing within 1.5 m).
 - **Historical tier:** pre-monsoon trend 2000–2023 for **622 districts (79%)**; PRE/NOV anomaly series for 633. Sanity: Punjab falling (Sangrur 1.1, Barnala 1.0 m/yr; Fazilka rising, matching waterlogging), south Delhi falling 0.4–0.6 m/yr, Marathwada no long-term trend.
