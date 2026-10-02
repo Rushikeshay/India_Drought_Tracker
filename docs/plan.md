@@ -1,238 +1,108 @@
-# India Water Stress Tool — Project Plan
+# India Drought Tracker — Plan (v2)
 
-Working name: TBD. Status: planning. Last updated: 2026-09-28.
+Repo: github.com/Rushikeshay/India_Drought_Tracker · Updated 2026-10-01 · v1 of this plan is in git history (commit 4a489fe).
+Source details, URLs, quirks and test results: [sources.md](sources.md). This file holds the decisions and the status.
 
 ## 1. Goal
 
-A public web tool that shows, for every district in India, whether this year's **rain** and **groundwater** are adequate, and what a **dry next year** would mean.
+A public website that shows, for every Indian district, whether **rain** and **groundwater** are adequate, whether **drought was declared**, and what a dry next year would mean. Audience: intermediaries (NGOs, extension officers, journalists, district officials).
 
-Audience: intermediaries (NGOs, extension officers, journalists, district officials). Not farmers directly in v1.
+Core idea: drought declaration is gated on rainfall (Drought Manual 2020), so:
+- **Hidden drought:** normal rain but depleted groundwater, so no declaration.
+- **Buffered:** poor rain but good groundwater.
 
-Core idea: drought declaration in India is gated on rainfall (Manual for Drought Management 2020). Groundwater is only an optional impact indicator. So:
-- A district with normal rain but depleted groundwater cannot be declared ("hidden drought").
-- A district with poor rain but good groundwater may be declared while it is actually buffered.
+## 2. Two tiers
 
-The tool makes both cases visible and adds a next-year outlook.
-
-## 2. Decisions made
-
-| Topic | Decision |
-|---|---|
-| Geography | National, district level. Block level later. |
-| Audience | Intermediaries |
-| Hosting | Public GitHub repo + GitHub Pages |
-| Front end | Plain HTML/CSS/JS + D3. No build step. |
-| Data refresh | Scheduled Python pipeline on GitHub Actions writes static JSON; page reads JSON on load |
-| Rain axis | IMD season-to-date departure (SW monsoon Jun–Sep; NE monsoon Oct–Dec for NE-monsoon districts). Water-year total shown alongside. |
-| Groundwater axis | Per-well percentile vs its own same-season history; district = median. Low = ≤ 20th percentile. Also show CGWB's rise/fall in meters vs 10-year mean. |
-| Minimum data | District classified only with ≥ 5 wells that each have ≥ 10 years of same-season readings. Otherwise "insufficient data". |
-| Outlook | Always show dry/normal scenarios + current ENSO odds (with "low skill before April" note). Add IMD / IRI forecasts when issued. |
-| Declarations | v2, as a hand-maintained CSV |
-| Language | English v1, all UI strings in a JSON file so Hindi/Marathi can be added |
-
-## 3. How "live" updates work
-
-1. A GitHub Actions cron job runs `pipeline/run.py` daily.
-2. The script fetches new data from each source, processes it, and writes `web/data/*.json`.
-3. If anything changed, the job commits the files. GitHub Pages redeploys.
-4. A visitor's browser loads `index.html`, which fetches the JSON and draws the map.
-
-Why not fetch sources directly in the browser: government portals usually block cross-origin requests (CORS), are slow, and go down. The sources update daily to yearly, so a daily pipeline is as current as the data allows. Every layer shows an "as of" date.
-
-## 4. Data layers
-
-### 4.1 Rainfall (current season)
-
-| Option | Level | Update | Notes |
+| Tier | Period | Layers | What it answers |
 |---|---|---|---|
-| **IMD gridded 0.25° daily rainfall** via `imdlib` (`get_data` for history since 1901, `get_real_data` for recent) | Grid → district by spatial overlay | Daily | **Chosen.** Authoritative, long history, needed for normals and scenarios too. |
-| IMD district-wise departure pages (mausam.imd.gov.in) | District | Daily | Use to **validate** our numbers. |
-| CHIRPS 0.05° | Grid | Pentad | Fallback if IMD real-time fails. |
+| **Historical** | ~2000–2023 | Rain, groundwater trend, declarations, IN-GRES stress | Long-term pattern for the district. Context where current data is thin. |
+| **Current** | 2024–now | Rain season-to-date, latest groundwater level, current declarations, ENSO outlook | How the district is doing right now. |
 
-Metrics:
-- Season-to-date rainfall departure (%) vs normal.
-- IMD categories: Large excess (≥ +60), Excess (+20 to +59), Normal (−19 to +19), Deficient (−20 to −59), Large deficient (≤ −60).
-- SPI-3 and SPI-6 (computed from the same data), shown as supporting info.
-- NE-monsoon districts: Tamil Nadu, Puducherry, coastal AP, Rayalaseema, south interior Karnataka, Kerala. Their rain axis switches to the Oct–Dec season on Oct 1.
+## 3. Coverage without an India IP (measured 2026-10-01, 785 LGD districts)
 
-Phase 2 check: which normal period IMD currently uses for district normals. Match it.
+| Layer | Historical 2000–2023 | Current 2024–now |
+|---|---|---|
+| Rain (IMD gridded) | 100% | 100% (daily) |
+| GW: ≥ 1 well | 91% | 57% live in the last 60 days · 76% with any 2024+ reading |
+| GW: ≥ 3 wells, ≥ 5 yrs history | 85% | 2% (telemetry only) to 23% (if paired with old manual wells) |
+| GW: ≥ 5 wells, ≥ 10 yrs (v1 rule) | 78% | ≤ 9% |
+| Declarations | Not available yet (§6) | Not available yet |
 
-### 4.2 Groundwater level (current state)
+Reproduce with `notebooks/phase0/coverage.py`.
 
-**Source: CGWB wells via India-WRIS API.** ~25,000 wells nationally. Readings 4×/year (Jan, pre-monsoon Mar–May, Aug, Nov); newer telemetric wells every 6 hours.
+## 4. Data sources (decided)
 
-Endpoint recipe (from neer-vazhvu's pan-India playbook, proven July 2026; not yet tested by us):
-- `POST https://indiawris.gov.in/Dataset/Ground%20Water%20Level?stateName=..&districtName=..&agencyName=CGWB&startdate=YYYY-MM-DD&enddate=YYYY-MM-DD&download=false&page=0&size=9000`
-- Params go in the **query string**, not a JSON body.
-- All params required. Blank `districtName` returns **zero rows, not all rows**. Iterate every district explicitly.
-- Paginate until a short page.
-- Reported reachable from non-India IPs (this endpoint only; `arc.indiawris.gov.in` is blocked).
-- Returns `stationCode`, `stationName`, `latitude`, `longitude`, `district`, `tehsil`, `dataAcquisitionMode`, `stationStatus`, `dataValue`, `dataTime`, `unit`.
-
-District list for iteration: WRIS master endpoints seen in Daksh17440's extractor:
-- `POST /DataSet/DataSetList`
-- `POST /masterState/StateList` with `{"datasetcode": ..}`
-- `POST /masterDistrict/getDistrictbyState` with `{"statecode": .., "datasetcode": ..}`
-
-That extractor also uses a copied browser `JSESSIONID` cookie and `download=true` (CSV with extra fields: `well_type`, `well_depth`, `well_aquifer_type`, `block`). Test in Phase 0 whether the cookie is needed and whether the CSV fields are worth using. It has no license, so use it as reference only.
-
-Known traps (from the playbook):
-- **Sign convention differs by station family** (positive-down vs negative-down). Derive per station from its own median. Never `abs()`.
-- **Sanity envelope**: drop readings outside about −5 to 100 m below ground and log what was dropped.
-- **Liveness**: some districts have stale data (e.g. Gurugram, nothing since 2020). Track last reading date per district.
-- **Telemetric vs manual**: reduce 6-hourly telemetry to the four standard cycles before computing percentiles.
-
-Metrics:
-- Per well: depth for each cycle; percentile vs that well's own history for the same cycle (≥ 10 years).
-- Per district: median well percentile → Low if ≤ 20th. Also median rise/fall (m) vs 10-year mean for the same cycle.
-- Assign wells to districts by **lat/lon spatial join** to our boundaries, not by WRIS district name.
-
-Fallbacks: CGWB Ground Water Year Books (PDF); data.gov.in groundwater datasets.
-
-### 4.3 Groundwater stress (structural)
-
-**Source: IN-GRES** (CGWB + IIT Hyderabad), Dynamic Ground Water Resources Assessment. Annual since 2022; 2025 edition is latest.
-
-- API: `POST https://ingres.iith.ac.in/api/gec/getBusinessDataForUserOpen`, JSON body, no auth. Hosted outside NICNET, reachable from any IP.
-- Working payloads in neer-vazhvu's `build_ingres_gwr.py` (MIT license, reusable with attribution). Key gotchas:
-  - Lowercase keys (`locname`, `loctype`, `locuuid`); `locname` with no spaces ("WESTBENGAL").
-  - `parentuuid` is required. Wrong value returns HTTP 200 with an empty table.
-  - A COUNTRY-level call (`locuuid = parentuuid = ffce954d-24e1-494b-ba7e-0931d8ad6085`) returns all states with UUIDs. Get UUIDs this way, not from the site's JS bundle.
-  - Children of a district: `loctype=DISTRICT`, `locuuid=<district>`, `parentuuid=<state>`.
-- Manual fallback: the portal's table view (misview) has a download button.
-- Categories: Safe / Semi-critical / Critical / Over-exploited, plus **Saline** units with no extraction figures. Show saline as its own category.
-- Assessment units changed over time in some states. Don't stitch trends across a unit change.
-- Show district stage of extraction, and flag districts where any block is Critical/Over-exploited (district totals can hide them — e.g. Pune district Safe while Shirur block is Critical).
-
-### 4.4 Drought indices (cross-check)
-
-**IIT Gandhinagar India Drought Monitor** (github.com/wcl-iitgn/IndianDroughtMonitor). Weekly SPI, soil moisture (SSMI), runoff (SRI), composite index, 7/15/30-day forecasts. Text grids on GitHub; district stats file exists. **No license file found — ask the lab before reusing.** Use for cross-checks and an optional soil-moisture layer.
-
-### 4.5 Outlook (next season)
-
-No source forecasts district rainfall a year ahead with useful accuracy. The plan uses **scenarios**, anchored by whatever real forecast exists at that time of year.
-
-| Source | Horizon | Level | Use |
+| Layer | Source | Access | Refresh |
 |---|---|---|---|
-| **CPC/IRI ENSO probabilities** | ~9 months | Global index | Monthly. Odds of El Niño / La Niña. Weak skill before April. |
-| **IRI NMME India precipitation probability** (iridl.ldeo.columbia.edu) | 1–6 months | Grid → district | Tercile odds. |
-| **IMD Long Range Forecast** | Next monsoon | National / broad regions | April and late May/June. Enter by hand. |
+| Rain | IMD 0.25° gridded: yearly files (1901–last year) + real-time daily | POST to imdpune.gov.in; works from any IP | Daily; re-fetch the last 7 days (newest file may be preliminary) |
+| GW history | **NWDP** CGWB manual quarterly CSVs, 1991–2025 (most states end 2023–24) | nwdp.nwic.gov.in CKAN; any IP; includes LGD codes | One-time + yearly |
+| GW current | **NWDP** CGWB telemetry six-hourly, 2026–2030 files (~3,500 live wells) | Same; 2-day lag | Daily |
+| GW stress | IN-GRES, **2025-2026** edition, district + block | Open JSON API | Yearly |
+| Detected drought (cross-check) | IIT-GN India Drought Monitor (CDI, SPI, soil moisture; 740 districts by name) | GitHub raw files | Weekly. **No license; ask before republishing** |
+| ENSO | NOAA CPC strength-probability table (RONI-based) | HTML table | Monthly (2nd Thursday) |
+| NMME rain terciles | IRI Data Library | Reachable | Monthly (Phase 9) |
+| Declarations | See §6 | — | — |
+| Boundaries | india-geodata `LGD_Districts` (785 districts, Dec 2023, CC0) | GitHub release | Fixed |
 
-Scenario engine (per district):
-1. From IMD 1901–present, get the distribution of seasonal rainfall. Dry year = 20th percentile; normal = median.
-2. From years with well data, fit the relationship between seasonal rain departure and groundwater change (pre- to post-monsoon).
-3. Project next post-monsoon groundwater percentile under each scenario, with an uncertainty band.
-4. Show how often dry years occurred in El Niño years vs all years, next to current ENSO odds.
-5. Label "scenario, not forecast." Hide where the fit is weak or data is thin.
+**Dropped from the default path:** India-WRIS. It's blocked outside India (NICNET), and fresh manual readings 2024+ exist only there. An optional upgrade is ready but untested: a free Oracle VM in India (`deploy/oracle/`, `pipeline/sources/wris.py`). It would raise current-tier GW coverage to about 57% at full rigour (450 districts have long-history manual wells). Revisit after launch.
 
-### 4.6 Boundaries
+## 5. Groundwater method (revised)
 
-| Option | Notes |
-|---|---|
-| **LGD / Survey of India districts via india-geodata** (yashveeeeeeer.github.io/india-geodata, CC0) | First choice. Check vintage and LGD codes. |
-| udit-001/india-maps-data (MIT, ~759 districts) | Backup. |
-| DataMeet (Census 2011) | Crosswalks only. |
+- Assign wells to districts by **lat/lon spatial join**, never by the source's district name. Station names change between files ("X" vs "X_1"), so key wells on coordinates.
+- **Sign:** manual readings are positive-down; telemetry is negative-down (92%). Derive per well from its own median. Never `abs()`. Drop values outside −5 to 100 m and log them.
+- Telemetry: reduce six-hourly readings to the 4 standard cycles (Jan, pre-monsoon Mar–May, Aug, Nov).
+- **Well pairing:** link a telemetry well to the manual well at the same site (≤ 50 m) only if their readings agree where they overlap (2021–2023). Some sites have a deep sensor next to a shallow well (Andheri Devi: 33.9 m vs 7.5 m).
+- **District confidence tiers** (shown on the site):
+  - **Full:** ≥ 5 wells with ≥ 10 same-season years.
+  - **Short record:** ≥ 3 wells with ≥ 5 years.
+  - **Level only:** ≥ 1 live well. Show the latest level and the change this season, with no percentile.
+  - **Insufficient:** none of the above.
+- Low groundwater = district median well percentile ≤ 20th. Also show the change in metres vs the multi-year mean.
 
-Every table keys on **LGD district code**. `district_crosswalk.csv` maps source names (IN-GRES, IMD pages) to codes. Simplify geometry with mapshaper to TopoJSON < 2 MB. Use a Survey of India–conformant national outline.
+## 6. Drought declarations (moved up from v2)
 
-### 4.7 Later layers (v2+)
+No national machine-readable dataset exists; states publish their own notifications. The IDM data tables are a **detected** index (D0–D4 area %), not declarations.
+- **2000–2017:** IIT Gandhinagar ("Drought detection and declaration in India", *Water Security* 2021) compared declared and detected drought for all districts. **Email the lab** to ask for the declarations data and for permission to reuse IDM data.
+- **2018–now:** hand-compiled CSV `data/reference/declarations.csv` (state, district, tehsil, season, year, date, order URL). Start with drought-prone states (Maharashtra, Karnataka, Andhra Pradesh, Telangana, Rajasthan, Gujarat, Madhya Pradesh).
+- Show declared vs detected (rain deficit, IDM CDI, groundwater) side by side. That gap is the point of the site.
 
-- Official drought declarations (hand CSV: state, district, tehsil, season, date, order link).
-- Reservoir storage (CWC weekly bulletin, ~150 reservoirs).
-- Vegetation (NDVI/VCI).
-- Block-level view (IN-GRES already has blocks).
+## 7. Classification (current tier)
 
-## 5. Classification
-
-Per district, current season:
-
-| | Groundwater OK | Groundwater low |
+| | GW OK | GW low |
 |---|---|---|
 | **Rain OK** | Fine | Hidden drought |
-| **Rain short** | Buffered | Double drought |
+| **Rain short** (IMD Deficient or worse, season-to-date) | Buffered | Double drought |
 
-- Rain short = IMD category Deficient or worse, season-to-date.
-- Groundwater low = district median well percentile ≤ 20th for the latest cycle.
-- Insufficient data = fewer than 5 qualifying wells, or latest reading older than one cycle.
-- Secondary marks: IN-GRES category; well count and data age.
+Secondary marks: GW confidence tier, IN-GRES category and worst block, declared yes/no, data age. NE-monsoon districts (Tamil Nadu, Puducherry, coastal AP, Rayalaseema, south interior Karnataka, Kerala) switch to the Oct–Dec season on Oct 1.
 
-## 6. Architecture
+## 8. Phases and status
 
-```
-repo/
-  pipeline/
-    sources/        # one module per source: fetch() -> raw files
-    process/        # clean, aggregate to district, compute metrics
-    outlook/        # scenario engine, ENSO, NMME
-    run.py          # entry point: fetch -> process -> export
-  data/
-    raw/            # cached downloads (gitignored, except small files)
-    processed/      # parquet; DuckDB for queries
-    reference/      # boundaries, crosswalk, normals
-  web/
-    index.html  district.html  methods.html
-    js/ css/ i18n/en.json
-    data/           # exported JSON the site reads (committed)
-  notebooks/        # phase 0 exploration
-  docs/sources.md   # every source: URL, license, access method, quirks
-  .github/workflows/refresh.yml
-```
-
-Tools: Python 3.11, pandas, geopandas, xarray, `imdlib`, `exactextract` or `rasterstats`, DuckDB, requests. Front end: D3 v7, topojson-client.
-
-Refresh: rainfall daily; ENSO/NMME monthly; groundwater checked daily (changes ~4×/year; full national pull is slow, so fetch incrementally and cache); IN-GRES yearly.
-
-## 7. Front end (v1)
-
-1. **National map.** Quadrant colors (2×2 legend), hatching for insufficient data. Toggle single layers: rain departure, groundwater percentile, stage of extraction, outlook.
-2. **District panel.** Rain departure this season; groundwater time series with 10-year band; stage of extraction and worst block; scenario outcome; well count; "as of" dates; source links.
-3. **Hidden-drought table.** Sortable list of districts by quadrant, with CSV download.
-4. **Methods page.** Definitions, thresholds, sources, limits.
-5. Mobile-friendly, English, strings from `i18n/en.json`.
-
-## 8. Phases
-
-Each phase ends with a short review before moving on.
-
-| # | Phase | Output | Done when |
+| # | Phase | Status | Done when |
 |---|---|---|---|
-| 0 | Access tests | Notebook per source; `docs/sources.md` | Pulled one district each from WRIS, IMD gridded, IN-GRES, IDM, ENSO from **both** my laptop and a GitHub Actions runner; formats, lags, and reachability recorded |
-| 1 | Boundaries + district master | `districts.topojson`, `district_master.csv` (LGD codes) | All districts render; codes unique |
-| 2 | Rainfall pipeline | Season-to-date departure + SPI per district | Matches IMD district departure pages for a sample within a few % |
-| 3 | Groundwater pipeline | Well → district percentiles and meters vs 10-yr mean | Signs, envelope, staleness handled; sane results for known cases (Punjab, Marathwada, Delhi) |
-| 4 | Stress layer | IN-GRES 2025 joined to districts, incl. worst block | All districts matched or listed as unmatched |
-| 5 | Classification + validation | Quadrant per district; unit tests | Back-test on past years (e.g. 2023) vs known droughts |
-| 6 | Front end v1 | Map, panel, table, methods | Works on phone and laptop |
-| 7 | Automation | `refresh.yml` | Runs daily unattended for 2 weeks |
-| 8 | Outlook | Scenario engine + ENSO/NMME layer | Back-test: did scenarios bracket actual outcomes? |
-| 9 | Launch + feedback | Public site | 3–5 intermediaries try it; notes logged |
+| 0 | Access tests | ✅ **Done** (WRIS blocked → NWDP) | Probes from laptop + Actions; sources.md; coverage measured |
+| 1 | Boundaries + district master | ⏭ **Next.** File downloaded | `districts.topojson` < 2 MB, `district_master.csv` (LGD), crosswalks to IN-GRES/IDM names |
+| 2 | Rainfall pipeline | — | Season-to-date departure + SPI per district; matches IMD district pages within a few % |
+| 3 | Groundwater pipeline (NWDP) | — | History + telemetry merged; signs, envelope, pairing, tiers; sane for Punjab, Marathwada, Delhi |
+| 4 | Stress layer (IN-GRES) | — | 2025-26 edition joined incl. worst block; unmatched listed |
+| 5 | Declarations | — | IIT-GN emailed; CSV schema; ≥ 1 state compiled 2018–now |
+| 6 | Classification + validation | — | Both tiers; unit tests; back-test 2023 vs known droughts |
+| 7 | Front end v1 | — | Map, district panel, hidden-drought table, methods page; phone + laptop |
+| 8 | Automation | — | `refresh.yml` daily on Actions, unattended for 2 weeks |
+| 9 | Outlook | — | Scenario engine + ENSO/NMME; back-test |
+| 10 | Launch + feedback | — | 3–5 intermediaries try it |
 
-## 9. Risks
+## 9. Architecture (unchanged)
 
-- **Undocumented APIs** (WRIS, IN-GRES) can change without notice. Cache raw pulls; fail loudly; keep the manual download path documented.
-- **IP blocking.** Reported open from any IP, but probe from GitHub Actions in Phase 0. Fallback: run that step locally and commit results.
-- **Groundwater is local.** District medians hide variation between aquifers and wells. Say so on the page.
-- **Sparse or stale wells** in some districts. Minimum-data rule + "as of" dates.
-- **District boundaries change.** Key on LGD codes; keep a crosswalk.
-- **Official map rules.** Use a Survey of India–conformant national outline.
-- **Licenses.** Confirm IIT-GN data terms. Credit neer-vazhvu (MIT) for reused code.
+`pipeline/` (sources → process → outlook → `run.py`) → `web/data/*.json` (committed) → GitHub Pages (plain HTML/JS + D3, no build). Raw downloads go in `data/raw/` (gitignored). Python 3.11 in `.venv` via uv; dependencies are in `requirements.txt` only (pandas, geopandas, xarray, imdlib, duckdb, requests). Ask before adding any others. **Note:** parquet output needs `pyarrow`, which hasn't been approved yet.
 
-## 10. Open questions
+## 10. Open items
 
-1. Name and domain for the site?
-2. IIT-GN data: will the lab allow reuse? (Email before Phase 8.)
+1. Email IIT-GN: declarations 2000–2017 and IDM reuse terms.
+2. Site name and domain.
+3. Approve `pyarrow` (parquet) or keep CSV.
+4. Licenses still to confirm: IMD gridded data terms; India Data Portal dataset (`isopen: false`).
+5. Later: Oracle/WRIS upgrade for current-tier groundwater.
 
-## 11. Reference code
+## 11. Working rules (for Claude Code)
 
-- neer-vazhvu (MIT): `docs/methodology/pan-india-source-playbook.md`, `neer-vazhvu-api/scripts/build_ingres_gwr.py`, `build_delhi_cgwb_stations.py` — github.com/SundareshPrasanna/neer-vazhvu
-- Daksh17440/my_etl_pipeline `wris_extractor/` (no license; reference only)
-- DrJagadeeshG/india-water-data — WRIS client covering all dataset endpoints
-
-## 12. Instructions for Claude Code
-
-- Work one phase at a time. Stop at the end of each phase and summarize for review.
-- Never invent or hard-code data values. If a source fails, log it and stop.
-- Record every source URL, access date, and license in `docs/sources.md`.
-- Keep raw downloads out of git unless small.
-- Write tests for classification and aggregation logic.
-- Ask before adding a dependency not listed in section 6.
+One phase at a time; stop and summarize at the end of each. Never invent data; if a source fails, log it and stop. Record every source in sources.md. Write tests for aggregation and classification. Commit as Rushikeshay / rushikesh.y.jadhav@gmail.com.
