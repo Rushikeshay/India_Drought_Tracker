@@ -82,8 +82,8 @@ Secondary marks: GW confidence tier, IN-GRES category and worst block, IDM droug
 | 0 | Access tests | ✅ **Done** (WRIS blocked → NWDP) | Probes from laptop + Actions; sources.md; coverage measured |
 | 1 | Boundaries + district master | ✅ **Done 2026-10-01** (awaiting review) | 783 districts + 2 PoK outline polygons; `web/data/districts.geojson` 1.9 MB (simplified GeoJSON; no TopoJSON needed); IN-GRES crosswalk 723/733 rows; 11 tests pass |
 | 2 | Rainfall pipeline | ✅ **Done 2026-10-01**: headline = IMD official district figure (711), gridded fallback (72); history/SPI gridded | Season-to-date departure + SPI per district; matches IMD district pages within a few % |
-| 3 | Groundwater pipeline (NWDP) | ⏭ **Next** | History + telemetry merged; signs, envelope, pairing, tiers; sane for Punjab, Marathwada, Delhi |
-| 4 | Stress layer (IN-GRES) | — | 2025-26 edition joined incl. worst block; unmatched listed |
+| 3 | Groundwater pipeline (NWDP) | ✅ **Done 2026-10-01** (awaiting review). See §10 for results | History + telemetry merged; signs, envelope, pairing, tiers; sane for Punjab, Marathwada, Delhi |
+| 4 | Stress layer (IN-GRES) | ⏭ **Next** | 2025-26 edition joined incl. worst block; unmatched listed |
 | 5 | IDM drought layer | — | Weekly CDI grids → district stats with our own boundaries (back to Jul 2021); crosswalk of IDM names → LGD |
 | 6 | Classification + validation | — | Both tiers; unit tests; back-test 2023 vs known droughts |
 | 7 | Front end v1 | — | Map, district panel, hidden-drought table, methods page; phone + laptop |
@@ -96,6 +96,11 @@ Secondary marks: GW confidence tier, IN-GRES category and worst block, IDM droug
 `pipeline/` (sources → process → outlook → `run.py`) → `web/data/*.json` (committed) → GitHub Pages (plain HTML/JS + D3, no build). Raw downloads go in `data/raw/` (gitignored). Python 3.11 in `.venv` via uv; dependencies are in `requirements.txt` only (pandas, geopandas, xarray, imdlib, duckdb, requests). Ask before adding any others. `pyarrow` approved 2026-10-01 (parquet). Tests use stdlib `unittest`: `.venv/bin/python -m unittest discover -s tests -t .`
 
 ## 10. Open items
+
+**Phase 3 results (2026-10-01):** 42,618 wells (36,887 manual + 5,745 telemetry), 1.4M well-cycles. 1,142 impossible values dropped (outside −5 to 150 m). 701 telemetry↔manual pairs accepted (≤ 50 m, ≥ 2 shared cycles agreeing within 1.5 m).
+- **Historical tier:** pre-monsoon trend 2000–2023 for **622 districts (79%)**; PRE/NOV anomaly series for 633. Sanity: Punjab falling (Sangrur 1.1, Barnala 1.0 m/yr; Fazilka rising, matching waterlogging), south Delhi falling 0.4–0.6 m/yr, Marathwada no long-term trend.
+- **Current tier (Aug 2026):** full 8, short-record 26, level-only 402, insufficient 347. Percentiles are rare because most telemetry started in 2023 (≤ 3 same-cycle years). Each year adds one; unpaired wells reach the 5-year short tier around 2028. The Oracle/WRIS route (450 districts at full rigour) stays the main upgrade path.
+- Known QA flags: single-well jumps such as Delhi West −11 m vs last year (probably a sensor). Add a per-well jump check in Phase 6.
 
 **Phase 2 validation (2026-10-01), SW season Jun 1–Sep 30, our gridded vs IMD published:**
 - Subdivision level: median difference 2 percentage points, r = 0.95, 75% within 5 pp. **The method and normals are sound.**

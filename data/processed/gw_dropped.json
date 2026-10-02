@@ -1,0 +1,34 @@
+{
+  "envelope_m": [
+    -5.0,
+    150.0
+  ],
+  "well_cycles_dropped": 1142,
+  "by_source": {
+    "tele": 841,
+    "manual": 301
+  },
+  "examples": [
+    {
+      "station": "Bhooriyawas",
+      "depth_m": 2015.065
+    },
+    {
+      "station": "Bhooriyawas",
+      "depth_m": 2004.65
+    },
+    {
+      "station": "Bhooriyawas",
+      "depth_m": 1996.335
+    },
+    {
+      "station": "Bhooriyawas",
+      "depth_m": 1992.14
+    },
+    {
+      "station": "Turuvekere1",
+      "depth_m": 1374.0
+    }
+  ],
+  "wells_outside_districts": 49
+}

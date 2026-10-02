@@ -41,7 +41,7 @@ def season_years(t: pd.Series, months) -> int:
 
 def manual_wells() -> pd.DataFrame:
     frames = []
-    for f in glob.glob(str(RAW / "nwdp" / "*manual*quarterly*.csv")):
+    for f in glob.glob(str(RAW / "nwdp" / "manual" / "*.csv")):
         d = pd.read_csv(f, usecols=["Station", "Latitude", "Longitude", "Data Acquisition Time"], low_memory=False)
         frames.append(d)
     m = pd.concat(frames, ignore_index=True)
@@ -63,7 +63,7 @@ def manual_wells() -> pd.DataFrame:
 
 def telemetry_wells() -> pd.DataFrame:
     parts = []
-    for f in glob.glob(str(RAW / "nwdp" / "tele20*" / "*.csv")):
+    for f in glob.glob(str(RAW / "nwdp" / "telemetry" / "*.csv")):
         for d in pd.read_csv(f, usecols=["Station", "Latitude", "Longitude", "Data Acquisition Time"],
                              chunksize=2_000_000, low_memory=False):
             d["t"] = pd.to_datetime(d["Data Acquisition Time"], format=TIME_FMT, errors="coerce")

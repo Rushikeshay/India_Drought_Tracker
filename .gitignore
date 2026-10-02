@@ -11,3 +11,6 @@ data/processed/*.duckdb
 data/reference/*.parquet
 !data/processed/rain_monthly.parquet
 !data/processed/rain_daily_normal.parquet
+!data/processed/gw_cycles.parquet
+!data/processed/gw_wells.parquet
+!data/processed/gw_tele_latest.parquet

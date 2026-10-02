@@ -78,6 +78,13 @@ GitHub Actions run: 2026-09-29 ~02:40 UTC, egress US (Microsoft AS8075). Results
   - For comparison, the **manual network** has 10,711 wells with ≥ 10 years of January history still measured in 2023+, covering **450 districts with ≥ 5 wells**. Its 2024–2026 readings are only on WRIS.
 - Also found (not probed in depth): the India Data Portal (ISB) CKAN at `ckandev.indiadataportal.com`, dataset `cgwb-changes-in-depth-to-water-level`. Reachable; `isopen: false`.
 
+### 3c. NWDP processing notes (Phase 3)
+- Downloader: `python -m pipeline.sources.nwdp` (manifest-based; only changed files re-download). Layout `data/raw/nwdp/{manual,telemetry}/`.
+- Extra files found: telemetry "1991_2020" files exist for 8 states, but only Bihar's (Bihar state GW dept, 81 MB) has data.
+- Manual campaign months: Jan, Apr–May, Aug, Nov (Dec readings count toward the next Jan cycle).
+- Well identity = lat/lon (4 dp) + station base name; 1,932 coordinates carry several wells.
+- Envelope −5 to 150 m: 1,142 well-cycles dropped, e.g. "Bhooriyawas" ≈ 2,000 m (looks like an elevation in the depth field) and "Turuvekere1" 1,374 m.
+
 ## 4. IIT Gandhinagar — India Drought Monitor (cross-check only)
 
 - Repo: `https://github.com/wcl-iitgn/IndianDroughtMonitor` (~850 MB). **No license** (GitHub API `license: null`). Do not republish until the lab agrees. **Email needed.**
