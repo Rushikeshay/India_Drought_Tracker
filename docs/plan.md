@@ -81,7 +81,7 @@ Secondary marks: GW confidence tier, IN-GRES category and worst block, IDM droug
 |---|---|---|---|
 | 0 | Access tests | ✅ **Done** (WRIS blocked → NWDP) | Probes from laptop + Actions; sources.md; coverage measured |
 | 1 | Boundaries + district master | ✅ **Done 2026-10-01** (awaiting review) | 783 districts + 2 PoK outline polygons; `web/data/districts.geojson` 1.9 MB (simplified GeoJSON; no TopoJSON needed); IN-GRES crosswalk 723/733 rows; 11 tests pass |
-| 2 | Rainfall pipeline | ⏭ **Next** | Season-to-date departure + SPI per district; matches IMD district pages within a few % |
+| 2 | Rainfall pipeline | 🟡 **Built; validation needs a decision** (see §10) | Season-to-date departure + SPI per district; matches IMD district pages within a few % |
 | 3 | Groundwater pipeline (NWDP) | — | History + telemetry merged; signs, envelope, pairing, tiers; sane for Punjab, Marathwada, Delhi |
 | 4 | Stress layer (IN-GRES) | — | 2025-26 edition joined incl. worst block; unmatched listed |
 | 5 | IDM drought layer | — | Weekly CDI grids → district stats with our own boundaries (back to Jul 2021); crosswalk of IDM names → LGD |
@@ -96,6 +96,13 @@ Secondary marks: GW confidence tier, IN-GRES category and worst block, IDM droug
 `pipeline/` (sources → process → outlook → `run.py`) → `web/data/*.json` (committed) → GitHub Pages (plain HTML/JS + D3, no build). Raw downloads go in `data/raw/` (gitignored). Python 3.11 in `.venv` via uv; dependencies are in `requirements.txt` only (pandas, geopandas, xarray, imdlib, duckdb, requests). Ask before adding any others. `pyarrow` approved 2026-10-01 (parquet). Tests use stdlib `unittest`: `.venv/bin/python -m unittest discover -s tests -t .`
 
 ## 10. Open items
+
+**Phase 2 validation (2026-10-01), SW season Jun 1–Sep 30, our gridded vs IMD published:**
+- Subdivision level: median difference 2 percentage points, r = 0.95, 75% within 5 pp. **The method and normals are sound.**
+- District level (703 districts): median 9 pp, r = 0.59, 55% within 10 pp, same IMD category for 68%. The gaps come from IMD's few-gauge district average vs our area average, and are largest in hilly or sparsely gauged districts and low-normal districts.
+- **Decision needed:** which number is the current-season headline (IMD's official district figure, or our gridded one)?
+- Front end: when a season is under 7 days old (NE districts on Oct 1), say "season just started" instead of showing a category.
+- Automation: `rain_current_daily.parquet` changes daily (0.8 MB), so cache it in Actions instead of committing it.
 
 Phase 1 follow-ups: (a) **Decided 2026-10-01:** keep Rajasthan's 50-district map (9 districts abolished Dec 2024 stay, flagged) and show each source at the level it reports. Never re-apportion data to new boundaries; (b) districts newer than the Dec 2023 map (MP: Pandhurna, Maihar, Mauganj; AP: Markapuram, Polavaram; Gujarat: Vav-Tharad) aren't on it; (c) 64 map districts have no IN-GRES row (carved-out districts and Uttarakhand hills). Phase 4 falls back to the parent or marks them "not assessed". Delhi's IN-GRES units don't match LGD.
 

@@ -32,7 +32,9 @@ GitHub Actions run: 2026-09-29 ~02:40 UTC, egress US (Microsoft AS8075). Results
 - Tested 2026-09-28 (local): historical 2025 in 57 s; real-time files 2026-09-19 … 2026-09-28 in 2–4 s each. All files were distinct, with real rain values.
 - **Quirk (to confirm in Phase 2):** the newest day had far fewer wet cells (891 vs ~1,700–2,900 on earlier days). It may be a preliminary file that gets revised. **The pipeline should re-download the last ~7 days on every run.** IMD's rain day D is the 24 h ending 08:30 IST on D, so compute "today" in IST, not local time.
 - License: IMD data; terms to be checked (IMD Pune data-supply policy). **TODO Phase 2:** confirm the license and which normal period IMD's district normals use.
-- Validation site `https://mausam.imd.gov.in/` is reachable (HTTP 200). The district departure page URL is still to be pinned down in Phase 2.
+- Validation PDFs (text layer, read with pypdf) at `https://mausam.imd.gov.in/Rainfall/`: `DISTRICT_RAINFALL_DEPARTURECUMULATIVE_COUNTRY_INDIA_c.pdf` (week-by-week cumulative % departure since Jun 1), `DISTRICT_RAINFALL_DISTRIBUTION_COUNTRY_INDIA_cd.pdf` (today's district actual/normal, grouped by met subdivision and state; gives IMD's district → subdivision mapping), and `SUBDIVISION_*` equivalents. They're overwritten daily with the current period. IMD district names are mapped to LGD in `data/reference/imd_districts.csv`.
+- **Normal period:** IMD uses 1971–2020. Our gridded 1971–2020 daily normals reproduce IMD subdivision departures (median difference 2 pp).
+- Stored: `rain_monthly.parquet` (1951–2025, 1.8 MB), `rain_daily_normal.parquet` (1.8 MB), `rain_current_daily.parquet` (current year). Island districts 553, 602, 603 and 632 are outside the IMD land grid: no rainfall value.
 
 ## 2. IN-GRES — Dynamic Ground Water Resources assessment
 

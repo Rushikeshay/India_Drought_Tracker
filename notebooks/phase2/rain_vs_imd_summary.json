@@ -1,0 +1,12 @@
+{
+  "period": "2026-06-01 to 2026-09-30",
+  "days_in_our_data": 122,
+  "districts_compared": 703,
+  "median_abs_diff_pp": 9.0,
+  "mean_diff_pp (ours - IMD)": 2.5,
+  "within_5pp": "33%",
+  "within_10pp": "55%",
+  "within_20pp": "79%",
+  "same_IMD_category": "68%",
+  "correlation": 0.588
+}

@@ -9,3 +9,5 @@ data/raw/
 data/processed/*.parquet
 data/processed/*.duckdb
 data/reference/*.parquet
+!data/processed/rain_monthly.parquet
+!data/processed/rain_daily_normal.parquet
