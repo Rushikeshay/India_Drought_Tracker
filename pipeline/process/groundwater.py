@@ -38,6 +38,8 @@ from __future__ import annotations
 
 import argparse
 import json
+
+from pipeline import webjson
 import logging
 import re
 from pathlib import Path
@@ -187,7 +189,7 @@ def build_cycles() -> None:
         PROC / "gw_cycles.parquet", index=False)
     wells.to_parquet(PROC / "gw_wells.parquet", index=False)
     latest.to_parquet(PROC / "gw_tele_latest.parquet", index=False)
-    (PROC / "gw_dropped.json").write_text(json.dumps(dropped, indent=2, default=str))
+    (PROC / "gw_dropped.json").write_text(webjson.dumps(dropped, indent=2, default=str))
     log.info("wells: %d (%d outside district polygons)", len(wells), dropped["wells_outside_districts"])
 
 
@@ -333,7 +335,7 @@ def build_status(today: pd.Timestamp | None = None) -> None:
            "source": "CGWB via National Water Data Portal (telemetry + manual quarterly); wells joined to districts by location",
            "tier_counts": tiers, "districts": out}
     WEB.mkdir(parents=True, exist_ok=True)
-    (WEB / "groundwater.json").write_text(json.dumps(doc, separators=(",", ":")))
+    (WEB / "groundwater.json").write_text(webjson.dumps(doc, separators=(",", ":")))
     log.info("current %s %s: %s", cyc, year, tiers)
 
     # ---- historical tier ----
@@ -372,7 +374,7 @@ def build_status(today: pd.Timestamp | None = None) -> None:
                     rec[cy] = {str(int(y)): [round(float(r.a), 2), int(r.n)] for y, r in x.iterrows()}
         if rec:
             hist_doc["districts"][int(code)] = rec
-    (WEB / "gw_history.json").write_text(json.dumps(hist_doc, separators=(",", ":")))
+    (WEB / "gw_history.json").write_text(webjson.dumps(hist_doc, separators=(",", ":")))
     log.info("history: %d districts with trend, %d with any series",
              sum("trend_pre_m_per_yr" in v for v in hist_doc["districts"].values()), len(hist_doc["districts"]))
 

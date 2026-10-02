@@ -21,6 +21,8 @@ from __future__ import annotations
 
 import argparse
 import json
+
+from pipeline import webjson
 import logging
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
@@ -266,7 +268,7 @@ def main(argv=None) -> int:
         raise SystemExit("no current-year rainfall data")
     m = metrics(daily)
     WEB.mkdir(parents=True, exist_ok=True)
-    (WEB / "rain.json").write_text(json.dumps(m, separators=(",", ":")))
+    (WEB / "rain.json").write_text(webjson.dumps(m, separators=(",", ":")))
     cats = pd.Series([d["category"] for d in m["districts"].values()]).value_counts()
     log.info("as of %s: %s; headline sources %s", m["as_of"], cats.to_dict(), m["headline_sources"])
     return 0

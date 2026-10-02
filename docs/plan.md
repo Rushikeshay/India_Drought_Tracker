@@ -88,8 +88,8 @@ Secondary marks: GW confidence tier, IN-GRES category and worst block, IDM droug
 | 6 | Classification + validation | ✅ **Done 2026-10-01** (awaiting review). See §10 | Both tiers; unit tests; back-test 2023 vs known droughts |
 | 6a | Status history (snapshots) | ✅ **Done 2026-10-01**: Jan/May/Aug/Nov from 2000, 107 snapshots, median 577 districts classified per snapshot |
 | 6b | Row-level trace (backend accuracy check) | ✅ **Done 2026-10-01**: 23 steps for Sikar and Beed recomputed independently from raw files, all match (`notebooks/phase6b/trace_report.md`, `tests/test_trace.py`). Found and fixed: 61 placeholder `NaN NaN NaN` rows in IDM files |
-| 7 | Front end v1 | ⏭ **Next** | Map, district panel, hidden-drought table, methods page; phone + laptop |
-| 8 | Automation | — | `refresh.yml` daily on Actions, unattended for 2 weeks |
+| 7 | Front end v1 | ✅ **Built 2026-10-01** (awaiting review): map (5 layers), district panel with charts + timeline, history date picker (107 snapshots), sortable table + CSV, methods page, dark mode, mobile. Colours validated (all-pairs, light + dark). Publish via `.github/workflows/pages.yml` (needs Pages source = GitHub Actions) | Map, district panel, hidden-drought table, methods page; phone + laptop |
+| 8 | Automation | ⏭ **Next** | `refresh.yml` daily on Actions, unattended for 2 weeks |
 | 9 | Outlook | — | Scenario engine + ENSO/NMME; back-test |
 | 10 | Launch + feedback | — | 3–5 intermediaries try it |
 

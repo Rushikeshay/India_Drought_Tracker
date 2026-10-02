@@ -20,6 +20,8 @@ Usage: python -m pipeline.process.stress
 from __future__ import annotations
 
 import json
+
+from pipeline import webjson
 import logging
 from pathlib import Path
 
@@ -136,7 +138,7 @@ def main() -> int:
            "unmatched_ingres_rows": cw[cw.method.str.startswith("unmatched")][["state", "name"]].values.tolist(),
            "districts": out}
     WEB.mkdir(parents=True, exist_ok=True)
-    (WEB / "stress.json").write_text(json.dumps(doc, separators=(",", ":"), default=str))
+    (WEB / "stress.json").write_text(webjson.dumps(doc, separators=(",", ":"), default=str))
     log.info("status %s; categories %s; hidden stress in %d districts", status, cats,
              sum(v.get("hidden_stress", False) for v in out.values()))
     return 0

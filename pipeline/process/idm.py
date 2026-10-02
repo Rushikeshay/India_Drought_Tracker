@@ -16,6 +16,8 @@ Usage: python -m pipeline.process.idm
 from __future__ import annotations
 
 import json
+
+from pipeline import webjson
 import logging
 from pathlib import Path
 
@@ -125,7 +127,7 @@ def main() -> int:
                      "Combined Drought Index; district values = area-weighted over LGD boundaries. Detected drought, not an official declaration.",
            "districts": out}
     WEB.mkdir(parents=True, exist_ok=True)
-    (WEB / "idm.json").write_text(json.dumps(doc, separators=(",", ":")))
+    (WEB / "idm.json").write_text(webjson.dumps(doc, separators=(",", ":")))
     cls = pd.Series([v["class_of_mean"] for v in out.values()]).value_counts().to_dict()
     log.info("week %s: %d districts; class of district mean: %s", doc["week"], len(out), cls)
     return 0

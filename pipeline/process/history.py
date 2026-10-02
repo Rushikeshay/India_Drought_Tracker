@@ -12,7 +12,7 @@ from START_YEAR, up to the latest cycle that has ended. At each snapshot:
 
 Outputs
   data/processed/status_history.csv   one row per district x snapshot
-  web/data/status_history.json        compact arrays for the site
+  web/data/history/index.json, s_<date>.json (one per snapshot), d_<lgd>.json (one per district)
 Usage: python -m pipeline.process.history [--start 2000]
 """
 
@@ -20,6 +20,8 @@ from __future__ import annotations
 
 import argparse
 import json
+
+from pipeline import webjson
 import logging
 from datetime import date
 from pathlib import Path
@@ -142,20 +144,37 @@ def main(argv=None) -> int:
     PROC.mkdir(parents=True, exist_ok=True)
     df.to_csv(PROC / "status_history.csv", index=False)
 
-    snaps = sorted(df.snapshot.unique())
+    snaps = sorted(df.snapshot.astype(str).unique())
     fields = ["quadrant", "rain_category", "rain_dep_pct", "rain_source", "rain_short_reasons",
               "rain_dry_spell_weeks", "rain_spi_season", "gw_tier", "gw_percentile", "idm_class"]
-    out = {}
+
+    def row(r):
+        return [(QCODE.get(r["quadrant"]) if pd.notna(r["quadrant"]) else None) if f == "quadrant"
+                else (None if pd.isna(r[f]) or r[f] == "" else r[f]) for f in fields]
+
+    hdir = WEB / "history"
+    hdir.mkdir(parents=True, exist_ok=True)
+    for old in hdir.glob("*.json"):
+        old.unlink()
+    df = df.assign(snapshot=df.snapshot.astype(str))
+    counts = {}
+    for snap, g in df.groupby("snapshot"):
+        recs = {int(r["dist_lgd"]): row(r) for _, r in g.iterrows()}
+        counts[snap] = int(g.quadrant.notna().sum())
+        (hdir / f"s_{snap}.json").write_text(webjson.dumps({"snapshot": snap, "fields": fields, "districts": recs},
+                                                        separators=(",", ":"), default=str))
     for code, g in df.sort_values("snapshot").groupby("dist_lgd"):
-        out[int(code)] = [[(QCODE.get(q) if pd.notna(q) else None) if f == "quadrant" else (None if pd.isna(v) else v)
-                           for f, v, q in ((f, r[f], r["quadrant"]) for f in fields)] for _, r in g.iterrows()]
-    doc = {"snapshots": [str(s) for s in snaps],
-           "fields": fields, "quadrant_codes": {v: k for k, v in QCODE.items() if v},
-           "notes": "Rain: IMD official where archived for the exact window, else IMD gridded (district area mean). "
-                    "Groundwater: CGWB via NWDP, same-cycle percentile (tiers full/short only).",
-           "districts": out}
-    WEB.mkdir(parents=True, exist_ok=True)
-    (WEB / "status_history.json").write_text(json.dumps(doc, separators=(",", ":"), default=str))
+        (hdir / f"d_{int(code)}.json").write_text(webjson.dumps(
+            {"fields": ["snapshot"] + fields, "rows": [[r["snapshot"]] + row(r) for _, r in g.iterrows()]},
+            separators=(",", ":"), default=str))
+    (hdir / "index.json").write_text(webjson.dumps({
+        "snapshots": snaps, "classified": counts, "fields": fields,
+        "quadrant_codes": {v: k for k, v in QCODE.items() if v},
+        "notes": "Rain: IMD official where archived for the exact window, else IMD gridded (district area mean). "
+                 "Groundwater: CGWB via NWDP, same-cycle percentile (tiers full/short/provisional)."}, separators=(",", ":")))
+    old = WEB / "status_history.json"
+    if old.exists():
+        old.unlink()
     per = df.groupby("snapshot").quadrant.apply(lambda s: int(s.notna().sum()))
     log.info("snapshots: %d; classified per snapshot min %d / median %d / max %d", len(snaps), per.min(), int(per.median()), per.max())
     return 0

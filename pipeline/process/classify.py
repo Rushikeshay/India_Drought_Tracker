@@ -19,6 +19,8 @@ Usage:   python -m pipeline.process.classify
 from __future__ import annotations
 
 import json
+
+from pipeline import webjson
 from pathlib import Path
 
 import pandas as pd
@@ -73,7 +75,7 @@ def main() -> int:
         q = quadrant(rs, gl)
         rec = {
             "quadrant": q, "provisional": bool(q and g.get("tier") == "provisional"), "why_none": None if q else (r_why or g_why),
-            "rain": {"season": r.get("season"), "category": r.get("category"), "departure_pct": r.get("departure_pct"),
+            "rain": {"season": r.get("season"), "start": r.get("start"), "end": r.get("end"), "category": r.get("category"), "departure_pct": r.get("departure_pct"),
                      "source": r.get("source"), "season_days": r.get("season_days"), "short": rs,
                      "short_reasons": r.get("short_reasons"), "spi_season": r.get("spi_season"),
                      "dry_spell_weeks": r.get("dry_spell_weeks")},
@@ -103,7 +105,7 @@ def main() -> int:
            "quadrant_counts": {str(k): int(v) for k, v in counts.items()},
            "why_no_quadrant": why.to_dict(), "districts": out}
     WEB.mkdir(parents=True, exist_ok=True)
-    (WEB / "status.json").write_text(json.dumps(doc, separators=(",", ":"), default=str))
+    (WEB / "status.json").write_text(webjson.dumps(doc, separators=(",", ":"), default=str))
     pd.DataFrame(rows).to_csv(WEB / "status.csv", index=False)
     print(json.dumps({"quadrants": doc["quadrant_counts"], "why_none": doc["why_no_quadrant"]}, indent=1))
     return 0

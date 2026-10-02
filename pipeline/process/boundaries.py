@@ -21,6 +21,8 @@ Usage: python -m pipeline.process.boundaries
 from __future__ import annotations
 
 import json
+
+from pipeline import webjson
 import subprocess
 import urllib.request
 from pathlib import Path
@@ -135,7 +137,7 @@ def main() -> int:
     WEB.mkdir(parents=True, exist_ok=True)
     (WEB / "districts.geojson").write_bytes(to_geojson(s))
     outline = shapely.set_precision(shapely.union_all(s.geometry.values), 0.001)
-    (WEB / "india_outline.geojson").write_text(json.dumps(
+    (WEB / "india_outline.geojson").write_text(webjson.dumps(
         {"type": "Feature", "properties": {}, "geometry": json.loads(shapely.to_geojson(outline))}, separators=(",", ":")))
 
     report = {
@@ -149,7 +151,7 @@ def main() -> int:
         "web_geojson_bytes": (WEB / "districts.geojson").stat().st_size,
         "outline_bytes": (WEB / "india_outline.geojson").stat().st_size,
     }
-    (REF / "boundaries_report.json").write_text(json.dumps(report, indent=2))
+    (REF / "boundaries_report.json").write_text(webjson.dumps(report, indent=2))
     print(json.dumps(report, indent=2))
     return 0
 
