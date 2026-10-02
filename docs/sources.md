@@ -99,7 +99,12 @@ GitHub Actions run: 2026-09-29 ~02:40 UTC, egress US (Microsoft AS8075). Results
 
 ## 6. Boundaries
 
-Phase 1. Not probed yet.
+- india-geodata release `admin/districts`, `LGD_Districts.geojsonl.7z` (CC0): https://github.com/yashveeeeeeer/india-geodata/releases/tag/admin/districts. Downloaded 2026-10-01; file dated 2023-12-11.
+- 785 polygons, EPSG:4326, LGD codes in `dist_lgd`. Two are PoK (Mirpur, Muzaffarabad) with `dist_lgd = 0`: kept in the outline, not in the master table. 10 invalid geometries repaired with `make_valid`. The national outline includes all of J&K and Ladakh (official map).
+- Vintage gaps: Rajasthan's 9 districts abolished in Dec 2024 are still present (flagged). MP's Pandhurna, Maihar and Mauganj, AP's Markapuram and Polavaram, and Gujarat's Vav-Tharad are absent.
+- All 643 district LGD codes in NWDP groundwater data exist on this map (except Kolkata, coded 9999 in NWDP; wells are joined spatially anyway).
+- LGD directory (lgdirectory.gov.in, NICNET) is reachable from the US, but bulk download needs a CAPTCHA, and the guessed web-service URLs return 404.
+- Build: `python -m pipeline.process.boundaries`. Crosswalk: `python -m pipeline.process.crosswalk`.
 
 ## Reference code and credits
 

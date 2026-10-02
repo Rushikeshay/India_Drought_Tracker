@@ -1,0 +1,11 @@
+{
+  "polygons_in_source": 785,
+  "districts_in_master": 783,
+  "pok_polygons_outline_only": 2,
+  "invalid_geometries_fixed": 10,
+  "rajasthan_abolished_flagged": 9,
+  "states": 36,
+  "web_tolerance_deg": 0.01,
+  "web_geojson_bytes": 1893837,
+  "outline_bytes": 125062
+}

@@ -78,8 +78,8 @@ Secondary marks: GW confidence tier, IN-GRES category and worst block, IDM droug
 | # | Phase | Status | Done when |
 |---|---|---|---|
 | 0 | Access tests | ✅ **Done** (WRIS blocked → NWDP) | Probes from laptop + Actions; sources.md; coverage measured |
-| 1 | Boundaries + district master | ⏭ **Next.** File downloaded | `districts.topojson` < 2 MB, `district_master.csv` (LGD), crosswalks to IN-GRES/IDM names |
-| 2 | Rainfall pipeline | — | Season-to-date departure + SPI per district; matches IMD district pages within a few % |
+| 1 | Boundaries + district master | ✅ **Done 2026-10-01** (awaiting review) | 783 districts + 2 PoK outline polygons; `web/data/districts.geojson` 1.9 MB (simplified GeoJSON; no TopoJSON needed); IN-GRES crosswalk 723/733 rows; 11 tests pass |
+| 2 | Rainfall pipeline | ⏭ **Next** | Season-to-date departure + SPI per district; matches IMD district pages within a few % |
 | 3 | Groundwater pipeline (NWDP) | — | History + telemetry merged; signs, envelope, pairing, tiers; sane for Punjab, Marathwada, Delhi |
 | 4 | Stress layer (IN-GRES) | — | 2025-26 edition joined incl. worst block; unmatched listed |
 | 5 | IDM drought layer | — | Weekly CDI grids → district stats with our own boundaries (back to Jul 2021); crosswalk of IDM names → LGD |
@@ -91,14 +91,16 @@ Secondary marks: GW confidence tier, IN-GRES category and worst block, IDM droug
 
 ## 9. Architecture (unchanged)
 
-`pipeline/` (sources → process → outlook → `run.py`) → `web/data/*.json` (committed) → GitHub Pages (plain HTML/JS + D3, no build). Raw downloads go in `data/raw/` (gitignored). Python 3.11 in `.venv` via uv; dependencies are in `requirements.txt` only (pandas, geopandas, xarray, imdlib, duckdb, requests). Ask before adding any others. **Note:** parquet output needs `pyarrow`, which hasn't been approved yet.
+`pipeline/` (sources → process → outlook → `run.py`) → `web/data/*.json` (committed) → GitHub Pages (plain HTML/JS + D3, no build). Raw downloads go in `data/raw/` (gitignored). Python 3.11 in `.venv` via uv; dependencies are in `requirements.txt` only (pandas, geopandas, xarray, imdlib, duckdb, requests). Ask before adding any others. `pyarrow` approved 2026-10-01 (parquet). Tests use stdlib `unittest`: `.venv/bin/python -m unittest discover -s tests -t .`
 
 ## 10. Open items
 
+Phase 1 follow-ups: (a) Rajasthan's 9 districts abolished in Dec 2024 are still on the map, flagged in `notes`; (b) districts newer than the Dec 2023 map (MP: Pandhurna, Maihar, Mauganj; AP: Markapuram, Polavaram; Gujarat: Vav-Tharad) aren't on it; (c) 64 map districts have no IN-GRES row (carved-out districts and Uttarakhand hills). Phase 4 falls back to the parent or marks them "not assessed". Delhi's IN-GRES units don't match LGD.
+
+
 1. Site name and domain.
-2. Approve `pyarrow` (parquet) or keep CSV.
-3. Licenses still to confirm: IMD gridded data terms; India Data Portal dataset (`isopen: false`).
-4. Later: Oracle/WRIS upgrade for current-tier groundwater; declarations (v2).
+2. Licenses still to confirm: IMD gridded data terms; India Data Portal dataset (`isopen: false`).
+3. Later: Oracle/WRIS upgrade for current-tier groundwater; declarations (v2).
 
 ## 11. Working rules (for Claude Code)
 
