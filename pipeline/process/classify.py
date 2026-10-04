@@ -84,7 +84,7 @@ def main() -> int:
                    "vs_decadal_mean_m": g.get("vs_decadal_mean_m"), "n_live": g.get("n_live")},
             "stress": {"category": s.get("category"), "stage_pct": s.get("stage_pct"),
                        "hidden_stress": s.get("hidden_stress"), "worst_unit": s.get("worst_unit"), "status": s.get("status")},
-            "idm": {"class_of_mean": i.get("class_of_mean"), "pct_in_drought_d0plus": i.get("pct_in_drought_d0plus")},
+            "idm": {"class_of_mean": i.get("class_of_mean"), "cdi_mean": i.get("cdi_mean"), "pct_in_drought_d0plus": i.get("pct_in_drought_d0plus")},
         }
         out[int(m.dist_lgd)] = rec
         rows.append({"dist_lgd": m.dist_lgd, "district": m.district, "state": m.state, "quadrant": q, "provisional": bool(q and g.get("tier") == "provisional"),

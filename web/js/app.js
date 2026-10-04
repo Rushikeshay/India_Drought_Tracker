@@ -20,9 +20,10 @@ const LAYERS = ["quadrant", "rain", "gw", "stress", "idm"];
 const CYCLE_MONTH = { "01": "Jan", "05": "May", "08": "Aug", "11": "Nov" };
 
 let S = null;          // i18n strings
-const st = { layer: "quadrant", snapshot: "now", selected: null, view: "map", filter: null, sort: ["category", 1] };
+const st = { layer: "quadrant", snapshot: "now", selected: null, view: "map", filter: null, sort: ["category", 1],
+  groups: new Set(LAYERS), q: "" };  // table: column groups shown, district search text
 const cache = { snaps: {}, dist: {} };
-let geo, status, histIndex, names = {}, paths, outlinePath;
+let geo, status, histIndex, names = {}, paths, outlinePath, zoom;
 
 // ---------------- helpers ----------------
 const t = (k, vars = {}) => (S && S[k] !== undefined ? S[k] : k).replace(/\{(\w+)\}/g, (_, v) => vars[v] ?? "");
@@ -49,8 +50,8 @@ function storage(k, val) {
 }
 
 // ---------------- record access (now or snapshot) ----------------
-function record(lgd) {
-  if (st.snapshot === "now") {
+function record(lgd, snap = st.snapshot) {
+  if (snap === "now") {
     const r = status.districts[lgd];
     if (!r) return null;
     return {
@@ -58,7 +59,7 @@ function record(lgd) {
       rain: r.rain, gw: r.gw, stress: { ...r.stress, edition: "2025-2026" }, idm: r.idm,
     };
   }
-  const s = cache.snaps[st.snapshot];
+  const s = cache.snaps[snap];
   const row = s && s.districts[lgd];
   if (!row) return null;
   const f = Object.fromEntries(s.fields.map((k, i) => [k, row[i]]));
@@ -72,12 +73,13 @@ function record(lgd) {
       short_reasons: f.rain_short_reasons ? String(f.rain_short_reasons).split(",") : [],
       dry_spell_weeks: f.rain_dry_spell_weeks, spi_season: f.rain_spi_season,
     },
-    gw: { tier: f.gw_tier, percentile: f.gw_percentile },
+    gw: { tier: f.gw_tier, percentile: f.gw_percentile, median_depth_m: f.gw_median_depth_m,
+          change_vs_last_year_m: f.gw_change_vs_ly_m, vs_decadal_mean_m: f.gw_vs_10y_m, n_live: f.gw_wells },
     stress: f.stress_edition
       ? { category: f.stress_category, stage_pct: f.stress_stage_pct, edition: f.stress_edition,
           status: f.stress_category || f.stress_stage_pct !== null ? "assessed" : "not_in_ingres" }
       : { status: "no_edition" },
-    idm: { class_of_mean: f.idm_class },
+    idm: { class_of_mean: f.idm_class, cdi_mean: f.idm_cdi_mean, pct_in_drought_d0plus: f.idm_d0plus_pct },
   };
 }
 
@@ -98,6 +100,22 @@ function noDataReason(r) {
   return "";
 }
 function layerHasData(lgd) { return fillFor(lgd) !== "url(#nodata)"; }
+// Shown at the top of the panel when the map layer has nothing for the selected district,
+// so it is clear why the map is hatched while other sections below still have figures.
+const LAYER_PANEL = { rain: "panel_rain", gw: "panel_gw", stress: "panel_stress", idm: "panel_idm" };
+function panelNotice(lgd, r) {
+  if (layerHasData(lgd)) return "";
+  const has = {
+    rain: !!r.rain?.category,
+    gw: (r.gw?.percentile ?? r.gw?.median_depth_m ?? null) !== null,
+    stress: !!r.stress?.category || (r.stress?.stage_pct ?? null) !== null,
+    idm: !!r.idm?.class_of_mean,
+  };
+  const others = Object.keys(LAYER_PANEL).filter((k) => k !== st.layer && has[k]).map((k) => t(LAYER_PANEL[k]).toLowerCase());
+  const why = noDataReason(r).replace(/\.$/, "");
+  return `<p class="notice"><b>${esc(t("notice_no_layer", { layer: t("layer_" + st.layer) }))}</b>
+    ${why ? esc(why[0].toUpperCase() + why.slice(1)) + ". " : ""}${esc(others.length ? t("notice_others", { list: others.join(", ") }) : t("notice_no_others"))}</p>`;
+}
 
 // ---------------- colour per layer ----------------
 function fillFor(lgd) {
@@ -147,6 +165,21 @@ function drawMap() {
     .on("click", (ev, f) => f.properties.lgd && select(f.properties.lgd));
   outlinePath = g.append("path").attr("class", "outline");
   json(DATA + "india_outline.geojson").then((o) => outlinePath.attr("d", path(o)));
+  // Zoom: buttons, drag, double-click, pinch. Plain scroll and one-finger swipes are left to
+  // the page (wheel needs Ctrl/Cmd, which is also what a trackpad pinch sends).
+  zoom = d3.zoom().scaleExtent([1, 12]).translateExtent([[0, 0], [W, H]])
+    .filter((ev) => ev.type === "wheel" ? ev.ctrlKey || ev.metaKey
+      : ev.type.startsWith("touch") ? ev.touches.length > 1 || d3.zoomTransform(svg.node()).k > 1
+      : !ev.button)
+    .on("zoom", (ev) => { g.attr("transform", ev.transform); hideTip(); });
+  svg.call(zoom);
+  const zoomBy = (k) => svg.transition().duration(200).call(zoom.scaleBy, k);
+  for (const [id, key, fn] of [["#zoom-in", "zoom_in", () => zoomBy(1.6)], ["#zoom-out", "zoom_out", () => zoomBy(1 / 1.6)],
+    ["#zoom-reset", "zoom_reset", () => svg.transition().duration(200).call(zoom.transform, d3.zoomIdentity)]]) {
+    $(id).onclick = fn;
+    $(id).title = t(key);
+    $(id).setAttribute("aria-label", t(key));
+  }
   recolor();
 }
 function layerNotice() {
@@ -154,7 +187,9 @@ function layerNotice() {
   if (!n) { n = document.createElement("div"); n.id = "layer-notice"; n.className = "layer-notice"; $("#map-wrap").appendChild(n); }
   const any = geo.features.some((f) => f.properties.lgd && layerHasData(f.properties.lgd));
   let msg = "";
-  if (!any) {
+  if (st.moved) {
+    msg = t("date_moved", { layer: t("layer_" + st.layer), date: snapLabel(st.moved) });
+  } else if (!any) {
     msg = st.layer === "idm" ? t("idm_unavailable") : st.layer === "stress" ? t("stress_unavailable") : t("layer_empty");
   }
   n.textContent = msg;
@@ -222,6 +257,7 @@ function drawLegend() {
 // ---------------- selection + panel ----------------
 function select(lgd) {
   st.selected = lgd;
+  $("#search").value = names[lgd] ? `${names[lgd].n}, ${names[lgd].s}` : "";
   recolor();
   renderPanel();
   if (window.matchMedia("(max-width: 900px)").matches) $("#panel").scrollIntoView({ behavior: "smooth" });
@@ -233,6 +269,7 @@ function reasonText(reasons, r) {
 
 async function renderPanel() {
   const P = $("#panel");
+  P.classList.toggle("is-empty", !st.selected);
   if (!st.selected) { P.innerHTML = `<p class="empty">${esc(t("panel_hint"))}</p>`; return; }
   const lgd = st.selected;
   const r = record(lgd) || {};
@@ -291,6 +328,7 @@ async function renderPanel() {
   P.innerHTML = `
     <h2>${esc(nm?.n || lgd)}</h2>
     <p class="sub">${esc(nm?.s || "")} · LGD ${lgd}${st.snapshot !== "now" ? " · " + esc(snapLabel(st.snapshot)) : ""}</p>
+    ${panelNotice(lgd, r)}
     <section><h3>${esc(t("panel_category"))}</h3>${chip}</section>
     <section><h3>${esc(t("panel_rain"))}</h3>${rainHtml}</section>
     <section><h3>${esc(t("panel_gw"))}</h3>${gwHtml}</section>
@@ -423,62 +461,111 @@ function rainWhy(rain) {
     .map((k) => k === "dry_spell" ? t("short_dry_spell", { n: rain.dry_spell_weeks }) : t("short_spi", { v: fmt(rain.spi_season, 1) }));
   return extra.length ? " · " + extra.join(", ") : "";
 }
-function tableRows() {
+function tableRows(snap = st.snapshot) {
   return geo.features.filter((f) => f.properties.lgd).map((f) => {
-    const lgd = f.properties.lgd, r = record(lgd) || {};
+    const lgd = f.properties.lgd, r = record(lgd, snap) || {};
+    const rain = r.rain || {}, gw = r.gw || {}, s = r.stress || {}, idm = r.idm || {};
     return {
       lgd, district: f.properties.n, state: f.properties.s,
       category: r.quadrant ? t("q_" + r.quadrant) + (r.provisional ? " (" + t("panel_provisional") + ")" : "") : t("q_none"),
       quadrant: r.quadrant || "none",
       rank: { double_drought: 0, hidden_drought: 1, buffered: 2, fine: 3 }[r.quadrant] ?? 4,
-      rain: r.rain?.category ? t("rain_cat_" + r.rain.category) + rainWhy(r.rain) : "",
-      rain_dep: r.rain?.departure_pct ?? null,
-      gw_pct: r.gw?.percentile ?? null,
-      gw_tier: r.gw?.tier ? t("tier_" + r.gw.tier) : "",
-      stress: r.stress?.category ? t("stress_" + r.stress.category) : "",
-      idm: r.idm?.class_of_mean ? t("idm_" + r.idm.class_of_mean) : "",
+      rain: rain.category ? t("rain_cat_" + rain.category) + rainWhy(rain) : "",
+      rain_dep: rain.departure_pct ?? null, rain_spi: rain.spi_season ?? null, rain_dry: rain.dry_spell_weeks ?? null,
+      rain_src: rain.source ? t("src_short_" + rain.source) : "",
+      gw_pct: gw.percentile ?? null, gw_tier: gw.tier ? t("tier_" + gw.tier) : "",
+      gw_depth: gw.median_depth_m ?? null, gw_ly: gw.change_vs_last_year_m ?? null, gw_10y: gw.vs_decadal_mean_m ?? null,
+      gw_wells: gw.n_live ?? null,
+      stress: s.category ? t("stress_" + s.category) : "", stress_stage: s.stage_pct ?? null,
+      stress_ed: s.category || (s.stage_pct ?? null) !== null ? s.edition || "" : "",
+      idm: idm.class_of_mean ? t("idm_" + idm.class_of_mean) : "",
+      idm_cdi: idm.cdi_mean ?? null, idm_area: idm.pct_in_drought_d0plus ?? null,
     };
   });
 }
-const COLS = [["district", "col_district"], ["state", "col_state"], ["category", "col_category"], ["rain", "col_rain"],
-  ["rain_dep", "col_rain_dep", true], ["gw_pct", "col_gw_pct", true], ["gw_tier", "col_gw_tier"], ["stress", "col_stress"], ["idm", "col_idm"]];
-const COL_HELP = { category: "#categories", rain: "#rain", rain_dep: "#rain", gw_pct: "#groundwater", gw_tier: "#groundwater", stress: "#stress", idm: "#drought-index" };
-function renderTable() {
-  const tools = $("#table-tools");
-  const qs = ["hidden_drought", "double_drought", "buffered", "fine", "none"];
-  tools.innerHTML = `<strong>${esc(t("table_title"))}</strong>
-    <button class="filter-chip" data-q="" aria-pressed="${!st.filter}">${esc(t("table_all"))}</button>
-    ${qs.map((q) => `<button class="filter-chip" data-q="${q}" aria-pressed="${st.filter === q}">${esc(t(q === "none" ? "q_none" : "q_" + q))}</button>`).join("")}
-    <button class="btn" id="dl">${esc(t("table_download"))}</button>
-    <details class="col-help"><summary>${esc(t("table_help_title"))}</summary><dl>
-      ${COLS.filter(([c]) => COL_HELP[c]).map(([c, lab]) => `<dt>${esc(t(lab))}</dt><dd>${esc(t(lab + "_help"))} <a href="methods.html${COL_HELP[c]}">${esc(t("more_in_methods"))}</a></dd>`).join("")}
-    </dl></details>`;
-  tools.querySelectorAll(".filter-chip").forEach((b) => b.onclick = () => { st.filter = b.dataset.q || null; renderTable(); });
-  let rows = tableRows();
+// Table columns: [key, label, group, decimals (numeric columns only), show + sign].
+// The "Columns" chips in the ribbon switch whole groups on and off; district and state always show.
+const COLS = [
+  ["district", "col_district", "id"], ["state", "col_state", "id"],
+  ["category", "col_category", "quadrant"],
+  ["rain", "col_rain", "rain"], ["rain_dep", "col_rain_dep", "rain", 0, true], ["rain_spi", "col_rain_spi", "rain", 2, true],
+  ["rain_dry", "col_rain_dry", "rain", 0], ["rain_src", "col_rain_src", "rain"],
+  ["gw_pct", "col_gw_pct", "gw", 0], ["gw_tier", "col_gw_tier", "gw"], ["gw_depth", "col_gw_depth", "gw", 1],
+  ["gw_ly", "col_gw_ly", "gw", 2, true], ["gw_10y", "col_gw_10y", "gw", 2, true], ["gw_wells", "col_gw_wells", "gw", 0],
+  ["stress", "col_stress", "stress"], ["stress_stage", "col_stress_stage", "stress", 1], ["stress_ed", "col_stress_ed", "stress"],
+  ["idm", "col_idm", "idm"], ["idm_cdi", "col_idm_cdi", "idm", 2, true], ["idm_area", "col_idm_area", "idm", 1],
+];
+const GROUP_HELP = { quadrant: "#categories", rain: "#rain", gw: "#groundwater", stress: "#stress", idm: "#drought-index" };
+const shownCols = () => COLS.filter(([, , g]) => g === "id" || st.groups.has(g));
+const snapDate = (snap) => (snap === "now" ? status.as_of.rain : snap);
+function filterSort(rows) {
   if (st.filter) rows = rows.filter((r) => r.quadrant === st.filter);
+  const q = st.q.trim().toLowerCase();
+  if (q) rows = rows.filter((r) => `${r.district}, ${r.state}`.toLowerCase().includes(q));
   const [k, dir] = st.sort;
   const key = k === "category" ? "rank" : k;  // category sorts by severity, not alphabetically
-  rows.sort((a, b) => {
+  return rows.sort((a, b) => {
     const x = a[key], y = b[key];
     if (x === null || x === "") return 1;
     if (y === null || y === "") return -1;
     return (typeof x === "number" ? x - y : String(x).localeCompare(String(y))) * dir;
   });
-  $("#table").innerHTML = `<thead><tr>${COLS.map(([c, lab]) => `<th data-k="${c}" title="${esc(t(lab + "_help"))}" aria-sort="${k === c ? (dir > 0 ? "ascending" : "descending") : "none"}">${esc(t(lab))}${k === c ? (dir > 0 ? " ▲" : " ▼") : ""}</th>`).join("")}</tr></thead>
-    <tbody>${rows.map((r) => `<tr data-lgd="${r.lgd}">${COLS.map(([c, , num]) => `<td class="${num ? "num" : ""}">${esc(r[c] === null ? "–" : num ? (c === "rain_dep" ? signed(r[c]) : fmt(r[c])) : r[c])}</td>`).join("")}</tr>`).join("")}</tbody>`;
+}
+function downloadCsv(name, cols, lines) {
+  const head = cols.map(([, lab]) => t(lab)).concat(["LGD", "date"]);
+  const csv = [head].concat(lines).map((l) => l.map((x) => `"${String(x).replace(/"/g, '""')}"`).join(",")).join("\n");
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(new Blob([csv], { type: "text/csv" }));
+  a.download = name;
+  a.click();
+}
+function renderGroups() {
+  $("#col-groups").innerHTML = `<span>${esc(t("table_columns"))}</span><div>${LAYERS.map((g) =>
+    `<button class="filter-chip" data-g="${g}" aria-pressed="${st.groups.has(g)}">${esc(t("group_" + g))}</button>`).join("")}</div>`;
+  $("#col-groups").querySelectorAll("button").forEach((b) => b.onclick = () => {
+    st.groups.has(b.dataset.g) ? st.groups.delete(b.dataset.g) : st.groups.add(b.dataset.g);
+    renderGroups();
+    renderTable();
+  });
+}
+function renderTable() {
+  const tools = $("#table-tools");
+  const qs = ["hidden_drought", "double_drought", "buffered", "fine", "none"];
+  const cols = shownCols();
+  const rows = filterSort(tableRows());
+  const [k, dir] = st.sort;
+  tools.innerHTML = `<strong>${esc(t("table_title"))}</strong>
+    <button class="filter-chip" data-q="" aria-pressed="${!st.filter}">${esc(t("table_all"))}</button>
+    ${qs.map((q) => `<button class="filter-chip" data-q="${q}" aria-pressed="${st.filter === q}">${esc(t(q === "none" ? "q_none" : "q_" + q))}</button>`).join("")}
+    <span class="count">${esc(t("table_count", { n: rows.length }))}</span>
+    <button class="btn" id="dl">${esc(t("table_download"))}</button>
+    <button class="btn" id="dl-all">${esc(t("table_download_all"))}</button>
+    <details class="col-help"${$("#table-tools details")?.open ? " open" : ""}><summary>${esc(t("table_help_title"))}</summary><dl>
+      ${cols.filter(([, , g]) => GROUP_HELP[g]).map(([, lab, g]) => `<dt>${esc(t(lab))}</dt><dd>${esc(t(lab + "_help"))} <a href="methods.html${GROUP_HELP[g]}">${esc(t("more_in_methods"))}</a></dd>`).join("")}
+    </dl></details>`;
+  tools.querySelectorAll(".filter-chip").forEach((b) => b.onclick = () => { st.filter = b.dataset.q || null; renderTable(); });
+  const cell = (r, [c, , , dec, sg]) => {
+    const x = r[c];
+    return `<td class="${dec !== undefined ? "num" : ""}">${esc(x === null ? "–" : dec !== undefined ? (sg ? signed(x, dec) : fmt(x, dec)) : x)}</td>`;
+  };
+  $("#table").innerHTML = `<thead><tr>${cols.map(([c, lab]) => `<th data-k="${c}" title="${esc(t(lab + "_help"))}" aria-sort="${k === c ? (dir > 0 ? "ascending" : "descending") : "none"}">${esc(t(lab))}${k === c ? (dir > 0 ? " ▲" : " ▼") : ""}</th>`).join("")}</tr></thead>
+    <tbody>${rows.map((r) => `<tr data-lgd="${r.lgd}">${cols.map((c) => cell(r, c)).join("")}</tr>`).join("")}</tbody>`;
   $("#table").querySelectorAll("th").forEach((th) => th.onclick = () => {
     st.sort = [th.dataset.k, st.sort[0] === th.dataset.k ? -st.sort[1] : 1];
     renderTable();
   });
   $("#table").querySelectorAll("tbody tr").forEach((tr) => tr.onclick = () => { setView("map"); select(+tr.dataset.lgd); });
-  $("#dl").onclick = () => {
-    const head = COLS.map(([, lab]) => t(lab)).concat(["LGD", "date"]);
-    const lines = [head].concat(rows.map((r) => COLS.map(([c]) => r[c] ?? "").concat([r.lgd, st.snapshot === "now" ? status.as_of.rain : st.snapshot])));
-    const csv = lines.map((l) => l.map((x) => `"${String(x).replace(/"/g, '""')}"`).join(",")).join("\n");
-    const a = document.createElement("a");
-    a.href = URL.createObjectURL(new Blob([csv], { type: "text/csv" }));
-    a.download = `drought-watch-${st.snapshot === "now" ? "latest" : st.snapshot}.csv`;
-    a.click();
+  const line = (r, snap) => cols.map(([c]) => r[c] ?? "").concat([r.lgd, snapDate(snap)]);
+  $("#dl").onclick = () => downloadCsv(`drought-watch-${st.snapshot === "now" ? "latest" : st.snapshot}.csv`, cols, rows.map((r) => line(r, st.snapshot)));
+  // every snapshot plus the latest figures, with the same columns, filter and search as on screen
+  $("#dl-all").onclick = async (ev) => {
+    const b = ev.currentTarget, snaps = histIndex.snapshots;
+    b.disabled = true;
+    let done = 0;
+    await Promise.all(snaps.map(async (d) => { await loadSnap(d); b.textContent = t("table_loading", { n: ++done, total: snaps.length }); }));
+    downloadCsv("drought-watch-all-dates.csv", cols, [...snaps, "now"].flatMap((d) => filterSort(tableRows(d)).map((r) => line(r, d))));
+    b.disabled = false;
+    b.textContent = t("table_download_all");
   };
 }
 function setView(view) {
@@ -487,7 +574,11 @@ function setView(view) {
   $("#table-view").hidden = view !== "table";
   $("#nav-map").setAttribute("aria-pressed", view === "map");
   $("#nav-table").setAttribute("aria-pressed", view === "table");
-  if (view === "table") renderTable();
+  $("#controls").classList.toggle("for-table", view === "table");
+  // the search box filters rows in the table, and names the selected district on the map
+  $("#search").value = view === "table" ? st.q : names[st.selected] ? `${names[st.selected].n}, ${names[st.selected].s}` : "";
+  st.moved = null;
+  syncDates().then(() => { if (view === "table") renderTable(); });
 }
 
 // ---------------- controls ----------------
@@ -502,8 +593,11 @@ function asofLine() {
     $("#asof").textContent = t("snapshot_note", { date: snapLabel(st.snapshot), edition: ed ? "IN-GRES " + ed : t("stress_none_for_date") });
   }
 }
-async function setSnapshot(d) {
+async function loadSnap(d) {
   if (d !== "now" && !cache.snaps[d]) cache.snaps[d] = await json(`${DATA}history/s_${d}.json`);
+}
+async function setSnapshot(d) {
+  await loadSnap(d);
   st.snapshot = d;
   asofLine();
   recolor();
@@ -511,20 +605,57 @@ async function setSnapshot(d) {
   if (st.view === "table") renderTable();
 }
 
+// Snapshot dates the current layer has data for (stress and the drought index start late).
+function layerDates() {
+  const from = st.view === "table" ? null : histIndex.layer_from?.[st.layer];  // the table has every date
+  return histIndex.snapshots.filter((d) => !from || d >= from);
+}
+function fillDates() {
+  const date = $("#date");
+  date.innerHTML = `<option value="now">${esc(t("date_now"))}</option>` +
+    layerDates().reverse().map((d) => `<option value="${d}">${esc(snapLabel(d))} · ${histIndex.classified[d]} districts</option>`).join("");
+  date.value = st.snapshot;
+}
+// Refill the date list for the current layer/view. If the chosen date is older than the
+// layer's data, move to the layer's first date and say so on the map.
+async function syncDates() {
+  const dates = layerDates();
+  if (st.snapshot !== "now" && !dates.includes(st.snapshot)) {
+    st.moved = dates[0] || null;
+    st.snapshot = dates[0] || "now";
+    fillDates();
+    await setSnapshot(st.snapshot);
+  } else {
+    fillDates();
+    recolor();
+    renderPanel();
+  }
+}
+const CTL_HELP = [["layer_quadrant", "#categories"], ["layer_rain", "#rain"], ["layer_gw", "#groundwater"],
+  ["layer_stress", "#stress"], ["layer_idm", "#drought-index"], ["ctl_date", "#history"]];
+
 function initControls() {
   const layer = $("#layer");
   layer.innerHTML = LAYERS.map((l) => `<option value="${l}">${esc(t("layer_" + l))}</option>`).join("");
-  layer.onchange = () => { st.layer = layer.value; recolor(); };
+  layer.onchange = async () => {
+    st.layer = layer.value;
+    st.moved = null;
+    await syncDates();
+  };
   const date = $("#date");
-  const snaps = [...histIndex.snapshots].reverse();
-  date.innerHTML = `<option value="now">${esc(t("date_now"))}</option>` +
-    snaps.map((d) => `<option value="${d}">${esc(snapLabel(d))} · ${histIndex.classified[d]} districts</option>`).join("");
-  date.onchange = () => setSnapshot(date.value);
+  fillDates();
+  date.onchange = () => { st.moved = null; setSnapshot(date.value); };
+  $("#ctl-help").innerHTML = `<summary>${esc(t("ctl_help_title"))}</summary><dl>
+    ${CTL_HELP.map(([k, a]) => `<dt>${esc(t(k))}</dt><dd>${esc(t(k + "_help"))} <a href="methods.html${a}">${esc(t("more_in_methods"))}</a></dd>`).join("")}
+  </dl>`;
   const dl = $("#district-list");
   const list = geo.features.filter((f) => f.properties.lgd).map((f) => `${f.properties.n}, ${f.properties.s}`);
   dl.innerHTML = list.map((x) => `<option value="${esc(x)}">`).join("");
   $("#search").setAttribute("placeholder", t("search_placeholder"));
+  $("#search").oninput = (e) => { if (st.view === "table") { st.q = e.target.value; renderTable(); } };
+  renderGroups();
   $("#search").onchange = (e) => {
+    if (st.view === "table") return;
     const f = geo.features.find((g) => `${g.properties.n}, ${g.properties.s}` === e.target.value);
     if (f) { setView("map"); select(f.properties.lgd); }
   };

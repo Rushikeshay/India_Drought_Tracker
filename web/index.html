@@ -13,19 +13,23 @@
     <div class="brand">
       <h1 data-i18n="site_title">India Drought & Groundwater Watch</h1>
       <p data-i18n="tagline"></p>
+      <p class="gap" data-i18n="tagline_gap"></p>
     </div>
-    <nav class="site-nav" aria-label="Views">
+    <nav class="view-tabs" aria-label="Views">
       <button id="nav-map" aria-pressed="true" data-i18n="nav_map">Map</button>
       <button id="nav-table" aria-pressed="false" data-i18n="nav_table">Table</button>
+    </nav>
+    <nav class="site-nav">
       <a href="methods.html" data-i18n="nav_methods">Methods</a>
       <button id="theme" aria-label="Toggle dark mode" title="Toggle dark mode">◐</button>
     </nav>
   </header>
 
-  <div class="controls" role="search">
+  <div class="controls" id="controls" role="search">
     <label><span data-i18n="ctl_layer">Show</span>
       <select id="layer"></select>
     </label>
+    <div class="col-groups" id="col-groups"></div>
     <label><span data-i18n="ctl_date">Date</span>
       <select id="date"></select>
     </label>
@@ -34,12 +38,18 @@
       <datalist id="district-list"></datalist>
     </label>
     <div class="asof" id="asof"></div>
+    <details class="col-help" id="ctl-help"></details>
   </div>
 
   <main id="map-view" class="layout">
     <div class="map-wrap" id="map-wrap">
       <svg id="map" role="img" aria-label="Map of India's districts"></svg>
       <div class="tooltip" id="tooltip" role="status"></div>
+      <div class="zoom-ctl" id="zoom-ctl">
+        <button id="zoom-in">+</button>
+        <button id="zoom-out">−</button>
+        <button id="zoom-reset">⟲</button>
+      </div>
       <div class="legend" id="legend"></div>
     </div>
     <aside class="panel" id="panel" aria-live="polite"></aside>

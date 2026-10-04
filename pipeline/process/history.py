@@ -99,7 +99,10 @@ def build(start: int, today: pd.Timestamp) -> pd.DataFrame:
         g = gw.district_status(c, units, master, year, cyc, live=None)
         ed = edition_for(snap.year, snap.month)
         wk = idm[idm.week <= pd.Timestamp(snap)]
-        idm_cls = wk[wk.week == wk.week.max()].set_index("dist_lgd").cls if len(wk) and wk.week.max() >= pd.Timestamp(snap) - pd.Timedelta(days=7) else pd.Series(dtype=object)
+        idm_wk = wk[wk.week == wk.week.max()].set_index("dist_lgd") if len(wk) and wk.week.max() >= pd.Timestamp(snap) - pd.Timedelta(days=7) else idm.iloc[:0].set_index("dist_lgd")
+        idm_cls = idm_wk.cls
+        idm_cdi = idm_wk.cdi_mean.astype(float).round(2)  # float32 in the parquet
+        idm_d0p = idm_wk[["pct_d0", "pct_d1", "pct_d2", "pct_d3", "pct_d4"]].astype(float).sum(axis=1).round(1)
         # rain: one window for non-NE and one for NE districts
         dep_by_window = {}
         for is_ne in (False, True):
@@ -133,7 +136,12 @@ def build(start: int, today: pd.Timestamp) -> pd.DataFrame:
                          "rain_short_reasons": ",".join(why),
                          "gw_tier": g[code]["tier"], "gw_percentile": g[code].get("percentile"),
                          "gw_median_depth_m": g[code].get("median_depth_m"),
+                         "gw_change_vs_ly_m": g[code].get("change_vs_last_year_m"),
+                         "gw_vs_10y_m": g[code].get("vs_decadal_mean_m"),
+                         "gw_wells": g[code].get("n_wells_with_reading"),
                          "idm_class": idm_cls.get(code) if code in idm_cls.index else None,
+                         "idm_cdi_mean": float(idm_cdi[code]) if code in idm_cdi.index and pd.notna(idm_cdi[code]) else None,
+                         "idm_d0plus_pct": float(idm_d0p[code]) if code in idm_d0p.index and pd.notna(idm_cls.get(code)) else None,
                          "stress_edition": ed,
                          "stress_category": eds.category.get((ed, code)) if ed else None,
                          "stress_stage_pct": eds.stage_pct.get((ed, code)) if ed else None})
@@ -153,7 +161,8 @@ def main(argv=None) -> int:
     snaps = sorted(df.snapshot.astype(str).unique())
     fields = ["quadrant", "rain_category", "rain_dep_pct", "rain_source", "rain_short_reasons",
               "rain_dry_spell_weeks", "rain_spi_season", "gw_tier", "gw_percentile", "idm_class",
-              "stress_edition", "stress_category", "stress_stage_pct"]
+              "stress_edition", "stress_category", "stress_stage_pct",
+              "gw_median_depth_m", "gw_change_vs_ly_m", "gw_vs_10y_m", "gw_wells", "idm_cdi_mean", "idm_d0plus_pct"]
 
     def row(r):
         return [(QCODE.get(r["quadrant"]) if pd.notna(r["quadrant"]) else None) if f == "quadrant"
@@ -174,8 +183,13 @@ def main(argv=None) -> int:
         (hdir / f"d_{int(code)}.json").write_text(webjson.dumps(
             {"fields": ["snapshot"] + fields, "rows": [[r["snapshot"]] + row(r) for _, r in g.iterrows()]},
             separators=(",", ":"), default=str))
+    # first snapshot each late-starting layer has data for; the site offers only dates from then on
+    layer_from = {}
+    for layer, col in (("stress", "stress_edition"), ("idm", "idm_class")):
+        has = df[df[col].notna() & (df[col] != "")]
+        layer_from[layer] = has.snapshot.min() if len(has) else None
     (hdir / "index.json").write_text(webjson.dumps({
-        "snapshots": snaps, "classified": counts, "fields": fields,
+        "snapshots": snaps, "classified": counts, "fields": fields, "layer_from": layer_from,
         "quadrant_codes": {v: k for k, v in QCODE.items() if v},
         "notes": "Rain: IMD official where archived for the exact window, else IMD gridded (district area mean). "
                  "Groundwater: CGWB via NWDP, same-cycle percentile (tiers full/short/provisional)."}, separators=(",", ":")))
