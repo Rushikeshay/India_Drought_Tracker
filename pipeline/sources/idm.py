@@ -47,11 +47,14 @@ def listing() -> dict[date, str]:
     return out
 
 
-def fetch_all() -> list[Path]:
+def fetch_all(after: date | None = None) -> list[Path]:
+    """Download the weekly files not yet on disk. `after`: only weeks later than this date."""
     RAW.mkdir(parents=True, exist_ok=True)
     s = _session()
     paths = []
     for d, name in sorted(listing().items()):
+        if after and d <= after:
+            continue
         p = RAW / name
         if not p.exists() or p.stat().st_size < 1000:
             r = s.get(RAW_URL.format(name), timeout=60)

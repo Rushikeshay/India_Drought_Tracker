@@ -1,9 +1,11 @@
 # Section 6 of docs/plan.md. Ask before adding anything not listed there.
-pandas
-geopandas
-xarray
-imdlib
-duckdb
-requests
-pyarrow
-pypdf
+# Pinned (2026-10-04) to the versions the pipeline was built and checked with, so the
+# unattended daily run does not change behaviour when a library releases a new version.
+pandas==3.0.6
+geopandas==1.2.0
+xarray==2026.7.0
+imdlib==0.1.22
+duckdb==1.5.6
+requests==2.34.2
+pyarrow==25.0.1
+pypdf==6.19.0

@@ -7,6 +7,7 @@ on:
     branches: [main]
     paths: ["web/**", ".github/workflows/pages.yml"]
   workflow_dispatch:
+  workflow_call:   # refresh.yml publishes after its data commit
 
 permissions:
   contents: read
@@ -25,6 +26,8 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}   # branch tip, so a commit made earlier in the calling run is included
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

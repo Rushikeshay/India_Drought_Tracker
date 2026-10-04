@@ -31,7 +31,13 @@ Stage 3 (`status`): district status for the latest completed cycle (current tier
 and long-term trends/anomalies (historical tier).
   -> web/data/groundwater.json, web/data/gw_history.json
 
-Usage: python -m pipeline.process.groundwater [cycles|pairs|status|all]
+Usage: python -m pipeline.process.groundwater [cycles|pairs|status|all] [--incremental]
+
+--incremental (the daily run on a clean checkout, which has no telemetry history on disk):
+manual cycles are rebuilt from all manual files as usual; telemetry cycles before
+CURRENT_FROM come from the existing gw_cycles.parquet, and the current period is rebuilt
+from the current-period files only (see pipeline.sources.nwdp --daily). Wells already in
+gw_wells.parquet keep their district; only new wells are placed on the map.
 """
 
 from __future__ import annotations
@@ -48,7 +54,11 @@ import geopandas as gpd
 import numpy as np
 import pandas as pd
 
+from pipeline.process import boundaries
+from pipeline.sources import nwdp
+
 REPO = Path(__file__).resolve().parents[2]
+CURRENT_FROM = 2026  # first year of NWDP's current-period files (nwdp.CURRENT)
 RAW = REPO / "data" / "raw" / "nwdp"
 PROC = REPO / "data" / "processed"
 REF = REPO / "data" / "reference"
@@ -116,9 +126,9 @@ def manual_cycles() -> pd.DataFrame:
     return out
 
 
-def tele_cycles() -> tuple[pd.DataFrame, pd.DataFrame]:
+def tele_cycles(paths: list[Path] | None = None) -> tuple[pd.DataFrame, pd.DataFrame]:
     parts, latest = [], []
-    for p in sorted((RAW / "telemetry").glob("*.csv")):
+    for p in sorted((RAW / "telemetry").glob("*.csv")) if paths is None else paths:
         reader, val = _read(p, chunksize=2_000_000)
         for d in reader:
             d = _prep(d, val)
@@ -148,6 +158,28 @@ def tele_cycles() -> tuple[pd.DataFrame, pd.DataFrame]:
     return t, lt
 
 
+def tele_incremental() -> tuple[pd.DataFrame, pd.DataFrame]:
+    """Telemetry cycles without the raw history: years before CURRENT_FROM from the existing
+    gw_cycles/gw_wells (raw value = stored depth x stored sign), CURRENT_FROM onward rebuilt
+    from the current-period files. Returns the same two frames as tele_cycles()."""
+    cur = [p for p in sorted((RAW / "telemetry").glob("*.csv")) if nwdp.CURRENT.search(p.name)]
+    if not cur:
+        raise FileNotFoundError(f"no current-period telemetry files in {RAW / 'telemetry'}")
+    new, latest = tele_cycles(cur)
+    new = new[new.year >= CURRENT_FROM]
+    base = pd.read_parquet(PROC / "gw_cycles.parquet")
+    w = pd.read_parquet(PROC / "gw_wells.parquet").set_index("well_id")
+    b = base[(base.source == "tele") & (base.year < CURRENT_FROM)]
+    b = b.assign(raw=b.depth_m * b.well_id.map(w.sign), **{k: b.well_id.map(w[k]) for k in ("station", "agency", "lat", "lon", "last")})
+    t = pd.concat([b[new.columns], new], ignore_index=True).sort_values(["well_id", "year", "cycle"]).reset_index(drop=True)
+    # keep the stored row for wells with nothing newer: its 30-day window may reach into the previous period's file
+    old = pd.read_parquet(PROC / "gw_tele_latest.parquet")[latest.columns]
+    newer = latest[latest["last"] > latest.well_id.map(old.set_index("well_id")["last"]).fillna(pd.Timestamp.min)]
+    latest = pd.concat([newer, old[~old.well_id.isin(newer.well_id)]], ignore_index=True)
+    log.info("telemetry (incremental): %d well-cycles kept, %d from current-period files", len(b), len(new))
+    return t, latest
+
+
 def assign_signs(c: pd.DataFrame) -> pd.Series:
     """+1 where values are positive-down already, -1 where the well reports negative-down."""
     med = c.groupby("well_id").raw.median()
@@ -157,13 +189,17 @@ def assign_signs(c: pd.DataFrame) -> pd.Series:
     return sign
 
 
-def build_cycles() -> None:
+def build_cycles(incremental: bool = False) -> None:
     m = manual_cycles()
     log.info("manual: %d well-cycles, %d wells", len(m), m.well_id.nunique())
-    t, latest = tele_cycles()
+    kw = pd.read_parquet(PROC / "gw_wells.parquet").set_index("well_id") if incremental else None
+    known = None if kw is None else kw.dist_lgd
+    t, latest = tele_incremental() if incremental else tele_cycles()
     log.info("telemetry: %d well-cycles, %d wells", len(t), t.well_id.nunique())
     c = pd.concat([m, t], ignore_index=True)
     sign = assign_signs(c)
+    if kw is not None:  # wells seen before keep their sign (it was set from their full raw history)
+        sign.update(kw.sign[kw.index.isin(sign.index)])
     c["depth_m"] = c.raw * c.well_id.map(sign)
     lo, hi = ENVELOPE_M
     bad = ~c.depth_m.between(lo, hi)
@@ -177,10 +213,15 @@ def build_cycles() -> None:
                                      agency=("agency", "last"), lat=("lat", "last"), lon=("lon", "last"),
                                      first_year=("year", "min"), last=("last", "max")).reset_index()
     wells["sign"] = wells.well_id.map(sign)
-    d = gpd.read_parquet(REF / "districts.parquet")[["dist_lgd", "geometry"]]
-    g = gpd.GeoDataFrame(wells, geometry=gpd.points_from_xy(wells.lon, wells.lat), crs=4326)
-    j = gpd.sjoin(g, d, how="left", predicate="within")
-    wells["dist_lgd"] = j.groupby(level=0).dist_lgd.first().reindex(wells.index).astype("Int64")
+    # a well id includes its coordinates, so wells placed before keep their district
+    todo = wells if known is None else wells[~wells.well_id.isin(known.index)]
+    wells["dist_lgd"] = pd.array([pd.NA] * len(wells), dtype="Int64") if known is None else wells.well_id.map(known).astype("Int64")
+    if len(todo):
+        d = gpd.read_parquet(boundaries.ensure_parquet())[["dist_lgd", "geometry"]]
+        g = gpd.GeoDataFrame(todo[["well_id"]], geometry=gpd.points_from_xy(todo.lon, todo.lat), crs=4326)
+        j = gpd.sjoin(g, d, how="left", predicate="within")
+        wells.loc[todo.index, "dist_lgd"] = j.groupby(level=0).dist_lgd.first().reindex(todo.index).astype("Int64")
+        log.info("placed %d %swells on the district map", len(todo), "new " if known is not None else "")
     dropped["wells_outside_districts"] = int(wells.dist_lgd.isna().sum())
 
     latest["depth_30d"] = latest.raw_30d * latest.well_id.map(sign).fillna(1)
@@ -189,7 +230,8 @@ def build_cycles() -> None:
         PROC / "gw_cycles.parquet", index=False)
     wells.to_parquet(PROC / "gw_wells.parquet", index=False)
     latest.to_parquet(PROC / "gw_tele_latest.parquet", index=False)
-    (PROC / "gw_dropped.json").write_text(webjson.dumps(dropped, indent=2, default=str))
+    if not incremental:  # an incremental run only sees the current period's drops
+        (PROC / "gw_dropped.json").write_text(webjson.dumps(dropped, indent=2, default=str))
     log.info("wells: %d (%d outside district polygons)", len(wells), dropped["wells_outside_districts"])
 
 
@@ -386,10 +428,11 @@ def _r(x, nd=2):
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("stage", choices=["cycles", "pairs", "status", "all"])
+    ap.add_argument("--incremental", action="store_true", help="telemetry history from gw_cycles.parquet, current period from raw")
     a = ap.parse_args(argv)
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
     if a.stage in ("cycles", "all"):
-        build_cycles()
+        build_cycles(a.incremental)
     if a.stage in ("pairs", "all"):
         build_pairs()
     if a.stage in ("status", "all"):

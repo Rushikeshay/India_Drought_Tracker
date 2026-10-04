@@ -1,0 +1,114 @@
+# Daily data refresh (docs/plan.md Phase 8).
+#   12:30 UTC (18:00 IST)  full run: python -m pipeline.run, tests, commit web/data, publish the site
+#   02:30 UTC (08:00 IST)  IMD district rainfall table only. IMD overwrites it every day, so a
+#                          second run protects the season-final figures if the full run was late.
+# A failed source keeps that layer's previous files; web/data is committed only when the
+# publish check and the tests pass. The job ends red whenever any step failed, so GitHub
+# emails the owner.
+name: refresh
+
+on:
+  schedule:
+    - cron: "30 12 * * *"
+    - cron: "30 2 * * *"
+  workflow_dispatch:
+    inputs:
+      only:
+        description: "Steps to run, comma-separated (empty = all): rain_official, rain, groundwater, idm, classify, history, check"
+        default: ""
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    outputs:
+      web_changed: ${{ steps.commit.outputs.web_changed }}
+    env:
+      ONLY: ${{ github.event.schedule == '30 2 * * *' && 'rain_official' || inputs.only }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: bsdtar (reads the 7z boundary file when new wells need placing)
+        run: sudo apt-get install -y --no-install-recommends libarchive-tools
+
+      # Downloads that are expensive to repeat. Everything here can be rebuilt from the sources
+      # if the cache is lost: the run is then slower, not different.
+      - uses: actions/cache/restore@v4
+        if: env.ONLY != 'rain_official'
+        with:
+          path: |
+            data/raw/nwdp
+            data/processed/rain_current_daily.parquet
+            data/reference/districts.parquet
+          key: refresh-${{ github.run_id }}
+          restore-keys: refresh-
+
+      - name: Run pipeline
+        id: run
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python -m pipeline.run ${ONLY:+--only "$ONLY"}
+
+      - name: Tests
+        id: tests
+        if: steps.run.outputs.publish == 'true'
+        continue-on-error: true
+        run: python -m unittest discover -s tests -t .
+
+      - uses: actions/cache/save@v4
+        if: always() && env.ONLY != 'rain_official'
+        with:
+          path: |
+            data/raw/nwdp
+            data/processed/rain_current_daily.parquet
+            data/reference/districts.parquet
+          key: refresh-${{ github.run_id }}
+
+      - name: Commit
+        id: commit
+        env:
+          PUBLISH: ${{ steps.run.outputs.publish == 'true' && steps.tests.outcome == 'success' }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/processed/imd_official
+          if [ "$PUBLISH" = "true" ]; then git add web/data; fi
+          if git diff --cached --quiet -- web; then echo "web_changed=false" >> "$GITHUB_OUTPUT"; else echo "web_changed=true" >> "$GITHUB_OUTPUT"; fi
+          if git diff --cached --quiet; then echo "nothing to commit"; exit 0; fi
+          git commit -m "Data refresh $(date -u +%F)"
+          git checkout -- .   # working files the run rebuilt but does not publish (e.g. data/processed/*.parquet)
+          for i in 1 2 3; do
+            if git pull --rebase origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}"; then exit 0; fi
+            sleep 10
+          done
+          exit 1
+
+      - name: Fail the job if any step failed
+        if: steps.run.outcome != 'success' || (steps.run.outputs.publish == 'true' && steps.tests.outcome != 'success')
+        run: |
+          echo "pipeline: ${{ steps.run.outcome }} (failed steps: ${{ steps.run.outputs.failed }}); tests: ${{ steps.tests.outcome }}"
+          exit 1
+
+  # A push made with the workflow token does not start other workflows, so publish from here.
+  deploy:
+    needs: refresh
+    if: always() && needs.refresh.outputs.web_changed == 'true'
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    uses: ./.github/workflows/pages.yml

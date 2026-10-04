@@ -18,3 +18,5 @@ data/reference/*.parquet
 data/processed/status_history.csv
 !data/processed/rain_weekly.parquet
 !data/processed/rain_weekly_normal.parquet
+# seed for the daily run: without it a run with an empty cache downloads every day of the year (about 2 hours)
+!data/processed/rain_current_daily.parquet

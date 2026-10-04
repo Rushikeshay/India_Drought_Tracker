@@ -23,6 +23,7 @@ from __future__ import annotations
 import json
 
 from pipeline import webjson
+import shutil
 import subprocess
 import urllib.request
 from pathlib import Path
@@ -56,7 +57,8 @@ def fetch() -> None:
     RAW.mkdir(parents=True, exist_ok=True)
     arc = RAW / "LGD_Districts.geojsonl.7z"
     urllib.request.urlretrieve(SRC_URL, arc)
-    subprocess.run(["tar", "-xf", arc.name], cwd=RAW, check=True)  # bsdtar reads 7z
+    tar = shutil.which("bsdtar") or "tar"  # bsdtar reads 7z (macOS tar is bsdtar; on Linux install libarchive-tools)
+    subprocess.run([tar, "-xf", arc.name], cwd=RAW, check=True)
     if not SRC.exists():
         raise FileNotFoundError(f"{SRC} not found after extracting {arc}")
 
@@ -122,6 +124,18 @@ def to_geojson(s: gpd.GeoDataFrame) -> bytes:
         feats.append({"type": "Feature", "properties": props,
                       "geometry": json.loads(shapely.to_geojson(r.geometry))})
     return json.dumps({"type": "FeatureCollection", "features": feats}, separators=(",", ":")).encode()
+
+
+def ensure_parquet() -> Path:
+    """Full-resolution district polygons (data/reference/districts.parquet is not in git).
+    Built from the source release when missing; the daily run needs it only to place new wells."""
+    p = REF / "districts.parquet"
+    if not p.exists():
+        fetch()
+        g = load()
+        REF.mkdir(parents=True, exist_ok=True)
+        g[~g.is_pok].drop(columns=["is_pok", "was_invalid"]).to_parquet(p)
+    return p
 
 
 def main() -> int:

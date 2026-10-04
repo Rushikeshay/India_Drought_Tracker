@@ -2,7 +2,7 @@
 
 Tagline / web address: **Hidden Drought** (e.g. hiddendrought.in, domain not yet bought).
 
-Repo: github.com/Rushikeshay/India_Drought_Tracker · Updated 2026-10-01 · v1 of this plan is in git history (commit 4a489fe).
+Repo: github.com/Rushikeshay/India_Drought_Tracker · Updated 2026-10-04 · v1 of this plan is in git history (commit 4a489fe).
 Source details, URLs, quirks and test results: [sources.md](sources.md). This file holds the decisions and the status.
 
 ## 1. Goal
@@ -89,15 +89,27 @@ Secondary marks: GW confidence tier, IN-GRES category and worst block, IDM droug
 | 6a | Status history (snapshots) | ✅ **Done 2026-10-01**: Jan/May/Aug/Nov from 2000, 107 snapshots, median 637 districts classified per snapshot |
 | 6b | Row-level trace (backend accuracy check) | ✅ **Done 2026-10-01**: 23 steps for Sikar and Beed recomputed independently from raw files, all match (`notebooks/phase6b/trace_report.md`, `tests/test_trace.py`). Found and fixed: 61 placeholder `NaN NaN NaN` rows in IDM files |
 | 7 | Front end v1 | ✅ **Built 2026-10-01** (awaiting review): map (5 layers), district panel with charts + timeline, history date picker (107 snapshots), sortable table + CSV, methods page, dark mode, mobile. Colours validated (all-pairs, light + dark). Publish via `.github/workflows/pages.yml` (needs Pages source = GitHub Actions) | Map, district panel, hidden-drought table, methods page; phone + laptop |
-| 8 | Automation | ⏭ **Next** | `refresh.yml` daily on Actions, unattended for 2 weeks |
-| 9 | Outlook | — | Scenario engine + ENSO/NMME; back-test |
+| 8 | Automation | 🟡 **Built 2026-10-04**, on watch: `pipeline/run.py` + `.github/workflows/refresh.yml`; clean-checkout trial passed (all 7 steps, 13 min). See §10 | `refresh.yml` daily on Actions, unattended for 2 weeks (to 2026-10-18) |
+| 9 | Outlook | ⏭ **Next** (after the Phase 8 watch) | Scenario engine + ENSO/NMME; back-test |
 | 10 | Launch + feedback | — | 3–5 intermediaries try it |
 
 ## 9. Architecture (unchanged)
 
-`pipeline/` (sources → process → outlook → `run.py`) → `web/data/*.json` (committed) → GitHub Pages (plain HTML/JS + D3, no build). Raw downloads go in `data/raw/` (gitignored). Python 3.11 in `.venv` via uv; dependencies are in `requirements.txt` only (pandas, geopandas, xarray, imdlib, duckdb, requests). Ask before adding any others. `pyarrow` approved 2026-10-01 (parquet). Tests use stdlib `unittest`: `.venv/bin/python -m unittest discover -s tests -t .`
+`pipeline/` (sources → process → outlook → `run.py`) → `web/data/*.json` (committed) → GitHub Pages (plain HTML/JS + D3, no build). `run.py` is run daily by `.github/workflows/refresh.yml`, which then publishes through `pages.yml`. Raw downloads go in `data/raw/` (gitignored). Python 3.11 in `.venv` via uv; dependencies are in `requirements.txt` only (pandas, geopandas, xarray, imdlib, duckdb, requests). Ask before adding any others. `pyarrow` approved 2026-10-01 (parquet). Tests use stdlib `unittest`: `.venv/bin/python -m unittest discover -s tests -t .`
 
 ## 10. Open items
+
+**Phase 8 automation (2026-10-04):**
+- **Schedule:** full run daily at 12:30 UTC (18:00 IST); a second run at 02:30 UTC (08:00 IST) only archives IMD's district rainfall table, because IMD overwrites it daily and season-final figures would be lost.
+- **Steps** (`python -m pipeline.run`): rain_official → rain → groundwater → idm → classify → history → check. A failed source keeps that layer's previous files and the other layers still update; nothing is filled in. The job ends red if any step failed (GitHub emails the owner). `web/data/run.json` records each run.
+- **What gets committed by the run:** `web/data/` (only if the publish check and the tests pass) and `data/processed/imd_official/` (always). Processed parquet files are rebuilt in the runner and not committed, so the repo does not grow by megabytes a day.
+- **No raw history on the runner.** The 2.9 GB in `data/raw/` stays on the laptop. Groundwater (`--incremental`), weekly rain and the drought index build on the committed processed files and download only what changes: all manual NWDP files (180 MB), current-period telemetry (390 MB), new IDM weeks, the last 7 days of IMD grids. Checked on the laptop: incremental groundwater and IDM output is identical to a full rebuild.
+- **Cache (Actions):** NWDP downloads, this year's daily rain, full-resolution boundaries. Losing the cache makes a run slower, not different. `rain_current_daily.parquet` is committed as a seed, because without it a cold start downloads every day of the year (about 25 s each, 2 hours).
+- **Publish check** (`pipeline/validate/publish.py`): valid JSON, 783 districts, coverage floors (rain 700, drought index 700, stress 650, groundwater 250), all history files present.
+- **Library versions pinned** in `requirements.txt` (pandas 3.0.6 etc.).
+- **Not in the daily run:** IN-GRES stress (yearly; run `stress` and `stress_history` by hand for a new edition).
+- **Open, before 2026-12-31:** year rollover. On Jan 1 the daily rain file restarts for 2027 and `rain_monthly.parquet` ends at 2025, so the Oct–Dec 2026 season would lose its gridded figures until the 2026 yearly file is reduced (`rain history --end 2026`, needs the laptop). Needs a small change so the previous year's daily file is kept until then.
+- **Open:** after long gaps between laptop rebuilds, re-commit the processed files so cold starts stay short (the seed and the IDM base only move forward when committed).
 
 **Phase 6 results (2026-10-01):**
 - **Current (rain = SW 2026 / NE season, GW = Aug 2026):** only **16 districts** get a quadrant: fine 6, buffered 4, hidden drought 3 (Bikaner, Jhunjhunu, Sikar: normal rain, GW at record lows, all Over-exploited), double drought 3 (Sirohi, Nalgonda, Yadadri Bhuvanagiri). Not classified: GW level-only 349, GW insufficient 319, NE season < 15 days 99.
@@ -123,7 +135,7 @@ Secondary marks: GW confidence tier, IN-GRES category and worst block, IDM droug
 - District level (703 districts): median 9 pp, r = 0.59, 55% within 10 pp, same IMD category for 68%. The gaps come from IMD's few-gauge district average vs our area average, and are largest in hilly or sparsely gauged districts and low-normal districts.
 - **Decided:** the headline is IMD's official district figure, archived daily (`pipeline/process/rain_official.py`) with the final snapshot per season; gridded is the fallback and powers history, SPI and the outlook. **Phase 8 must run this daily, or season-final figures are lost** (IMD overwrites its PDFs).
 - Front end: when a season is under 7 days old (NE districts on Oct 1), say "season just started" instead of showing a category.
-- Automation: `rain_current_daily.parquet` changes daily (0.8 MB), so cache it in Actions instead of committing it.
+- Automation: `rain_current_daily.parquet` changes daily (0.8 MB), so the daily run caches it in Actions; the committed copy is only a seed (see Phase 8 above).
 
 Phase 1 follow-ups: (a) **Decided 2026-10-01:** keep Rajasthan's 50-district map (9 districts abolished Dec 2024 stay, flagged) and show each source at the level it reports. Never re-apportion data to new boundaries; (b) districts newer than the Dec 2023 map (MP: Pandhurna, Maihar, Mauganj; AP: Markapuram, Polavaram; Gujarat: Vav-Tharad) aren't on it; (c) 64 map districts have no IN-GRES row (carved-out districts and Uttarakhand hills). Phase 4 falls back to the parent or marks them "not assessed". Delhi's IN-GRES units don't match LGD.
 
