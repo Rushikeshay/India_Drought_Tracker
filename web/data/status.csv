@@ -2,31 +2,31 @@ dist_lgd,district,state,quadrant,provisional,why_none,rain_category,rain_departu
 603,Nicobars,Andaman and Nicobar,,False,gw_insufficient,Deficient,-36,IMD,deviation,,,insufficient,,,Safe,0.91,False,
 632,North And Middle Andaman,Andaman and Nicobar,,False,gw_insufficient,Excess,41,IMD,,,,insufficient,,,Safe,2.35,False,
 602,South Andamans,Andaman and Nicobar,,False,gw_insufficient,Normal,-14,IMD,,,,insufficient,,,Safe,3.62,False,
-745,Alluri Sitharama Raju,Andhra Pradesh,,False,season_just_started,Large Deficient,-93,IMD,deviation,,,provisional,25.0,-0.32,Safe,6.69,False,none
-744,Anakapalli,Andhra Pradesh,,False,season_just_started,Large Deficient,-73,IMD,deviation,,,provisional,50.0,-0.76,Safe,30.6,False,none
-502,Anantapur,Andhra Pradesh,,False,season_just_started,Large Deficient,-84,IMD,deviation,,,provisional,50.0,0.01,Safe,51.02,True,none
-753,Annamayya,Andhra Pradesh,,False,season_just_started,Large Deficient,-83,IMD,deviation,,,provisional,33.0,-0.05,Safe,43.86,True,d1
-750,Bapatla,Andhra Pradesh,,False,season_just_started,Large Deficient,-83,IMD,deviation,,,provisional,0.0,-2.33,Safe,21.53,False,d1
-503,Chittoor,Andhra Pradesh,,False,season_just_started,Large Deficient,-60,IMD,deviation,,,short,33.0,-0.77,Safe,67.24,True,d0
+745,Alluri Sitharama Raju,Andhra Pradesh,,False,season_just_started,Large Deficient,-94,IMD,deviation,,,provisional,25.0,-0.32,Safe,6.69,False,none
+744,Anakapalli,Andhra Pradesh,,False,season_just_started,Deficient,-59,IMD,deviation,,,provisional,50.0,-0.76,Safe,30.6,False,none
+502,Anantapur,Andhra Pradesh,,False,season_just_started,Large Deficient,-87,IMD,deviation,,,provisional,50.0,0.01,Safe,51.02,True,none
+753,Annamayya,Andhra Pradesh,,False,season_just_started,Large Deficient,-85,IMD,deviation,,,provisional,33.0,-0.05,Safe,43.86,True,d1
+750,Bapatla,Andhra Pradesh,,False,season_just_started,Large Deficient,-86,IMD,deviation,,,provisional,0.0,-2.33,Safe,21.53,False,d1
+503,Chittoor,Andhra Pradesh,,False,season_just_started,Large Deficient,-69,IMD,deviation,,,short,33.0,-0.77,Safe,67.24,True,d0
 505,East Godavari,Andhra Pradesh,,False,season_just_started,No Rain,-100,IMD,deviation,,,provisional,0.0,-1.11,Safe,25.84,False,none
-748,Eluru,Andhra Pradesh,,False,season_just_started,Large Deficient,-95,IMD,deviation,,,provisional,75.0,4.37,Safe,37.57,False,none
-506,Guntur,Andhra Pradesh,,False,season_just_started,Large Deficient,-87,IMD,deviation,,,provisional,0.0,-2.97,Safe,20.7,False,none
-746,Kakinada,Andhra Pradesh,,False,season_just_started,Deficient,-34,IMD,deviation,,,provisional,0.0,-0.52,Safe,16.8,False,none
-747,Konaseema,Andhra Pradesh,,False,season_just_started,Large Deficient,-96,IMD,deviation,,,provisional,0.0,-0.58,Safe,19.07,False,none
-510,Krishna,Andhra Pradesh,,False,season_just_started,No Rain,-100,IMD,deviation,,,provisional,0.0,-0.95,Safe,33.69,False,none
+748,Eluru,Andhra Pradesh,,False,season_just_started,Large Deficient,-96,IMD,deviation,,,provisional,75.0,4.37,Safe,37.57,False,none
+506,Guntur,Andhra Pradesh,,False,season_just_started,Large Deficient,-89,IMD,deviation,,,provisional,0.0,-2.97,Safe,20.7,False,none
+746,Kakinada,Andhra Pradesh,,False,season_just_started,Deficient,-49,IMD,deviation,,,provisional,0.0,-0.52,Safe,16.8,False,none
+747,Konaseema,Andhra Pradesh,,False,season_just_started,Large Deficient,-94,IMD,deviation,,,provisional,0.0,-0.58,Safe,19.07,False,none
+510,Krishna,Andhra Pradesh,,False,season_just_started,Large Deficient,-97,IMD,deviation,,,provisional,0.0,-0.95,Safe,33.69,False,none
 511,Kurnool,Andhra Pradesh,,False,season_just_started,No Rain,-100,IMD,deviation,,,provisional,58.0,-0.3,Safe,37.76,False,d2
 755,Nandyal,Andhra Pradesh,,False,season_just_started,Large Deficient,-99,IMD,deviation,,,provisional,0.0,-1.4,Safe,9.0,False,d1
-749,Ntr,Andhra Pradesh,,False,season_just_started,Large Deficient,-70,IMD,deviation,,,provisional,0.0,-0.74,Safe,33.99,False,d0
+749,Ntr,Andhra Pradesh,,False,season_just_started,Large Deficient,-76,IMD,deviation,,,provisional,0.0,-0.74,Safe,33.99,False,d0
 751,Palnadu,Andhra Pradesh,,False,season_just_started,No Rain,-100,IMD,deviation,,,provisional,33.0,0.32,Safe,31.54,True,d1
-743,Parvathipuram Manyam,Andhra Pradesh,,False,season_just_started,Large Deficient,-86,IMD,deviation,,,provisional,50.0,1.56,Safe,26.01,False,none
-517,Prakasam,Andhra Pradesh,,False,season_just_started,Large Deficient,-86,IMD,deviation,,,provisional,67.0,0.0,Safe,29.73,False,d1
+743,Parvathipuram Manyam,Andhra Pradesh,,False,season_just_started,Large Deficient,-88,IMD,deviation,,,provisional,50.0,1.56,Safe,26.01,False,none
+517,Prakasam,Andhra Pradesh,,False,season_just_started,Large Deficient,-89,IMD,deviation,,,provisional,67.0,0.0,Safe,29.73,False,d1
 515,Spsr Nellore,Andhra Pradesh,,False,season_just_started,Large Deficient,-99,IMD,deviation,,,provisional,50.0,0.87,Safe,32.35,True,d0
-754,Sri Sathya Sai,Andhra Pradesh,,False,season_just_started,Large Deficient,-88,IMD,deviation,,,short,34.0,-1.0,Safe,56.36,True,d1
-519,Srikakulam,Andhra Pradesh,,False,season_just_started,Large Deficient,-87,IMD,deviation,,,insufficient,,,Safe,33.7,True,none
+754,Sri Sathya Sai,Andhra Pradesh,,False,season_just_started,Large Deficient,-90,IMD,deviation,,,short,34.0,-1.0,Safe,56.36,True,d1
+519,Srikakulam,Andhra Pradesh,,False,season_just_started,Large Deficient,-90,IMD,deviation,,,insufficient,,,Safe,33.7,True,none
 752,Tirupati,Andhra Pradesh,,False,season_just_started,Large Deficient,-99,IMD,deviation,,,provisional,50.0,0.18,Safe,36.24,True,d1
 520,Visakhapatanam,Andhra Pradesh,,False,season_just_started,No Rain,-100,IMD,deviation,,,provisional,0.0,-1.9,Safe,46.16,False,none
-521,Vizianagaram,Andhra Pradesh,,False,season_just_started,Large Deficient,-96,IMD,deviation,,,provisional,100.0,0.59,Safe,29.07,False,none
-523,West Godavari,Andhra Pradesh,,False,season_just_started,Large Deficient,-89,IMD,deviation,,,provisional,67.0,4.82,Safe,10.29,False,none
+521,Vizianagaram,Andhra Pradesh,,False,season_just_started,Large Deficient,-97,IMD,deviation,,,provisional,100.0,0.59,Safe,29.07,False,none
+523,West Godavari,Andhra Pradesh,,False,season_just_started,Large Deficient,-67,IMD,deviation,,,provisional,67.0,4.82,Safe,10.29,False,none
 504,Y.S.R.,Andhra Pradesh,,False,season_just_started,No Rain,-100,IMD,deviation,,,short,62.0,-1.51,Safe,42.51,False,d1
 628,Anjaw,Arunachal Pradesh,,False,gw_insufficient,Large Deficient,-89,IMD,"deviation,spi,dry_spell",-1.3,12.0,insufficient,,,Hilly area,,False,d1
 229,Changlang,Arunachal Pradesh,,False,gw_insufficient,Deficient,-24,IMD,"deviation,spi,dry_spell",-1.55,4.0,insufficient,,,Safe,0.9,False,d3
@@ -291,48 +291,48 @@ dist_lgd,district,state,quadrant,provisional,why_none,rain_category,rain_departu
 524,Bagalkote,Karnataka,double_drought,True,,Deficient,-21,IMD,"deviation,spi,dry_spell",-1.12,4.0,provisional,0.0,-1.73,Semi-critical,75.94,True,d1
 528,Ballari,Karnataka,,False,season_just_started,No Rain,-100,IMD,deviation,,,provisional,0.0,-3.59,Safe,31.4,False,d1
 527,Belagavi,Karnataka,buffered,True,,Normal,2,IMD,spi,-1.27,3.0,provisional,50.0,-0.35,Semi-critical,71.34,True,d0
-526,Bengaluru Rural,Karnataka,,False,season_just_started,Normal,-16,IMD,,,,insufficient,,,Over-exploited,148.31,False,d0
-525,Bengaluru Urban,Karnataka,,False,season_just_started,Large Deficient,-64,IMD,deviation,,,insufficient,,,Over-exploited,179.4,False,none
+526,Bengaluru Rural,Karnataka,,False,season_just_started,Deficient,-33,IMD,deviation,,,insufficient,,,Over-exploited,148.31,False,d0
+525,Bengaluru Urban,Karnataka,,False,season_just_started,Large Deficient,-71,IMD,deviation,,,insufficient,,,Over-exploited,179.4,False,none
 529,Bidar,Karnataka,buffered,True,,Deficient,-24,IMD,deviation,-0.78,3.0,provisional,50.0,-0.54,Safe,69.72,False,d0
-531,Chamarajanagara,Karnataka,,False,season_just_started,Deficient,-49,IMD,deviation,,,insufficient,,,Critical,90.16,False,none
-630,Chikkaballapura,Karnataka,,False,season_just_started,No Rain,-100,IMD,deviation,,,provisional,33.0,-4.02,Over-exploited,151.41,False,d1
-532,Chikkamagaluru,Karnataka,,False,season_just_started,Large Deficient,-91,IMD,deviation,,,insufficient,,,Safe,54.77,True,d1
+531,Chamarajanagara,Karnataka,,False,season_just_started,Deficient,-37,IMD,deviation,,,insufficient,,,Critical,90.16,False,none
+630,Chikkaballapura,Karnataka,,False,season_just_started,Deficient,-46,IMD,deviation,,,provisional,33.0,-4.02,Over-exploited,151.41,False,d1
+532,Chikkamagaluru,Karnataka,,False,season_just_started,Deficient,-23,IMD,deviation,,,insufficient,,,Safe,54.77,True,d1
 533,Chitradurga,Karnataka,,False,season_just_started,No Rain,-100,IMD,deviation,,,provisional,0.0,-5.86,Over-exploited,116.14,False,none
 534,Dakshina Kannada,Karnataka,,False,gw_insufficient,Deficient,-24,IMD,"deviation,spi",-1.78,2.0,insufficient,,,Safe,46.41,False,d2
 535,Davangere,Karnataka,,False,season_just_started,Large Deficient,-96,IMD,deviation,,,provisional,0.0,-2.71,Semi-critical,82.11,True,none
 536,Dharwad,Karnataka,buffered,True,,Deficient,-51,IMD,"deviation,spi",-1.03,3.0,provisional,100.0,0.14,Safe,54.33,False,none
 537,Gadag,Karnataka,double_drought,True,,Deficient,-25,IMD,deviation,-0.41,2.0,provisional,0.0,-2.27,Semi-critical,76.31,True,none
-539,Hassan,Karnataka,,False,season_just_started,Normal,2,IMD,,,,insufficient,,,Safe,54.19,True,none
+539,Hassan,Karnataka,,False,season_just_started,Normal,8,IMD,,,,insufficient,,,Safe,54.19,True,none
 540,Haveri,Karnataka,buffered,True,,Deficient,-42,IMD,"deviation,spi,dry_spell",-1.52,4.0,provisional,25.0,-7.61,Safe,63.79,False,d1
 538,Kalaburagi,Karnataka,,False,gw_level_only,Deficient,-54,IMD,"deviation,spi",-1.73,3.0,level_only,,,Safe,48.81,False,d3
-541,Kodagu,Karnataka,,False,season_just_started,Deficient,-45,IMD,deviation,,,insufficient,,,Safe,35.25,False,d0
-542,Kolar,Karnataka,,False,season_just_started,Large Deficient,-74,IMD,deviation,,,insufficient,,,Over-exploited,185.86,False,d0
+541,Kodagu,Karnataka,,False,season_just_started,Deficient,-44,IMD,deviation,,,insufficient,,,Safe,35.25,False,d0
+542,Kolar,Karnataka,,False,season_just_started,Large Deficient,-79,IMD,deviation,,,insufficient,,,Over-exploited,185.86,False,d0
 543,Koppal,Karnataka,double_drought,True,,Deficient,-36,IMD,deviation,-0.96,3.0,provisional,0.0,-3.24,Safe,59.26,True,d1
-544,Mandya,Karnataka,,False,season_just_started,Large Deficient,-72,IMD,deviation,,,insufficient,,,Safe,66.09,False,none
-545,Mysuru,Karnataka,,False,season_just_started,Large Deficient,-63,IMD,deviation,,,insufficient,,,Safe,46.39,False,none
+544,Mandya,Karnataka,,False,season_just_started,Large Deficient,-76,IMD,deviation,,,insufficient,,,Safe,66.09,False,none
+545,Mysuru,Karnataka,,False,season_just_started,Large Deficient,-69,IMD,deviation,,,insufficient,,,Safe,46.39,False,none
 546,Raichur,Karnataka,buffered,True,,Deficient,-41,IMD,"deviation,spi,dry_spell",-1.26,6.0,provisional,25.0,-1.28,Safe,42.19,False,d1
 631,Ramanagara,Karnataka,,False,season_just_started,No Rain,-100,IMD,deviation,,,insufficient,,,Semi-critical,89.7,True,none
-547,Shivamogga,Karnataka,,False,season_just_started,Large Deficient,-89,IMD,deviation,,,insufficient,,,Safe,42.54,False,d0
-548,Tumakuru,Karnataka,,False,season_just_started,No Rain,-100,IMD,deviation,,,provisional,0.0,-2.56,Critical,91.08,False,none
+547,Shivamogga,Karnataka,,False,season_just_started,Large Deficient,-86,IMD,deviation,,,insufficient,,,Safe,42.54,False,d0
+548,Tumakuru,Karnataka,,False,season_just_started,Large Deficient,-99,IMD,deviation,,,provisional,0.0,-2.56,Critical,91.08,False,none
 549,Udupi,Karnataka,,False,gw_insufficient,Deficient,-30,IMD,deviation,-0.96,2.0,insufficient,,,Safe,33.0,False,d3
 550,Uttara Kannada,Karnataka,,False,gw_insufficient,Deficient,-30,IMD,"deviation,spi",-1.73,2.0,insufficient,,,Safe,31.52,False,d2
-738,Vijayanagar,Karnataka,,False,season_just_started,Large Deficient,-96,IMD,deviation,,,provisional,50.0,-0.0,Semi-critical,86.4,True,d0
+738,Vijayanagar,Karnataka,,False,season_just_started,Large Deficient,-97,IMD,deviation,,,provisional,50.0,-0.0,Semi-critical,86.4,True,d0
 530,Vijayapura,Karnataka,buffered,True,,Deficient,-41,IMD,"deviation,spi",-1.5,3.0,provisional,50.0,-2.5,Safe,46.11,False,d2
 635,Yadgir,Karnataka,buffered,True,,Deficient,-30,IMD,"deviation,spi",-1.05,3.0,provisional,50.0,-0.68,Safe,38.64,False,d1
-554,Alappuzha,Kerala,,False,season_just_started,Deficient,-48,IMD,deviation,,,insufficient,,,Safe,37.56,False,none
-555,Ernakulam,Kerala,,False,season_just_started,Deficient,-50,IMD,deviation,,,insufficient,,,Safe,42.84,False,none
-556,Idukki,Kerala,,False,season_just_started,Deficient,-56,IMD,deviation,,,insufficient,,,Safe,49.38,False,none
-557,Kannur,Kerala,,False,season_just_started,Large Deficient,-77,IMD,deviation,,,insufficient,,,Safe,45.47,False,d2
-558,Kasaragod,Kerala,,False,season_just_started,Large Deficient,-67,IMD,deviation,,,insufficient,,,Safe,69.33,False,d3
-559,Kollam,Kerala,,False,season_just_started,Deficient,-40,IMD,deviation,,,insufficient,,,Safe,47.27,False,none
-560,Kottayam,Kerala,,False,season_just_started,Normal,-14,IMD,,,,insufficient,,,Safe,32.6,False,none
-561,Kozhikode,Kerala,,False,season_just_started,Large Deficient,-92,IMD,deviation,,,insufficient,,,Safe,57.84,False,d1
-562,Malappuram,Kerala,,False,season_just_started,Large Deficient,-96,IMD,deviation,,,insufficient,,,Safe,68.25,False,d1
-563,Palakkad,Kerala,,False,season_just_started,Large Deficient,-67,IMD,deviation,,,insufficient,,,Safe,55.23,True,none
-564,Pathanamthitta,Kerala,,False,season_just_started,Normal,14,IMD,,,,insufficient,,,Safe,31.23,False,none
-565,Thiruvananthapuram,Kerala,,False,season_just_started,Normal,-11,IMD,,,,insufficient,,,Safe,62.87,False,none
-566,Thrissur,Kerala,,False,season_just_started,Deficient,-54,IMD,deviation,,,insufficient,,,Safe,57.03,False,d1
-567,Wayanad,Kerala,,False,season_just_started,Large Deficient,-87,IMD,deviation,,,insufficient,,,Safe,24.69,False,none
+554,Alappuzha,Kerala,,False,season_just_started,Deficient,-21,IMD,deviation,,,insufficient,,,Safe,37.56,False,none
+555,Ernakulam,Kerala,,False,season_just_started,Deficient,-38,IMD,deviation,,,insufficient,,,Safe,42.84,False,none
+556,Idukki,Kerala,,False,season_just_started,Deficient,-26,IMD,deviation,,,insufficient,,,Safe,49.38,False,none
+557,Kannur,Kerala,,False,season_just_started,Large Deficient,-64,IMD,deviation,,,insufficient,,,Safe,45.47,False,d2
+558,Kasaragod,Kerala,,False,season_just_started,Deficient,-26,IMD,deviation,,,insufficient,,,Safe,69.33,False,d3
+559,Kollam,Kerala,,False,season_just_started,Deficient,-21,IMD,deviation,,,insufficient,,,Safe,47.27,False,none
+560,Kottayam,Kerala,,False,season_just_started,Normal,-8,IMD,,,,insufficient,,,Safe,32.6,False,none
+561,Kozhikode,Kerala,,False,season_just_started,Deficient,-25,IMD,deviation,,,insufficient,,,Safe,57.84,False,d1
+562,Malappuram,Kerala,,False,season_just_started,Deficient,-41,IMD,deviation,,,insufficient,,,Safe,68.25,False,d1
+563,Palakkad,Kerala,,False,season_just_started,Normal,-12,IMD,,,,insufficient,,,Safe,55.23,True,none
+564,Pathanamthitta,Kerala,,False,season_just_started,Excess,53,IMD,,,,insufficient,,,Safe,31.23,False,none
+565,Thiruvananthapuram,Kerala,,False,season_just_started,Normal,-10,IMD,,,,insufficient,,,Safe,62.87,False,none
+566,Thrissur,Kerala,,False,season_just_started,Normal,-18,IMD,,,,insufficient,,,Safe,57.03,False,d1
+567,Wayanad,Kerala,,False,season_just_started,Large Deficient,-83,IMD,deviation,,,insufficient,,,Safe,24.69,False,none
 6,Kargil,Ladakh,,False,gw_insufficient,Large Excess,90,IMD,"spi,dry_spell",-1.12,6.0,insufficient,,,Safe,36.1,False,d1
 9,Leh Ladakh,Ladakh,,False,gw_insufficient,Large Excess,120,IMD,spi,-1.13,2.0,insufficient,,,Safe,33.83,False,d1
 553,Lakshadweep District,Lakshadweep,,False,gw_insufficient,Deficient,-29,IMD,deviation,,,insufficient,,,,,,
@@ -509,8 +509,8 @@ dist_lgd,district,state,quadrant,provisional,why_none,rain_category,rain_departu
 371,Sambalpur,Odisha,,False,gw_insufficient,Excess,29,IMD,,1.33,2.0,insufficient,,,Safe,36.02,False,none
 372,Sonepur,Odisha,,False,gw_insufficient,Excess,45,IMD,,1.14,2.0,insufficient,,,Safe,52.32,False,none
 373,Sundargarh,Odisha,,False,gw_insufficient,Excess,21,IMD,,1.47,2.0,insufficient,,,Safe,45.9,False,none
-598,Karaikal,Puducherry,,False,season_just_started,Large Excess,81,IMD,,,,provisional,50.0,1.13,Safe,50.37,False,none
-599,Mahe,Puducherry,,False,season_just_started,Large Deficient,-97,gridded,deviation,,,insufficient,,,,,,
+598,Karaikal,Puducherry,,False,season_just_started,Excess,46,IMD,,,,provisional,50.0,1.13,Safe,50.37,False,none
+599,Mahe,Puducherry,,False,season_just_started,Large Deficient,-61,gridded,deviation,,,insufficient,,,,,,
 600,Pondicherry,Puducherry,,False,season_just_started,No Rain,-100,IMD,deviation,,,provisional,0.0,-1.68,Semi-critical,87.05,False,none
 601,Yanam,Puducherry,,False,season_just_started,No Rain,-100,IMD,deviation,,,insufficient,,,,,,none
 27,Amritsar,Punjab,,False,gw_insufficient,Normal,-19,IMD,,-0.25,3.0,insufficient,,,Over-exploited,148.78,False,none
@@ -592,44 +592,44 @@ dist_lgd,district,state,quadrant,provisional,why_none,rain_category,rain_departu
 227,Namchi,Sikkim,,False,gw_insufficient,Normal,16,IMD,,-0.24,1.0,insufficient,,,Safe,6.72,False,d1
 741,Pakyong,Sikkim,,False,gw_insufficient,Normal,-17,gridded,,-0.94,1.0,insufficient,,,Safe,4.88,False,d1
 742,Soreng,Sikkim,,False,gw_insufficient,Normal,-1,gridded,,-0.0,1.0,insufficient,,,Safe,7.89,False,none
-610,Ariyalur,Tamil Nadu,,False,season_just_started,Deficient,-49,IMD,deviation,,,provisional,50.0,-2.22,Safe,53.3,False,none
-730,Chengalpattu,Tamil Nadu,,False,season_just_started,No Rain,-100,IMD,deviation,,,provisional,6.0,-0.17,Safe,65.14,False,d1
+610,Ariyalur,Tamil Nadu,,False,season_just_started,Deficient,-56,IMD,deviation,,,provisional,50.0,-2.22,Safe,53.3,False,none
+730,Chengalpattu,Tamil Nadu,,False,season_just_started,Large Deficient,-96,IMD,deviation,,,provisional,6.0,-0.17,Safe,65.14,False,d1
 568,Chennai,Tamil Nadu,,False,season_just_started,No Rain,-100,IMD,deviation,,,provisional,33.0,0.08,Over-exploited,120.62,False,d2
-569,Coimbatore,Tamil Nadu,,False,season_just_started,Normal,-2,IMD,,,,full,57.0,-2.15,Critical,98.23,False,none
-570,Cuddalore,Tamil Nadu,,False,season_just_started,Large Deficient,-65,IMD,deviation,,,short,15.0,-1.91,Safe,56.91,True,none
-571,Dharmapuri,Tamil Nadu,,False,season_just_started,Large Deficient,-71,IMD,deviation,,,provisional,50.0,-1.04,Semi-critical,86.77,True,none
-572,Dindigul,Tamil Nadu,,False,season_just_started,Deficient,-51,IMD,deviation,,,short,46.0,-1.28,Over-exploited,115.68,False,none
-573,Erode,Tamil Nadu,,False,season_just_started,Deficient,-54,IMD,deviation,,,short,31.0,-2.14,Semi-critical,75.85,True,none
-729,Kallakurichi,Tamil Nadu,,False,season_just_started,Excess,42,IMD,,,,full,26.0,-3.42,Semi-critical,80.11,True,none
-574,Kanchipuram,Tamil Nadu,,False,season_just_started,Large Deficient,-98,IMD,deviation,,,provisional,33.0,-0.3,Safe,46.43,False,d1
-575,Kanniyakumari,Tamil Nadu,,False,season_just_started,Excess,28,IMD,,,,provisional,10.0,-0.38,Safe,14.11,False,none
-576,Karur,Tamil Nadu,,False,season_just_started,Normal,-2,IMD,,,,provisional,0.0,-0.74,Critical,99.64,False,d1
-577,Krishnagiri,Tamil Nadu,,False,season_just_started,Deficient,-41,IMD,deviation,,,full,41.0,-2.7,Critical,97.13,False,none
-578,Madurai,Tamil Nadu,,False,season_just_started,Deficient,-56,IMD,deviation,,,short,78.0,-0.56,Safe,64.75,True,none
-735,Mayiladuthurai,Tamil Nadu,,False,season_just_started,Deficient,-46,IMD,deviation,,,provisional,17.0,-0.18,Over-exploited,114.11,False,none
-579,Nagapattinam,Tamil Nadu,,False,season_just_started,Large Deficient,-92,IMD,deviation,,,provisional,17.0,-0.83,Saline,-100000.0,False,none
-580,Namakkal,Tamil Nadu,,False,season_just_started,Normal,-13,IMD,,,,provisional,0.0,-0.78,Over-exploited,121.7,False,d0
-581,Perambalur,Tamil Nadu,,False,season_just_started,Excess,56,IMD,,,,provisional,44.0,-2.18,Over-exploited,114.65,False,none
-582,Pudukkottai,Tamil Nadu,,False,season_just_started,Deficient,-43,IMD,deviation,,,provisional,2.0,-0.49,Safe,49.03,False,none
-583,Ramanathapuram,Tamil Nadu,,False,season_just_started,Deficient,-40,IMD,deviation,,,provisional,0.0,-2.89,Safe,13.2,False,none
-731,Ranipet,Tamil Nadu,,False,season_just_started,Large Deficient,-91,IMD,deviation,,,provisional,56.0,-1.31,Semi-critical,82.55,True,none
-584,Salem,Tamil Nadu,,False,season_just_started,Large Deficient,-89,IMD,deviation,,,short,68.0,-1.1,Over-exploited,150.56,False,d0
-585,Sivaganga,Tamil Nadu,,False,season_just_started,Large Deficient,-83,IMD,deviation,,,provisional,18.0,-0.52,Safe,26.05,False,none
-733,Tenkasi,Tamil Nadu,,False,season_just_started,Large Excess,100,IMD,,,,short,61.0,-0.46,Semi-critical,77.44,True,none
-586,Thanjavur,Tamil Nadu,,False,season_just_started,Large Deficient,-63,IMD,deviation,,,provisional,25.0,-3.05,Over-exploited,102.09,False,none
-587,The Nilgiris,Tamil Nadu,,False,season_just_started,Large Deficient,-68,IMD,deviation,,,provisional,50.0,0.48,Safe,9.52,False,none
-588,Theni,Tamil Nadu,,False,season_just_started,Normal,-14,IMD,,,,provisional,25.0,-1.87,Semi-critical,75.28,True,none
+569,Coimbatore,Tamil Nadu,,False,season_just_started,Excess,30,IMD,,,,full,57.0,-2.15,Critical,98.23,False,none
+570,Cuddalore,Tamil Nadu,,False,season_just_started,Large Deficient,-71,IMD,deviation,,,short,15.0,-1.91,Safe,56.91,True,none
+571,Dharmapuri,Tamil Nadu,,False,season_just_started,Large Deficient,-76,IMD,deviation,,,provisional,50.0,-1.04,Semi-critical,86.77,True,none
+572,Dindigul,Tamil Nadu,,False,season_just_started,Deficient,-41,IMD,deviation,,,short,46.0,-1.28,Over-exploited,115.68,False,none
+573,Erode,Tamil Nadu,,False,season_just_started,Deficient,-57,IMD,deviation,,,short,31.0,-2.14,Semi-critical,75.85,True,none
+729,Kallakurichi,Tamil Nadu,,False,season_just_started,Normal,3,IMD,,,,full,26.0,-3.42,Semi-critical,80.11,True,none
+574,Kanchipuram,Tamil Nadu,,False,season_just_started,Large Deficient,-92,IMD,deviation,,,provisional,33.0,-0.3,Safe,46.43,False,d1
+575,Kanniyakumari,Tamil Nadu,,False,season_just_started,Excess,29,IMD,,,,provisional,10.0,-0.38,Safe,14.11,False,none
+576,Karur,Tamil Nadu,,False,season_just_started,Normal,-19,IMD,,,,provisional,0.0,-0.74,Critical,99.64,False,d1
+577,Krishnagiri,Tamil Nadu,,False,season_just_started,Deficient,-50,IMD,deviation,,,full,41.0,-2.7,Critical,97.13,False,none
+578,Madurai,Tamil Nadu,,False,season_just_started,Deficient,-52,IMD,deviation,,,short,78.0,-0.56,Safe,64.75,True,none
+735,Mayiladuthurai,Tamil Nadu,,False,season_just_started,Large Deficient,-61,IMD,deviation,,,provisional,17.0,-0.18,Over-exploited,114.11,False,none
+579,Nagapattinam,Tamil Nadu,,False,season_just_started,Large Deficient,-94,IMD,deviation,,,provisional,17.0,-0.83,Saline,-100000.0,False,none
+580,Namakkal,Tamil Nadu,,False,season_just_started,Normal,-6,IMD,,,,provisional,0.0,-0.78,Over-exploited,121.7,False,d0
+581,Perambalur,Tamil Nadu,,False,season_just_started,Normal,15,IMD,,,,provisional,44.0,-2.18,Over-exploited,114.65,False,none
+582,Pudukkottai,Tamil Nadu,,False,season_just_started,Deficient,-53,IMD,deviation,,,provisional,2.0,-0.49,Safe,49.03,False,none
+583,Ramanathapuram,Tamil Nadu,,False,season_just_started,Deficient,-48,IMD,deviation,,,provisional,0.0,-2.89,Safe,13.2,False,none
+731,Ranipet,Tamil Nadu,,False,season_just_started,Large Deficient,-93,IMD,deviation,,,provisional,56.0,-1.31,Semi-critical,82.55,True,none
+584,Salem,Tamil Nadu,,False,season_just_started,Large Deficient,-92,IMD,deviation,,,short,68.0,-1.1,Over-exploited,150.56,False,d0
+585,Sivaganga,Tamil Nadu,,False,season_just_started,Large Deficient,-79,IMD,deviation,,,provisional,18.0,-0.52,Safe,26.05,False,none
+733,Tenkasi,Tamil Nadu,,False,season_just_started,Large Excess,97,IMD,,,,short,61.0,-0.46,Semi-critical,77.44,True,none
+586,Thanjavur,Tamil Nadu,,False,season_just_started,Large Deficient,-69,IMD,deviation,,,provisional,25.0,-3.05,Over-exploited,102.09,False,none
+587,The Nilgiris,Tamil Nadu,,False,season_just_started,Normal,-11,IMD,,,,provisional,50.0,0.48,Safe,9.52,False,none
+588,Theni,Tamil Nadu,,False,season_just_started,Normal,12,IMD,,,,provisional,25.0,-1.87,Semi-critical,75.28,True,none
 589,Thiruvallur,Tamil Nadu,,False,season_just_started,Large Deficient,-91,IMD,deviation,,,provisional,33.0,-0.79,Safe,57.03,False,d1
-590,Thiruvarur,Tamil Nadu,,False,season_just_started,Large Deficient,-71,IMD,deviation,,,provisional,0.0,-8.47,Safe,54.77,True,none
-591,Tiruchirappalli,Tamil Nadu,,False,season_just_started,Deficient,-50,IMD,deviation,,,short,45.0,-0.34,Semi-critical,75.04,True,none
-592,Tirunelveli,Tamil Nadu,,False,season_just_started,Large Excess,138,IMD,,,,full,38.0,0.55,Safe,39.96,True,none
-732,Tirupathur,Tamil Nadu,,False,season_just_started,Large Deficient,-64,IMD,deviation,,,provisional,0.0,-6.62,Over-exploited,140.64,False,none
-634,Tiruppur,Tamil Nadu,,False,season_just_started,Large Deficient,-66,IMD,deviation,,,full,57.0,-3.02,Semi-critical,85.5,True,none
-593,Tiruvannamalai,Tamil Nadu,,False,season_just_started,Normal,-12,IMD,,,,provisional,0.0,-1.76,Semi-critical,84.1,True,none
-594,Tuticorin,Tamil Nadu,,False,season_just_started,Normal,-2,IMD,,,,full,52.0,-0.61,Safe,28.21,False,none
-595,Vellore,Tamil Nadu,,False,season_just_started,Large Deficient,-64,IMD,deviation,,,short,36.0,-0.86,Over-exploited,117.3,False,none
-596,Villupuram,Tamil Nadu,,False,season_just_started,Large Deficient,-62,IMD,deviation,,,provisional,0.0,-2.21,Semi-critical,89.67,True,none
-597,Virudhunagar,Tamil Nadu,,False,season_just_started,Large Excess,79,IMD,,,,short,33.0,-1.43,Safe,59.64,True,none
+590,Thiruvarur,Tamil Nadu,,False,season_just_started,Large Deficient,-76,IMD,deviation,,,provisional,0.0,-8.47,Safe,54.77,True,none
+591,Tiruchirappalli,Tamil Nadu,,False,season_just_started,Large Deficient,-60,IMD,deviation,,,short,45.0,-0.34,Semi-critical,75.04,True,none
+592,Tirunelveli,Tamil Nadu,,False,season_just_started,Large Excess,142,IMD,,,,full,38.0,0.55,Safe,39.96,True,none
+732,Tirupathur,Tamil Nadu,,False,season_just_started,Large Deficient,-71,IMD,deviation,,,provisional,0.0,-6.62,Over-exploited,140.64,False,none
+634,Tiruppur,Tamil Nadu,,False,season_just_started,Deficient,-45,IMD,deviation,,,full,57.0,-3.02,Semi-critical,85.5,True,none
+593,Tiruvannamalai,Tamil Nadu,,False,season_just_started,Deficient,-29,IMD,deviation,,,provisional,0.0,-1.76,Semi-critical,84.1,True,none
+594,Tuticorin,Tamil Nadu,,False,season_just_started,Excess,23,IMD,,,,full,52.0,-0.61,Safe,28.21,False,none
+595,Vellore,Tamil Nadu,,False,season_just_started,Large Deficient,-71,IMD,deviation,,,short,36.0,-0.86,Over-exploited,117.3,False,none
+596,Villupuram,Tamil Nadu,,False,season_just_started,Large Deficient,-71,IMD,deviation,,,provisional,0.0,-2.21,Semi-critical,89.67,True,none
+597,Virudhunagar,Tamil Nadu,,False,season_just_started,Excess,50,IMD,,,,short,33.0,-1.43,Safe,59.64,True,none
 501,Adilabad,Telangana,double_drought,True,,Deficient,-27,IMD,"deviation,dry_spell",-0.91,5.0,provisional,0.0,-0.76,Safe,37.57,True,d1
 690,Bhadradri Kothagudem,Telangana,double_drought,True,,Deficient,-21,IMD,deviation,-0.69,3.0,provisional,0.0,-0.7,Safe,32.04,False,d0
 686,Hanumakonda,Telangana,double_drought,True,,Deficient,-24,IMD,deviation,-0.63,2.0,provisional,0.0,-1.72,Safe,56.3,True,d1
