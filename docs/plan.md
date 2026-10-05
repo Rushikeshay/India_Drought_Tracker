@@ -90,14 +90,17 @@ Secondary marks: GW confidence tier, IN-GRES category and worst block, IDM droug
 | 6b | Row-level trace (backend accuracy check) | ✅ **Done 2026-10-01**: 23 steps for Sikar and Beed recomputed independently from raw files, all match (`notebooks/phase6b/trace_report.md`, `tests/test_trace.py`). Found and fixed: 61 placeholder `NaN NaN NaN` rows in IDM files |
 | 7 | Front end v1 | ✅ **Built 2026-10-01** (awaiting review): map (5 layers), district panel with charts + timeline, history date picker (107 snapshots), sortable table + CSV, methods page, dark mode, mobile. Colours validated (all-pairs, light + dark). Publish via `.github/workflows/pages.yml` (needs Pages source = GitHub Actions) | Map, district panel, hidden-drought table, methods page; phone + laptop |
 | 8 | Automation | 🟡 **Built 2026-10-04**, on watch: `pipeline/run.py` + `.github/workflows/refresh.yml`; clean-checkout trial passed (all 7 steps, 13 min). See §10 | `refresh.yml` daily on Actions, unattended for 2 weeks (to 2026-10-18) |
-| 9 | Outlook | ⏭ **Next** (after the Phase 8 watch) | Scenario engine + ENSO/NMME; back-test |
-| 10 | Launch + feedback | — | 3–5 intermediaries try it |
+| 9 | Outlook | ⏸ **Deferred to v2** (decided 2026-10-04): no scenario engine and no ENSO line in v1, see §10 | Scenario engine + ENSO/NMME; back-test |
+| 10 | Launch + feedback | ⏭ **Next** | 3–5 intermediaries try it |
 
 ## 9. Architecture (unchanged)
 
 `pipeline/` (sources → process → outlook → `run.py`) → `web/data/*.json` (committed) → GitHub Pages (plain HTML/JS + D3, no build). `run.py` is run daily by `.github/workflows/refresh.yml`, which then publishes through `pages.yml`. Raw downloads go in `data/raw/` (gitignored). Python 3.11 in `.venv` via uv; dependencies are in `requirements.txt` only (pandas, geopandas, xarray, imdlib, duckdb, requests). Ask before adding any others. `pyarrow` approved 2026-10-01 (parquet). Tests use stdlib `unittest`: `.venv/bin/python -m unittest discover -s tests -t .`
 
 ## 10. Open items
+
+**Phase 9 decision (owner, 2026-10-04):** no scenario engine in v1. District-level groundwater scenarios would rest on thin current data (34 districts at full/short tier) and read as a forecast. Ask the Phase 10 users whether they want an outlook. The ENSO line is also left out (owner, 2026-10-04): it would add another layer for the audience to interpret, and the evidence below is too thin to present as prediction. The check is kept here for v2.
+- **ENSO check** (Jun–Sep district rain 1971–2025, short = 20% or more below the 1971–2020 normal; El Niño monsoon = NOAA ONI mean of JJA and JAS ≥ +0.5: 1972, 1982, 1987, 1991, 1997, 2002, 2009, 2015, 2023): districts were rain-short in 40% of El Niño monsoons vs 22% of other years. 397 of 779 districts are at least 20 points higher in El Niño years (chance: median 77, 95th percentile 181, from 2,000 random sets of 9 years). Strongest in Uttarakhand, Gujarat, Uttar Pradesh, Rajasthan, Himachal, Maharashtra, Haryana, Punjab (+27 to +38 points); no or reversed relation in the north-east (Meghalaya −16). Limits: 9 El Niño years; 1991, 1997 and 2023 were mild (22–27% of districts short) and 1979, not an El Niño year, was the worst (54%). Uses ONI; CPC now verifies against RONI, so the year list should be re-derived from RONI before anything is published.
 
 **Phase 8 automation (2026-10-04):**
 - **Schedule:** full run daily at 12:30 UTC (18:00 IST); a second run at 02:30 UTC (08:00 IST) only archives IMD's district rainfall table, because IMD overwrites it daily and season-final figures would be lost.
