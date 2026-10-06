@@ -1,18 +1,18 @@
 {
- "run_at_utc":"2026-10-05 20:48",
+ "run_at_utc":"2026-10-06 18:48",
  "publish":true,
  "steps":{
   "rain_official":{
    "ok":true,
-   "seconds":15
+   "seconds":17
   },
   "rain":{
    "ok":true,
-   "seconds":105
+   "seconds":551
   },
   "groundwater":{
    "ok":true,
-   "seconds":169
+   "seconds":163
   },
   "idm":{
    "ok":true,
@@ -24,7 +24,7 @@
   },
   "history":{
    "ok":true,
-   "seconds":375
+   "seconds":355
   },
   "check":{
    "ok":true,
