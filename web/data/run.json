@@ -1,5 +1,5 @@
 {
- "run_at_utc":"2026-10-07 19:11",
+ "run_at_utc":"2026-10-08 19:13",
  "publish":true,
  "steps":{
   "rain_official":{
@@ -7,13 +7,12 @@
    "seconds":10
   },
   "rain":{
-   "ok":false,
-   "error":"ImdError: rain_ind0.25_26_10_04.grd: ConnectTimeout(MaxRetryError(\"HTTPSConnectionPool(host='imdpune.gov.in', port=443): Max retries exceeded with url: /cmpg/Realtimedata/Rainfall/rain.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='imdpune.gov.in', port=443) at 0x7f44309ff010>, 'Connectio",
-   "seconds":235
+   "ok":true,
+   "seconds":527
   },
   "groundwater":{
    "ok":true,
-   "seconds":163
+   "seconds":176
   },
   "idm":{
    "ok":true,
@@ -25,7 +24,7 @@
   },
   "history":{
    "ok":true,
-   "seconds":283
+   "seconds":304
   },
   "check":{
    "ok":true,
