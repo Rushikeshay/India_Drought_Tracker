@@ -1,18 +1,19 @@
 {
- "run_at_utc":"2026-10-16 17:07",
+ "run_at_utc":"2026-10-17 15:57",
  "publish":true,
  "steps":{
   "rain_official":{
    "ok":true,
-   "seconds":16
+   "seconds":12
   },
   "rain":{
-   "ok":true,
-   "seconds":376
+   "ok":false,
+   "error":"ImdError: rain_ind0.25_26_10_11.grd: ImdError('rain_ind0.25_26_10_11.grd: got 0 bytes, expected [69660]')",
+   "seconds":34
   },
   "groundwater":{
    "ok":true,
-   "seconds":194
+   "seconds":164
   },
   "idm":{
    "ok":true,
@@ -24,7 +25,7 @@
   },
   "history":{
    "ok":true,
-   "seconds":496
+   "seconds":482
   },
   "check":{
    "ok":true,
