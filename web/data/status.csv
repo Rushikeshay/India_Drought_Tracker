@@ -510,7 +510,7 @@ dist_lgd,district,state,quadrant,provisional,why_none,rain_category,rain_departu
 372,Sonepur,Odisha,,False,gw_insufficient,Excess,45,IMD,,1.14,2.0,insufficient,,,Safe,52.32,False,none
 373,Sundargarh,Odisha,,False,gw_insufficient,Excess,21,IMD,,1.47,2.0,insufficient,,,Safe,45.9,False,none
 598,Karaikal,Puducherry,fine,True,,Large Excess,139,IMD,,,0.0,provisional,50.0,1.13,Safe,50.37,False,none
-599,Mahe,Puducherry,,False,gw_insufficient,Normal,-6,gridded,,,2.0,insufficient,,,,,,
+599,Mahe,Puducherry,,False,gw_insufficient,Normal,-9,gridded,,,2.0,insufficient,,,,,,
 600,Pondicherry,Puducherry,double_drought,True,,Deficient,-45,IMD,deviation,,2.0,provisional,0.0,-1.68,Semi-critical,87.05,False,d1
 601,Yanam,Puducherry,,False,gw_insufficient,Deficient,-58,IMD,deviation,,2.0,insufficient,,,,,,none
 27,Amritsar,Punjab,,False,gw_insufficient,Normal,-19,IMD,,-0.25,3.0,insufficient,,,Over-exploited,148.78,False,none
