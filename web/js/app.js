@@ -143,6 +143,26 @@ function opacityFor(lgd) {
 }
 
 // ---------------- map ----------------
+// State borders = district edges whose two sides are in different states. The pipeline
+// simplifies districts as one coverage, so neighbours share identical vertices.
+function stateBorders(features) {
+  const owner = new Map(), segs = [];
+  for (const f of features) {
+    const st8 = f.properties.s, gm = f.geometry;
+    if (!gm) continue;
+    const polys = gm.type === "Polygon" ? [gm.coordinates] : gm.type === "MultiPolygon" ? gm.coordinates : [];
+    for (const ring of polys.flat()) {
+      for (let i = 0; i < ring.length - 1; i++) {
+        const a = ring[i] + "", b = ring[i + 1] + "";
+        const key = a < b ? a + "|" + b : b + "|" + a;
+        const prev = owner.get(key);
+        if (prev === undefined) owner.set(key, st8);
+        else if (prev !== st8) segs.push([ring[i], ring[i + 1]]);
+      }
+    }
+  }
+  return { type: "MultiLineString", coordinates: segs };
+}
 function drawMap() {
   const svg = d3.select("#map");
   const W = 900, H = 1000;
@@ -163,6 +183,7 @@ function drawMap() {
     .on("mousemove", (ev, f) => showTip(ev, f))
     .on("mouseleave", hideTip)
     .on("click", (ev, f) => f.properties.lgd && select(f.properties.lgd));
+  g.append("path").attr("class", "states").attr("d", path(stateBorders(geo.features)));
   outlinePath = g.append("path").attr("class", "outline");
   json(DATA + "india_outline.geojson").then((o) => outlinePath.attr("d", path(o)));
   // Zoom: buttons, drag, double-click, pinch. Plain scroll and one-finger swipes are left to
@@ -423,8 +444,15 @@ function idmChart(el, vals, weeks) {
   const svg = d3.select(el).append("svg").attr("viewBox", `0 0 ${W} ${H}`);
   svg.append("g").attr("class", "grid").selectAll("line").data([0, 50, 100]).join("line").attr("x1", m.l).attr("x2", W - m.r).attr("y1", y).attr("y2", y);
   svg.append("g").attr("class", "axis").attr("transform", `translate(${m.l},0)`).call(d3.axisLeft(y).tickValues([0, 50, 100]).tickFormat((d) => d + "%").tickSizeOuter(0));
+  // one tick at the first week of each month; the year only on the first tick and on January
+  const mon = (i) => pts[i]?.w?.slice(0, 7);
+  const ticks = pts.map((p) => p.i).filter((i) => i > 0 && mon(i) !== mon(i - 1));
+  const tickText = (i, k) => {
+    const dt = new Date(pts[i].w + "T00:00:00");
+    return d3.timeFormat(k === 0 || dt.getMonth() === 0 ? "%b %Y" : "%b")(dt);
+  };
   svg.append("g").attr("class", "axis").attr("transform", `translate(0,${H - m.b})`)
-    .call(d3.axisBottom(x).tickValues([0, pts.length - 1]).tickFormat((i) => pts[i]?.w?.slice(5) || "").tickSizeOuter(0));
+    .call(d3.axisBottom(x).tickValues(ticks).tickFormat(tickText).tickSizeOuter(0));
   svg.append("path").attr("class", "line").attr("d", d3.line().x((p) => x(p.i)).y((p) => y(p.val))(pts)).style("stroke", v("--series-1"));
   const dot = svg.append("circle").attr("r", 4).style("fill", v("--series-1")).style("stroke", v("--surface")).attr("stroke-width", 2).style("display", "none");
   const tip = chartTip(el);
@@ -528,6 +556,15 @@ function renderGroups() {
     renderTable();
   });
 }
+// Fit the table's scroll box between its top and the bottom of the screen, so the sideways
+// scrollbar is visible without scrolling the page first.
+function fitTable() {
+  const box = $(".table-scroll");
+  if (!box.offsetParent) return;  // table view hidden
+  const top = box.getBoundingClientRect().top + window.scrollY;
+  box.style.maxHeight = Math.max(320, window.innerHeight - top - 16) + "px";
+}
+window.addEventListener("resize", fitTable);
 function renderTable() {
   const tools = $("#table-tools");
   const qs = ["hidden_drought", "double_drought", "buffered", "fine", "none"];
@@ -550,6 +587,7 @@ function renderTable() {
   };
   $("#table").innerHTML = `<thead><tr>${cols.map(([c, lab]) => `<th data-k="${c}" title="${esc(t(lab + "_help"))}" aria-sort="${k === c ? (dir > 0 ? "ascending" : "descending") : "none"}">${esc(t(lab))}${k === c ? (dir > 0 ? " ▲" : " ▼") : ""}</th>`).join("")}</tr></thead>
     <tbody>${rows.map((r) => `<tr data-lgd="${r.lgd}">${cols.map((c) => cell(r, c)).join("")}</tr>`).join("")}</tbody>`;
+  fitTable();
   $("#table").querySelectorAll("th").forEach((th) => th.onclick = () => {
     st.sort = [th.dataset.k, st.sort[0] === th.dataset.k ? -st.sort[1] : 1];
     renderTable();
@@ -569,6 +607,7 @@ function renderTable() {
   };
 }
 function setView(view) {
+  stopPlay();
   st.view = view;
   $("#map-view").hidden = view !== "map";
   $("#table-view").hidden = view !== "table";
@@ -596,13 +635,91 @@ function asofLine() {
 async function loadSnap(d) {
   if (d !== "now" && !cache.snaps[d]) cache.snaps[d] = await json(`${DATA}history/s_${d}.json`);
 }
-async function setSnapshot(d) {
+// quiet: skip the side panel (used during playback; the panel catches up when playback stops).
+let snapTok = 0;
+async function setSnapshot(d, quiet = false) {
+  const tok = ++snapTok;
   await loadSnap(d);
+  if (tok !== snapTok) return;  // a newer date was picked while this one was loading
   st.snapshot = d;
+  $("#date").value = d;
+  syncSlider();
   asofLine();
   recolor();
-  renderPanel();
+  if (!quiet) renderPanel();
   if (st.view === "table") renderTable();
+}
+
+// ---------------- timeline slider + playback ----------------
+// The slider runs over the same dates as the dropdown (so it follows the layer), ending at Latest.
+const STEP_MS = 800;
+const play = { on: false, timer: null };
+const sliderDates = () => [...layerDates(), "now"];
+const dateText = (d) => (d === "now" ? t("date_now") : snapLabel(d));
+function sliderLabel(d) {
+  $("#date-range-label").textContent = dateText(d);
+  $("#date-range").setAttribute("aria-valuetext", dateText(d));
+}
+function syncSlider() {
+  const r = $("#date-range"), ds = sliderDates();
+  r.max = ds.length - 1;
+  r.value = Math.max(0, ds.indexOf(st.snapshot));
+  sliderLabel(ds[r.value]);
+  const md = $("#map-date");
+  md.textContent = st.snapshot === "now" ? "" : snapLabel(st.snapshot);
+  md.hidden = st.snapshot === "now";
+}
+function playButton() {
+  const b = $("#play");
+  b.textContent = play.on ? "❚❚" : "▶";
+  b.title = t(play.on ? "pause" : "play");
+  b.setAttribute("aria-label", b.title);
+}
+function stopPlay() {
+  if (!play.on) return;
+  play.on = false;
+  clearTimeout(play.timer);
+  playButton();
+  renderPanel();
+}
+async function startPlay() {
+  play.on = true;
+  playButton();
+  const ds = sliderDates();
+  if (ds.indexOf(st.snapshot) >= ds.length - 1) {  // at Latest: start again from the oldest date
+    st.moved = null;
+    await setSnapshot(ds[0], true);
+  }
+  if (play.on) play.timer = setTimeout(playStep, STEP_MS);
+}
+async function playStep() {
+  if (!play.on) return;
+  const ds = sliderDates();
+  const i = ds.indexOf(st.snapshot);
+  const next = ds[i + 1];
+  if (!next) return stopPlay();
+  for (const d of ds.slice(i + 2, i + 4)) if (d !== "now") loadSnap(d).catch(() => {});  // prefetch
+  const t0 = performance.now();
+  st.moved = null;
+  try { await setSnapshot(next, true); } catch (e) { return stopPlay(); }
+  if (!play.on) return;
+  if (next === "now") return stopPlay();
+  play.timer = setTimeout(playStep, Math.max(0, STEP_MS - (performance.now() - t0)));
+}
+function initSlider() {
+  const r = $("#date-range");
+  r.setAttribute("aria-label", t("timeline_slider"));
+  let wait;
+  r.oninput = () => {
+    stopPlay();
+    const d = sliderDates()[r.value];
+    sliderLabel(d);
+    clearTimeout(wait);  // only load once the slider rests, not for every date dragged past
+    wait = setTimeout(() => { st.moved = null; setSnapshot(d); }, 150);
+  };
+  $("#play").onclick = () => (play.on ? stopPlay() : startPlay());
+  playButton();
+  syncSlider();
 }
 
 // Snapshot dates the current layer has data for (stress and the drought index start late).
@@ -615,6 +732,7 @@ function fillDates() {
   date.innerHTML = `<option value="now">${esc(t("date_now"))}</option>` +
     layerDates().reverse().map((d) => `<option value="${d}">${esc(snapLabel(d))} · ${histIndex.classified[d]} districts</option>`).join("");
   date.value = st.snapshot;
+  syncSlider();
 }
 // Refill the date list for the current layer/view. If the chosen date is older than the
 // layer's data, move to the layer's first date and say so on the map.
@@ -628,11 +746,11 @@ async function syncDates() {
   } else {
     fillDates();
     recolor();
-    renderPanel();
+    if (!play.on) renderPanel();
   }
 }
 const CTL_HELP = [["layer_quadrant", "#categories"], ["layer_rain", "#rain"], ["layer_gw", "#groundwater"],
-  ["layer_stress", "#stress"], ["layer_idm", "#drought-index"], ["ctl_date", "#history"]];
+  ["layer_stress", "#stress"], ["layer_idm", "#drought-index"], ["ctl_date", "#history"], ["ctl_timeline", "#history"]];
 
 function initControls() {
   const layer = $("#layer");
@@ -644,7 +762,8 @@ function initControls() {
   };
   const date = $("#date");
   fillDates();
-  date.onchange = () => { st.moved = null; setSnapshot(date.value); };
+  date.onchange = () => { stopPlay(); st.moved = null; setSnapshot(date.value); };
+  initSlider();
   $("#ctl-help").innerHTML = `<summary>${esc(t("ctl_help_title"))}</summary><dl>
     ${CTL_HELP.map(([k, a]) => `<dt>${esc(t(k))}</dt><dd>${esc(t(k + "_help"))} <a href="methods.html${a}">${esc(t("more_in_methods"))}</a></dd>`).join("")}
   </dl>`;
