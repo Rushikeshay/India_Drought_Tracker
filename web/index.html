@@ -40,6 +40,14 @@
     <label><span data-i18n="ctl_date">Date</span>
       <select id="date"></select>
     </label>
+    <div class="timeslider" id="timeslider">
+      <span data-i18n="ctl_timeline">Timeline</span>
+      <div>
+        <button id="play" type="button">▶</button>
+        <input id="date-range" type="range" min="0" max="0" step="1" value="0">
+        <span id="date-range-label" class="date-range-label"></span>
+      </div>
+    </div>
     <label><span data-i18n="ctl_search">Find a district</span>
       <input id="search" list="district-list" autocomplete="off">
       <datalist id="district-list"></datalist>
@@ -52,6 +60,7 @@
     <div class="map-wrap" id="map-wrap">
       <svg id="map" role="img" aria-label="Map of India's districts"></svg>
       <div class="tooltip" id="tooltip" role="status"></div>
+      <div class="map-date" id="map-date" hidden></div>
       <div class="zoom-ctl" id="zoom-ctl">
         <button id="zoom-in">+</button>
         <button id="zoom-out">−</button>

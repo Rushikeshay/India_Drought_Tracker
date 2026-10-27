@@ -94,6 +94,22 @@ button, select, input { font: inherit; color: var(--ink); }
 .col-groups div { display: flex; flex-wrap: wrap; gap: 4px; }
 .col-groups .filter-chip { padding: 5px 10px; }
 .asof { margin-left: auto; font-size: 12px; color: var(--muted); max-width: 420px; }
+/* timeline: play button + slider over the dates the shown layer has */
+.timeslider { display: grid; gap: 2px; font-size: 12px; color: var(--muted); }
+.timeslider div { display: flex; align-items: center; gap: 8px; }
+.timeslider button {
+  width: 32px; height: 32px; flex: none; border: 1px solid var(--axis); border-radius: 6px;
+  background: var(--surface); cursor: pointer; color: var(--ink); font-size: 12px; line-height: 1;
+}
+.timeslider button:hover { background: var(--page); }
+.timeslider input[type="range"] { width: 240px; min-width: 0; accent-color: var(--accent); }
+.date-range-label { min-width: 150px; font-size: 13px; color: var(--ink); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.controls.for-table .timeslider { display: none; }
+.map-date {
+  position: absolute; top: 12px; left: 12px; padding: 4px 10px; border-radius: 8px;
+  background: var(--surface); border: 1px solid var(--ring); font-size: 20px; font-weight: 600;
+  color: var(--ink); font-variant-numeric: tabular-nums; pointer-events: none;
+}
 
 /* layout */
 .layout { display: grid; grid-template-columns: minmax(0, 1fr) 400px; gap: 0; }
@@ -105,6 +121,7 @@ button, select, input { font: inherit; color: var(--ink); }
 .zoom-ctl button { width: 30px; height: 30px; border: 0; border-radius: 6px; background: none; cursor: pointer; font-size: 17px; line-height: 1; color: var(--ink-2); }
 .zoom-ctl button:hover { background: var(--page); color: var(--ink); }
 #map path.d:hover, #map path.d.sel { stroke: var(--ink); stroke-width: 1.4; }
+#map path.states { fill: none; stroke: var(--ink-2); stroke-opacity: 0.9; stroke-width: 1.2; stroke-linecap: round; pointer-events: none; }
 #map path.outline { fill: none; stroke: var(--ink-2); stroke-width: 0.8; pointer-events: none; }
 .legend {
   position: absolute; left: 12px; bottom: 12px; background: var(--surface); border: 1px solid var(--ring);
@@ -161,7 +178,12 @@ dl.kv dd { margin: 0; font-variant-numeric: tabular-nums; min-width: 0; overflow
 .filter-chip[aria-pressed="true"] { background: var(--ink); color: var(--surface); border-color: var(--ink); }
 .btn { border: 1px solid var(--axis); background: var(--surface); border-radius: 6px; padding: 6px 12px; cursor: pointer; }
 .table-tools .count { color: var(--muted); font-size: 13px; margin-right: auto; }
-.table-scroll { overflow-x: auto; }
+/* the table scrolls inside a screen-high box, so the sideways scrollbar is always in reach */
+.table-scroll {
+  overflow: auto; max-height: calc(100vh - 110px);  /* fitTable() in app.js tightens this */
+  border: 1px solid var(--ring); border-radius: 8px;
+}
+table.data th { z-index: 1; }
 table.data { border-collapse: collapse; width: 100%; font-size: 13px; }
 table.data th, table.data td { padding: 6px 8px; border-bottom: 1px solid var(--grid); text-align: left; white-space: nowrap; }
 table.data th { position: sticky; top: 0; background: var(--surface); cursor: pointer; color: var(--ink-2); user-select: none; }
@@ -193,7 +215,10 @@ table.data tr:hover td { background: var(--page); }
   .brand { grid-column: 1 / -1; }
   .view-tabs { justify-self: start; }
   .controls { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
-  .controls label:has(#search), .asof, .col-groups { grid-column: 1 / -1; }
+  .controls label:has(#search), .asof, .col-groups, .timeslider { grid-column: 1 / -1; }
+  .timeslider input[type="range"] { flex: 1; width: auto; }
+  .date-range-label { min-width: 0; }
+  .map-date { font-size: 15px; }
   .map-wrap { border-right: 0; min-height: 0; }
   #map { height: auto; min-height: 0; aspect-ratio: 9 / 10; }
   .panel { max-height: none; border-top: 1px solid var(--ring); }
