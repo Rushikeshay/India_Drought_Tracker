@@ -20,7 +20,7 @@ dist_lgd,district,state,quadrant,provisional,why_none,rain_category,rain_departu
 751,Palnadu,Andhra Pradesh,buffered,True,,Large Deficient,-60,IMD,deviation,,2.0,provisional,33.0,0.32,Safe,31.54,True,d1
 743,Parvathipuram Manyam,Andhra Pradesh,fine,True,,Normal,11,IMD,,,3.0,provisional,50.0,1.53,Safe,26.01,False,none
 517,Prakasam,Andhra Pradesh,buffered,True,,Deficient,-58,IMD,deviation,,2.0,provisional,67.0,0.0,Safe,29.73,False,d2
-515,Spsr Nellore,Andhra Pradesh,buffered,True,,Deficient,-45,IMD,deviation,,2.0,provisional,50.0,0.9,Safe,32.35,True,d2
+515,Spsr Nellore,Andhra Pradesh,buffered,True,,Deficient,-45,IMD,deviation,,1.0,provisional,50.0,0.9,Safe,32.35,True,d2
 754,Sri Sathya Sai,Andhra Pradesh,buffered,False,,Deficient,-46,IMD,deviation,,1.0,short,34.0,-0.92,Safe,56.36,True,d1
 519,Srikakulam,Andhra Pradesh,,False,gw_insufficient,Large Excess,99,IMD,,,2.0,insufficient,,,Safe,33.7,True,none
 752,Tirupati,Andhra Pradesh,fine,True,,Normal,4,IMD,,,2.0,provisional,50.0,0.18,Safe,36.24,True,d1
@@ -319,20 +319,20 @@ dist_lgd,district,state,quadrant,provisional,why_none,rain_category,rain_departu
 738,Vijayanagar,Karnataka,buffered,True,,Deficient,-52,IMD,deviation,,3.0,provisional,50.0,-0.01,Semi-critical,86.4,True,d1
 530,Vijayapura,Karnataka,buffered,True,,Deficient,-41,IMD,"deviation,spi",-1.5,3.0,provisional,50.0,-1.97,Safe,46.11,False,d2
 635,Yadgir,Karnataka,buffered,True,,Deficient,-30,IMD,"deviation,spi",-1.05,3.0,provisional,50.0,-0.45,Safe,38.64,False,d1
-554,Alappuzha,Kerala,,False,gw_insufficient,Normal,0,IMD,,,0.0,insufficient,,,Safe,37.56,False,none
-555,Ernakulam,Kerala,,False,gw_insufficient,Deficient,-25,IMD,deviation,,0.0,insufficient,,,Safe,42.84,False,none
+554,Alappuzha,Kerala,,False,gw_insufficient,Normal,0,IMD,,,1.0,insufficient,,,Safe,37.56,False,none
+555,Ernakulam,Kerala,,False,gw_insufficient,Deficient,-25,IMD,deviation,,1.0,insufficient,,,Safe,42.84,False,none
 556,Idukki,Kerala,,False,gw_insufficient,Deficient,-31,IMD,deviation,,1.0,insufficient,,,Safe,49.38,False,none
 557,Kannur,Kerala,,False,gw_insufficient,Normal,-19,IMD,,,1.0,insufficient,,,Safe,45.47,False,d1
 558,Kasaragod,Kerala,,False,gw_insufficient,Deficient,-31,IMD,deviation,,1.0,insufficient,,,Safe,69.33,False,d1
-559,Kollam,Kerala,,False,gw_insufficient,Normal,-17,IMD,,,0.0,insufficient,,,Safe,47.27,False,none
-560,Kottayam,Kerala,,False,gw_insufficient,Normal,-15,IMD,,,0.0,insufficient,,,Safe,32.6,False,none
+559,Kollam,Kerala,,False,gw_insufficient,Normal,-17,IMD,,,1.0,insufficient,,,Safe,47.27,False,none
+560,Kottayam,Kerala,,False,gw_insufficient,Normal,-15,IMD,,,1.0,insufficient,,,Safe,32.6,False,none
 561,Kozhikode,Kerala,,False,gw_insufficient,Normal,-7,IMD,,,1.0,insufficient,,,Safe,57.84,False,none
-562,Malappuram,Kerala,,False,gw_insufficient,Deficient,-29,IMD,deviation,,0.0,insufficient,,,Safe,68.25,False,none
-563,Palakkad,Kerala,,False,gw_insufficient,Normal,4,IMD,,,0.0,insufficient,,,Safe,55.23,True,none
-564,Pathanamthitta,Kerala,,False,gw_insufficient,Normal,-2,IMD,,,0.0,insufficient,,,Safe,31.23,False,none
-565,Thiruvananthapuram,Kerala,,False,gw_insufficient,Normal,0,IMD,,,0.0,insufficient,,,Safe,62.87,False,none
+562,Malappuram,Kerala,,False,gw_insufficient,Deficient,-29,IMD,deviation,,1.0,insufficient,,,Safe,68.25,False,none
+563,Palakkad,Kerala,,False,gw_insufficient,Normal,4,IMD,,,1.0,insufficient,,,Safe,55.23,True,none
+564,Pathanamthitta,Kerala,,False,gw_insufficient,Normal,-2,IMD,,,1.0,insufficient,,,Safe,31.23,False,none
+565,Thiruvananthapuram,Kerala,,False,gw_insufficient,Normal,0,IMD,,,1.0,insufficient,,,Safe,62.87,False,none
 566,Thrissur,Kerala,,False,gw_insufficient,Deficient,-28,IMD,deviation,,1.0,insufficient,,,Safe,57.03,False,none
-567,Wayanad,Kerala,,False,gw_insufficient,Excess,20,IMD,,,0.0,insufficient,,,Safe,24.69,False,none
+567,Wayanad,Kerala,,False,gw_insufficient,Excess,20,IMD,,,1.0,insufficient,,,Safe,24.69,False,none
 6,Kargil,Ladakh,,False,gw_insufficient,Large Excess,90,IMD,"spi,dry_spell",-1.12,6.0,insufficient,,,Safe,36.1,False,d1
 9,Leh Ladakh,Ladakh,,False,gw_insufficient,Large Excess,120,IMD,spi,-1.13,2.0,insufficient,,,Safe,33.83,False,d1
 553,Lakshadweep District,Lakshadweep,,False,gw_insufficient,Deficient,-29,IMD,deviation,,,insufficient,,,,,,
@@ -509,7 +509,7 @@ dist_lgd,district,state,quadrant,provisional,why_none,rain_category,rain_departu
 371,Sambalpur,Odisha,,False,gw_insufficient,Excess,29,IMD,,1.33,2.0,insufficient,,,Safe,36.02,False,none
 372,Sonepur,Odisha,,False,gw_insufficient,Excess,45,IMD,,1.14,2.0,insufficient,,,Safe,52.32,False,none
 373,Sundargarh,Odisha,,False,gw_insufficient,Excess,21,IMD,,1.47,2.0,insufficient,,,Safe,45.9,False,none
-598,Karaikal,Puducherry,fine,True,,Excess,40,IMD,,,0.0,provisional,50.0,1.13,Safe,50.37,False,none
+598,Karaikal,Puducherry,fine,True,,Excess,40,IMD,,,1.0,provisional,50.0,1.13,Safe,50.37,False,none
 599,Mahe,Puducherry,,False,gw_insufficient,Large Deficient,-94,IMD,deviation,,2.0,insufficient,,,,,,
 600,Pondicherry,Puducherry,double_drought,True,,Deficient,-20,IMD,deviation,,2.0,provisional,0.0,-1.67,Semi-critical,87.05,False,none
 601,Yanam,Puducherry,,False,gw_insufficient,Normal,15,IMD,,,2.0,insufficient,,,,,,none
@@ -602,11 +602,11 @@ dist_lgd,district,state,quadrant,provisional,why_none,rain_category,rain_departu
 573,Erode,Tamil Nadu,fine,False,,Excess,45,IMD,,,2.0,short,34.0,-3.0,Semi-critical,75.85,True,none
 729,Kallakurichi,Tamil Nadu,fine,False,,Excess,45,IMD,,,2.0,full,26.0,-5.31,Semi-critical,80.11,True,none
 574,Kanchipuram,Tamil Nadu,fine,True,,Normal,-13,IMD,,,2.0,provisional,33.0,-0.3,Safe,46.43,False,none
-575,Kanniyakumari,Tamil Nadu,hidden_drought,True,,Excess,39,IMD,,,0.0,provisional,3.0,-0.67,Safe,14.11,False,none
+575,Kanniyakumari,Tamil Nadu,hidden_drought,True,,Excess,39,IMD,,,1.0,provisional,3.0,-0.67,Safe,14.11,False,none
 576,Karur,Tamil Nadu,hidden_drought,True,,Excess,38,IMD,,,2.0,provisional,0.0,-0.88,Critical,99.64,False,none
 577,Krishnagiri,Tamil Nadu,fine,False,,Normal,-8,IMD,,,1.0,full,41.0,-2.39,Critical,97.13,False,none
 578,Madurai,Tamil Nadu,fine,False,,Normal,-6,IMD,,,1.0,full,52.0,-0.55,Safe,64.75,True,none
-735,Mayiladuthurai,Tamil Nadu,hidden_drought,True,,Normal,-11,IMD,,,2.0,provisional,17.0,-0.02,Over-exploited,114.11,False,none
+735,Mayiladuthurai,Tamil Nadu,hidden_drought,True,,Normal,-11,IMD,,,1.0,provisional,17.0,-0.02,Over-exploited,114.11,False,none
 579,Nagapattinam,Tamil Nadu,hidden_drought,True,,Normal,3,IMD,,,1.0,provisional,17.0,-0.83,Saline,-100000.0,False,none
 580,Namakkal,Tamil Nadu,hidden_drought,False,,Excess,48,IMD,,,1.0,short,4.0,-2.16,Over-exploited,121.7,False,none
 581,Perambalur,Tamil Nadu,hidden_drought,True,,Excess,33,IMD,,,1.0,provisional,0.0,-3.39,Over-exploited,114.65,False,none
@@ -615,21 +615,21 @@ dist_lgd,district,state,quadrant,provisional,why_none,rain_category,rain_departu
 731,Ranipet,Tamil Nadu,hidden_drought,True,,Excess,41,IMD,,,2.0,provisional,17.0,-2.17,Semi-critical,82.55,True,none
 584,Salem,Tamil Nadu,fine,False,,Normal,-6,IMD,,,1.0,full,67.0,-1.27,Over-exploited,150.56,False,d0
 585,Sivaganga,Tamil Nadu,hidden_drought,True,,Normal,-18,IMD,,,2.0,provisional,0.0,-0.52,Safe,26.05,False,d0
-733,Tenkasi,Tamil Nadu,fine,False,,Normal,11,IMD,,,0.0,short,61.0,-0.5,Semi-critical,77.44,True,none
+733,Tenkasi,Tamil Nadu,fine,False,,Normal,11,IMD,,,1.0,short,61.0,-0.5,Semi-critical,77.44,True,none
 586,Thanjavur,Tamil Nadu,buffered,True,,Deficient,-39,IMD,deviation,,2.0,provisional,25.0,-3.05,Over-exploited,102.09,False,none
-587,The Nilgiris,Tamil Nadu,fine,True,,Excess,34,IMD,,,0.0,provisional,50.0,0.45,Safe,9.52,False,none
+587,The Nilgiris,Tamil Nadu,fine,True,,Excess,34,IMD,,,1.0,provisional,50.0,0.45,Safe,9.52,False,none
 588,Theni,Tamil Nadu,hidden_drought,True,,Normal,5,IMD,,,1.0,provisional,0.0,-2.15,Semi-critical,75.28,True,none
 589,Thiruvallur,Tamil Nadu,fine,True,,Normal,13,IMD,,,2.0,provisional,33.0,-1.03,Safe,57.03,False,none
 590,Thiruvarur,Tamil Nadu,hidden_drought,True,,Normal,-15,IMD,,,1.0,provisional,0.0,-8.47,Safe,54.77,True,none
 591,Tiruchirappalli,Tamil Nadu,fine,False,,Excess,26,IMD,,,2.0,short,45.0,-0.34,Semi-critical,75.04,True,none
-592,Tirunelveli,Tamil Nadu,fine,False,,Excess,42,IMD,,,0.0,full,54.0,0.15,Safe,39.96,True,none
+592,Tirunelveli,Tamil Nadu,fine,False,,Excess,42,IMD,,,1.0,full,54.0,0.15,Safe,39.96,True,none
 732,Tirupathur,Tamil Nadu,hidden_drought,True,,Excess,27,IMD,,,1.0,provisional,0.0,-5.93,Over-exploited,140.64,False,none
 634,Tiruppur,Tamil Nadu,fine,False,,Excess,40,IMD,,,1.0,full,36.0,-3.43,Semi-critical,85.5,True,none
 593,Tiruvannamalai,Tamil Nadu,hidden_drought,True,,Excess,48,IMD,,,2.0,provisional,0.0,-2.11,Semi-critical,84.1,True,none
-594,Tuticorin,Tamil Nadu,buffered,False,,Deficient,-29,IMD,deviation,,0.0,full,50.0,-0.84,Safe,28.21,False,none
+594,Tuticorin,Tamil Nadu,buffered,False,,Deficient,-29,IMD,deviation,,1.0,full,50.0,-0.84,Safe,28.21,False,none
 595,Vellore,Tamil Nadu,fine,False,,Normal,1,IMD,,,2.0,short,36.0,-0.86,Over-exploited,117.3,False,d0
 596,Villupuram,Tamil Nadu,hidden_drought,True,,Normal,13,IMD,,,2.0,provisional,0.0,-2.22,Semi-critical,89.67,True,none
-597,Virudhunagar,Tamil Nadu,fine,False,,Normal,7,IMD,,,0.0,full,33.0,-1.69,Safe,59.64,True,none
+597,Virudhunagar,Tamil Nadu,fine,False,,Normal,7,IMD,,,1.0,full,33.0,-1.69,Safe,59.64,True,none
 501,Adilabad,Telangana,double_drought,True,,Deficient,-27,IMD,"deviation,dry_spell",-0.91,5.0,provisional,0.0,-0.76,Safe,37.57,True,d1
 690,Bhadradri Kothagudem,Telangana,double_drought,True,,Deficient,-21,IMD,deviation,-0.69,3.0,provisional,0.0,-0.7,Safe,32.04,False,d1
 686,Hanumakonda,Telangana,double_drought,True,,Deficient,-24,IMD,deviation,-0.63,2.0,provisional,0.0,-1.71,Safe,56.3,True,d1
