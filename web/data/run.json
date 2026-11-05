@@ -1,23 +1,22 @@
 {
- "run_at_utc":"2026-11-04 20:02",
+ "run_at_utc":"2026-11-05 20:20",
  "publish":true,
  "steps":{
   "rain_official":{
-   "ok":false,
-   "error":"ValueError: no PERIOD line in DISTRICT_RAINFALL_DISTRIBUTION_COUNTRY_INDIA_cd.pdf",
-   "seconds":3
+   "ok":true,
+   "seconds":11
   },
   "rain":{
    "ok":true,
-   "seconds":44
+   "seconds":47
   },
   "groundwater":{
    "ok":true,
-   "seconds":146
+   "seconds":156
   },
   "idm":{
    "ok":true,
-   "seconds":6
+   "seconds":3
   },
   "classify":{
    "ok":true,
@@ -25,7 +24,7 @@
   },
   "history":{
    "ok":true,
-   "seconds":211
+   "seconds":477
   },
   "check":{
    "ok":true,
