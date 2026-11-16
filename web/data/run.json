@@ -1,22 +1,22 @@
 {
- "run_at_utc":"2026-11-15 19:11",
+ "run_at_utc":"2026-11-16 22:30",
  "publish":true,
  "steps":{
   "rain_official":{
    "ok":true,
-   "seconds":10
+   "seconds":9
   },
   "rain":{
    "ok":true,
-   "seconds":47
+   "seconds":45
   },
   "groundwater":{
    "ok":true,
-   "seconds":239
+   "seconds":146
   },
   "idm":{
    "ok":true,
-   "seconds":4
+   "seconds":2
   },
   "classify":{
    "ok":true,
@@ -24,7 +24,7 @@
   },
   "history":{
    "ok":true,
-   "seconds":428
+   "seconds":207
   },
   "check":{
    "ok":true,
