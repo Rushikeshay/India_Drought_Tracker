@@ -1,23 +1,23 @@
 {
- "run_at_utc":"2026-11-24 22:47",
+ "run_at_utc":"2026-11-25 21:59",
  "publish":true,
  "steps":{
   "rain_official":{
    "ok":true,
-   "seconds":11
+   "seconds":9
   },
   "rain":{
    "ok":true,
-   "seconds":47
+   "seconds":45
   },
   "groundwater":{
    "ok":false,
-   "error":"SSLError: HTTPSConnectionPool(host='nwdp.nwic.gov.in', port=443): Max retries exceeded with url: /api/3/action/package_show?id=gwl-manual-quarterly-central-ground-water-board-department (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certi",
+   "error":"SSLError: HTTPSConnectionPool(host='nwdp.nwic.gov.in', port=443): Max retries exceeded with url: /api/3/action/package_show?id=gwl-manual-quarterly-central-ground-water-board-department (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unabl",
    "seconds":1
   },
   "idm":{
    "ok":true,
-   "seconds":4
+   "seconds":3
   },
   "classify":{
    "ok":true,
@@ -25,7 +25,7 @@
   },
   "history":{
    "ok":true,
-   "seconds":474
+   "seconds":365
   },
   "check":{
    "ok":true,
